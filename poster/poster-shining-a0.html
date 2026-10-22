@@ -135,21 +135,22 @@
   .callout svg{flex:0 0 12mm;width:12mm;height:12mm}
   .callout.warn{background:#fff4dc;border:.6mm solid #f0cd7d}
   .callout.info{background:var(--teal-l);border:.6mm solid #b4c3ec}
-  .uxgrid{display:grid;grid-template-columns:1fr;gap:1.8mm;margin-top:2mm}
-  .ux{display:grid;grid-template-columns:1fr 70mm 18mm;gap:3mm;align-items:center;font-size:15.5pt;line-height:1.1}
-  .ux .track{height:6mm}
-  .ux .sc{font-weight:700;color:var(--navy);text-align:right}
+  table.tb{width:100%;border-collapse:separate;border-spacing:0;font-size:15.5pt;line-height:1.15;margin-top:1mm;border:.5mm solid var(--line);border-radius:3mm;overflow:hidden}
+  .tb th{background:var(--navy);color:#fff;font-weight:700;text-align:center;padding:1.8mm 3mm;font-size:14.5pt}
+  .tb th:first-child{text-align:left}
+  .tb td{padding:1.6mm 3mm;text-align:center;vertical-align:middle}
+  .tb td:first-child{text-align:left}
+  .tb tr:nth-child(even) td{background:var(--abu)}
+  .tb td small{display:block;font-size:12.5pt;color:var(--muted)}
+  .tb .tr{height:5.5mm;background:#dfe3ef;border-radius:1.2mm;overflow:hidden}
+  .tb .tr div{height:100%;border-radius:1.2mm}
+  .tb .num{font-weight:700;color:var(--navy)}
+  .tb .coef{display:inline-block;min-width:24mm;font-weight:700;border-radius:10mm;padding:.6mm 3mm;color:#fff}
 
   .split{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
   .donutrow{display:flex;gap:5mm;align-items:center}
   .legend{font-size:16pt;display:flex;flex-direction:column;gap:2mm}
   .legend i{display:inline-block;width:5mm;height:5mm;border-radius:1mm;margin-right:2.5mm;vertical-align:-.5mm}
-  .rel{display:flex;flex-direction:column;gap:1.6mm}
-  .rl{display:grid;grid-template-columns:1fr 34mm 30mm;align-items:center;gap:2.5mm;font-size:16pt;line-height:1.12}
-  .rl .from{background:var(--abu);border-radius:2.5mm;padding:1.3mm 3mm}
-  .rl .coef{text-align:center;font-weight:700;border-radius:10mm;padding:1.4mm 0;font-size:15pt;color:#fff}
-  .coef.pos{background:var(--green)} .coef.neg{background:var(--navy2)}
-  .rl .to{font-weight:700;color:var(--navy);text-align:center;border:.5mm solid var(--line);border-radius:2.5mm;padding:1.3mm 1mm}
   .gender{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-top:3mm}
   .g{border-radius:3.5mm;padding:3mm 4mm;font-size:15.5pt;line-height:1.2}
   .g h5{font-size:18pt;margin-bottom:1mm}
@@ -410,13 +411,15 @@
           <div class="callout warn"><svg><use href="#i-warn"/></svg><span>Tindak lanjut: hanya <b>1 dari 58</b> peserta yang melewati hari ke-56 mengisi sesi 2.</span></div>
 
           <div class="sub" style="margin-top:4mm">Uji kemudahan oleh 16 mahasiswa (skala 1–5)</div>
-          <div class="uxgrid">
-            <div class="ux"><span>Tampilan &amp; desain nyaman</span><div class="track"><div class="fill" style="width:92.6%;background:var(--green)"></div></div><span class="sc">4,63</span></div>
-            <div class="ux"><span>Memahami petunjuk &amp; bahasa</span><div class="track"><div class="fill" style="width:90%;background:var(--green)"></div></div><span class="sc">4,50</span></div>
-            <div class="ux"><span>Membuka &amp; bernavigasi situs</span><div class="track"><div class="fill" style="width:88.8%;background:var(--green)"></div></div><span class="sc">4,44</span></div>
-            <div class="ux"><span>Akses tanpa kendala perangkat</span><div class="track"><div class="fill" style="width:88.8%;background:var(--green)"></div></div><span class="sc">4,44</span></div>
-            <div class="ux"><span>Mengisi kuesioner/tugas</span><div class="track"><div class="fill" style="width:86.2%;background:var(--teal)"></div></div><span class="sc">4,31</span></div>
-          </div>
+          <table class="tb">
+            <colgroup><col style="width:44%"><col style="width:28%"><col style="width:15%"><col style="width:13%"></colgroup>
+            <tr><th>Aspek</th><th>Skor (1–5)</th><th>Rerata ± SB</th><th>Mudah (%)</th></tr>
+            <tr><td>Tampilan &amp; desain nyaman</td><td><div class="tr"><div style="width:92.6%;background:var(--green)"></div></div></td><td class="num">4,63 ± 0,62</td><td>94</td></tr>
+            <tr><td>Memahami petunjuk &amp; bahasa</td><td><div class="tr"><div style="width:90.0%;background:var(--green)"></div></div></td><td class="num">4,50 ± 0,63</td><td>94</td></tr>
+            <tr><td>Membuka &amp; bernavigasi situs</td><td><div class="tr"><div style="width:88.8%;background:var(--green)"></div></div></td><td class="num">4,44 ± 0,73</td><td>88</td></tr>
+            <tr><td>Akses tanpa kendala perangkat</td><td><div class="tr"><div style="width:88.8%;background:var(--green)"></div></div></td><td class="num">4,44 ± 0,73</td><td>88</td></tr>
+            <tr><td>Mengisi kuesioner/tugas</td><td><div class="tr"><div style="width:86.2%;background:var(--teal)"></div></div></td><td class="num">4,31 ± 0,70</td><td>88</td></tr>
+          </table>
           <div class="callout info"><svg><use href="#i-info"/></svg><span>Skor uji kemudahan tinggi, tetapi masalah tetap muncul di lapangan → uji coba perlu dilakukan <b>bersama kelompok sasaran dalam kondisi nyata</b>.</span></div>
         </div>
       </section>
@@ -436,14 +439,16 @@
           </div>
           <div class="cap">Gambar 3. Penggunaan media sosial calon pengantin di Kota Binjai</div>
 
-          <div class="sub" style="margin-top:4mm"><span>Hubungan yang bermakna (Spearman r<sub>s</sub>; p&lt;0,05)</span></div>
-          <div class="rel">
-            <div class="rl"><div class="from">Skor pengetahuan gizi</div><div class="coef pos">+0,380</div><div class="to">Sikap HBM</div></div>
-            <div class="rl"><div class="from">Selalu memeriksa kebenaran informasi</div><div class="coef pos">+0,254</div><div class="to">Sikap HBM</div></div>
-            <div class="rl"><div class="from">Durasi harian media sosial</div><div class="coef neg">−0,258</div><div class="to">IMT</div></div>
-            <div class="rl"><div class="from">Mencari informasi prakonsepsi</div><div class="coef neg">−0,234</div><div class="to">IMT</div></div>
-            <div class="rl"><div class="from">Sumber akun nakes/resmi (median 22,5 vs 26,6 kg/m²)</div><div class="coef neg">p=0,013</div><div class="to">IMT ↓</div></div>
-          </div>
+          <div class="sub" style="margin-top:4mm"><span>Hubungan yang bermakna (p&lt;0,05)</span></div>
+          <table class="tb">
+            <colgroup><col style="width:52%"><col style="width:18%"><col style="width:16%"><col style="width:14%"></colgroup>
+            <tr><th>Variabel</th><th>Terhadap</th><th>r<sub>s</sub></th><th>p</th></tr>
+            <tr><td>Skor pengetahuan gizi</td><td class="num">Sikap HBM</td><td><span class="coef" style="background:var(--green)">+0,380</span></td><td>&lt;0,001</td></tr>
+            <tr><td>Selalu memeriksa kebenaran informasi</td><td class="num">Sikap HBM</td><td><span class="coef" style="background:var(--green)">+0,254</span></td><td>0,028</td></tr>
+            <tr><td>Durasi harian media sosial</td><td class="num">IMT</td><td><span class="coef" style="background:var(--navy2)">−0,258</span></td><td>0,025</td></tr>
+            <tr><td>Mencari informasi prakonsepsi</td><td class="num">IMT</td><td><span class="coef" style="background:var(--navy2)">−0,234</span></td><td>0,043</td></tr>
+            <tr><td>Sumber akun nakes/resmi<small>median IMT 22,5 vs 26,6 kg/m² (Mann-Whitney)</small></td><td class="num">IMT</td><td>–</td><td>0,013</td></tr>
+          </table>
           <div class="gender">
             <div class="g f"><h5>Calon pengantin perempuan (n=47)</h5>Lebih banyak TikTok/IG (44,7%) dan ≥3 jam/hari (59,6%); sikap positif 74,5%</div>
             <div class="g m"><h5>Calon pengantin laki-laki (n=29)</h5>WhatsApp dominan (75,9%); sikap positif lebih rendah (48,3%; p=0,020)</div>
