@@ -49,7 +49,7 @@
   .contact .seminar{margin-top:2mm;background:var(--abubiru);border-radius:4mm;padding:3mm 4mm;font-size:16pt;color:var(--navy)}
 
   /* ===== BODY ===== */
-  main{flex:1;padding:9mm 16mm 0;display:flex;flex-direction:column;gap:8mm}
+  main{flex:1;padding:9mm 16mm 0;display:flex;flex-direction:column;gap:8mm;justify-content:space-between}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
   .card{background:rgba(255,255,255,.86);border-radius:5mm;overflow:hidden;box-shadow:0 .6mm 1.6mm rgba(37,60,146,.12);display:flex;flex-direction:column}
   .hd{display:flex;align-items:center;gap:4mm;padding:4mm 7mm;color:#fff;font-size:32.5pt;font-weight:700;line-height:1.1}
@@ -100,30 +100,43 @@
   .chip b{color:var(--green);font-size:17pt}
 
   /* iteration */
-  .iter .bd{padding:6mm 8mm 7mm}
-  .iter-top{display:grid;grid-template-columns:138mm 1fr;gap:8mm;align-items:start}
-  .cycle-wrap{background:var(--abu);border-radius:4mm;padding:2mm 3mm 3mm}
-  .cycle-wrap .cap{text-align:center;margin-top:1mm}
-  .timeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:4mm}
-  .timeline:before{content:"";position:absolute;left:4%;right:4%;top:11mm;height:2mm;background:linear-gradient(90deg,var(--navy),var(--teal),var(--green));border-radius:2mm}
+  .iter .bd{padding:5mm 7mm 6mm}
+  .iter-wrap{display:grid;grid-template-columns:1fr 136mm;gap:7mm;align-items:stretch}
+  .iter-top{display:grid;grid-template-columns:112mm 1fr;gap:5mm;align-items:start}
+  .cycle-wrap{background:var(--abu);border-radius:4mm;padding:1mm 2mm 2mm}
+  .cycle-wrap .cap{text-align:center;margin-top:0;font-size:12.5pt}
+  .timeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:3mm}
+  .timeline:before{content:"";position:absolute;left:6%;right:6%;top:8mm;height:1.6mm;background:linear-gradient(90deg,var(--navy),var(--teal),var(--green));border-radius:2mm}
   .ms{position:relative;display:flex;flex-direction:column;align-items:center}
-  .ms .dot{width:24mm;height:24mm;border-radius:50%;background:#fff;border:1.6mm solid var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-size:19pt;z-index:1}
+  .ms .dot{width:17mm;height:17mm;border-radius:50%;background:#fff;border:1.3mm solid var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--navy);font-size:17pt;z-index:1}
   .ms.key .dot{background:var(--gold);border-color:var(--gold);color:#fff}
-  .ms .date{margin-top:2mm;font-weight:700;color:var(--navy);font-size:19pt;text-align:center;line-height:1.1}
-  .ms .ver{font-size:14pt;color:var(--muted)}
-  .box{width:100%;border-radius:3mm;padding:2.6mm 3.2mm;font-size:15.5pt;line-height:1.2;margin-top:2.5mm}
-  .box .lb{display:block;font-size:13pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.8mm}
-  .box.prob{background:var(--red-l);border-left:1.6mm solid var(--red)} .box.prob .lb{color:var(--red)}
-  .box.fix{background:var(--green-l);border-left:1.6mm solid var(--green)} .box.fix .lb{color:var(--green)}
-  .box.neu{background:var(--abubiru);border-left:1.6mm solid var(--navy2)} .box.neu .lb{color:var(--navy2)}
-  .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm;margin-top:5mm}
-  .imp{border-radius:4mm;background:var(--abu);padding:4mm 5mm;display:flex;flex-direction:column}
-  .imp .t{font-size:16.5pt;font-weight:700;color:var(--navy);line-height:1.15}
-  .ba{display:flex;align-items:center;gap:3mm;margin:2mm 0 1mm}
-  .ba .v{font-size:36pt;font-weight:700;line-height:1}
+  .ms .date{margin-top:1.5mm;font-weight:700;color:var(--navy);font-size:17pt;text-align:center;line-height:1.05}
+  .ms .ver{font-size:12.5pt;color:var(--muted)}
+  .box{width:100%;border-radius:2.5mm;padding:1.8mm 2.4mm;font-size:14pt;line-height:1.17;margin-top:2mm}
+  .box .lb{display:block;font-size:11.5pt;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.4mm}
+  .box.prob{background:var(--red-l);border-left:1.3mm solid var(--red)} .box.prob .lb{color:var(--red)}
+  .box.fix{background:var(--green-l);border-left:1.3mm solid var(--green)} .box.fix .lb{color:var(--green)}
+  .box.neu{background:var(--abubiru);border-left:1.3mm solid var(--navy2)} .box.neu .lb{color:var(--navy2)}
+  .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:4mm}
+  .imp{border-radius:3.5mm;background:var(--abu);padding:2.6mm 4mm;display:flex;flex-direction:column}
+  .imp .t{font-size:14.5pt;font-weight:700;color:var(--navy);line-height:1.15}
+  .ba{display:flex;align-items:center;gap:2.5mm;margin:1.2mm 0 .6mm}
+  .ba .v{font-size:30pt;font-weight:700;line-height:1}
   .ba .v.bad{color:var(--red)} .ba .v.good{color:var(--green)} .ba .v.nav{color:var(--navy)}
-  .ba svg{width:12mm;height:8mm}
-  .imp .s{font-size:14pt;color:var(--muted);line-height:1.2}
+  .ba svg{width:10mm;height:7mm}
+  .imp .s{font-size:12.5pt;color:var(--muted);line-height:1.18}
+  /* laman SHINING */
+  .site{display:flex;flex-direction:column;gap:2.4mm}
+  .browser{border-radius:3.5mm;overflow:hidden;border:.7mm solid #d9cbb4;box-shadow:0 1mm 3mm rgba(91,58,25,.18);background:#fff}
+  .browser .bar{display:flex;align-items:center;gap:1.6mm;background:#f3ead9;padding:1.8mm 3mm}
+  .browser .bar i{width:3mm;height:3mm;border-radius:50%;background:#d98a5b}
+  .browser .bar i:nth-child(2){background:#e3b65a} .browser .bar i:nth-child(3){background:#8bb87a}
+  .browser .bar span{flex:1;margin-left:2mm;background:#fff;border-radius:3mm;padding:.5mm 3mm;font-size:12pt;color:#6b4a2b}
+  .browser img{display:block;width:100%;height:auto}
+  .link{display:flex;align-items:center;gap:3mm;background:linear-gradient(90deg,#c46a33,#8a4a1f);color:#fff;border-radius:3.5mm;padding:2.6mm 3.5mm}
+  .link img{width:21mm;height:21mm;background:#fff;border-radius:2mm;padding:.8mm;flex:0 0 21mm}
+  .link .lt{font-size:13.5pt;line-height:1.2;opacity:.95}
+  .link .url{font-size:17pt;font-weight:700;line-height:1.1;margin-top:.8mm;word-break:break-all}
 
   /* results charts */
   .bars{display:flex;flex-direction:column;gap:1.7mm}
@@ -315,6 +328,8 @@
     <section class="card iter">
       <div class="hd teal"><span class="num" style="color:var(--teal)">3</span>Hasil: Proses Iterasi Pengembangan Platform SHINING <small>Iterative development</small></div>
       <div class="bd">
+        <div class="iter-wrap">
+        <div>
         <div class="iter-top">
           <div class="cycle-wrap">
             <!-- Siklus iteratif -->
@@ -334,36 +349,34 @@
                 <text x="200" y="220" fill="#565a6e" font-size="17" font-weight="400">4 putaran perbaikan</text>
               </g>
             </svg>
-            <div class="cap">Gambar 1. Siklus pengembangan iteratif selama pengumpulan data</div>
+            <div class="cap">Gambar 1. Siklus iteratif</div>
           </div>
 
-          <div>
-            <div class="timeline">
-              <div class="ms">
-                <div class="dot">1</div><div class="date">Akhir Juli</div><div class="ver">2026 · peluncuran</div>
-                <div class="box prob"><span class="lb">Masalah</span>Halaman persetujuan tak tersimpan; angka 0 di depan no. telepon hilang; tanda selesai di peramban</div>
-                <div class="box fix"><span class="lb">Perubahan</span>Skrip ditulis ulang: normalisasi nomor, karantina, penanda duplikat; status selesai dikonfirmasi server; cegah ketuk ganda</div>
-              </div>
-              <div class="ms">
-                <div class="dot">2</div><div class="date">Agustus</div><div class="ver">2026 · uji kemudahan</div>
-                <div class="box neu"><span class="lb">Evaluasi</span>Penilaian kemudahan &amp; keterbacaan oleh 16 mahasiswa</div>
-                <div class="box fix"><span class="lb">Hasil</span>Tidak ada masalah besar dilaporkan (skor 4,31–4,63 dari 5)</div>
-              </div>
-              <div class="ms">
-                <div class="dot">3</div><div class="date">Awal Oktober</div><div class="ver">2026 · perbaikan alur</div>
-                <div class="box prob"><span class="lb">Masalah</span>Progres hilang saat berganti telepon; isian kosong</div>
-                <div class="box fix"><span class="lb">Perubahan</span>Progres dilacak per nomor telepon; validasi isian kosong; kirim ulang otomatis</div>
-              </div>
-              <div class="ms key">
-                <div class="dot">4</div><div class="date">13 Oktober</div><div class="ver">2026 · versi utama</div>
-                <div class="box prob"><span class="lb">Masalah</span>Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap</div>
-                <div class="box fix"><span class="lb">Perubahan</span>Simpan draf otomatis; blok makanan pokok wajib; persetujuan berlapis; kartu “selamat datang kembali”</div>
-              </div>
-              <div class="ms">
-                <div class="dot">5</div><div class="date">20 Oktober</div><div class="ver">2026 · kunci data</div>
-                <div class="box neu"><span class="lb">Status</span>Pendaftaran kelompok kontrol ditutup</div>
-                <div class="box fix"><span class="lb">Tindakan</span>Data dikunci untuk analisis</div>
-              </div>
+          <div class="timeline">
+            <div class="ms">
+              <div class="dot">1</div><div class="date">Akhir Juli</div><div class="ver">peluncuran</div>
+              <div class="box prob"><span class="lb">Masalah</span>Persetujuan tak tersimpan; angka 0 nomor HP hilang</div>
+              <div class="box fix"><span class="lb">Perubahan</span>Skrip ditulis ulang; status selesai dikonfirmasi server</div>
+            </div>
+            <div class="ms">
+              <div class="dot">2</div><div class="date">Agustus</div><div class="ver">uji kemudahan</div>
+              <div class="box neu"><span class="lb">Evaluasi</span>Uji kemudahan oleh 16 mahasiswa</div>
+              <div class="box fix"><span class="lb">Hasil</span>Tanpa masalah besar (skor 4,31–4,63)</div>
+            </div>
+            <div class="ms">
+              <div class="dot">3</div><div class="date">Awal Okt</div><div class="ver">perbaikan alur</div>
+              <div class="box prob"><span class="lb">Masalah</span>Progres hilang saat ganti HP; isian kosong</div>
+              <div class="box fix"><span class="lb">Perubahan</span>Progres per nomor HP; validasi &amp; kirim ulang otomatis</div>
+            </div>
+            <div class="ms key">
+              <div class="dot">4</div><div class="date">13 Okt</div><div class="ver">versi utama</div>
+              <div class="box prob"><span class="lb">Masalah</span>Blok makanan pokok FFQ hilang; halaman awal panjang</div>
+              <div class="box fix"><span class="lb">Perubahan</span>Simpan draf otomatis; persetujuan berlapis; kartu “selamat datang kembali”</div>
+            </div>
+            <div class="ms">
+              <div class="dot">5</div><div class="date">20 Okt</div><div class="ver">kunci data</div>
+              <div class="box neu"><span class="lb">Status</span>Pendaftaran ditutup</div>
+              <div class="box fix"><span class="lb">Tindakan</span>Data dikunci untuk analisis</div>
             </div>
           </div>
         </div>
@@ -372,23 +385,37 @@
           <div class="imp">
             <div class="t">Blok makanan pokok FFQ kosong</div>
             <div class="ba"><span class="v bad">26,9%</span><svg><use href="#i-right"/></svg><span class="v good">0%</span></div>
-            <div class="s">Sebelum (29/108) vs sesudah simpan draf otomatis (0/12); p=0,04</div>
+            <div class="s">29/108 → 0/12 setelah simpan draf; p=0,04</div>
           </div>
           <div class="imp">
-            <div class="t">Penyelesaian sesi 1 pendaftar baru</div>
+            <div class="t">Penyelesaian sesi 1</div>
             <div class="ba"><span class="v nav">37,1%</span><svg><use href="#i-right"/></svg><span class="v good">52,4%</span></div>
-            <div class="s">Setelah halaman awal disederhanakan; p=0,24 (deskriptif)</div>
+            <div class="s">setelah halaman awal disederhanakan; p=0,24</div>
           </div>
           <div class="imp">
             <div class="t">Kiriman berulang</div>
             <div class="ba"><span class="v bad">13,9%</span></div>
-            <div class="s">186 dari 1.339 rekaman mentah, terutama halaman persetujuan</div>
+            <div class="s">186 dari 1.339 rekaman mentah</div>
           </div>
           <div class="imp">
             <div class="t">Rekaman karantina</div>
             <div class="ba"><span class="v nav">27/28</span></div>
-            <div class="s">muncul pada minggu pertama → teratasi oleh skrip baru</div>
+            <div class="s">di minggu pertama → teratasi skrip baru</div>
           </div>
+        </div>
+        </div>
+
+        <aside class="site">
+          <div class="browser">
+            <div class="bar"><i></i><i></i><i></i><span>shining.edukasi-catin.id</span></div>
+            <img src="laman-shining.jpg" alt="Tampilan laman utama SHINING" width="997" height="813">
+          </div>
+          <div class="link">
+            <img src="qr-shining.svg" alt="Kode QR laman SHINING">
+            <div><div class="lt">Kunjungi laman SHINING:</div><div class="url">shining.edukasi-catin.id</div></div>
+          </div>
+          <div class="cap" style="margin-top:0">Gambar 2. Laman utama SHINING</div>
+        </aside>
         </div>
       </div>
     </section>
@@ -410,7 +437,7 @@
             <div class="bar"><div class="lab">IPAQ-SF <small>· 1,8 mnt</small></div><div class="track"><div class="fill" style="width:41.2%;background:var(--teal)">82 · 41,2%</div></div></div>
             <div class="bar"><div class="lab"><b>Keenam instrumen</b></div><div class="track"><div class="fill" style="width:38.7%;background:var(--green)">77 · 38,7%</div></div></div>
           </div>
-          <div class="cap">Gambar 2. Kehilangan peserta terbesar terjadi sebelum tes pengetahuan (instrumen terpanjang). Waktu pengisian = median (mnt = menit).</div>
+          <div class="cap">Gambar 3. Kehilangan peserta terbesar terjadi sebelum tes pengetahuan (instrumen terpanjang). Waktu pengisian = median (mnt = menit).</div>
           <div class="callout warn"><svg><use href="#i-warn"/></svg><span>Tindak lanjut: hanya <b>1 dari 58</b> peserta yang melewati hari ke-56 mengisi sesi 2.</span></div>
 
           <div class="sub" style="margin-top:4mm">Uji kemudahan oleh 16 mahasiswa (skala 1–5)</div>
@@ -440,7 +467,7 @@
             <div class="bar"><div class="lab">Sumber: <i>influencer</i></div><div class="track"><div class="fill" style="width:38.2%;background:var(--gold)">38,2%</div></div></div>
             <div class="bar"><div class="lab">Tertarik produk dipromosikan</div><div class="track"><div class="fill" style="width:71.1%;background:var(--red)">71,1%</div></div></div>
           </div>
-          <div class="cap">Gambar 3. Penggunaan media sosial calon pengantin di Kota Binjai</div>
+          <div class="cap">Gambar 4. Penggunaan media sosial calon pengantin di Kota Binjai</div>
 
           <div class="sub" style="margin-top:4mm"><span>Hubungan yang bermakna (p&lt;0,05)</span></div>
           <table class="tb">
