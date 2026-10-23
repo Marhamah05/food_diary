@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 841 1189" width="841mm" height="1189mm">
+  <!-- Siluet laman web SHINING (tampilan telepon seluler), dipakai sebagai latar samar poster -->
+  <defs>
+    <style>
+      .t{font-family:'Source Sans 3',Carlito,Arial,sans-serif;font-weight:700}
+      .w{fill:#fff}
+    </style>
+    <g id="frame">
+      <rect x="0" y="0" width="150" height="300" rx="20" fill="none" stroke="#253c92" stroke-width="4"/>
+      <rect x="57" y="9" width="36" height="6" rx="3" fill="#253c92"/>
+      <rect x="10" y="22" width="130" height="30" rx="7" fill="#253c92"/>
+      <circle cx="27" cy="37" r="8" fill="#fff"/>
+      <text x="41" y="43" class="t w" font-size="16">SHINING</text>
+      <rect x="55" y="284" width="40" height="5" rx="2.5" fill="#253c92"/>
+    </g>
+
+    <!-- 1. Halaman masuk -->
+    <g id="p-login">
+      <use xlink:href="#frame"/>
+      <circle cx="75" cy="86" r="20" fill="none" stroke="#253c92" stroke-width="3"/>
+      <path d="M66 92c0-11 6-17 18-18-1 12-7 17-17 17M66 92l9-9" fill="none" stroke="#253c92" stroke-width="3" stroke-linecap="round"/>
+      <text x="75" y="126" text-anchor="middle" class="t" font-size="10.5" fill="#253c92">Sehat Sebelum Hamil</text>
+      <text x="75" y="139" text-anchor="middle" class="t" font-size="10.5" fill="#253c92">Itu Penting</text>
+      <text x="18" y="160" class="t" font-size="8" fill="#253c92">Nama</text>
+      <rect x="18" y="164" width="114" height="20" rx="5" fill="none" stroke="#253c92" stroke-width="2.4"/>
+      <text x="18" y="197" class="t" font-size="8" fill="#253c92">Nomor telepon</text>
+      <rect x="18" y="201" width="114" height="20" rx="5" fill="none" stroke="#253c92" stroke-width="2.4"/>
+      <rect x="18" y="234" width="114" height="22" rx="11" fill="#253c92"/>
+      <text x="75" y="249" text-anchor="middle" class="t w" font-size="11">Masuk</text>
+      <rect x="40" y="265" width="70" height="4" rx="2" fill="#253c92"/>
+    </g>
+
+    <!-- 2. Halaman persetujuan berlapis -->
+    <g id="p-consent">
+      <use xlink:href="#frame"/>
+      <text x="18" y="76" class="t" font-size="13" fill="#253c92">Persetujuan</text>
+      <g fill="#253c92">
+        <rect x="18" y="86" width="114" height="5" rx="2.5"/><rect x="18" y="97" width="100" height="5" rx="2.5"/>
+        <rect x="18" y="108" width="110" height="5" rx="2.5"/><rect x="18" y="119" width="80" height="5" rx="2.5"/>
+      </g>
+      <rect x="18" y="134" width="114" height="44" rx="6" fill="none" stroke="#253c92" stroke-width="2.4"/>
+      <text x="26" y="150" class="t" font-size="8.5" fill="#253c92">Lembar informasi</text>
+      <g fill="#253c92"><rect x="26" y="157" width="90" height="4" rx="2"/><rect x="26" y="166" width="70" height="4" rx="2"/></g>
+      <rect x="18" y="192" width="14" height="14" rx="3" fill="none" stroke="#253c92" stroke-width="2.4"/>
+      <path d="M21 199l3 3 6-7" fill="none" stroke="#253c92" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="38" y="197" width="90" height="5" rx="2.5" fill="#253c92"/>
+      <rect x="18" y="220" width="14" height="14" rx="3" fill="none" stroke="#253c92" stroke-width="2.4"/>
+      <rect x="38" y="225" width="80" height="5" rx="2.5" fill="#253c92"/>
+      <rect x="18" y="248" width="114" height="22" rx="11" fill="#253c92"/>
+      <text x="75" y="263" text-anchor="middle" class="t w" font-size="11">Saya setuju</text>
+    </g>
+
+    <!-- 3. Dasbor sesi 1 dengan 6 instrumen -->
+    <g id="p-dash">
+      <use xlink:href="#frame"/>
+      <text x="18" y="74" class="t" font-size="13" fill="#253c92">Sesi 1</text>
+      <rect x="18" y="81" width="114" height="8" rx="4" fill="none" stroke="#253c92" stroke-width="2"/>
+      <rect x="18" y="81" width="76" height="8" rx="4" fill="#253c92"/>
+      <g class="t" font-size="7.5" fill="#253c92">
+        <rect x="18" y="98" width="54" height="50" rx="6" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <rect x="78" y="98" width="54" height="50" rx="6" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <rect x="18" y="154" width="54" height="50" rx="6" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <rect x="78" y="154" width="54" height="50" rx="6" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <rect x="18" y="210" width="54" height="50" rx="6" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <rect x="78" y="210" width="54" height="50" rx="6" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <circle cx="45" cy="117" r="9"/><circle cx="105" cy="117" r="9"/><circle cx="45" cy="173" r="9"/><circle cx="105" cy="173" r="9" fill="none" stroke="#253c92" stroke-width="2.2"/><circle cx="45" cy="229" r="9" fill="none" stroke="#253c92" stroke-width="2.2"/><circle cx="105" cy="229" r="9" fill="none" stroke="#253c92" stroke-width="2.2"/>
+        <text x="45" y="140" text-anchor="middle">Identitas</text><text x="105" y="140" text-anchor="middle">Pengetahuan</text>
+        <text x="45" y="196" text-anchor="middle">Sikap</text><text x="105" y="196" text-anchor="middle">FFQ</text>
+        <text x="45" y="252" text-anchor="middle">IPAQ-SF</text><text x="105" y="252" text-anchor="middle">Media sosial</text>
+      </g>
+      <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M41 117l3 3 5-6M101 117l3 3 5-6M41 173l3 3 5-6"/></g>
+      <rect x="18" y="266" width="114" height="10" rx="5" fill="#253c92"/>
+    </g>
+
+    <!-- 4. Hasil IMT dan kartu selamat datang kembali -->
+    <g id="p-imt">
+      <use xlink:href="#frame"/>
+      <rect x="18" y="62" width="114" height="34" rx="6" fill="none" stroke="#253c92" stroke-width="2.4"/>
+      <text x="26" y="77" class="t" font-size="9" fill="#253c92">Selamat datang kembali!</text>
+      <rect x="26" y="83" width="80" height="4" rx="2" fill="#253c92"/>
+      <text x="75" y="118" text-anchor="middle" class="t" font-size="11" fill="#253c92">IMT Anda</text>
+      <path d="M30 185a45 45 0 0 1 90 0" fill="none" stroke="#253c92" stroke-width="12" stroke-dasharray="40 4"/>
+      <path d="M75 185l-22-26" stroke="#253c92" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="75" cy="185" r="6" fill="#253c92"/>
+      <text x="75" y="216" text-anchor="middle" class="t" font-size="24" fill="#253c92">22,5</text>
+      <text x="75" y="230" text-anchor="middle" class="t" font-size="8.5" fill="#253c92">kg/m²</text>
+      <rect x="18" y="246" width="114" height="22" rx="11" fill="#253c92"/>
+      <text x="75" y="261" text-anchor="middle" class="t w" font-size="11">Lanjutkan</text>
+    </g>
+  </defs>
+
+  <!-- Penempatan siluet di seluruh poster -->
+  <g>
+    <use xlink:href="#p-login"   transform="translate(-30 150) rotate(-12)"/>
+    <use xlink:href="#p-dash"    transform="translate(300 175) rotate(6) scale(.9)"/>
+    <use xlink:href="#p-consent" transform="translate(590 150) rotate(-6) scale(.95)"/>
+    <use xlink:href="#p-imt"     transform="translate(745 330) rotate(12) scale(.95)"/>
+    <use xlink:href="#p-consent" transform="translate(40 470) rotate(9) scale(1.05)"/>
+    <use xlink:href="#p-imt"     transform="translate(280 520) rotate(-8)"/>
+    <use xlink:href="#p-login"   transform="translate(520 470) rotate(7) scale(1.05)"/>
+    <use xlink:href="#p-dash"    transform="translate(-10 810) rotate(-7) scale(1.05)"/>
+    <use xlink:href="#p-login"   transform="translate(330 860) rotate(10) scale(.95)"/>
+    <use xlink:href="#p-dash"    transform="translate(620 800) rotate(-10) scale(1.05)"/>
+    <use xlink:href="#p-imt"     transform="translate(150 1060) rotate(5) scale(.8)"/>
+    <use xlink:href="#p-consent" transform="translate(500 1080) rotate(-5) scale(.8)"/>
+  </g>
+</svg>
