@@ -105,6 +105,10 @@ b{font-weight:800}
 .kw b{color:var(--orange)}
 .kw i{color:var(--ink)}
 
+.abs{display:flex;flex-direction:column;gap:2.2mm}
+.abs p{font-size:19pt;line-height:1.36;border-left:1.6mm solid var(--c);padding-left:3.5mm}
+.abs p b{color:var(--c)}
+.abs p+p{margin-top:0}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
@@ -276,14 +280,15 @@ html = f'''<!doctype html>
 <main>
   <div class="row c3">
     <section class="card">
-      {head(1,'Latar Belakang dan Tujuan','orange','book')}
-      <p>Masa prakonsepsi adalah periode kritis untuk memperbaiki gizi calon ayah dan calon ibu. Sekitar separuh orang dewasa Indonesia mengalami berat badan lebih atau obesitas, sementara misinformasi gizi menyebar luas di media sosial. Bukti tentang penggunaan media sosial calon pengantin (catin) dan kinerja platform edukasi prakonsepsi daring di Indonesia masih terbatas.</p>
-      <div class="sub" style="--c:var(--green)">{ic('target','#1f8a55')}Tujuan penelitian</div>
-      <ul class="goals">
-        <li><span class="k">1</span><p>Menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan indeks massa tubuh (IMT).</p></li>
-        <li><span class="k">2</span><p>Mengevaluasi pengembangan dan penerapan platform web SHINING pada kelompok kontrol.</p></li>
-      </ul>
-      <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i>, evaluasi proses</div>
+      {head(1,'Abstrak','orange','book')}
+      <div class="abs">
+        <p style="--c:var(--orange)"><b>Latar belakang.</b> Bukti tentang penggunaan media sosial calon pengantin (catin) dan kinerja platform edukasi gizi prakonsepsi daring di Indonesia masih terbatas.</p>
+        <p style="--c:var(--green)"><b>Tujuan.</b> Menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi, sikap HBM, dan IMT, serta mengevaluasi pengembangan platform SHINING.</p>
+        <p style="--c:var(--blue)"><b>Metode.</b> Potong lintang dan evaluasi proses (ADDIE) di Kota Binjai, Juli–Oktober 2026; 198 catin memenuhi syarat, 74 dianalisis.</p>
+        <p style="--c:var(--purple)"><b>Hasil.</b> Sebanyak 38,9% catin menuntaskan keenam instrumen. WhatsApp menjadi platform utama (59,5%). Pengetahuan berkorelasi dengan sikap HBM (r<sub>s</sub> = 0,414; p &lt; 0,001), dan 51,4% catin berat badan lebih atau obesitas.</p>
+        <p style="--c:var(--red)"><b>Simpulan.</b> SHINING layak dikembangkan; perbaikan berulang menutup celah kehilangan data, tetapi instrumen yang panjang masih menjadi titik putus utama.</p>
+      </div>
+      <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i></div>
     </section>
     <section class="card">
       {head(2,'Metode','blue','clip')}
