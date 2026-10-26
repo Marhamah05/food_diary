@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Poster SHINING A0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  @page { size: 841mm 1189mm; margin: 0; }
+  :root{
+    --ink:#17302d; --muted:#4f6562; --line:#d5e2df;
+    --teal-900:#0c3f3a; --teal-800:#0f4f49; --teal-700:#16655d; --teal-500:#2b8a7e; --teal-100:#e3efec; --teal-50:#f2f7f5;
+    --gold:#c88a14; --gold-100:#fbf1dc; --track:#e6ecea;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fff}
+  body{font-family:"Plus Jakarta Sans","Inter",sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .poster{width:841mm;height:1189mm;overflow:hidden;display:flex;flex-direction:column;background:var(--teal-50)}
+
+  /* ---------- Header ---------- */
+  header{background:var(--teal-800);color:#fff;padding:20mm 24mm 16mm;display:grid;grid-template-columns:62mm 1fr 178mm;gap:14mm;align-items:center;position:relative}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3.5mm;background:var(--gold)}
+  .logo{width:62mm;height:62mm;border:1.2mm dashed rgba(255,255,255,.55);border-radius:50%;display:grid;place-items:center;font-size:20pt;color:rgba(255,255,255,.8);text-align:center;line-height:1.2}
+  .eyebrow{font-size:21pt;letter-spacing:.14em;font-weight:700;color:#f0c35a;text-transform:uppercase}
+  h1{font-size:82pt;line-height:1.04;font-weight:800;letter-spacing:-.01em;margin:3mm 0 3mm}
+  .subtitle{font-size:34pt;font-weight:500;color:#cfe5e0;line-height:1.2}
+  .authors{font-size:27pt;font-weight:700;margin-top:6mm}
+  .authors sup,.affil sup{font-size:.6em}
+  .affil{font-size:18pt;color:#bcd8d2;margin-top:2mm;line-height:1.35}
+  .brand{background:rgba(255,255,255,.08);border:.5mm solid rgba(255,255,255,.18);border-radius:6mm;padding:9mm 10mm;display:flex;flex-direction:column;gap:3mm}
+  .brand .wordmark{display:flex;align-items:center;gap:4mm;font-size:54pt;font-weight:800;letter-spacing:.02em;color:#fff;line-height:1}
+  .brand .wordmark svg{width:20mm;height:20mm;flex:none}
+  .brand .tag{font-size:21pt;font-weight:700;color:#f0c35a}
+  .brand p{font-size:18pt;color:#d7ebe7;line-height:1.35}
+  .brand .contact{font-size:18pt;color:#fff;line-height:1.5;margin-top:1mm;border-top:.4mm solid rgba(255,255,255,.2);padding-top:3mm}
+
+  /* ---------- Body ---------- */
+  main{flex:1;padding:12mm 24mm 0;display:flex;flex-direction:column;gap:9mm;min-height:0}
+  .row{display:grid;gap:9mm}
+  .c3{grid-template-columns:1fr 1fr 1fr}
+  .c2{grid-template-columns:1fr 1fr}
+  .c-addie{grid-template-columns:2fr 1fr}
+  .card{background:#fff;border:.5mm solid var(--line);border-radius:5mm;padding:9mm 10mm}
+  .card.dark{background:var(--teal-800);border-color:var(--teal-800);color:#fff}
+  h2{display:flex;align-items:center;gap:4mm;font-size:37.4pt;font-weight:800;color:var(--teal-700);margin-bottom:5mm;line-height:1.1}
+  h2 .n{flex:none;width:13mm;height:13mm;border-radius:50%;background:var(--teal-700);color:#fff;font-size:22.0pt;display:grid;place-items:center}
+  .card.dark h2{color:#f0c35a}
+  .card.dark h2 .n{background:#f0c35a;color:var(--teal-900)}
+  p,li,td,th,.lbl{font-size:24.2pt;line-height:1.4}
+  p+p{margin-top:3mm}
+  b,strong{font-weight:700}
+  .muted{color:var(--muted)}
+  .note{font-size:18.7pt;line-height:1.4;color:var(--muted);margin-top:4mm}
+
+  .goals{list-style:none;display:flex;flex-direction:column;gap:5mm}
+  .goals li{display:grid;grid-template-columns:12mm 1fr;gap:4mm}
+  .goals .k{width:11mm;height:11mm;border-radius:50%;background:var(--teal-800);color:#fff;font-size:19.9pt;font-weight:700;display:grid;place-items:center;margin-top:1mm}
+  .meth{display:flex;flex-direction:column;gap:2.4mm}
+  .meth p{margin:0}
+  .meth b{color:var(--teal-700)}
+  .ctx{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:5mm}
+  .ctx div{background:var(--teal-50);border-radius:3mm;padding:4mm 5mm}
+  .ctx .v{font-size:37.4pt;font-weight:800;color:var(--teal-700);line-height:1.05}
+  .ctx .d{font-size:17.7pt;color:var(--muted);line-height:1.3;margin-top:1mm}
+
+  /* KPI */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:9mm}
+  .kpi{background:var(--teal-800);border-radius:5mm;padding:7mm 9mm;color:#fff}
+  .kpi .v{font-size:70.5pt;font-weight:800;color:#f0c35a;line-height:1}
+  .kpi .d{font-size:22.0pt;line-height:1.3;margin-top:2mm;color:#e1efec}
+
+  /* ADDIE */
+  .addie{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;position:relative}
+  .step{position:relative;background:var(--teal-50);border-radius:4mm;padding:6mm 5mm 5mm;text-align:center}
+  .step:not(:last-child)::after{content:"";position:absolute;right:-4.6mm;top:13mm;border:3mm solid transparent;border-left:3.6mm solid var(--teal-500);z-index:2}
+  .step .ltr{width:18mm;height:18mm;margin:0 auto 3mm;border-radius:50%;border:1.2mm solid var(--teal-700);color:var(--teal-700);font-weight:800;font-size:33.1pt;display:grid;place-items:center;background:#fff}
+  .step.on .ltr{background:var(--teal-700);color:#fff}
+  .step.focus{background:var(--gold-100);outline:.7mm solid var(--gold)}
+  .step.focus .ltr{background:var(--gold);border-color:var(--gold);color:#fff}
+  .step h3{font-size:23.2pt;font-weight:800;color:var(--teal-800);line-height:1.15}
+  .step p{font-size:18.1pt;line-height:1.35;color:var(--muted);margin-top:2mm}
+  .legend{display:flex;gap:8mm;margin-top:4mm;font-size:17.7pt;color:var(--muted)}
+  .legend span::before{content:"";display:inline-block;width:5mm;height:5mm;border-radius:50%;margin-right:2mm;vertical-align:-.5mm;background:var(--c)}
+
+  .feat{list-style:none;display:flex;flex-direction:column;gap:3.6mm}
+  .feat li{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start;font-size:22.0pt;line-height:1.35}
+  .feat svg{width:11mm;height:11mm}
+
+  /* bar tables */
+  .bars{width:100%;border-collapse:collapse}
+  .bars th{font-size:17.7pt;font-weight:700;color:var(--muted);text-align:left;padding:0 0 2mm;border-bottom:.4mm solid var(--line)}
+  .bars th.r,.bars td.r{text-align:right;white-space:nowrap}
+  .bars td{padding:1.9mm 0;vertical-align:middle;font-size:22.0pt}
+  .bars td.lbl{width:34%;padding-right:4mm;line-height:1.2}
+  .bars td.bar{width:38%;padding-right:5mm}
+  .bars td.r{padding-left:3mm}
+  .track{height:6.5mm;background:var(--track);border-radius:4mm;overflow:hidden}
+  .fill{height:100%;background:var(--teal-700);border-radius:4mm}
+  .fill.g{background:var(--gold)}
+  .fill.d{background:var(--teal-900)}
+  tr.hl td{font-weight:800}
+  .callout{background:var(--teal-100);border-left:2mm solid var(--teal-700);border-radius:2mm;padding:4mm 6mm;margin-top:5mm;font-size:20.9pt;line-height:1.4}
+
+  /* timeline */
+  .tl{display:flex;flex-direction:column;gap:3.6mm}
+  .tl .it{display:grid;grid-template-columns:56mm 1fr;gap:5mm;align-items:start}
+  .tl .when{background:var(--teal-100);color:var(--teal-800);font-weight:800;font-size:20.9pt;border-radius:2.5mm;padding:2.5mm 4mm;line-height:1.2}
+  .tl p{font-size:20.9pt;line-height:1.38}
+  .tl .m{color:var(--gold);font-weight:800}
+  .tl .f{color:var(--teal-700);font-weight:800}
+
+  /* relations table */
+  .rel{width:100%;border-collapse:collapse}
+  .rel th{background:var(--teal-800);color:#fff;font-size:19.9pt;font-weight:700;text-align:left;padding:3mm 3.5mm}
+  .rel td{font-size:20.4pt;padding:2.7mm 3.5mm;border-bottom:.4mm solid var(--line);line-height:1.25}
+  .rel .r{text-align:right;white-space:nowrap}
+  .rel td:nth-child(2){white-space:nowrap}
+  .rel td.p{font-weight:800;color:var(--teal-700)}
+
+  /* grouped bars */
+  .grp{display:flex;flex-direction:column;gap:4.2mm}
+  .grp .t{font-size:21.5pt;font-weight:700;margin-bottom:1.5mm}
+  .grp .ln{display:grid;grid-template-columns:1fr 26mm;gap:4mm;align-items:center;margin-top:1.4mm}
+  .grp .ln span{font-size:19.9pt;text-align:right}
+  .key{display:flex;gap:7mm;font-size:19.9pt;margin-bottom:4mm}
+  .key i{display:inline-block;width:6mm;height:6mm;border-radius:1.2mm;margin-right:2mm;vertical-align:-.8mm}
+
+  .bul{list-style:none;display:flex;flex-direction:column;gap:3mm}
+  .bul li{position:relative;padding-left:7mm;font-size:23.2pt;line-height:1.4}
+  .bul li::before{content:"";position:absolute;left:0;top:3.4mm;width:3mm;height:3mm;border-radius:50%;background:#f0c35a}
+  .card:not(.dark) .bul li::before{background:var(--teal-700)}
+
+  .access{display:grid;grid-template-columns:52mm 1fr;gap:6mm;align-items:center}
+  .qr{width:52mm;height:52mm;border:.8mm dashed var(--muted);border-radius:3mm;display:grid;place-items:center;font-size:17.7pt;color:var(--muted);text-align:center}
+  .access ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:2mm}
+  .access li{counter-increment:s;font-size:20.9pt;line-height:1.35;padding-left:9mm;position:relative}
+  .access li::before{content:counter(s);position:absolute;left:0;top:.6mm;width:6.5mm;height:6.5mm;border-radius:50%;background:var(--gold);color:#fff;font-size:14.3pt;font-weight:800;display:grid;place-items:center}
+  .link{font-size:22.0pt;font-weight:800;color:var(--teal-700);margin-bottom:2mm}
+  .sub{font-size:24.2pt;font-weight:800;color:var(--teal-700);margin:6mm 0 2.5mm;padding-top:5mm;border-top:.4mm solid var(--line)}
+  .kw{font-size:19.9pt;line-height:1.4;color:var(--muted)}
+  .kw b{color:var(--ink)}
+
+  footer{margin-top:9mm;background:var(--teal-900);color:#d7ebe7;padding:6mm 24mm;display:flex;justify-content:space-between;align-items:center;font-size:20.9pt}
+  footer b{color:#f0c35a}
+  main>.row{flex:1 1 auto}
+  .fill-row{flex:1}
+  .stretch{display:flex;flex-direction:column}
+</style>
+</head>
+<body>
+<div class="poster">
+
+<header>
+  <div class="logo">Logo<br>IPB University</div>
+  <div>
+    <div class="eyebrow">Seminar Sekolah Pascasarjana IPB · Program Studi Ilmu Gizi</div>
+    <h1>Pengembangan Media Edukasi Gizi Online SHINING bagi Calon Pengantin</h1>
+    <div class="subtitle">Evaluasi Proses Implementasi dan Pola Penggunaan Media Sosial</div>
+    <div class="authors">Marhamah<sup>1</sup>, Hardinsyah<sup>2</sup>, Cesilia Meti Dwiriani<sup>2</sup>, Lilik Kustiyah<sup>2</sup>, Irman Hermadi<sup>3</sup></div>
+    <div class="affil"><sup>1</sup>Program Doktor Ilmu Gizi, FKGiz IPB &nbsp;·&nbsp; <sup>2</sup>Program Studi Ilmu Gizi, FKGiz IPB &nbsp;·&nbsp; <sup>3</sup>Program Studi Ilmu Komputer, FMIPA IPB</div>
+  </div>
+  <div class="brand">
+    <div class="wordmark">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><g stroke="#f0c35a" stroke-width="3" stroke-linecap="round"><line x1="20" y1="2" x2="20" y2="8"/><line x1="20" y1="32" x2="20" y2="38"/><line x1="2" y1="20" x2="8" y2="20"/><line x1="32" y1="20" x2="38" y2="20"/><line x1="7.3" y1="7.3" x2="11.5" y2="11.5"/><line x1="28.5" y1="28.5" x2="32.7" y2="32.7"/><line x1="7.3" y1="32.7" x2="11.5" y2="28.5"/><line x1="28.5" y1="11.5" x2="32.7" y2="7.3"/></g><circle cx="20" cy="20" r="8" fill="#f0c35a"/></svg>
+      SHINING
+    </div>
+    <div class="tag">Sehat Sebelum Hamil itu Penting</div>
+    <p>Edukasi gizi prakonsepsi daring bagi calon pengantin berbasis <i>Health Belief Model</i> (HBM)</p>
+    <div class="contact">✉ am_marhamah@apps.ipb.ac.id<br>☏ WA 0813-8172-4884</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Row 1 -->
+  <div class="row c3">
+    <section class="card">
+      <h2><span class="n">1</span>Latar Belakang</h2>
+      <p>Masa prakonsepsi adalah periode kritis untuk memperbaiki gizi calon ayah dan calon ibu. Sekitar separuh orang dewasa Indonesia mengalami berat badan lebih atau obesitas, sementara misinformasi gizi menyebar luas di media sosial.</p>
+      <p>Bukti tentang penggunaan media sosial calon pengantin (catin) dan kinerja platform edukasi prakonsepsi daring di Indonesia masih terbatas.</p>
+      <div class="ctx">
+        <div><div class="v">221,5 jt</div><div class="d">pengguna internet Indonesia (APJII, 2024)</div></div>
+        <div><div class="v">±50%</div><div class="d">orang dewasa Indonesia berat badan lebih/obesitas</div></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2><span class="n">2</span>Tujuan</h2>
+      <ul class="goals">
+        <li><span class="k">1</span><p>Menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan indeks massa tubuh (IMT).</p></li>
+        <li><span class="k">2</span><p>Mengevaluasi pengembangan dan penerapan platform web SHINING pada kelompok kontrol.</p></li>
+      </ul>
+      <div class="sub">Kata kunci</div>
+      <p class="kw"><b>calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i>, evaluasi proses</b></p>
+    </section>
+    <section class="card">
+      <h2><span class="n">3</span>Metode</h2>
+      <div class="meth">
+        <p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p>
+        <p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p>
+        <p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p>
+        <p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p>
+        <p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p>
+        <p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- KPI -->
+  <div class="kpis">
+    <div class="kpi"><div class="v">198</div><div class="d">catin memenuhi syarat</div></div>
+    <div class="kpi"><div class="v">38,9%</div><div class="d">menyelesaikan keenam instrumen sesi 1</div></div>
+    <div class="kpi"><div class="v">73,0%</div><div class="d">mengakses media sosial hampir tiap jam</div></div>
+    <div class="kpi"><div class="v">59,5%</div><div class="d">pengetahuan gizi prakonsepsi baik</div></div>
+    <div class="kpi"><div class="v">51,4%</div><div class="d">berat badan lebih atau obesitas</div></div>
+  </div>
+
+  <!-- ADDIE + platform -->
+  <div class="row c-addie">
+    <section class="card">
+      <h2><span class="n">4</span>Alur Penelitian (Model ADDIE)</h2>
+      <div class="addie">
+        <div class="step on"><div class="ltr">A</div><h3>Analisis kebutuhan</h3><p>Kajian literatur, survei awal, analisis kebutuhan catin</p></div>
+        <div class="step on"><div class="ltr">D</div><h3>Desain media</h3><p>Rancangan konten dan alur berbasis HBM</p></div>
+        <div class="step on"><div class="ltr">D</div><h3>Pengembangan</h3><p>Platform web SHINING, materi edukasi, dan instrumen daring</p></div>
+        <div class="step focus"><div class="ltr">I</div><h3>Implementasi</h3><p>Rekrutmen catin, uji lapangan, perbaikan berulang</p></div>
+        <div class="step focus"><div class="ltr">E</div><h3>Evaluasi</h3><p>Evaluasi proses dan pola penggunaan media sosial</p></div>
+      </div>
+      <div class="legend"><span style="--c:var(--teal-700)">Tahap selesai</span><span style="--c:var(--gold)">Fokus poster ini</span></div>
+    </section>
+    <section class="card">
+      <h2><span class="n">5</span>Platform SHINING</h2>
+      <ul class="feat">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#16655d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2"/><path d="M8 7h8M8 11h6"/></svg><span>Materi gizi prakonsepsi berbasis bukti dan konstruk HBM</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#16655d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg><span>Web ramah HP; masuk cukup dengan nama dan nomor WhatsApp</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#16655d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg><span>Progres dan draf tersimpan otomatis per nomor HP</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#16655d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Instrumen evaluasi terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Hasil 1 + proses -->
+  <div class="row c2">
+    <section class="card">
+      <h2><span class="n">6</span>Hasil 1 · Penyelesaian Instrumen Sesi 1 (n = 198)</h2>
+      <table class="bars">
+        <tr><th>Tahap</th><th></th><th class="r">n (%)</th><th class="r">Median</th></tr>
+        <tr><td class="lbl">Persetujuan</td><td class="bar"><div class="track"><div class="fill" style="width:86.4%"></div></div></td><td class="r">171 (86,4)</td><td class="r">–</td></tr>
+        <tr><td class="lbl">Formulir identitas</td><td class="bar"><div class="track"><div class="fill" style="width:81.3%"></div></div></td><td class="r">161 (81,3)</td><td class="r">1,9 mnt</td></tr>
+        <tr class="hl"><td class="lbl">Tes pengetahuan</td><td class="bar"><div class="track"><div class="fill g" style="width:54%"></div></div></td><td class="r">107 (54,0)</td><td class="r">16,7 mnt</td></tr>
+        <tr><td class="lbl">Skala sikap HBM</td><td class="bar"><div class="track"><div class="fill" style="width:48.5%"></div></div></td><td class="r">96 (48,5)</td><td class="r">3,0 mnt</td></tr>
+        <tr><td class="lbl">FFQ</td><td class="bar"><div class="track"><div class="fill" style="width:46.5%"></div></div></td><td class="r">92 (46,5)</td><td class="r">5,5 mnt</td></tr>
+        <tr><td class="lbl">Media sosial</td><td class="bar"><div class="track"><div class="fill" style="width:41.4%"></div></div></td><td class="r">82 (41,4)</td><td class="r">3,2 mnt</td></tr>
+        <tr><td class="lbl">IPAQ-SF</td><td class="bar"><div class="track"><div class="fill" style="width:41.4%"></div></div></td><td class="r">82 (41,4)</td><td class="r">1,8 mnt</td></tr>
+        <tr class="hl"><td class="lbl">Keenam instrumen</td><td class="bar"><div class="track"><div class="fill d" style="width:38.9%"></div></div></td><td class="r">77 (38,9)</td><td class="r">–</td></tr>
+      </table>
+      <p class="note">Penurunan terbesar terjadi sebelum tes pengetahuan, instrumen terpanjang. Kiriman berulang mencapai 13,8% rekaman.</p>
+      <div class="callout"><b>Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</div>
+    </section>
+    <section class="card">
+      <h2><span class="n">7</span>Proses Pengembangan Platform</h2>
+      <div class="tl">
+        <div class="it"><div class="when">Akhir Juli</div><p><span class="m">Masalah:</span> persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta. <span class="f">Perbaikan:</span> skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda.</p></div>
+        <div class="it"><div class="when">Agustus</div><p><span class="m">Uji kemudahan:</span> 15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner. <span class="f">Catatan:</span> tidak menangkap masalah yang kemudian muncul di lapangan.</p></div>
+        <div class="it"><div class="when">Awal Oktober</div><p><span class="m">Masalah:</span> progres hilang saat berganti HP; isian kosong. <span class="f">Perbaikan:</span> progres dilacak per nomor HP; validasi isian; kirim ulang otomatis.</p></div>
+        <div class="it"><div class="when">Pertengahan Oktober</div><p><span class="m">Masalah:</span> blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap. <span class="f">Perbaikan:</span> simpan draf otomatis; blok wajib; persetujuan berlapis.</p></div>
+        <div class="it"><div class="when">Akhir Oktober</div><p><span class="m">Status:</span> pendaftaran kelompok kontrol ditutup. <span class="f">Tindak lanjut:</span> data dikunci untuk analisis.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Hasil 2 -->
+  <div class="row c3">
+    <section class="card">
+      <h2><span class="n">8</span>Hasil 2 · Media Sosial (n = 74)</h2>
+      <table class="bars">
+        <tr><td class="lbl">WhatsApp utama</td><td class="bar"><div class="track"><div class="fill" style="width:59.5%"></div></div></td><td class="r">59,5%</td></tr>
+        <tr><td class="lbl">TikTok/Instagram</td><td class="bar"><div class="track"><div class="fill" style="width:33.8%"></div></div></td><td class="r">33,8%</td></tr>
+        <tr><td class="lbl">Akses ±tiap jam</td><td class="bar"><div class="track"><div class="fill" style="width:73%"></div></div></td><td class="r">73,0%</td></tr>
+        <tr><td class="lbl">Durasi ≥3 jam/hari</td><td class="bar"><div class="track"><div class="fill" style="width:51.4%"></div></div></td><td class="r">51,4%</td></tr>
+        <tr><td class="lbl">Akun nakes/resmi</td><td class="bar"><div class="track"><div class="fill" style="width:75.7%"></div></div></td><td class="r">75,7%</td></tr>
+        <tr><td class="lbl">Influencer</td><td class="bar"><div class="track"><div class="fill g" style="width:39.2%"></div></div></td><td class="r">39,2%</td></tr>
+        <tr><td class="lbl">Tertarik produk promosi</td><td class="bar"><div class="track"><div class="fill g" style="width:71.6%"></div></div></td><td class="r">71,6%</td></tr>
+      </table>
+      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
+    </section>
+    <section class="card">
+      <h2><span class="n">9</span>Hubungan yang Bermakna</h2>
+      <table class="rel">
+        <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
+        <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r">0,414</td><td class="r p">&lt;0,001</td></tr>
+        <tr><td>Memeriksa kebenaran informasi</td><td>Sikap HBM</td><td class="r">0,287</td><td class="r p">0,014</td></tr>
+        <tr><td>Platform utama (WhatsApp terendah)<sup>a</sup></td><td>Sikap HBM</td><td class="r">–</td><td class="r p">0,006</td></tr>
+        <tr><td>Durasi harian media sosial</td><td>IMT</td><td class="r">−0,331</td><td class="r p">0,004</td></tr>
+        <tr><td>Sumber akun nakes/resmi<sup>b</sup></td><td>IMT</td><td class="r">–</td><td class="r p">0,022</td></tr>
+      </table>
+      <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
+    </section>
+    <section class="card">
+      <h2><span class="n">10</span>Menurut Peran Catin</h2>
+      <div class="key"><span><i style="background:var(--teal-700)"></i>Laki-laki (n = 30)</span><span><i style="background:var(--gold)"></i>Perempuan (n = 44)</span></div>
+      <div class="grp">
+        <div><div class="t">WhatsApp platform utama*</div>
+          <div class="ln"><div class="track"><div class="fill" style="width:73.3%"></div></div><span>73,3%</span></div>
+          <div class="ln"><div class="track"><div class="fill g" style="width:50%"></div></div><span>50,0%</span></div></div>
+        <div><div class="t">TikTok/Instagram platform utama*</div>
+          <div class="ln"><div class="track"><div class="fill" style="width:20%"></div></div><span>20,0%</span></div>
+          <div class="ln"><div class="track"><div class="fill g" style="width:43.2%"></div></div><span>43,2%</span></div></div>
+        <div><div class="t">Durasi ≥3 jam/hari*</div>
+          <div class="ln"><div class="track"><div class="fill" style="width:36.7%"></div></div><span>36,7%</span></div>
+          <div class="ln"><div class="track"><div class="fill g" style="width:61.4%"></div></div><span>61,4%</span></div></div>
+        <div><div class="t">Sikap positif (p = 0,053)</div>
+          <div class="ln"><div class="track"><div class="fill" style="width:53.3%"></div></div><span>53,3%</span></div>
+          <div class="ln"><div class="track"><div class="fill g" style="width:75%"></div></div><span>75,0%</span></div></div>
+      </div>
+      <p class="note">*p &lt; 0,05 (khi-kuadrat)</p>
+    </section>
+  </div>
+
+  <!-- Simpulan / Saran / Akses -->
+  <div class="row c3 fill-row">
+    <section class="card dark">
+      <h2><span class="n">11</span>Simpulan</h2>
+      <ul class="bul">
+        <li>Penggunaan media sosial catin intensif dan didominasi WhatsApp.</li>
+        <li>Pengetahuan umumnya baik dan berkorelasi dengan sikap HBM, tetapi 51,4% catin berat badan lebih atau obesitas.</li>
+        <li>Platform SHINING layak dikembangkan; perbaikan berulang terbukti menutup celah kehilangan data, sedangkan instrumen yang panjang masih menjadi titik putus utama.</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2><span class="n">12</span>Saran</h2>
+      <p><b>Edukasi:</b> latih verifikasi informasi, arahkan catin ke akun tenaga kesehatan yang kredibel, ingatkan bahaya produk tanpa izin edar, dan manfaatkan WhatsApp sebagai saluran pengingat.</p>
+      <p><b>Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</p>
+    </section>
+    <section class="card">
+      <h2><span class="n">13</span>Akses SHINING</h2>
+      <div class="access">
+        <div class="qr">[QR<br>SHINING]</div>
+        <div>
+          <div class="link">[tautan LMS SHINING]</div>
+          <ol><li>Pindai QR atau buka tautan.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca ringkasan persetujuan, lalu mulai.</li></ol>
+        </div>
+      </div>
+      <div class="sub">Ucapan Terima Kasih</div>
+      <p class="kw">Para calon pengantin peserta penelitian; Pemerintah Kota Binjai, BKKBN, dan KUA; serta tim peneliti dan enumerator lapangan.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <span><b>SHINING</b> · Sehat sebelum hamil itu penting: edukasi gizi ringkas, kredibel, dan mudah diakses bagi calon pengantin</span>
+  <span>IPB University · 2026</span>
+</footer>
+</div>
+</body>
+</html>
