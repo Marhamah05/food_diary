@@ -36,8 +36,8 @@
   .brand .contact{font-size:18pt;color:#fff;line-height:1.5;margin-top:1mm;border-top:.4mm solid rgba(255,255,255,.2);padding-top:3mm}
 
   /* ---------- Body ---------- */
-  main{flex:1;padding:12mm 24mm 0;display:flex;flex-direction:column;gap:9mm;min-height:0}
-  .row{display:grid;gap:9mm}
+  main{flex:1;padding:10mm 24mm 0;display:flex;flex-direction:column;gap:8mm;min-height:0}
+  .row{display:grid;gap:8mm}
   .c3{grid-template-columns:1fr 1fr 1fr}
   .c2{grid-template-columns:1fr 1fr}
   .c-addie{grid-template-columns:2fr 1fr}
@@ -53,7 +53,7 @@
   .muted{color:var(--muted)}
   .note{font-size:18.7pt;line-height:1.4;color:var(--muted);margin-top:4mm}
 
-  .goals{list-style:none;display:flex;flex-direction:column;gap:5mm}
+  .goals{list-style:none;display:flex;flex-direction:column;gap:3mm}
   .goals li{display:grid;grid-template-columns:12mm 1fr;gap:4mm}
   .goals .k{width:11mm;height:11mm;border-radius:50%;background:var(--teal-800);color:#fff;font-size:19.9pt;font-weight:700;display:grid;place-items:center;margin-top:1mm}
   .meth{display:flex;flex-direction:column;gap:2.4mm}
@@ -66,7 +66,7 @@
 
   /* KPI */
   .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:9mm}
-  .kpi{background:var(--teal-800);border-radius:5mm;padding:7mm 9mm;color:#fff}
+  .kpi{background:var(--teal-800);border-radius:5mm;padding:6mm 9mm;color:#fff}
   .kpi .v{font-size:70.5pt;font-weight:800;color:#f0c35a;line-height:1}
   .kpi .d{font-size:22.0pt;line-height:1.3;margin-top:2mm;color:#e1efec}
 
@@ -142,6 +142,13 @@
   .kw{font-size:19.9pt;line-height:1.4;color:var(--muted)}
   .kw b{color:var(--ink)}
 
+  .browser{width:166mm;margin:0 auto;border:.6mm solid var(--line);border-radius:4mm;overflow:hidden;box-shadow:0 2mm 5mm rgba(12,63,58,.15);background:#fff}
+  .browser .bar{display:flex;align-items:center;gap:2mm;background:var(--teal-100);padding:2.5mm 4mm}
+  .browser .bar i{width:3.2mm;height:3.2mm;border-radius:50%;background:#c9d8d4}
+  .browser .bar span{margin-left:3mm;flex:1;background:#fff;border-radius:3mm;padding:1mm 4mm;font-size:14pt;color:var(--muted)}
+  .browser .screen{position:relative;aspect-ratio:985/620;background:var(--teal-50);display:grid;place-items:center}
+  .browser .screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top}
+  .browser .screen span{font-size:16pt;color:var(--muted)}
   footer{margin-top:9mm;background:var(--teal-900);color:#d7ebe7;padding:6mm 24mm;display:flex;justify-content:space-between;align-items:center;font-size:20.9pt}
   footer b{color:#f0c35a}
   main>.row{flex:1 1 auto}
@@ -177,25 +184,17 @@
   <!-- Row 1 -->
   <div class="row c3">
     <section class="card">
-      <h2><span class="n">1</span>Latar Belakang</h2>
-      <p>Masa prakonsepsi adalah periode kritis untuk memperbaiki gizi calon ayah dan calon ibu. Sekitar separuh orang dewasa Indonesia mengalami berat badan lebih atau obesitas, sementara misinformasi gizi menyebar luas di media sosial.</p>
-      <p>Bukti tentang penggunaan media sosial calon pengantin (catin) dan kinerja platform edukasi prakonsepsi daring di Indonesia masih terbatas.</p>
-      <div class="ctx">
-        <div><div class="v">221,5 jt</div><div class="d">pengguna internet Indonesia (APJII, 2024)</div></div>
-        <div><div class="v">±50%</div><div class="d">orang dewasa Indonesia berat badan lebih/obesitas</div></div>
-      </div>
-    </section>
-    <section class="card">
-      <h2><span class="n">2</span>Tujuan</h2>
+      <h2><span class="n">1</span>Latar Belakang dan Tujuan</h2>
+      <p>Masa prakonsepsi adalah periode kritis untuk memperbaiki gizi calon ayah dan calon ibu. Sekitar separuh orang dewasa Indonesia mengalami berat badan lebih atau obesitas, sementara misinformasi gizi menyebar luas di media sosial. Bukti tentang penggunaan media sosial calon pengantin (catin) dan kinerja platform edukasi prakonsepsi daring di Indonesia masih terbatas.</p>
+      <div class="sub" style="margin-top:3mm;padding-top:3mm">Tujuan penelitian</div>
       <ul class="goals">
         <li><span class="k">1</span><p>Menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan indeks massa tubuh (IMT).</p></li>
         <li><span class="k">2</span><p>Mengevaluasi pengembangan dan penerapan platform web SHINING pada kelompok kontrol.</p></li>
       </ul>
-      <div class="sub">Kata kunci</div>
-      <p class="kw"><b>calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i>, evaluasi proses</b></p>
+      <p class="kw" style="margin-top:2.5mm"><b>Kata kunci:</b> calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i>, evaluasi proses</p>
     </section>
     <section class="card">
-      <h2><span class="n">3</span>Metode</h2>
+      <h2><span class="n">2</span>Metode</h2>
       <div class="meth">
         <p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p>
         <p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p>
@@ -204,6 +203,14 @@
         <p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p>
         <p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p>
       </div>
+    </section>
+    <section class="card">
+      <h2><span class="n">3</span>Tampilan Laman SHINING</h2>
+      <figure class="browser">
+        <div class="bar"><i></i><i></i><i></i><span>mulai.edukasi-catin.id</span></div>
+        <div class="screen"><img src="laman-shining.png" alt="Laman awal SHINING" onerror="this.remove()"><span>Tangkapan layar laman SHINING</span></div>
+      </figure>
+      <p class="note" style="text-align:center">Laman awal SHINING: “Siap memulai hidup baru bersama pasangan?”</p>
     </section>
   </div>
 
