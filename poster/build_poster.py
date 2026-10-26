@@ -55,22 +55,22 @@ body{font-family:"Plus Jakarta Sans","Inter",sans-serif;color:var(--ink);-webkit
 
 /* header */
 header{padding:0 24mm 9mm;display:grid;grid-template-columns:118mm 1fr 196mm;gap:10mm;align-items:center}
-.pill{grid-column:1/-1;justify-self:center;background:var(--navy);color:#fff;font-weight:800;font-size:21pt;letter-spacing:.06em;padding:3.4mm 16mm;border-radius:0 0 8mm 8mm;margin-bottom:4mm}
+.pill{grid-column:1/-1;justify-self:center;background:linear-gradient(90deg,var(--dark),var(--green));color:#fff;font-weight:800;font-size:21pt;letter-spacing:.06em;padding:3.4mm 16mm;border-radius:0 0 8mm 8mm;margin-bottom:4mm}
 .ipb{display:flex;flex-direction:column;align-items:center;gap:3mm}
 .ipb img{width:60mm;height:60mm}
 .ipb .wm{font-size:40pt;font-weight:800;color:var(--navy);line-height:1}
 .ipb .loc{font-size:17pt;color:var(--muted)}
 .ttl{text-align:center}
-h1{font-size:66pt;line-height:1.05;font-weight:800;color:var(--navy);letter-spacing:-.01em}
-h1 .sh{color:var(--green)}
-.subtitle{font-size:31pt;font-weight:700;color:var(--blue);margin-top:4mm;line-height:1.2}
+h1{font-size:66pt;line-height:1.05;font-weight:800;color:var(--dark);letter-spacing:-.01em}
+h1 .sh{color:var(--dark)}
+.subtitle{font-size:31pt;font-weight:800;color:var(--dark);margin-top:4mm;line-height:1.2}
 .authors{font-size:25pt;font-weight:700;margin-top:5mm}
 .authors sup,.affil sup{font-size:.6em}
 .affil{font-size:17pt;color:var(--muted);margin-top:1.5mm;line-height:1.35}
 .side{display:flex;flex-direction:column;gap:4mm}
 .contact{display:flex;flex-direction:column;gap:2.4mm}
 .contact div{display:grid;grid-template-columns:10mm 1fr;gap:3mm;align-items:center;font-size:18pt;line-height:1.3}
-.contact .ci{width:10mm;height:10mm;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.contact .ci{width:10mm;height:10mm;border-radius:50%;background:var(--blue);display:grid;place-items:center}
 .contact .ci svg{width:6mm;height:6mm}
 .brand{background:var(--sky);border:.6mm solid #c7dbf3;border-radius:5mm;padding:5mm 7mm}
 .brand .wm2{display:flex;align-items:center;gap:3mm;font-size:38pt;font-weight:800;color:var(--navy);line-height:1}
@@ -255,7 +255,7 @@ html = f'''<!doctype html>
 {decos}
 <header>
   <div class="pill">SEMINAR SEKOLAH PASCASARJANA IPB · PROGRAM STUDI ILMU GIZI</div>
-  <div class="ipb"><img src="logo-ipb.png" alt="Logo IPB University"><div class="wm">IPB University</div><div class="loc">— Bogor, Indonesia —</div></div>
+  <div class="ipb"><img src="logo-ipb.png" alt="Logo IPB University"><div class="wm">IPB University</div><div class="loc">—— Bogor Indonesia ——</div></div>
   <div class="ttl">
     <h1>Pengembangan Media Edukasi Gizi Online <span class="sh">SHINING</span> bagi Calon Pengantin</h1>
     <div class="subtitle">Evaluasi Proses Implementasi dan Pola Penggunaan Media Sosial</div>
@@ -264,11 +264,11 @@ html = f'''<!doctype html>
   </div>
   <div class="side">
     <div class="contact">
-      <div><span class="ci">{ic('pin','#fff')}</span>Program Studi Ilmu Gizi, IPB University, Kampus Dramaga, Bogor</div>
-      <div><span class="ci">{ic('wa','#fff')}</span>WA 0813-8172-4884</div>
+      <div><span class="ci">{ic('pin','#fff')}</span>Program Studi Ilmu Gizi, FKGiz IPB<br>Kampus IPB Dramaga, Bogor, Jawa Barat</div>
+      <div><span class="ci">{ic('wa','#fff')}</span>0813-8172-4884</div>
       <div><span class="ci">{ic('mail','#fff')}</span>am_marhamah@apps.ipb.ac.id</div>
     </div>
-    <div class="brand"><div class="wm2">{sun}SHINING</div><div class="btag">Sehat Sebelum Hamil itu Penting</div><p>Edukasi gizi prakonsepsi daring bagi calon pengantin berbasis <i>Health Belief Model</i> (HBM)</p></div>
+    <div class="brand"><div class="wm2">{sun}SHINING</div><div class="btag">Sehat Sebelum Hamil itu Penting</div><p>Program edukasi gizi prakonsepsi daring berbasis <i>Health Belief Model</i> (HBM)</p></div>
   </div>
 </header>
 <div class="stripe"></div>
