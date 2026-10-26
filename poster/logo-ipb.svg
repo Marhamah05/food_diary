@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <path id="top" d="M 100 100 m -76 0 a 76 76 0 1 1 152 0"/>
+    <path id="topw" d="M 35.5 127 A 71 71 0 1 1 164.5 127"/>
+    <path id="bot" d="M 40 118 A 62 62 0 0 0 160 118"/>
+  </defs>
+  <circle cx="100" cy="100" r="99" fill="#fff"/>
+  <circle cx="100" cy="100" r="97.5" fill="none" stroke="#273c93" stroke-width="1.2"/>
+  <circle cx="100" cy="100" r="95.5" fill="#273c93"/>
+  <g fill="#e9e9ee" font-family="Montserrat, 'Plus Jakarta Sans', Arial, sans-serif" font-weight="500" font-size="15.5">
+    <text letter-spacing="7"><textPath href="#topw" startOffset="50%" text-anchor="middle">INSTITUT PERTANIAN</textPath></text>
+    <text letter-spacing="6"><textPath href="#bot" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">BOGOR</textPath></text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- top bud -->
+    <path d="M100 40 C 88 50, 86 62, 100 80 C 114 62, 112 50, 100 40 Z"/>
+    <!-- upper leaves -->
+    <path d="M97 84 C 88 72, 72 70, 62 76 C 70 88, 86 92, 97 84 Z"/>
+    <path d="M103 84 C 112 72, 128 70, 138 76 C 130 88, 114 92, 103 84 Z"/>
+    <!-- lower leaves -->
+    <path d="M97 112 C 92 98, 74 90, 56 94 C 66 110, 82 118, 97 112 Z"/>
+    <path d="M103 112 C 108 98, 126 90, 144 94 C 134 110, 118 118, 103 112 Z"/>
+    <!-- stem -->
+    <path d="M100 80 C 96 88, 95 96, 96 106 M100 80 C 104 88, 105 96, 104 106"/>
+  </g>
+  <g stroke="#fff" stroke-width="3.6" stroke-linecap="butt">
+    <line x1="93.5" y1="113" x2="94.5" y2="140"/><line x1="100" y1="110" x2="100" y2="144"/><line x1="106.5" y1="113" x2="105.5" y2="140"/>
+  </g>
+  <path d="M60 145 L 61.5 152 C 72 150, 80 151, 90 155 C 95 157, 98 160, 100 162 C 102 160, 105 157, 110 155 C 120 151, 128 150, 138.5 152 L 140 145 C 128 147, 120 146, 110 149 C 105 150.5, 102 153, 100 154 C 98 153, 95 150.5, 90 149 C 80 146, 72 147, 60 145 Z" fill="#fff"/>
+</svg>

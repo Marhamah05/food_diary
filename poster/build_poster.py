@@ -255,7 +255,7 @@ html = f'''<!doctype html>
 {decos}
 <header>
   <div class="pill">SEMINAR SEKOLAH PASCASARJANA IPB · PROGRAM STUDI ILMU GIZI</div>
-  <div class="ipb"><img src="logo-ipb.png" alt="Logo IPB University"><div class="wm">IPB University</div><div class="loc">—— Bogor Indonesia ——</div></div>
+  <div class="ipb"><img src="logo-ipb.svg" alt="Logo IPB University"><div class="wm">IPB University</div><div class="loc">—— Bogor Indonesia ——</div></div>
   <div class="ttl">
     <h1>Pengembangan Media Edukasi Gizi Online <span class="sh">SHINING</span> bagi Calon Pengantin</h1>
     <div class="subtitle">Evaluasi Proses Implementasi dan Pola Penggunaan Media Sosial</div>
