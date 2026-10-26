@@ -104,8 +104,9 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .col>.access .qr{width:42mm;height:42mm}
 .storyv{grid-template-columns:1fr!important;gap:0}
 .storyv .arr{font-size:20pt;line-height:1;padding:1mm 0}
-.storyv .pan{gap:2mm}
-.storyv .st{grid-template-columns:40mm 1fr}
+.storyv .pan{gap:2mm;display:grid!important;grid-template-columns:1fr 1fr;column-gap:3mm}
+.storyv .pan>.ph,.storyv .pan>p,.storyv .pan>.find,.storyv .pan>.gap{grid-column:1/-1}
+.storyv .st{grid-template-columns:auto 1fr}
 .platv .feat{margin-top:3mm}
 .procv{display:flex;flex-direction:column;align-items:center;gap:4mm}
 .procv .cyc svg{width:100mm;height:100mm}
@@ -115,6 +116,13 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .vw .dot{position:absolute;left:-11.3mm;top:.5mm;width:9mm;height:9mm;border-radius:50%;background:var(--c);color:#fff;font-size:16.8pt;display:grid;place-items:center;border:.8mm solid #fff}
 .vi .box{font-size:18.0pt;margin:0!important}
 .col>.access{flex:none}
+.proch{display:grid;grid-template-columns:95mm 1fr;gap:6mm;align-items:center}
+.proch .cyc svg{width:95mm;height:95mm}
+.pair{display:grid;grid-template-columns:1fr 1.15fr;gap:7mm;flex:none}
+.pair>.card{padding-bottom:6mm}
+.pair .access{grid-template-columns:40mm 1fr;gap:5mm;padding:5mm 6mm}
+.pair .access .qr{width:40mm;height:40mm}
+.grp{display:grid!important;grid-template-columns:1fr 1fr;column-gap:9mm}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
@@ -226,27 +234,6 @@ tr.hl td{font-weight:800}
 footer{margin-top:4mm;background:var(--dark);color:#e6f4ee;padding:5.5mm 24mm;display:flex;justify-content:center;gap:6mm;align-items:center;font-size:20pt;font-weight:600}
 footer b{color:#bfe6ea}
 footer svg{width:8mm;height:8mm}
-
-/* spacing for column layout */
-.bars td{padding:2.8mm 0!important}
-.track{height:9mm!important}
-.grp{gap:6mm!important}.grp .ln{margin-top:2mm!important}
-.rel td{padding:3.4mm 3mm!important}
-.bul{gap:4.5mm!important}
-.meth{gap:4mm!important}
-.abs{gap:3.5mm!important}
-.abs p,.meth p,.bul li,.feat li{line-height:1.5!important}
-.storyv .pan{gap:3mm!important;padding-bottom:5mm!important}
-.st{padding:3mm 4mm!important}
-.vtl{gap:4mm!important}
-.vi .box{padding:3.2mm 4mm!important;line-height:1.4!important}
-.procv .cyc svg{width:120mm!important;height:120mm!important}
-.card{padding-bottom:10mm!important}
-.col{gap:9mm!important}
-h2.bn{margin-bottom:7mm!important}
-.platv .feat{gap:4.5mm!important;margin-top:5mm!important}
-.callout{margin-top:6mm!important}
-.note{margin-top:5mm!important}
 </style></head>
 <body><div class="poster">
 <svg class="deco" style="left:-14mm;top:-6mm;width:70mm;height:70mm;opacity:0.22;transform:rotate(-35deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#8fa3b5"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:30mm;top:-16mm;width:46mm;height:46mm;opacity:0.16;transform:rotate(20deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#b9bec4"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:790mm;top:150mm;width:66mm;height:66mm;opacity:0.18;transform:rotate(40deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#8fa3b5"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:812mm;top:118mm;width:40mm;height:40mm;opacity:0.14;transform:rotate(-10deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#b9bec4"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:-18mm;top:560mm;width:60mm;height:60mm;opacity:0.14;transform:rotate(-60deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#8fa3b5"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:800mm;top:640mm;width:56mm;height:56mm;opacity:0.14;transform:rotate(60deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#b9bec4"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:-12mm;top:1080mm;width:70mm;height:70mm;opacity:0.18;transform:rotate(-120deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#8fa3b5"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg><svg class="deco" style="left:790mm;top:1090mm;width:64mm;height:64mm;opacity:0.18;transform:rotate(130deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="#8fa3b5"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg>
@@ -271,7 +258,7 @@ h2.bn{margin-bottom:7mm!important}
 <div class="stripe"></div>
 
 <main>
-  <div class="row c3 masonry">
+  <div class="row masonry" style="grid-template-columns:1fr 1fr">
     <div class="col">
     <section class="card">
       <h2 class="bn" style="--c:var(--orange)"><span class="tt">Abstrak</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></span></h2>
@@ -284,6 +271,92 @@ h2.bn{margin-bottom:7mm!important}
       </div>
       <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i></div>
     </section>
+    <section class="card">
+      <h2 class="bn" style="--c:var(--blue)"><span class="n">2</span><span class="tt">Metode</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h4"/></svg></span></h2>
+      <div class="meth">
+        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 5H15a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h7.5"/></svg></span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
+        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
+        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M1 21v-1a7 7 0 0 1 14 0v1"/><path d="M16 4.2a4 4 0 0 1 0 7.6M23 21v-1a7 7 0 0 0-5-6.7"/></svg></span><p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p></div>
+        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h4"/></svg></span><p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p></div>
+        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M22 20H2"/></svg></span><p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p></div>
+        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p></div>
+      </div>
+      <div class="sub" style="--c:var(--green);margin-top:5mm"><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 5H15a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h7.5"/></svg>Alur penelitian (model ADDIE)</div>
+      <div class="mini">
+        <div style="--c:var(--blue)"><b>A</b><span>Analisis</span></div><i>›</i>
+        <div style="--c:var(--teal)"><b>D</b><span>Desain</span></div><i>›</i>
+        <div style="--c:var(--purple)"><b>D</b><span>Pengem-<br>bangan</span></div><i>›</i>
+        <div class="on" style="--c:var(--red)"><b>I</b><span>Implemen-<br>tasi</span></div><i>›</i>
+        <div class="on" style="--c:var(--orange)"><b>E</b><span>Evaluasi</span></div>
+      </div>
+      <p class="note" style="margin-top:2mm">Lingkaran penuh: tahap yang dilaporkan pada poster ini.</p>
+    </section>
+    <section class="card">
+      <h2 class="bn" style="--c:var(--green)"><span class="n">3.2</span><span class="tt">Hasil · Proses Pengembangan Platform</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4L21 8"/><path d="M21 3v5h-5"/></svg></span></h2>
+      <div class="proch">
+        <div class="cyc"><svg viewBox="0 0 200 200">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1b3a8a"/></marker></defs>
+<circle cx="100" cy="100" r="68" fill="none" stroke="#c9d6e8" stroke-width="2" stroke-dasharray="4 4"/>
+<g fill="none" stroke="#1b3a8a" stroke-width="2.4" marker-end="url(#ah)">
+<path d="M126 38 A68 68 0 0 1 160 70"/><path d="M162 128 A68 68 0 0 1 130 160"/><path d="M72 162 A68 68 0 0 1 40 130"/><path d="M38 72 A68 68 0 0 1 70 40"/></g>
+<circle cx="100" cy="100" r="28" fill="#fff" stroke="#2e8a57" stroke-width="3"/>
+<text x="100" y="104" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2e8a57" font-family="Calibri, Carlito, Arial">SHINING</text>
+<circle cx="100" cy="32" r="27" fill="#1f3a68"/><text x="100" y="30.3" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="100" dy="0">Pemantauan</tspan><tspan x="100" dy="8.6">& evaluasi</tspan></text><circle cx="168" cy="100" r="27" fill="#1f8a96"/><text x="168" y="98.3" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="168" dy="0">Perbaikan</tspan><tspan x="168" dy="8.6">sistem</tspan></text><circle cx="100" cy="168" r="27" fill="#5f7a91"/><text x="100" y="166.29999999999998" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="100" dy="0">Deteksi</tspan><tspan x="100" dy="8.6">masalah</tspan></text><circle cx="32" cy="100" r="27" fill="#2e8a57"/><text x="32" y="98.3" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="32" dy="0">Uji</tspan><tspan x="32" dy="8.6">lapangan</tspan></text>
+</svg></div>
+        <div class="vtl">
+          <div class="vi" style="--c:var(--blue)"><div class="vw"><span class="dot">1</span>Akhir Juli</div><div class="box m"><b>Masalah</b>Persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta</div><div class="box f"><b>Perbaikan</b>Skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda</div></div>
+          <div class="vi" style="--c:var(--green)"><div class="vw"><span class="dot">2</span>Agustus</div><div class="box m"><b>Uji kemudahan</b>15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner</div><div class="box f"><b>Catatan</b>Tidak menangkap masalah yang kemudian muncul di lapangan</div></div>
+          <div class="vi" style="--c:var(--purple)"><div class="vw"><span class="dot">3</span>Awal Oktober</div><div class="box m"><b>Masalah</b>Progres hilang saat berganti HP; isian kosong</div><div class="box f"><b>Perbaikan</b>Progres dilacak per nomor HP; validasi isian; kirim ulang otomatis</div></div>
+          <div class="vi" style="--c:var(--orange)"><div class="vw"><span class="dot">4</span>Pertengahan Oktober</div><div class="box m"><b>Masalah</b>Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap</div><div class="box f"><b>Perbaikan</b>Simpan draf otomatis; blok wajib; persetujuan berlapis</div></div>
+          <div class="vi" style="--c:var(--teal)"><div class="vw"><span class="dot">5</span>Akhir Oktober</div><div class="box m"><b>Status</b>Pendaftaran kelompok kontrol ditutup</div><div class="box f"><b>Tindak lanjut</b>Data dikunci untuk analisis</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="card">
+      <h2 class="bn" style="--c:var(--teal)"><span class="n">3.4</span><span class="tt">Penggunaan Media Sosial (n = 74)</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span></h2>
+      <table class="bars">
+        <tr><td class="lbl">WhatsApp utama</td><td class="bar"><div class="track"><div class="fill" style="width:59.5%;--f:var(--green)"></div></div></td><td class="r">59,5%</td></tr>
+        <tr><td class="lbl">TikTok/Instagram</td><td class="bar"><div class="track"><div class="fill" style="width:33.8%;--f:var(--purple)"></div></div></td><td class="r">33,8%</td></tr>
+        <tr><td class="lbl">Akses ±tiap jam</td><td class="bar"><div class="track"><div class="fill" style="width:73%;--f:var(--blue)"></div></div></td><td class="r">73,0%</td></tr>
+        <tr><td class="lbl">Durasi ≥3 jam/hari</td><td class="bar"><div class="track"><div class="fill" style="width:51.4%;--f:var(--orange)"></div></div></td><td class="r">51,4%</td></tr>
+        <tr><td class="lbl">Akun nakes/resmi</td><td class="bar"><div class="track"><div class="fill" style="width:75.7%;--f:var(--teal)"></div></div></td><td class="r">75,7%</td></tr>
+        <tr><td class="lbl">Influencer</td><td class="bar"><div class="track"><div class="fill" style="width:39.2%;--f:var(--red)"></div></div></td><td class="r">39,2%</td></tr>
+        <tr><td class="lbl">Tertarik produk promosi</td><td class="bar"><div class="track"><div class="fill" style="width:71.6%;--f:var(--pink)"></div></div></td><td class="r">71,6%</td></tr>
+      </table>
+      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
+    </section>
+    <section class="card">
+      <h2 class="bn" style="--c:var(--green)"><span class="n">3.6</span><span class="tt">Hubungan yang Bermakna</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M8.6 7.5l6.8 9M9 6h6"/></svg></span></h2>
+      <table class="rel">
+        <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
+        <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r pos">+0,414</td><td class="r">&lt;0,001</td></tr>
+        <tr><td>Memeriksa kebenaran informasi</td><td>Sikap HBM</td><td class="r pos">+0,287</td><td class="r">0,014</td></tr>
+        <tr><td>Platform utama (WhatsApp terendah)<sup>a</sup></td><td>Sikap HBM</td><td class="r na">–</td><td class="r">0,006</td></tr>
+        <tr><td>Durasi harian media sosial</td><td>IMT</td><td class="r neg">−0,331</td><td class="r">0,004</td></tr>
+        <tr><td>Sumber akun nakes/resmi<sup>b</sup></td><td>IMT</td><td class="r na">–</td><td class="r">0,022</td></tr>
+      </table>
+      <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
+    </section>
+    <div class="pair">
+      <section class="card">
+        <h2 class="bn" style="--c:var(--green)"><span class="n">5</span><span class="tt">Ucapan Terima Kasih</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></h2>
+        <ul class="bul">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Para calon pengantin peserta penelitian</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Tim peneliti dan enumerator lapangan</span></li>
+        </ul>
+      </section>
+      <div class="access">
+        <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
+        <div>
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="#bfe6ea" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>Akses SHINING</h3>
+          <div class="link">mulai.edukasi-catin.id</div>
+          <ol><li>Pindai QR atau buka tautan.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca persetujuan, lalu mulai.</li></ol>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col">
     <section class="card">
       <h2 class="bn" style="--c:var(--green)"><span class="n">1</span><span class="tt">Pendahuluan</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span></h2>
       <div class="story storyv">
@@ -317,30 +390,8 @@ h2.bn{margin-bottom:7mm!important}
       <p class="note" style="text-align:center;font-style:italic;margin-top:2.5mm">Gambar 1. Alur masalah yang melatarbelakangi penelitian</p>
     </section>
     <section class="card">
-      <h2 class="bn" style="--c:var(--blue)"><span class="n">2</span><span class="tt">Metode</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h4"/></svg></span></h2>
-      <div class="meth">
-        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 5H15a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h7.5"/></svg></span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
-        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
-        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M1 21v-1a7 7 0 0 1 14 0v1"/><path d="M16 4.2a4 4 0 0 1 0 7.6M23 21v-1a7 7 0 0 0-5-6.7"/></svg></span><p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p></div>
-        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h4"/></svg></span><p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p></div>
-        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M22 20H2"/></svg></span><p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p></div>
-        <div><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#1f3a68" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p></div>
-      </div>
-      <div class="sub" style="--c:var(--green);margin-top:5mm"><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 5H15a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h7.5"/></svg>Alur penelitian (model ADDIE)</div>
-      <div class="mini">
-        <div style="--c:var(--blue)"><b>A</b><span>Analisis</span></div><i>›</i>
-        <div style="--c:var(--teal)"><b>D</b><span>Desain</span></div><i>›</i>
-        <div style="--c:var(--purple)"><b>D</b><span>Pengem-<br>bangan</span></div><i>›</i>
-        <div class="on" style="--c:var(--red)"><b>I</b><span>Implemen-<br>tasi</span></div><i>›</i>
-        <div class="on" style="--c:var(--orange)"><b>E</b><span>Evaluasi</span></div>
-      </div>
-      <p class="note" style="margin-top:2mm">Lingkaran penuh: tahap yang dilaporkan pada poster ini.</p>
-    </section>
-    </div>
-    <div class="col">
-    <section class="card">
       <h2 class="bn" style="--c:var(--purple)"><span class="n">3.1</span><span class="tt">Hasil · Platform SHINING</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span></h2>
-      <div class="platv"><div><figure class="browser">
+      <div class="platgrid"><div><figure class="browser">
           <div class="bar"><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><span>mulai.edukasi-catin.id</span></div>
           <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
         </figure>
@@ -351,27 +402,6 @@ h2.bn{margin-bottom:7mm!important}
         <li><span class="fi" style="--bg:var(--lilac)"><svg viewBox="0 0 24 24" fill="none" stroke="#5f7a91" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg></span>Progres dan draf tersimpan otomatis per nomor HP</li>
         <li><span class="fi" style="--bg:var(--peach)"><svg viewBox="0 0 24 24" fill="none" stroke="#1f8a96" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
       </ul></div>
-    </section>
-    <section class="card">
-      <h2 class="bn" style="--c:var(--green)"><span class="n">3.2</span><span class="tt">Hasil · Proses Pengembangan Platform</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4L21 8"/><path d="M21 3v5h-5"/></svg></span></h2>
-      <div class="procv">
-        <div class="cyc"><svg viewBox="0 0 200 200">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1b3a8a"/></marker></defs>
-<circle cx="100" cy="100" r="68" fill="none" stroke="#c9d6e8" stroke-width="2" stroke-dasharray="4 4"/>
-<g fill="none" stroke="#1b3a8a" stroke-width="2.4" marker-end="url(#ah)">
-<path d="M126 38 A68 68 0 0 1 160 70"/><path d="M162 128 A68 68 0 0 1 130 160"/><path d="M72 162 A68 68 0 0 1 40 130"/><path d="M38 72 A68 68 0 0 1 70 40"/></g>
-<circle cx="100" cy="100" r="28" fill="#fff" stroke="#2e8a57" stroke-width="3"/>
-<text x="100" y="104" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2e8a57" font-family="Calibri, Carlito, Arial">SHINING</text>
-<circle cx="100" cy="32" r="27" fill="#1f3a68"/><text x="100" y="30.3" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="100" dy="0">Pemantauan</tspan><tspan x="100" dy="8.6">& evaluasi</tspan></text><circle cx="168" cy="100" r="27" fill="#1f8a96"/><text x="168" y="98.3" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="168" dy="0">Perbaikan</tspan><tspan x="168" dy="8.6">sistem</tspan></text><circle cx="100" cy="168" r="27" fill="#5f7a91"/><text x="100" y="166.29999999999998" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="100" dy="0">Deteksi</tspan><tspan x="100" dy="8.6">masalah</tspan></text><circle cx="32" cy="100" r="27" fill="#2e8a57"/><text x="32" y="98.3" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial"><tspan x="32" dy="0">Uji</tspan><tspan x="32" dy="8.6">lapangan</tspan></text>
-</svg></div>
-        <div class="vtl">
-          <div class="vi" style="--c:var(--blue)"><div class="vw"><span class="dot">1</span>Akhir Juli</div><div class="box m"><b>Masalah</b>Persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta</div><div class="box f"><b>Perbaikan</b>Skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda</div></div>
-          <div class="vi" style="--c:var(--green)"><div class="vw"><span class="dot">2</span>Agustus</div><div class="box m"><b>Uji kemudahan</b>15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner</div><div class="box f"><b>Catatan</b>Tidak menangkap masalah yang kemudian muncul di lapangan</div></div>
-          <div class="vi" style="--c:var(--purple)"><div class="vw"><span class="dot">3</span>Awal Oktober</div><div class="box m"><b>Masalah</b>Progres hilang saat berganti HP; isian kosong</div><div class="box f"><b>Perbaikan</b>Progres dilacak per nomor HP; validasi isian; kirim ulang otomatis</div></div>
-          <div class="vi" style="--c:var(--orange)"><div class="vw"><span class="dot">4</span>Pertengahan Oktober</div><div class="box m"><b>Masalah</b>Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap</div><div class="box f"><b>Perbaikan</b>Simpan draf otomatis; blok wajib; persetujuan berlapis</div></div>
-          <div class="vi" style="--c:var(--teal)"><div class="vw"><span class="dot">5</span>Akhir Oktober</div><div class="box m"><b>Status</b>Pendaftaran kelompok kontrol ditutup</div><div class="box f"><b>Tindak lanjut</b>Data dikunci untuk analisis</div></div>
-        </div>
-      </div>
     </section>
     <section class="card">
       <h2 class="bn" style="--c:var(--blue)"><span class="n">3.3</span><span class="tt">Penyelesaian Instrumen (n = 198)</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M22 20H2"/></svg></span></h2>
@@ -388,21 +418,6 @@ h2.bn{margin-bottom:7mm!important}
       </table>
       <p class="note">Penurunan terbesar terjadi sebelum tes pengetahuan, instrumen terpanjang. Kiriman berulang mencapai 13,8% rekaman.</p>
       <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
-    </section>
-    </div>
-    <div class="col">
-    <section class="card">
-      <h2 class="bn" style="--c:var(--teal)"><span class="n">3.4</span><span class="tt">Penggunaan Media Sosial (n = 74)</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span></h2>
-      <table class="bars">
-        <tr><td class="lbl">WhatsApp utama</td><td class="bar"><div class="track"><div class="fill" style="width:59.5%;--f:var(--green)"></div></div></td><td class="r">59,5%</td></tr>
-        <tr><td class="lbl">TikTok/Instagram</td><td class="bar"><div class="track"><div class="fill" style="width:33.8%;--f:var(--purple)"></div></div></td><td class="r">33,8%</td></tr>
-        <tr><td class="lbl">Akses ±tiap jam</td><td class="bar"><div class="track"><div class="fill" style="width:73%;--f:var(--blue)"></div></div></td><td class="r">73,0%</td></tr>
-        <tr><td class="lbl">Durasi ≥3 jam/hari</td><td class="bar"><div class="track"><div class="fill" style="width:51.4%;--f:var(--orange)"></div></div></td><td class="r">51,4%</td></tr>
-        <tr><td class="lbl">Akun nakes/resmi</td><td class="bar"><div class="track"><div class="fill" style="width:75.7%;--f:var(--teal)"></div></div></td><td class="r">75,7%</td></tr>
-        <tr><td class="lbl">Influencer</td><td class="bar"><div class="track"><div class="fill" style="width:39.2%;--f:var(--red)"></div></div></td><td class="r">39,2%</td></tr>
-        <tr><td class="lbl">Tertarik produk promosi</td><td class="bar"><div class="track"><div class="fill" style="width:71.6%;--f:var(--pink)"></div></div></td><td class="r">71,6%</td></tr>
-      </table>
-      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
     </section>
     <section class="card">
       <h2 class="bn" style="--c:var(--purple)"><span class="n">3.5</span><span class="tt">Menurut Peran Catin</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M1 21v-1a7 7 0 0 1 14 0v1"/><path d="M16 4.2a4 4 0 0 1 0 7.6M23 21v-1a7 7 0 0 0-5-6.7"/></svg></span></h2>
@@ -423,18 +438,6 @@ h2.bn{margin-bottom:7mm!important}
       </div>
       <p class="note">*p &lt; 0,05 (khi-kuadrat)</p>
     </section>
-    <section class="card">
-      <h2 class="bn" style="--c:var(--green)"><span class="n">3.6</span><span class="tt">Hubungan yang Bermakna</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M8.6 7.5l6.8 9M9 6h6"/></svg></span></h2>
-      <table class="rel">
-        <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
-        <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r pos">+0,414</td><td class="r">&lt;0,001</td></tr>
-        <tr><td>Memeriksa kebenaran informasi</td><td>Sikap HBM</td><td class="r pos">+0,287</td><td class="r">0,014</td></tr>
-        <tr><td>Platform utama (WhatsApp terendah)<sup>a</sup></td><td>Sikap HBM</td><td class="r na">–</td><td class="r">0,006</td></tr>
-        <tr><td>Durasi harian media sosial</td><td>IMT</td><td class="r neg">−0,331</td><td class="r">0,004</td></tr>
-        <tr><td>Sumber akun nakes/resmi<sup>b</sup></td><td>IMT</td><td class="r na">–</td><td class="r">0,022</td></tr>
-      </table>
-      <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
-    </section>
     <section class="card" style="background:#f3f8f9">
       <h2 class="bn" style="--c:var(--teal)"><span class="n">4</span><span class="tt">Kesimpulan</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span></h2>
       <ul class="bul">
@@ -448,22 +451,7 @@ h2.bn{margin-bottom:7mm!important}
         <li><svg viewBox="0 0 24 24" fill="none" stroke="#1b2f52" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg><span><b style="color:var(--red)">Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</span></li>
       </ul>
     </section>
-      <section class="card">
-        <h2 class="bn" style="--c:var(--green)"><span class="n">5</span><span class="tt">Ucapan Terima Kasih</span><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></h2>
-        <ul class="bul">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Para calon pengantin peserta penelitian</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2e8a57" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>Tim peneliti dan enumerator lapangan</span></li>
-        </ul>
-      </section>
-      <div class="access">
-        <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
-        <div>
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="#bfe6ea" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>Akses SHINING</h3>
-          <div class="link">mulai.edukasi-catin.id</div>
-          <ol><li>Pindai QR atau buka tautan.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca persetujuan, lalu mulai.</li></ol>
-        </div>
-      </div>
+
     </div>
   </div>
 </main>

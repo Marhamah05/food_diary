@@ -141,8 +141,9 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .col>.access .qr{width:42mm;height:42mm}
 .storyv{grid-template-columns:1fr!important;gap:0}
 .storyv .arr{font-size:20pt;line-height:1;padding:1mm 0}
-.storyv .pan{gap:2mm}
-.storyv .st{grid-template-columns:40mm 1fr}
+.storyv .pan{gap:2mm;display:grid!important;grid-template-columns:1fr 1fr;column-gap:3mm}
+.storyv .pan>.ph,.storyv .pan>p,.storyv .pan>.find,.storyv .pan>.gap{grid-column:1/-1}
+.storyv .st{grid-template-columns:auto 1fr}
 .platv .feat{margin-top:3mm}
 .procv{display:flex;flex-direction:column;align-items:center;gap:4mm}
 .procv .cyc svg{width:100mm;height:100mm}
@@ -152,6 +153,13 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .vw .dot{position:absolute;left:-11.3mm;top:.5mm;width:9mm;height:9mm;border-radius:50%;background:var(--c);color:#fff;font-size:16.8pt;display:grid;place-items:center;border:.8mm solid #fff}
 .vi .box{font-size:18.0pt;margin:0!important}
 .col>.access{flex:none}
+.proch{display:grid;grid-template-columns:95mm 1fr;gap:6mm;align-items:center}
+.proch .cyc svg{width:95mm;height:95mm}
+.pair{display:grid;grid-template-columns:1fr 1.15fr;gap:7mm;flex:none}
+.pair>.card{padding-bottom:6mm}
+.pair .access{grid-template-columns:40mm 1fr;gap:5mm;padding:5mm 6mm}
+.pair .access .qr{width:40mm;height:40mm}
+.grp{display:grid!important;grid-template-columns:1fr 1fr;column-gap:9mm}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
@@ -263,27 +271,6 @@ tr.hl td{font-weight:800}
 footer{margin-top:4mm;background:var(--dark);color:#e6f4ee;padding:5.5mm 24mm;display:flex;justify-content:center;gap:6mm;align-items:center;font-size:20pt;font-weight:600}
 footer b{color:#bfe6ea}
 footer svg{width:8mm;height:8mm}
-
-/* spacing for column layout */
-.bars td{padding:2.8mm 0!important}
-.track{height:9mm!important}
-.grp{gap:6mm!important}.grp .ln{margin-top:2mm!important}
-.rel td{padding:3.4mm 3mm!important}
-.bul{gap:4.5mm!important}
-.meth{gap:4mm!important}
-.abs{gap:3.5mm!important}
-.abs p,.meth p,.bul li,.feat li{line-height:1.5!important}
-.storyv .pan{gap:3mm!important;padding-bottom:5mm!important}
-.st{padding:3mm 4mm!important}
-.vtl{gap:4mm!important}
-.vi .box{padding:3.2mm 4mm!important;line-height:1.4!important}
-.procv .cyc svg{width:120mm!important;height:120mm!important}
-.card{padding-bottom:10mm!important}
-.col{gap:9mm!important}
-h2.bn{margin-bottom:7mm!important}
-.platv .feat{gap:4.5mm!important;margin-top:5mm!important}
-.callout{margin-top:6mm!important}
-.note{margin-top:5mm!important}
 '''
 
 leaf = lambda x,y,r,s,o,col: f'<svg class="deco" style="left:{x}mm;top:{y}mm;width:{s}mm;height:{s}mm;opacity:{o};transform:rotate({r}deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="{col}"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg>'
@@ -342,7 +329,7 @@ html = f'''<!doctype html>
 <div class="stripe"></div>
 
 <main>
-  <div class="row c3 masonry">
+  <div class="row masonry" style="grid-template-columns:1fr 1fr">
     <div class="col">
     <section class="card">
       {head(None,'Abstrak','orange','book')}
@@ -355,6 +342,84 @@ html = f'''<!doctype html>
       </div>
       <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i></div>
     </section>
+    <section class="card">
+      {head(2,'Metode','blue','clip')}
+      <div class="meth">
+        <div><span class="mi">{ic('flow','#1f3a68')}</span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
+        <div><span class="mi">{ic('pin','#1f3a68')}</span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
+        <div><span class="mi">{ic('users','#1f3a68')}</span><p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p></div>
+        <div><span class="mi">{ic('clip','#1f3a68')}</span><p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p></div>
+        <div><span class="mi">{ic('chart','#1f3a68')}</span><p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p></div>
+        <div><span class="mi">{ic('shield','#1f3a68')}</span><p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p></div>
+      </div>
+      <div class="sub" style="--c:var(--green);margin-top:5mm">{ic('flow','#2e8a57')}Alur penelitian (model ADDIE)</div>
+      <div class="mini">
+        <div style="--c:var(--blue)"><b>A</b><span>Analisis</span></div><i>›</i>
+        <div style="--c:var(--teal)"><b>D</b><span>Desain</span></div><i>›</i>
+        <div style="--c:var(--purple)"><b>D</b><span>Pengem-<br>bangan</span></div><i>›</i>
+        <div class="on" style="--c:var(--red)"><b>I</b><span>Implemen-<br>tasi</span></div><i>›</i>
+        <div class="on" style="--c:var(--orange)"><b>E</b><span>Evaluasi</span></div>
+      </div>
+      <p class="note" style="margin-top:2mm">Lingkaran penuh: tahap yang dilaporkan pada poster ini.</p>
+    </section>
+    <section class="card">
+      {head('3.2','Hasil · Proses Pengembangan Platform','green','cycle')}
+      <div class="proch">
+        <div class="cyc">{cyc}</div>
+        <div class="vtl">
+          {tsv(1,'Akhir Juli','blue','Masalah','Persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta','Perbaikan','Skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda')}
+          {tsv(2,'Agustus','green','Uji kemudahan','15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner','Catatan','Tidak menangkap masalah yang kemudian muncul di lapangan')}
+          {tsv(3,'Awal Oktober','purple','Masalah','Progres hilang saat berganti HP; isian kosong','Perbaikan','Progres dilacak per nomor HP; validasi isian; kirim ulang otomatis')}
+          {tsv(4,'Pertengahan Oktober','orange','Masalah','Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap','Perbaikan','Simpan draf otomatis; blok wajib; persetujuan berlapis')}
+          {tsv(5,'Akhir Oktober','teal','Status','Pendaftaran kelompok kontrol ditutup','Tindak lanjut','Data dikunci untuk analisis')}
+        </div>
+      </div>
+    </section>
+    <section class="card">
+      {head('3.4','Penggunaan Media Sosial (n = 74)','teal','phone')}
+      <table class="bars">
+        {bar('WhatsApp utama',59.5,'59,5%','green')}
+        {bar('TikTok/Instagram',33.8,'33,8%','purple')}
+        {bar('Akses ±tiap jam',73,'73,0%','blue')}
+        {bar('Durasi ≥3 jam/hari',51.4,'51,4%','orange')}
+        {bar('Akun nakes/resmi',75.7,'75,7%','teal')}
+        {bar('Influencer',39.2,'39,2%','red')}
+        {bar('Tertarik produk promosi',71.6,'71,6%','pink')}
+      </table>
+      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
+    </section>
+    <section class="card">
+      {head('3.6','Hubungan yang Bermakna','green','link')}
+      <table class="rel">
+        <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
+        <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r pos">+0,414</td><td class="r">&lt;0,001</td></tr>
+        <tr><td>Memeriksa kebenaran informasi</td><td>Sikap HBM</td><td class="r pos">+0,287</td><td class="r">0,014</td></tr>
+        <tr><td>Platform utama (WhatsApp terendah)<sup>a</sup></td><td>Sikap HBM</td><td class="r na">–</td><td class="r">0,006</td></tr>
+        <tr><td>Durasi harian media sosial</td><td>IMT</td><td class="r neg">−0,331</td><td class="r">0,004</td></tr>
+        <tr><td>Sumber akun nakes/resmi<sup>b</sup></td><td>IMT</td><td class="r na">–</td><td class="r">0,022</td></tr>
+      </table>
+      <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
+    </section>
+    <div class="pair">
+      <section class="card">
+        {head(5,'Ucapan Terima Kasih','green','heart')}
+        <ul class="bul">
+          <li>{ic('check','#2e8a57')}<span>Para calon pengantin peserta penelitian</span></li>
+          <li>{ic('check','#2e8a57')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
+          <li>{ic('check','#2e8a57')}<span>Tim peneliti dan enumerator lapangan</span></li>
+        </ul>
+      </section>
+      <div class="access">
+        <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
+        <div>
+          <h3>{ic('qr','#bfe6ea')}Akses SHINING</h3>
+          <div class="link">mulai.edukasi-catin.id</div>
+          <ol><li>Pindai QR atau buka tautan.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca persetujuan, lalu mulai.</li></ol>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col">
     <section class="card">
       {head(1,'Pendahuluan','green','bulb')}
       <div class="story storyv">
@@ -388,30 +453,8 @@ html = f'''<!doctype html>
       <p class="note" style="text-align:center;font-style:italic;margin-top:2.5mm">Gambar 1. Alur masalah yang melatarbelakangi penelitian</p>
     </section>
     <section class="card">
-      {head(2,'Metode','blue','clip')}
-      <div class="meth">
-        <div><span class="mi">{ic('flow','#1f3a68')}</span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
-        <div><span class="mi">{ic('pin','#1f3a68')}</span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
-        <div><span class="mi">{ic('users','#1f3a68')}</span><p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p></div>
-        <div><span class="mi">{ic('clip','#1f3a68')}</span><p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p></div>
-        <div><span class="mi">{ic('chart','#1f3a68')}</span><p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p></div>
-        <div><span class="mi">{ic('shield','#1f3a68')}</span><p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p></div>
-      </div>
-      <div class="sub" style="--c:var(--green);margin-top:5mm">{ic('flow','#2e8a57')}Alur penelitian (model ADDIE)</div>
-      <div class="mini">
-        <div style="--c:var(--blue)"><b>A</b><span>Analisis</span></div><i>›</i>
-        <div style="--c:var(--teal)"><b>D</b><span>Desain</span></div><i>›</i>
-        <div style="--c:var(--purple)"><b>D</b><span>Pengem-<br>bangan</span></div><i>›</i>
-        <div class="on" style="--c:var(--red)"><b>I</b><span>Implemen-<br>tasi</span></div><i>›</i>
-        <div class="on" style="--c:var(--orange)"><b>E</b><span>Evaluasi</span></div>
-      </div>
-      <p class="note" style="margin-top:2mm">Lingkaran penuh: tahap yang dilaporkan pada poster ini.</p>
-    </section>
-    </div>
-    <div class="col">
-    <section class="card">
       {head('3.1','Hasil · Platform SHINING','purple','monitor')}
-      <div class="platv"><div><figure class="browser">
+      <div class="platgrid"><div><figure class="browser">
           <div class="bar"><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><span>mulai.edukasi-catin.id</span></div>
           <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
         </figure>
@@ -422,19 +465,6 @@ html = f'''<!doctype html>
         <li><span class="fi" style="--bg:var(--lilac)">{ic('save','#5f7a91')}</span>Progres dan draf tersimpan otomatis per nomor HP</li>
         <li><span class="fi" style="--bg:var(--peach)">{ic('check','#1f8a96')}</span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
       </ul></div>
-    </section>
-    <section class="card">
-      {head('3.2','Hasil · Proses Pengembangan Platform','green','cycle')}
-      <div class="procv">
-        <div class="cyc">{cyc}</div>
-        <div class="vtl">
-          {tsv(1,'Akhir Juli','blue','Masalah','Persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta','Perbaikan','Skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda')}
-          {tsv(2,'Agustus','green','Uji kemudahan','15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner','Catatan','Tidak menangkap masalah yang kemudian muncul di lapangan')}
-          {tsv(3,'Awal Oktober','purple','Masalah','Progres hilang saat berganti HP; isian kosong','Perbaikan','Progres dilacak per nomor HP; validasi isian; kirim ulang otomatis')}
-          {tsv(4,'Pertengahan Oktober','orange','Masalah','Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap','Perbaikan','Simpan draf otomatis; blok wajib; persetujuan berlapis')}
-          {tsv(5,'Akhir Oktober','teal','Status','Pendaftaran kelompok kontrol ditutup','Tindak lanjut','Data dikunci untuk analisis')}
-        </div>
-      </div>
     </section>
     <section class="card">
       {head('3.3','Penyelesaian Instrumen (n = 198)','blue','chart')}
@@ -451,21 +481,6 @@ html = f'''<!doctype html>
       </table>
       <p class="note">Penurunan terbesar terjadi sebelum tes pengetahuan, instrumen terpanjang. Kiriman berulang mencapai 13,8% rekaman.</p>
       <div class="callout">{ic('check','#2e8a57')}<span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
-    </section>
-    </div>
-    <div class="col">
-    <section class="card">
-      {head('3.4','Penggunaan Media Sosial (n = 74)','teal','phone')}
-      <table class="bars">
-        {bar('WhatsApp utama',59.5,'59,5%','green')}
-        {bar('TikTok/Instagram',33.8,'33,8%','purple')}
-        {bar('Akses ±tiap jam',73,'73,0%','blue')}
-        {bar('Durasi ≥3 jam/hari',51.4,'51,4%','orange')}
-        {bar('Akun nakes/resmi',75.7,'75,7%','teal')}
-        {bar('Influencer',39.2,'39,2%','red')}
-        {bar('Tertarik produk promosi',71.6,'71,6%','pink')}
-      </table>
-      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
     </section>
     <section class="card">
       {head('3.5','Menurut Peran Catin','purple','users')}
@@ -486,18 +501,6 @@ html = f'''<!doctype html>
       </div>
       <p class="note">*p &lt; 0,05 (khi-kuadrat)</p>
     </section>
-    <section class="card">
-      {head('3.6','Hubungan yang Bermakna','green','link')}
-      <table class="rel">
-        <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
-        <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r pos">+0,414</td><td class="r">&lt;0,001</td></tr>
-        <tr><td>Memeriksa kebenaran informasi</td><td>Sikap HBM</td><td class="r pos">+0,287</td><td class="r">0,014</td></tr>
-        <tr><td>Platform utama (WhatsApp terendah)<sup>a</sup></td><td>Sikap HBM</td><td class="r na">–</td><td class="r">0,006</td></tr>
-        <tr><td>Durasi harian media sosial</td><td>IMT</td><td class="r neg">−0,331</td><td class="r">0,004</td></tr>
-        <tr><td>Sumber akun nakes/resmi<sup>b</sup></td><td>IMT</td><td class="r na">–</td><td class="r">0,022</td></tr>
-      </table>
-      <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
-    </section>
     <section class="card" style="background:#f3f8f9">
       {head(4,'Kesimpulan','teal','bulb')}
       <ul class="bul">
@@ -511,22 +514,7 @@ html = f'''<!doctype html>
         <li>{ic('monitor','#1b2f52')}<span><b style="color:var(--red)">Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</span></li>
       </ul>
     </section>
-      <section class="card">
-        {head(5,'Ucapan Terima Kasih','green','heart')}
-        <ul class="bul">
-          <li>{ic('check','#2e8a57')}<span>Para calon pengantin peserta penelitian</span></li>
-          <li>{ic('check','#2e8a57')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
-          <li>{ic('check','#2e8a57')}<span>Tim peneliti dan enumerator lapangan</span></li>
-        </ul>
-      </section>
-      <div class="access">
-        <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
-        <div>
-          <h3>{ic('qr','#bfe6ea')}Akses SHINING</h3>
-          <div class="link">mulai.edukasi-catin.id</div>
-          <ol><li>Pindai QR atau buka tautan.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca persetujuan, lalu mulai.</li></ol>
-        </div>
-      </div>
+
     </div>
   </div>
 </main>
