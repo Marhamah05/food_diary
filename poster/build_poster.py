@@ -87,7 +87,7 @@ main{flex:1;padding:9mm 24mm 0;display:flex;flex-direction:column;gap:8mm;min-he
 .c3{grid-template-columns:1fr 1fr 1fr}
 .c21{grid-template-columns:2fr 1fr}
 .card{background:#fff;border:.6mm solid var(--line);border-radius:6mm;padding:0 9mm 8mm;box-shadow:0 1.2mm 3mm rgba(20,60,80,.06);display:flex;flex-direction:column;overflow:hidden}
-h2.bn{display:flex;align-items:center;gap:4mm;margin:0 -9mm 6mm;padding:3.6mm 9mm;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff));color:#fff;font-size:31.0pt;font-weight:800;line-height:1.1}
+h2.bn{display:flex;align-items:center;gap:4mm;margin:0 -9mm 6mm;padding:3.6mm 9mm;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff));color:#fff;font-size:33.5pt;font-weight:800;line-height:1.1}
 h2.bn .n{flex:none;width:13mm;height:13mm;border-radius:50%;background:#fff;color:var(--c);font-size:20pt;display:grid;place-items:center}
 h2.bn .tt{flex:1}
 h2.bn .hi{flex:none;width:11mm;height:11mm;opacity:.9}
@@ -95,43 +95,43 @@ h2.bn .hi svg{width:100%;height:100%}
 p,li{font-size:20pt;line-height:1.4}
 p+p{margin-top:3mm}
 b{font-weight:800}
-.note{font-size:17.7pt;line-height:1.4;color:var(--muted);margin-top:3.5mm}
+.note{font-size:20pt;line-height:1.4;color:var(--muted);margin-top:3.5mm}
 .sub{display:flex;align-items:center;gap:3mm;font-size:20pt;font-weight:800;color:var(--c,var(--green));margin:5mm 0 3mm}
 .sub svg{width:9mm;height:9mm}
 
 .goals{list-style:none;display:flex;flex-direction:column;gap:3mm}
 .goals li{display:grid;grid-template-columns:11mm 1fr;gap:4mm}
-.goals .k{width:11mm;height:11mm;border-radius:50%;background:var(--green);color:#fff;font-size:19.3pt;font-weight:800;display:grid;place-items:center;margin-top:.8mm}
+.goals .k{width:11mm;height:11mm;border-radius:50%;background:var(--green);color:#fff;font-size:20pt;font-weight:800;display:grid;place-items:center;margin-top:.8mm}
 .goals li:nth-child(2) .k{background:var(--blue)}
-.kw{background:var(--peach);border-radius:3mm;padding:3mm 5mm;font-size:18.7pt;line-height:1.4;margin-top:4mm}
+.kw{background:var(--peach);border-radius:3mm;padding:3mm 5mm;font-size:20pt;line-height:1.4;margin-top:4mm}
 .kw b{color:var(--orange)}
 .kw i{color:var(--ink)}
 
 .abs{display:flex;flex-direction:column;gap:2.2mm}
-.abs p{font-size:19.0pt;line-height:1.36;border-left:1.6mm solid var(--c);padding-left:3.5mm}
+.abs p{font-size:20pt;line-height:1.36;border-left:1.6mm solid var(--c);padding-left:3.5mm}
 .abs p b{color:var(--c)}
 .abs p+p{margin-top:0}
 .story{display:grid;grid-template-columns:1fr 9mm 1fr 9mm 1fr;align-items:stretch}
 .story .arr{align-self:center;text-align:center;font-style:normal;font-size:20pt;color:var(--muted)}
 .pan{background:var(--bg);border-radius:4mm;padding:0 5mm 4mm;display:flex;flex-direction:column;gap:2.6mm;overflow:hidden}
-.ph{display:flex;align-items:center;gap:3mm;margin:0 -5mm 1mm;padding:2.6mm 5mm;background:var(--c);color:#fff;font-weight:800;font-size:19.0pt}
+.ph{display:flex;align-items:center;gap:3mm;margin:0 -5mm 1mm;padding:2.6mm 5mm;background:var(--c);color:#fff;font-weight:800;font-size:20pt}
 .ph svg{width:8mm;height:8mm;flex:none}
 .st{display:grid;grid-template-columns:auto 1fr;gap:3mm;align-items:center;background:#fff;border-radius:3mm;padding:2mm 3mm}
-.st b{font-size:28.0pt;font-weight:800;color:var(--c);line-height:1;white-space:nowrap}
-.st span,.pan p,.gap li{font-size:16.0pt;line-height:1.32}
-.pan cite,.goal cite{font-style:normal;color:var(--muted);font-size:14pt}
+.st b{font-size:30.2pt;font-weight:800;color:var(--c);line-height:1;white-space:nowrap}
+.st span,.pan p,.gap li{font-size:19.2pt;line-height:1.32}
+.pan cite,.goal cite{font-style:normal;color:var(--muted);font-size:16.8pt}
 .gap{list-style:none;display:flex;flex-direction:column;gap:2.4mm}
 .gap li{display:grid;grid-template-columns:8mm 1fr;gap:2.5mm;background:#fff;border-radius:3mm;padding:2mm 3mm}
 .gap svg{width:7mm;height:7mm;margin-top:.5mm}
-.goal{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:center;margin-top:4mm;background:linear-gradient(90deg,var(--green),var(--teal));color:#fff;border-radius:4mm;padding:3.5mm 6mm;font-size:18.0pt;line-height:1.35}
+.goal{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:center;margin-top:4mm;background:linear-gradient(90deg,var(--green),var(--teal));color:#fff;border-radius:4mm;padding:3.5mm 6mm;font-size:20pt;line-height:1.35}
 .goal svg{width:11mm;height:11mm}
-.find{margin-top:auto;background:var(--c);color:#fff;border-radius:3mm;padding:2.2mm 3.5mm;font-size:15.5pt;line-height:1.3}
+.find{margin-top:auto;background:var(--c);color:#fff;border-radius:3mm;padding:2.2mm 3.5mm;font-size:18.6pt;line-height:1.3}
 .find b{color:#fff}
 .mini{display:flex;align-items:center;gap:1.5mm}
 .mini div{flex:1;text-align:center}
 .mini b{display:grid;place-items:center;width:15mm;height:15mm;margin:0 auto 1.5mm;border-radius:50%;border:1.1mm solid var(--c);color:var(--c);font-size:20pt;font-weight:800;background:#fff}
 .mini .on b{background:var(--c);color:#fff}
-.mini span{display:block;font-size:15.0pt;font-weight:700;color:var(--c);line-height:1.15}
+.mini span{display:block;font-size:18.0pt;font-weight:700;color:var(--c);line-height:1.15}
 .mini i{font-style:normal;font-size:20pt;color:var(--muted)}
 .platgrid{display:grid;grid-template-columns:1.55fr 1fr;gap:6mm;align-items:center}
 h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
@@ -139,6 +139,19 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .col>.card{flex:1 1 auto}
 .col>.access{flex:none;grid-template-columns:42mm 1fr;gap:5mm;padding:5mm 7mm}
 .col>.access .qr{width:42mm;height:42mm}
+.storyv{grid-template-columns:1fr!important;gap:0}
+.storyv .arr{font-size:20pt;line-height:1;padding:1mm 0}
+.storyv .pan{gap:2mm}
+.storyv .st{grid-template-columns:40mm 1fr}
+.platv .feat{margin-top:3mm}
+.procv{display:flex;flex-direction:column;align-items:center;gap:4mm}
+.procv .cyc svg{width:100mm;height:100mm}
+.vtl{width:calc(100% - 4mm);display:flex;flex-direction:column;gap:2.5mm;border-left:1mm solid var(--navy);margin-left:4mm;padding-left:6mm}
+.vi{display:grid;grid-template-columns:34mm 1fr 1fr;gap:2.5mm;align-items:stretch;position:relative}
+.vw{font-size:19.2pt;font-weight:700;color:var(--navy);line-height:1.2}
+.vw .dot{position:absolute;left:-11.3mm;top:.5mm;width:9mm;height:9mm;border-radius:50%;background:var(--c);color:#fff;font-size:16.8pt;display:grid;place-items:center;border:.8mm solid #fff}
+.vi .box{font-size:18.0pt;margin:0!important}
+.col>.access{flex:none}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
@@ -149,11 +162,11 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .browser{width:100%;border:.6mm solid var(--line);border-radius:4mm;overflow:hidden;box-shadow:0 2mm 5mm rgba(80,40,120,.15);background:#fff}
 .browser .bar{display:flex;align-items:center;gap:2mm;background:var(--lilac);padding:2.5mm 4mm}
 .browser .bar i{width:3.2mm;height:3.2mm;border-radius:50%}
-.browser .bar span{margin-left:3mm;flex:1;background:#fff;border-radius:3mm;padding:1mm 4mm;font-size:15.0pt;color:var(--muted)}
+.browser .bar span{margin-left:3mm;flex:1;background:#fff;border-radius:3mm;padding:1mm 4mm;font-size:18.0pt;color:var(--muted)}
 .browser .screen{position:relative;aspect-ratio:1752/781;background:var(--lilac)}
 .browser .screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .chips{display:flex;flex-wrap:wrap;gap:2.5mm;margin-top:4mm;justify-content:center}
-.chip{display:flex;align-items:center;gap:2mm;font-size:17.1pt;font-weight:700;padding:1.6mm 4mm;border-radius:10mm;background:var(--bg);color:var(--fg)}
+.chip{display:flex;align-items:center;gap:2mm;font-size:20pt;font-weight:700;padding:1.6mm 4mm;border-radius:10mm;background:var(--bg);color:var(--fg)}
 .chip svg{width:6mm;height:6mm}
 
 /* KPI */
@@ -161,19 +174,19 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .kpi{background:#fff;border:.6mm solid var(--line);border-top:2.4mm solid var(--c);border-radius:5mm;padding:5mm 7mm;display:grid;grid-template-columns:22mm 1fr;gap:5mm;align-items:center;box-shadow:0 1.2mm 3mm rgba(20,60,80,.06)}
 .kpi .ki{width:22mm;height:22mm;border-radius:50%;background:color-mix(in srgb,var(--c) 14%,#fff);display:grid;place-items:center}
 .kpi .ki svg{width:12mm;height:12mm}
-.kpi .v{font-size:55.6pt;font-weight:800;color:var(--c);line-height:1}
-.kpi .d{font-size:18.7pt;line-height:1.3;margin-top:1.5mm;color:var(--ink)}
+.kpi .v{font-size:60.0pt;font-weight:800;color:var(--c);line-height:1}
+.kpi .d{font-size:20pt;line-height:1.3;margin-top:1.5mm;color:var(--ink)}
 
 /* ADDIE */
 .addie{display:grid;grid-template-columns:repeat(5,1fr);gap:7mm}
 .step{position:relative;text-align:center}
-.step:not(:last-child)::after{content:"➜";position:absolute;right:-7mm;top:5.5mm;font-size:25.7pt;color:var(--muted)}
-.step .ltr{width:22mm;height:22mm;margin:0 auto 3mm;border-radius:50%;border:1.4mm solid var(--c);color:var(--c);font-weight:800;font-size:32.1pt;display:grid;place-items:center;background:#fff}
+.step:not(:last-child)::after{content:"➜";position:absolute;right:-7mm;top:5.5mm;font-size:27.8pt;color:var(--muted)}
+.step .ltr{width:22mm;height:22mm;margin:0 auto 3mm;border-radius:50%;border:1.4mm solid var(--c);color:var(--c);font-weight:800;font-size:34.7pt;display:grid;place-items:center;background:#fff}
 .step.focus .ltr{background:var(--c);color:#fff;box-shadow:0 0 0 2mm color-mix(in srgb,var(--c) 22%,#fff)}
 .step h3{font-size:20pt;font-weight:800;color:var(--c);line-height:1.15}
-.step p{font-size:18.2pt;line-height:1.35;color:var(--muted);margin-top:1.5mm}
-.legend{display:flex;gap:8mm;margin-top:5mm;font-size:17.1pt;color:var(--muted);justify-content:center}
-.tag{display:inline-block;background:var(--red);color:#fff;font-size:14pt;font-weight:800;border-radius:2mm;padding:.6mm 2.4mm;margin-top:2mm}
+.step p{font-size:20pt;line-height:1.35;color:var(--muted);margin-top:1.5mm}
+.legend{display:flex;gap:8mm;margin-top:5mm;font-size:20pt;color:var(--muted);justify-content:center}
+.tag{display:inline-block;background:var(--red);color:#fff;font-size:16.8pt;font-weight:800;border-radius:2mm;padding:.6mm 2.4mm;margin-top:2mm}
 
 .feat{list-style:none;display:flex;flex-direction:column;gap:3.5mm}
 .feat li{display:grid;grid-template-columns:13mm 1fr;gap:4mm;align-items:center;font-size:20pt;line-height:1.33}
@@ -187,44 +200,44 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .tlh::before{content:"";position:absolute;left:0;right:3mm;top:6mm;height:1mm;background:var(--navy)}
 .tlh::after{content:"";position:absolute;right:0;top:4.2mm;border:2.3mm solid transparent;border-left:4mm solid var(--navy)}
 .ts{position:relative}
-.ts .dot{position:absolute;top:-21mm;left:50%;transform:translateX(-50%);width:11mm;height:11mm;border-radius:50%;background:var(--c);color:#fff;font-weight:800;font-size:18.2pt;display:grid;place-items:center;border:1mm solid #fff}
-.ts .when{position:absolute;top:-9.5mm;left:0;right:0;text-align:center;font-size:19.8pt;font-weight:800;color:var(--navy)}
-.box{border-radius:3mm;padding:2.6mm 4mm;font-size:17.7pt;line-height:1.35}
-.box b{display:block;font-size:16.1pt;letter-spacing:.04em;text-transform:uppercase}
+.ts .dot{position:absolute;top:-21mm;left:50%;transform:translateX(-50%);width:11mm;height:11mm;border-radius:50%;background:var(--c);color:#fff;font-weight:800;font-size:20pt;display:grid;place-items:center;border:1mm solid #fff}
+.ts .when{position:absolute;top:-9.5mm;left:0;right:0;text-align:center;font-size:20pt;font-weight:800;color:var(--navy)}
+.box{border-radius:3mm;padding:2.6mm 4mm;font-size:20pt;line-height:1.35}
+.box b{display:block;font-size:19.3pt;letter-spacing:.04em;text-transform:uppercase}
 .box.m{background:var(--rose)} .box.m b{color:var(--red)}
 .box.f{background:var(--mint);margin-top:2.5mm} .box.f b{color:var(--green)}
 
 /* bars */
 .bars{width:100%;border-collapse:collapse}
-.bars th{font-size:16.6pt;font-weight:800;color:var(--muted);text-align:left;padding:0 0 2mm;border-bottom:.4mm solid var(--line)}
+.bars th{font-size:19.9pt;font-weight:800;color:var(--muted);text-align:left;padding:0 0 2mm;border-bottom:.4mm solid var(--line)}
 .bars th.r,.bars td.r{text-align:right;white-space:nowrap}
-.bars td{padding:1.7mm 0;vertical-align:middle;font-size:19.8pt}
+.bars td{padding:1.7mm 0;vertical-align:middle;font-size:20pt}
 .bars td.lbl{padding-right:3mm;line-height:1.2}
 .bars td.bar{width:40%;padding-right:3mm}
 .bars td.r{padding-left:3mm}
 .track{height:7mm;background:var(--track);border-radius:4mm;overflow:hidden}
 .fill{height:100%;border-radius:4mm;background:linear-gradient(90deg,var(--f),color-mix(in srgb,var(--f) 65%,#fff))}
 tr.hl td{font-weight:800}
-.callout{display:grid;grid-template-columns:10mm 1fr;gap:3mm;background:var(--mint);border-radius:3mm;padding:3.4mm 5mm;margin-top:4mm;font-size:18.7pt;line-height:1.4}
+.callout{display:grid;grid-template-columns:10mm 1fr;gap:3mm;background:var(--mint);border-radius:3mm;padding:3.4mm 5mm;margin-top:4mm;font-size:20pt;line-height:1.4}
 .callout svg{width:10mm;height:10mm}
 
 .rel{width:100%;border-collapse:separate;border-spacing:0 1.6mm}
-.rel th{background:var(--green);color:#fff;font-size:18.2pt;font-weight:800;text-align:left;padding:2.6mm 3mm}
+.rel th{background:var(--green);color:#fff;font-size:20pt;font-weight:800;text-align:left;padding:2.6mm 3mm}
 .rel th:first-child{border-radius:2mm 0 0 2mm}.rel th:last-child{border-radius:0 2mm 2mm 0}
-.rel td{font-size:18.7pt;padding:2.2mm 3mm;line-height:1.25;background:#f6f9fa}
+.rel td{font-size:20pt;padding:2.2mm 3mm;line-height:1.25;background:#f6f9fa}
 .rel td:nth-child(2){white-space:nowrap}
 .rel .r{text-align:right;white-space:nowrap;font-weight:800}
 .rel td.pos{background:var(--green);color:#fff;text-align:center}
 .rel td.neg{background:var(--red);color:#fff;text-align:center}
 .rel td.na{color:var(--muted);text-align:center}
 
-.key{display:flex;gap:7mm;font-size:18.2pt;margin-bottom:3mm}
+.key{display:flex;gap:7mm;font-size:20pt;margin-bottom:3mm}
 .key span{display:flex;align-items:center;gap:2mm}
 .key svg{width:7mm;height:7mm}
 .grp{display:flex;flex-direction:column;gap:3.6mm}
-.grp .t{font-size:19.8pt;font-weight:800}
+.grp .t{font-size:20pt;font-weight:800}
 .grp .ln{display:grid;grid-template-columns:1fr 24mm;gap:3mm;align-items:center;margin-top:1.2mm}
-.grp .ln span{font-size:18.2pt;text-align:right;font-weight:700}
+.grp .ln span{font-size:20pt;text-align:right;font-weight:700}
 
 .bul{list-style:none;display:flex;flex-direction:column;gap:3mm}
 .bul li{display:grid;grid-template-columns:10mm 1fr;gap:3mm;font-size:20pt;line-height:1.38}
@@ -234,22 +247,43 @@ tr.hl td{font-weight:800}
 .access{background:linear-gradient(90deg,var(--dark),#1f8a96);border-radius:6mm;color:#fff;padding:6mm 9mm;display:grid;grid-template-columns:50mm 1fr;gap:8mm;align-items:center}
 .access .qr{width:50mm;height:50mm;background:#fff;border-radius:3mm;padding:3.4mm}
 .access .qr img{width:100%;height:100%;display:block}
-.access h3{font-size:28.9pt;font-weight:800;color:#bfe6ea;display:flex;align-items:center;gap:3mm}
+.access h3{font-size:31.2pt;font-weight:800;color:#bfe6ea;display:flex;align-items:center;gap:3mm}
 .access h3 svg{width:10mm;height:10mm}
 .access .link{font-size:20pt;font-weight:800;margin:1.5mm 0 2.5mm}
 .access ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:1.6mm}
-.access li{counter-increment:s;font-size:19.8pt;line-height:1.3;padding-left:10mm;position:relative}
-.access li::before{content:counter(s);position:absolute;left:0;top:.3mm;width:7mm;height:7mm;border-radius:50%;background:var(--orange);color:#fff;font-size:14pt;font-weight:800;display:grid;place-items:center}
+.access li{counter-increment:s;font-size:20pt;line-height:1.3;padding-left:10mm;position:relative}
+.access li::before{content:counter(s);position:absolute;left:0;top:.3mm;width:7mm;height:7mm;border-radius:50%;background:var(--orange);color:#fff;font-size:16.8pt;font-weight:800;display:grid;place-items:center}
 .thanks{background:#fff;border:.6mm solid var(--line);border-radius:6mm;padding:6mm 9mm}
-.thanks h3{font-size:25.7pt;font-weight:800;color:var(--teal);display:flex;align-items:center;gap:3mm;margin-bottom:3mm}
+.thanks h3{font-size:27.8pt;font-weight:800;color:var(--teal);display:flex;align-items:center;gap:3mm;margin-bottom:3mm}
 .thanks h3 svg{width:9mm;height:9mm}
 .thanks ul{list-style:none;display:flex;flex-direction:column;gap:1.8mm}
-.thanks li{display:grid;grid-template-columns:8mm 1fr;gap:2.5mm;font-size:19.3pt;line-height:1.3}
+.thanks li{display:grid;grid-template-columns:8mm 1fr;gap:2.5mm;font-size:20pt;line-height:1.3}
 .thanks li svg{width:7mm;height:7mm;margin-top:.5mm}
 
 footer{margin-top:4mm;background:var(--dark);color:#e6f4ee;padding:5.5mm 24mm;display:flex;justify-content:center;gap:6mm;align-items:center;font-size:20pt;font-weight:600}
 footer b{color:#bfe6ea}
 footer svg{width:8mm;height:8mm}
+
+/* spacing for column layout */
+.bars td{padding:2.8mm 0!important}
+.track{height:9mm!important}
+.grp{gap:6mm!important}.grp .ln{margin-top:2mm!important}
+.rel td{padding:3.4mm 3mm!important}
+.bul{gap:4.5mm!important}
+.meth{gap:4mm!important}
+.abs{gap:3.5mm!important}
+.abs p,.meth p,.bul li,.feat li{line-height:1.5!important}
+.storyv .pan{gap:3mm!important;padding-bottom:5mm!important}
+.st{padding:3mm 4mm!important}
+.vtl{gap:4mm!important}
+.vi .box{padding:3.2mm 4mm!important;line-height:1.4!important}
+.procv .cyc svg{width:120mm!important;height:120mm!important}
+.card{padding-bottom:10mm!important}
+.col{gap:9mm!important}
+h2.bn{margin-bottom:7mm!important}
+.platv .feat{gap:4.5mm!important;margin-top:5mm!important}
+.callout{margin-top:6mm!important}
+.note{margin-top:5mm!important}
 '''
 
 leaf = lambda x,y,r,s,o,col: f'<svg class="deco" style="left:{x}mm;top:{y}mm;width:{s}mm;height:{s}mm;opacity:{o};transform:rotate({r}deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="{col}"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg>'
@@ -277,6 +311,8 @@ cyc = f'''<svg viewBox="0 0 200 200">
 {node(100,32,'#1f3a68',['Pemantauan','& evaluasi'])}{node(168,100,'#1f8a96',['Perbaikan','sistem'])}{node(100,168,'#5f7a91',['Deteksi','masalah'])}{node(32,100,'#2e8a57',['Uji','lapangan'])}
 </svg>'''
 
+def tsv(n,when,col,mlab,m,flab,f):
+    return f'<div class="vi" style="--c:var(--{col})"><div class="vw"><span class="dot">{n}</span>{when}</div><div class="box m"><b>{mlab}</b>{m}</div><div class="box f"><b>{flab}</b>{f}</div></div>'
 def ts(n,when,col,mlab,m,flab,f):
     return f'<div class="ts" style="--c:var(--{col})"><div class="dot">{n}</div><div class="when">{when}</div><div class="box m"><b>{mlab}</b>{m}</div><div class="box f"><b>{flab}</b>{f}</div></div>'
 
@@ -306,7 +342,8 @@ html = f'''<!doctype html>
 <div class="stripe"></div>
 
 <main>
-  <div class="row" style="grid-template-columns:1fr 2fr">
+  <div class="row c3 masonry">
+    <div class="col">
     <section class="card">
       {head(None,'Abstrak','orange','book')}
       <div class="abs">
@@ -320,7 +357,7 @@ html = f'''<!doctype html>
     </section>
     <section class="card">
       {head(1,'Pendahuluan','green','bulb')}
-      <div class="story">
+      <div class="story storyv">
         <div class="pan" style="--c:var(--orange);--bg:var(--peach)">
           <div class="ph">{ic('scale','#fff')}<span>Masalah gizi prakonsepsi</span></div>
           <div class="st"><b>±50%</b><span>orang dewasa Indonesia berat badan berlebih atau obesitas <cite>(Pengpid dan Peltzer 2017)</cite></span></div>
@@ -328,7 +365,7 @@ html = f'''<!doctype html>
           <p>Masa prakonsepsi kritis bagi calon ayah, ibu, dan anak, namun sering diabaikan <cite>(Stephenson <i>et al.</i> 2018)</cite></p>
           <div class="find"><b>Temuan kami:</b> 51,4% catin berat badan lebih atau obesitas, meski 59,5% berpengetahuan baik</div>
         </div>
-        <i class="arr">➜</i>
+        <i class="arr">⬇</i>
         <div class="pan" style="--c:var(--blue);--bg:var(--sky)">
           <div class="ph">{ic('phone','#fff')}<span>Paparan digital</span></div>
           <div class="st"><b>221,5 jt</b><span>pengguna internet, didominasi milenial dan gen-Z yang akan menikah <cite>(APJII 2024)</cite></span></div>
@@ -336,7 +373,7 @@ html = f'''<!doctype html>
           <p>Usia produktif aktif mencari info kesehatan di media sosial <cite>(Lim <i>et al.</i> 2022)</cite>, padahal misinformasi gizi menyebar luas <cite>(Wang <i>et al.</i> 2019; Suarez-Lledo dan Alvarez-Galvez 2021)</cite>. Dalam HBM, media sosial menjadi isyarat untuk bertindak <cite>(Janz dan Becker 1984)</cite></p>
           <div class="find"><b>Temuan kami:</b> 73,0% mengakses media sosial hampir tiap jam; WhatsApp platform utama (59,5%)</div>
         </div>
-        <i class="arr">➜</i>
+        <i class="arr">⬇</i>
         <div class="pan" style="--c:var(--purple);--bg:var(--lilac)">
           <div class="ph">{ic('target','#fff')}<span>Kesenjangan</span></div>
           <ul class="gap">
@@ -350,9 +387,6 @@ html = f'''<!doctype html>
       <div class="goal">{ic('sun','#fff')}<span><b>Tujuan:</b> (1) menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap HBM, dan IMT; (2) mengevaluasi pengembangan dan penerapan platform web SHINING, sebagai dasar edukasi gizi prakonsepsi <i>online</i> yang mudah diakses dan berkelanjutan.</span></div>
       <p class="note" style="text-align:center;font-style:italic;margin-top:2.5mm">Gambar 1. Alur masalah yang melatarbelakangi penelitian</p>
     </section>
-  </div>
-
-  <div class="row" style="grid-template-columns:1.45fr 1.1fr">
     <section class="card">
       {head(2,'Metode','blue','clip')}
       <div class="meth">
@@ -373,9 +407,11 @@ html = f'''<!doctype html>
       </div>
       <p class="note" style="margin-top:2mm">Lingkaran penuh: tahap yang dilaporkan pada poster ini.</p>
     </section>
+    </div>
+    <div class="col">
     <section class="card">
       {head('3.1','Hasil · Platform SHINING','purple','monitor')}
-      <div class="platgrid"><div><figure class="browser">
+      <div class="platv"><div><figure class="browser">
           <div class="bar"><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><span>mulai.edukasi-catin.id</span></div>
           <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
         </figure>
@@ -387,25 +423,19 @@ html = f'''<!doctype html>
         <li><span class="fi" style="--bg:var(--peach)">{ic('check','#1f8a96')}</span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
       </ul></div>
     </section>
-  </div>
-
-  <div class="row">
     <section class="card">
       {head('3.2','Hasil · Proses Pengembangan Platform','green','cycle')}
-      <div class="proc">
+      <div class="procv">
         <div class="cyc">{cyc}</div>
-        <div class="tlh">
-          {ts(1,'Akhir Juli','blue','Masalah','Persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta','Perbaikan','Skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda')}
-          {ts(2,'Agustus','green','Uji kemudahan','15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner','Catatan','Tidak menangkap masalah yang kemudian muncul di lapangan')}
-          {ts(3,'Awal Oktober','purple','Masalah','Progres hilang saat berganti HP; isian kosong','Perbaikan','Progres dilacak per nomor HP; validasi isian; kirim ulang otomatis')}
-          {ts(4,'Pertengahan Oktober','orange','Masalah','Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap','Perbaikan','Simpan draf otomatis; blok wajib; persetujuan berlapis')}
-          {ts(5,'Akhir Oktober','teal','Status','Pendaftaran kelompok kontrol ditutup','Tindak lanjut','Data dikunci untuk analisis')}
+        <div class="vtl">
+          {tsv(1,'Akhir Juli','blue','Masalah','Persetujuan tidak tersimpan; angka nol nomor HP hilang; status selesai hanya di HP peserta','Perbaikan','Skrip ditulis ulang; status selesai dikonfirmasi server; cegah kirim ganda')}
+          {tsv(2,'Agustus','green','Uji kemudahan','15 mahasiswa menilai mudah (rerata 4,40–4,73 dari 5); terendah pada pengisian kuesioner','Catatan','Tidak menangkap masalah yang kemudian muncul di lapangan')}
+          {tsv(3,'Awal Oktober','purple','Masalah','Progres hilang saat berganti HP; isian kosong','Perbaikan','Progres dilacak per nomor HP; validasi isian; kirim ulang otomatis')}
+          {tsv(4,'Pertengahan Oktober','orange','Masalah','Blok makanan pokok FFQ hilang saat dikirim; halaman awal bertahap-tahap','Perbaikan','Simpan draf otomatis; blok wajib; persetujuan berlapis')}
+          {tsv(5,'Akhir Oktober','teal','Status','Pendaftaran kelompok kontrol ditutup','Tindak lanjut','Data dikunci untuk analisis')}
         </div>
       </div>
     </section>
-  </div>
-
-  <div class="row c3">
     <section class="card">
       {head('3.3','Penyelesaian Instrumen (n = 198)','blue','chart')}
       <table class="bars">
@@ -422,6 +452,8 @@ html = f'''<!doctype html>
       <p class="note">Penurunan terbesar terjadi sebelum tes pengetahuan, instrumen terpanjang. Kiriman berulang mencapai 13,8% rekaman.</p>
       <div class="callout">{ic('check','#2e8a57')}<span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
     </section>
+    </div>
+    <div class="col">
     <section class="card">
       {head('3.4','Penggunaan Media Sosial (n = 74)','teal','phone')}
       <table class="bars">
@@ -454,9 +486,6 @@ html = f'''<!doctype html>
       </div>
       <p class="note">*p &lt; 0,05 (khi-kuadrat)</p>
     </section>
-  </div>
-
-  <div class="row c3">
     <section class="card">
       {head('3.6','Hubungan yang Bermakna','green','link')}
       <table class="rel">
@@ -482,7 +511,6 @@ html = f'''<!doctype html>
         <li>{ic('monitor','#1b2f52')}<span><b style="color:var(--red)">Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</span></li>
       </ul>
     </section>
-    <div class="col">
       <section class="card">
         {head(5,'Ucapan Terima Kasih','green','heart')}
         <ul class="bul">
