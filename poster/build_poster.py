@@ -161,7 +161,7 @@ h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
 .pair .access{grid-template-columns:40mm 1fr;gap:5mm;padding:5mm 6mm}
 .pair .access .qr{width:40mm;height:40mm}
 .grp{display:grid!important;grid-template-columns:1fr 1fr;column-gap:9mm}
-.fig1{border:.6mm dashed var(--slate);border-radius:4mm;padding:4mm;background:#fafbfc}
+.fig1{margin:0}
 .fig1row{display:grid;grid-template-columns:1fr 7mm 1fr 7mm 1fr;align-items:stretch}
 .fig1row .arr,.fig1 .arr.down{align-self:center;text-align:center;font-style:normal;font-size:18pt;color:var(--muted)}
 .fig1 .arr.down{display:block;line-height:1;padding:1.5mm 0}
@@ -397,7 +397,6 @@ html = f'''<!doctype html>
         </div>
         <i class="arr down">⬇</i>
         <div class="goal">{ic('sun','#fff')}<span><b>Tujuan:</b> (1) menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap HBM, dan IMT; (2) mengevaluasi pengembangan dan penerapan platform web SHINING, sebagai dasar edukasi gizi prakonsepsi <i>online</i> yang mudah diakses dan berkelanjutan.</span></div>
-        <figcaption><b>Gambar 1.</b> Alur masalah yang melatarbelakangi penelitian: masalah gizi → paparan digital → kesenjangan → tujuan</figcaption>
       </figure>
     </section>
   </div>
@@ -432,7 +431,7 @@ html = f'''<!doctype html>
           <div class="bar"><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><span>mulai.edukasi-catin.id</span></div>
           <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
         </figure>
-        <p class="note" style="text-align:center">Gambar 2. Laman awal dan login SHINING</p></div>
+        <p class="note" style="text-align:center">Gambar 1. Laman awal dan login SHINING</p></div>
       <ul class="feat">
         <li><span class="fi" style="--bg:var(--mint)">{ic('book','#2e8a57')}</span>Materi gizi prakonsepsi berbasis bukti dan konstruk HBM</li>
         <li><span class="fi" style="--bg:var(--sky)">{ic('phone','#1f3a68')}</span>Ramah HP; masuk dengan nama dan nomor WhatsApp</li>
