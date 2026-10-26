@@ -80,8 +80,8 @@ h1 .sh{color:var(--dark)}
 .stripe{height:3.2mm;background:linear-gradient(90deg,var(--green),var(--teal),var(--blue),var(--purple),var(--red),var(--orange),var(--gold))}
 
 /* body */
-main{flex:1;padding:9mm 24mm 0;display:flex;flex-direction:column;gap:8mm;min-height:0}
-.row{display:grid;gap:8mm;flex:1 1 auto}
+main{flex:1;padding:6mm 24mm 0;display:flex;flex-direction:column;gap:7mm;min-height:0}
+.row{display:grid;gap:7mm;flex:1 1 auto}
 .c3{grid-template-columns:1fr 1fr 1fr}
 .c21{grid-template-columns:2fr 1fr}
 .card{background:#fff;border:.6mm solid var(--line);border-radius:6mm;padding:0 9mm 8mm;box-shadow:0 1.2mm 3mm rgba(20,60,80,.06);display:flex;flex-direction:column;overflow:hidden}
@@ -134,11 +134,16 @@ b{font-weight:800}
 .feat2 .fi{width:10mm!important;height:10mm!important}
 .feat2 .fi svg{width:6mm!important;height:6mm!important}
 .masonry{flex:1 1 auto}
-.col{display:flex;flex-direction:column;gap:8mm;min-height:0}
+.col{display:flex;flex-direction:column;gap:7mm;min-height:0}
 .col>.card{flex:1 1 auto}
 .col>.access{flex:none;grid-template-columns:44mm 1fr;gap:5mm;padding:6mm 7mm}
 .col>.access .qr{width:44mm;height:44mm}
 .col>.thanks{flex:none}
+.kstack{display:flex;flex-direction:column;gap:2mm;flex:1;justify-content:space-between}
+.kcard .kpi{border-top:0;border-left:2mm solid var(--c);box-shadow:none;padding:1.6mm 5mm;grid-template-columns:15mm 1fr;gap:4mm}
+.kcard .kpi .ki{width:15mm;height:15mm}.kcard .kpi .ki svg{width:8mm;height:8mm}
+.kcard .kpi .v{font-size:30pt}.kcard .kpi .d{font-size:15pt;margin-top:.5mm}
+.platgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:7mm;align-items:center}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
@@ -181,8 +186,8 @@ b{font-weight:800}
 .feat .fi svg{width:7.5mm;height:7.5mm}
 
 /* proses */
-.proc{display:grid;grid-template-columns:120mm 1fr;gap:9mm;align-items:center}
-.cyc svg{width:120mm;height:120mm}
+.proc{display:grid;grid-template-columns:110mm 1fr;gap:9mm;align-items:center}
+.cyc svg{width:110mm;height:110mm}
 .tlh{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:5mm;padding-top:22mm}
 .tlh::before{content:"";position:absolute;left:0;right:3mm;top:6mm;height:1mm;background:var(--navy)}
 .tlh::after{content:"";position:absolute;right:0;top:4.2mm;border:2.3mm solid transparent;border-left:4mm solid var(--navy)}
@@ -336,15 +341,7 @@ html = f'''<!doctype html>
     </section>
   </div>
 
-  <div class="kpis">
-    <div class="kpi" style="--c:var(--blue)"><span class="ki">{ic('users','#2d6cc0')}</span><div><div class="v">198</div><div class="d">catin memenuhi syarat</div></div></div>
-    <div class="kpi" style="--c:var(--orange)"><span class="ki">{ic('check','#e57a24')}</span><div><div class="v">38,9%</div><div class="d">menyelesaikan keenam instrumen sesi 1</div></div></div>
-    <div class="kpi" style="--c:var(--purple)"><span class="ki">{ic('clock','#7a4bb8')}</span><div><div class="v">73,0%</div><div class="d">mengakses media sosial hampir tiap jam</div></div></div>
-    <div class="kpi" style="--c:var(--green)"><span class="ki">{ic('book','#1f8a55')}</span><div><div class="v">59,5%</div><div class="d">pengetahuan gizi prakonsepsi baik</div></div></div>
-    <div class="kpi" style="--c:var(--red)"><span class="ki">{ic('scale','#d9483b')}</span><div><div class="v">51,4%</div><div class="d">berat badan lebih atau obesitas</div></div></div>
-  </div>
-
-  <div class="row" style="grid-template-columns:2.45fr 1fr">
+  <div class="row" style="grid-template-columns:2.6fr 1fr">
     <section class="card">
       {head(4,'Alur Penelitian (Model ADDIE)','green','flow')}
       <div class="addie">
@@ -365,25 +362,21 @@ html = f'''<!doctype html>
         <div style="--c:var(--green)"><b>74</b><span>data lengkap dan valid<br>(30 laki-laki, 44 perempuan)</span></div>
       </div>
     </section>
-    <section class="card">
-      {head(5,'Platform SHINING','purple','monitor')}
-      <figure class="browser">
-        <div class="bar"><i style="background:#ef6b5b"></i><i style="background:#f5b942"></i><i style="background:#4cbf74"></i><span>mulai.edukasi-catin.id</span></div>
-        <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
-      </figure>
-      <p class="note" style="text-align:center;margin-bottom:3mm">Laman awal dan login SHINING</p>
-      <ul class="feat feat2">
-        <li><span class="fi" style="--bg:var(--mint)">{ic('book','#1f8a55')}</span>Materi gizi prakonsepsi berbasis bukti dan konstruk HBM</li>
-        <li><span class="fi" style="--bg:var(--sky)">{ic('phone','#2d6cc0')}</span>Ramah HP; masuk dengan nama dan nomor WhatsApp</li>
-        <li><span class="fi" style="--bg:var(--lilac)">{ic('save','#7a4bb8')}</span>Progres dan draf tersimpan otomatis per nomor HP</li>
-        <li><span class="fi" style="--bg:var(--peach)">{ic('check','#e57a24')}</span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
-      </ul>
+    <section class="card kcard">
+      <h2 class="bn" style="--c:var(--navy)"><span class="tt">Angka Kunci</span></h2>
+      <div class="kstack">
+    <div class="kpi" style="--c:var(--blue)"><span class="ki">{ic('users','#2d6cc0')}</span><div><div class="v">198</div><div class="d">catin memenuhi syarat</div></div></div>
+    <div class="kpi" style="--c:var(--orange)"><span class="ki">{ic('check','#e57a24')}</span><div><div class="v">38,9%</div><div class="d">menyelesaikan keenam instrumen sesi 1</div></div></div>
+    <div class="kpi" style="--c:var(--purple)"><span class="ki">{ic('clock','#7a4bb8')}</span><div><div class="v">73,0%</div><div class="d">mengakses media sosial hampir tiap jam</div></div></div>
+    <div class="kpi" style="--c:var(--green)"><span class="ki">{ic('book','#1f8a55')}</span><div><div class="v">59,5%</div><div class="d">pengetahuan gizi prakonsepsi baik</div></div></div>
+    <div class="kpi" style="--c:var(--red)"><span class="ki">{ic('scale','#d9483b')}</span><div><div class="v">51,4%</div><div class="d">berat badan lebih atau obesitas</div></div></div>
+      </div>
     </section>
   </div>
 
   <div class="row">
     <section class="card">
-      {head(6,'Proses Pengembangan Platform SHINING','green','cycle')}
+      {head(5,'Proses Pengembangan Platform SHINING','green','cycle')}
       <div class="proc">
         <div class="cyc">{cyc}</div>
         <div class="tlh">
@@ -397,10 +390,23 @@ html = f'''<!doctype html>
     </section>
   </div>
 
-  <div class="row c3 masonry">
-    <div class="col">
+  <div class="row" style="grid-template-columns:1.75fr 1fr">
     <section class="card">
-      {head(7,'Hasil 1 · Instrumen Sesi 1 (n = 198)','blue','chart')}
+      {head(6,'Hasil 1 · Platform SHINING','purple','monitor')}
+      <div class="platgrid"><div><figure class="browser">
+        <div class="bar"><i style="background:#ef6b5b"></i><i style="background:#f5b942"></i><i style="background:#4cbf74"></i><span>mulai.edukasi-catin.id</span></div>
+        <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
+      </figure>
+      <p class="note" style="text-align:center">Gambar 1. Laman awal dan login platform SHINING (mulai.edukasi-catin.id)</p></div>
+      <ul class="feat">
+        <li><span class="fi" style="--bg:var(--mint)">{ic('book','#1f8a55')}</span>Materi gizi prakonsepsi berbasis bukti dan konstruk HBM</li>
+        <li><span class="fi" style="--bg:var(--sky)">{ic('phone','#2d6cc0')}</span>Ramah HP; masuk dengan nama dan nomor WhatsApp</li>
+        <li><span class="fi" style="--bg:var(--lilac)">{ic('save','#7a4bb8')}</span>Progres dan draf tersimpan otomatis per nomor HP</li>
+        <li><span class="fi" style="--bg:var(--peach)">{ic('check','#e57a24')}</span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
+      </ul></div>
+    </section>
+    <section class="card">
+      {head(7,'Hasil 2 · Instrumen Sesi 1 (n = 198)','blue','chart')}
       <table class="bars">
         <tr><th>Tahap</th><th></th><th class="r">n (%)</th><th class="r">Median</th></tr>
         {bar('Persetujuan',86.4,'–','blue','<td class="r">171 (86,4)</td>')}
@@ -415,8 +421,25 @@ html = f'''<!doctype html>
       <p class="note">Penurunan terbesar terjadi sebelum tes pengetahuan, instrumen terpanjang. Kiriman berulang mencapai 13,8% rekaman.</p>
       <div class="callout">{ic('check','#1f8a55')}<span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
     </section>
+  </div>
+
+  <div class="row c3 masonry">
+    <div class="col">
     <section class="card">
-      {head(8,'Hubungan yang Bermakna','green','link')}
+      {head(8,'Hasil 3 · Media Sosial (n = 74)','teal','phone')}
+      <table class="bars">
+        {bar('WhatsApp utama',59.5,'59,5%','green')}
+        {bar('TikTok/Instagram',33.8,'33,8%','purple')}
+        {bar('Akses ±tiap jam',73,'73,0%','blue')}
+        {bar('Durasi ≥3 jam/hari',51.4,'51,4%','orange')}
+        {bar('Akun nakes/resmi',75.7,'75,7%','teal')}
+        {bar('Influencer',39.2,'39,2%','red')}
+        {bar('Tertarik produk promosi',71.6,'71,6%','pink')}
+      </table>
+      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
+    </section>
+    <section class="card">
+      {head(9,'Hubungan yang Bermakna','green','link')}
       <table class="rel">
         <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
         <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r pos">+0,414</td><td class="r">&lt;0,001</td></tr>
@@ -429,19 +452,6 @@ html = f'''<!doctype html>
     </section>
     </div>
     <div class="col">
-    <section class="card">
-      {head(9,'Hasil 2 · Media Sosial (n = 74)','teal','phone')}
-      <table class="bars">
-        {bar('WhatsApp utama',59.5,'59,5%','green')}
-        {bar('TikTok/Instagram',33.8,'33,8%','purple')}
-        {bar('Akses ±tiap jam',73,'73,0%','blue')}
-        {bar('Durasi ≥3 jam/hari',51.4,'51,4%','orange')}
-        {bar('Akun nakes/resmi',75.7,'75,7%','teal')}
-        {bar('Influencer',39.2,'39,2%','red')}
-        {bar('Tertarik produk promosi',71.6,'71,6%','pink')}
-      </table>
-      <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
-    </section>
     <section class="card">
       {head(10,'Menurut Peran Catin','purple','users')}
       <div class="key"><span>{ic('male','#2d6cc0')}Laki-laki (n = 30)</span><span>{ic('female','#e0598b')}Perempuan (n = 44)</span></div>
@@ -461,8 +471,6 @@ html = f'''<!doctype html>
       </div>
       <p class="note">*p &lt; 0,05 (khi-kuadrat)</p>
     </section>
-    </div>
-    <div class="col">
     <section class="card" style="background:#fffaf3">
       {head(11,'Simpulan','orange','bulb')}
       <ul class="bul">
@@ -471,6 +479,8 @@ html = f'''<!doctype html>
         <li>{ic('cycle','#e57a24')}<span>Platform SHINING layak dikembangkan; perbaikan berulang terbukti menutup celah kehilangan data, sedangkan instrumen yang panjang masih menjadi titik putus utama.</span></li>
       </ul>
     </section>
+    </div>
+    <div class="col">
     <section class="card">
       {head(12,'Saran','red','mega')}
       <ul class="bul">
@@ -493,7 +503,6 @@ html = f'''<!doctype html>
         <li>{ic('check','#1f8a55')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
         <li>{ic('check','#1f8a55')}<span>Tim peneliti dan enumerator lapangan</span></li>
       </ul>
-    
     </div>
   </div>
 </main>
