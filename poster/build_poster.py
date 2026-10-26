@@ -30,7 +30,8 @@ def ic(name, color='currentColor', sw=2.1):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round">{I[name]}</svg>'
 
 def head(n, title, color, icon):
-    return f'<h2 class="bn" style="--c:var(--{color})"><span class="n">{n}</span><span class="tt">{title}</span><span class="hi">{ic(icon,"#fff")}</span></h2>'
+    nn = f'<span class="n">{n}</span>' if n else ''
+    return f'<h2 class="bn" style="--c:var(--{color})">{nn}<span class="tt">{title}</span><span class="hi">{ic(icon,"#fff")}</span></h2>'
 
 def bar(label, pct, val, color, extra='', bold=False):
     cls=' class="hl"' if bold else ''
@@ -133,6 +134,11 @@ b{font-weight:800}
 .mini span{display:block;font-size:15.0pt;font-weight:700;color:var(--c);line-height:1.15}
 .mini i{font-style:normal;font-size:20pt;color:var(--muted)}
 .platgrid{display:grid;grid-template-columns:1.55fr 1fr;gap:6mm;align-items:center}
+h2.bn .n{min-width:13mm;width:auto!important;padding:0 2.2mm;border-radius:7mm}
+.col{display:flex;flex-direction:column;gap:7mm;min-height:0}
+.col>.card{flex:1 1 auto}
+.col>.access{flex:none;grid-template-columns:42mm 1fr;gap:5mm;padding:5mm 7mm}
+.col>.access .qr{width:42mm;height:42mm}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
@@ -302,7 +308,7 @@ html = f'''<!doctype html>
 <main>
   <div class="row" style="grid-template-columns:1fr 2fr">
     <section class="card">
-      {head(1,'Abstrak','orange','book')}
+      {head(None,'Abstrak','orange','book')}
       <div class="abs">
         <p style="--c:var(--orange)"><b>Latar belakang.</b> Bukti tentang penggunaan media sosial calon pengantin (catin) dan kinerja platform edukasi gizi prakonsepsi daring di Indonesia masih terbatas.</p>
         <p style="--c:var(--green)"><b>Tujuan.</b> Menganalisis penggunaan media sosial catin dan hubungannya dengan pengetahuan gizi, sikap HBM, dan IMT, serta mengevaluasi pengembangan platform SHINING.</p>
@@ -313,7 +319,7 @@ html = f'''<!doctype html>
       <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi gizi, prakonsepsi, media sosial, <i>Health Belief Model</i></div>
     </section>
     <section class="card">
-      {head(2,'Pendahuluan','green','bulb')}
+      {head(1,'Pendahuluan','green','bulb')}
       <div class="story">
         <div class="pan" style="--c:var(--orange);--bg:var(--peach)">
           <div class="ph">{ic('scale','#fff')}<span>Masalah gizi prakonsepsi</span></div>
@@ -348,7 +354,7 @@ html = f'''<!doctype html>
 
   <div class="row" style="grid-template-columns:1.45fr 1.1fr">
     <section class="card">
-      {head(3,'Metode','blue','clip')}
+      {head(2,'Metode','blue','clip')}
       <div class="meth">
         <div><span class="mi">{ic('flow','#1f3a68')}</span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
         <div><span class="mi">{ic('pin','#1f3a68')}</span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
@@ -368,7 +374,7 @@ html = f'''<!doctype html>
       <p class="note" style="margin-top:2mm">Lingkaran penuh: tahap yang dilaporkan pada poster ini.</p>
     </section>
     <section class="card">
-      {head(4,'Tampilan Laman SHINING','purple','monitor')}
+      {head('3.1','Hasil · Platform SHINING','purple','monitor')}
       <div class="platgrid"><div><figure class="browser">
           <div class="bar"><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><span>mulai.edukasi-catin.id</span></div>
           <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
@@ -385,7 +391,7 @@ html = f'''<!doctype html>
 
   <div class="row">
     <section class="card">
-      {head(5,'Proses Pengembangan Platform SHINING','green','cycle')}
+      {head('3.2','Hasil · Proses Pengembangan Platform','green','cycle')}
       <div class="proc">
         <div class="cyc">{cyc}</div>
         <div class="tlh">
@@ -401,7 +407,7 @@ html = f'''<!doctype html>
 
   <div class="row c3">
     <section class="card">
-      {head(6,'Hasil 1 · Instrumen Sesi 1 (n = 198)','blue','chart')}
+      {head('3.3','Penyelesaian Instrumen (n = 198)','blue','chart')}
       <table class="bars">
         <tr><th>Tahap</th><th></th><th class="r">n (%)</th><th class="r">Median</th></tr>
         {bar('Persetujuan',86.4,'–','blue','<td class="r">171 (86,4)</td>')}
@@ -417,7 +423,7 @@ html = f'''<!doctype html>
       <div class="callout">{ic('check','#2e8a57')}<span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
     </section>
     <section class="card">
-      {head(7,'Hasil 2 · Media Sosial (n = 74)','teal','phone')}
+      {head('3.4','Penggunaan Media Sosial (n = 74)','teal','phone')}
       <table class="bars">
         {bar('WhatsApp utama',59.5,'59,5%','green')}
         {bar('TikTok/Instagram',33.8,'33,8%','purple')}
@@ -430,7 +436,7 @@ html = f'''<!doctype html>
       <p class="note">Sumber informasi dapat dipilih lebih dari satu.</p>
     </section>
     <section class="card">
-      {head(8,'Menurut Peran Catin','purple','users')}
+      {head('3.5','Menurut Peran Catin','purple','users')}
       <div class="key"><span>{ic('male','#1f3a68')}Laki-laki (n = 30)</span><span>{ic('female','#1f8a96')}Perempuan (n = 44)</span></div>
       <div class="grp">
         <div><div class="t">WhatsApp platform utama*</div>
@@ -452,7 +458,7 @@ html = f'''<!doctype html>
 
   <div class="row c3">
     <section class="card">
-      {head(9,'Hubungan yang Bermakna','green','link')}
+      {head('3.6','Hubungan yang Bermakna','green','link')}
       <table class="rel">
         <tr><th>Variabel</th><th>Terhadap</th><th class="r">r<sub>s</sub></th><th class="r">p</th></tr>
         <tr><td>Skor pengetahuan</td><td>Sikap HBM</td><td class="r pos">+0,414</td><td class="r">&lt;0,001</td></tr>
@@ -464,38 +470,35 @@ html = f'''<!doctype html>
       <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
     </section>
     <section class="card" style="background:#f3f8f9">
-      {head(10,'Simpulan','orange','bulb')}
+      {head(4,'Kesimpulan','teal','bulb')}
       <ul class="bul">
         <li>{ic('phone','#1f8a96')}<span>Media sosial, terutama WhatsApp, digunakan catin secara intensif sehingga menjadi saluran strategis edukasi gizi prakonsepsi.</span></li>
         <li>{ic('book','#1f8a96')}<span>Pengetahuan yang baik dan sikap HBM yang positif belum tecermin pada status gizi: <b>51,4%</b> catin berat badan lebih atau obesitas, sehingga intervensi sebelum kehamilan perlu segera diperkuat.</span></li>
         <li>{ic('cycle','#1f8a96')}<span>Platform SHINING layak dikembangkan; perbaikan berulang menutup celah kehilangan data dan menjadi landasan edukasi pranikah yang berkelanjutan melalui BKKBN dan KUA.</span></li>
       </ul>
-    </section>
-    <section class="card">
-      {head(11,'Saran','red','mega')}
+      <div class="sub" style="--c:var(--navy);margin-top:5mm">{ic('mega','#1f3a68')}Rekomendasi</div>
       <ul class="bul">
         <li>{ic('heart','#1b2f52')}<span><b style="color:var(--red)">Edukasi:</b> latih verifikasi informasi, arahkan catin ke akun tenaga kesehatan yang kredibel, ingatkan bahaya produk tanpa izin edar, dan manfaatkan WhatsApp sebagai saluran pengingat.</span></li>
         <li>{ic('monitor','#1b2f52')}<span><b style="color:var(--red)">Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</span></li>
       </ul>
     </section>
-  </div>
-
-  <div class="band">
-    <div class="access">
-      <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
-      <div>
-        <h3>{ic('qr','#bfe6ea')}12 · Akses SHINING – Mulai Sekarang!</h3>
-        <div class="link">mulai.edukasi-catin.id</div>
-        <ol><li>Pindai QR atau buka tautan di atas.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca ringkasan persetujuan, lalu mulai.</li></ol>
+    <div class="col">
+      <section class="card">
+        {head(5,'Ucapan Terima Kasih','green','heart')}
+        <ul class="bul">
+          <li>{ic('check','#2e8a57')}<span>Para calon pengantin peserta penelitian</span></li>
+          <li>{ic('check','#2e8a57')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
+          <li>{ic('check','#2e8a57')}<span>Tim peneliti dan enumerator lapangan</span></li>
+        </ul>
+      </section>
+      <div class="access">
+        <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
+        <div>
+          <h3>{ic('qr','#bfe6ea')}Akses SHINING</h3>
+          <div class="link">mulai.edukasi-catin.id</div>
+          <ol><li>Pindai QR atau buka tautan.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca persetujuan, lalu mulai.</li></ol>
+        </div>
       </div>
-    </div>
-    <div class="thanks">
-      <h3>{ic('heart','#1f8a96')}13 · Ucapan Terima Kasih</h3>
-      <ul>
-        <li>{ic('check','#2e8a57')}<span>Para calon pengantin peserta penelitian</span></li>
-        <li>{ic('check','#2e8a57')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
-        <li>{ic('check','#2e8a57')}<span>Tim peneliti dan enumerator lapangan</span></li>
-      </ul>
     </div>
   </div>
 </main>
