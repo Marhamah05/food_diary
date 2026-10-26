@@ -39,17 +39,18 @@ def bar(label, pct, val, color, extra='', bold=False):
 css = r'''
 @page { size: 841mm 1189mm; margin: 0; }
 :root{
-  --ink:#1c2a33; --muted:#566570; --line:#dfe7ec;
-  --navy:#1b3a8a; --blue:#2d6cc0; --sky:#e8f1fb;
-  --green:#1f8a55; --mint:#e7f5ec; --teal:#14857c; --tealbg:#e3f3f1;
-  --orange:#e57a24; --peach:#fdf0e3; --red:#d9483b; --rose:#fbe9e7;
-  --purple:#7a4bb8; --lilac:#f1ebfa; --pink:#e0598b; --gold:#e9a81c;
-  --dark:#0f5a43; --track:#e9eef2;
+  --ink:#1f2a36; --muted:#5b6672; --line:#d9dee4;
+  --navy:#1f3a68; --blue:#1f3a68; --sky:#e7edf5;
+  --green:#2e8a57; --mint:#e5f2ea; --teal:#1f8a96; --tealbg:#e2f1f3;
+  --orange:#1f8a96; --peach:#e8f2f4; --red:#1b2f52; --rose:#eceff3;
+  --purple:#5f7a91; --lilac:#e9eef3; --pink:#1f8a96; --gold:#8fa3b5;
+  --slate:#5f7a91; --grey:#b9bec4;
+  --dark:#1f3a68; --track:#e4e8ec;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#fff}
-body{font-family:"Plus Jakarta Sans","Inter",sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.poster{position:relative;width:841mm;height:1189mm;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,#f4faf5 0%,#ffffff 30%,#f6faf7 100%)}
+body{font-family:Calibri,Carlito,Arial,"Liberation Sans",sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.poster{position:relative;width:841mm;height:1189mm;overflow:hidden;display:flex;flex-direction:column;background:#f2f4f6}
 .deco{position:absolute;z-index:0;pointer-events:none}
 .poster>header,.poster>main,.poster>footer{position:relative;z-index:1}
 
@@ -72,7 +73,7 @@ h1 .sh{color:var(--dark)}
 .contact div{display:grid;grid-template-columns:10mm 1fr;gap:3mm;align-items:center;font-size:18pt;line-height:1.3}
 .contact .ci{width:10mm;height:10mm;border-radius:50%;background:var(--blue);display:grid;place-items:center}
 .contact .ci svg{width:6mm;height:6mm}
-.brand{background:var(--sky);border:.6mm solid #c7dbf3;border-radius:5mm;padding:5mm 7mm}
+.brand{background:var(--sky);border:.6mm solid #cfd8e3;border-radius:5mm;padding:5mm 7mm}
 .brand .wm2{display:flex;align-items:center;gap:3mm;font-size:38pt;font-weight:800;color:var(--navy);line-height:1}
 .brand .wm2 svg{width:13mm;height:13mm}
 .brand .btag{font-size:19pt;font-weight:800;color:var(--orange);margin-top:1.5mm}
@@ -86,15 +87,15 @@ main{flex:1;padding:9mm 24mm 0;display:flex;flex-direction:column;gap:8mm;min-he
 .c21{grid-template-columns:2fr 1fr}
 .card{background:#fff;border:.6mm solid var(--line);border-radius:6mm;padding:0 9mm 8mm;box-shadow:0 1.2mm 3mm rgba(20,60,80,.06);display:flex;flex-direction:column;overflow:hidden}
 h2.bn{display:flex;align-items:center;gap:4mm;margin:0 -9mm 6mm;padding:3.6mm 9mm;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 70%,#fff));color:#fff;font-size:31.0pt;font-weight:800;line-height:1.1}
-h2.bn .n{flex:none;width:13mm;height:13mm;border-radius:50%;background:#fff;color:var(--c);font-size:20.3pt;display:grid;place-items:center}
+h2.bn .n{flex:none;width:13mm;height:13mm;border-radius:50%;background:#fff;color:var(--c);font-size:20pt;display:grid;place-items:center}
 h2.bn .tt{flex:1}
 h2.bn .hi{flex:none;width:11mm;height:11mm;opacity:.9}
 h2.bn .hi svg{width:100%;height:100%}
-p,li{font-size:23.5pt;line-height:1.4}
+p,li{font-size:20pt;line-height:1.4}
 p+p{margin-top:3mm}
 b{font-weight:800}
 .note{font-size:17.7pt;line-height:1.4;color:var(--muted);margin-top:3.5mm}
-.sub{display:flex;align-items:center;gap:3mm;font-size:23.5pt;font-weight:800;color:var(--c,var(--green));margin:5mm 0 3mm}
+.sub{display:flex;align-items:center;gap:3mm;font-size:20pt;font-weight:800;color:var(--c,var(--green));margin:5mm 0 3mm}
 .sub svg{width:9mm;height:9mm}
 
 .goals{list-style:none;display:flex;flex-direction:column;gap:3mm}
@@ -106,37 +107,37 @@ b{font-weight:800}
 .kw i{color:var(--ink)}
 
 .abs{display:flex;flex-direction:column;gap:2.2mm}
-.abs p{font-size:19pt;line-height:1.36;border-left:1.6mm solid var(--c);padding-left:3.5mm}
+.abs p{font-size:19.0pt;line-height:1.36;border-left:1.6mm solid var(--c);padding-left:3.5mm}
 .abs p b{color:var(--c)}
 .abs p+p{margin-top:0}
 .story{display:grid;grid-template-columns:1fr 9mm 1fr 9mm 1fr;align-items:stretch}
-.story .arr{align-self:center;text-align:center;font-style:normal;font-size:24pt;color:var(--muted)}
+.story .arr{align-self:center;text-align:center;font-style:normal;font-size:20pt;color:var(--muted)}
 .pan{background:var(--bg);border-radius:4mm;padding:0 5mm 4mm;display:flex;flex-direction:column;gap:2.6mm;overflow:hidden}
-.ph{display:flex;align-items:center;gap:3mm;margin:0 -5mm 1mm;padding:2.6mm 5mm;background:var(--c);color:#fff;font-weight:800;font-size:19pt}
+.ph{display:flex;align-items:center;gap:3mm;margin:0 -5mm 1mm;padding:2.6mm 5mm;background:var(--c);color:#fff;font-weight:800;font-size:19.0pt}
 .ph svg{width:8mm;height:8mm;flex:none}
 .st{display:grid;grid-template-columns:auto 1fr;gap:3mm;align-items:center;background:#fff;border-radius:3mm;padding:2mm 3mm}
-.st b{font-size:28pt;font-weight:800;color:var(--c);line-height:1;white-space:nowrap}
-.st span,.pan p,.gap li{font-size:16pt;line-height:1.32}
-.pan cite,.goal cite{font-style:normal;color:var(--muted);font-size:.85em}
+.st b{font-size:28.0pt;font-weight:800;color:var(--c);line-height:1;white-space:nowrap}
+.st span,.pan p,.gap li{font-size:16.0pt;line-height:1.32}
+.pan cite,.goal cite{font-style:normal;color:var(--muted);font-size:14pt}
 .gap{list-style:none;display:flex;flex-direction:column;gap:2.4mm}
 .gap li{display:grid;grid-template-columns:8mm 1fr;gap:2.5mm;background:#fff;border-radius:3mm;padding:2mm 3mm}
 .gap svg{width:7mm;height:7mm;margin-top:.5mm}
-.goal{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:center;margin-top:4mm;background:linear-gradient(90deg,var(--green),var(--teal));color:#fff;border-radius:4mm;padding:3.5mm 6mm;font-size:18pt;line-height:1.35}
+.goal{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:center;margin-top:4mm;background:linear-gradient(90deg,var(--green),var(--teal));color:#fff;border-radius:4mm;padding:3.5mm 6mm;font-size:18.0pt;line-height:1.35}
 .goal svg{width:11mm;height:11mm}
 .find{margin-top:auto;background:var(--c);color:#fff;border-radius:3mm;padding:2.2mm 3.5mm;font-size:15.5pt;line-height:1.3}
 .find b{color:#fff}
 .mini{display:flex;align-items:center;gap:1.5mm}
 .mini div{flex:1;text-align:center}
-.mini b{display:grid;place-items:center;width:15mm;height:15mm;margin:0 auto 1.5mm;border-radius:50%;border:1.1mm solid var(--c);color:var(--c);font-size:21pt;font-weight:800;background:#fff}
+.mini b{display:grid;place-items:center;width:15mm;height:15mm;margin:0 auto 1.5mm;border-radius:50%;border:1.1mm solid var(--c);color:var(--c);font-size:20pt;font-weight:800;background:#fff}
 .mini .on b{background:var(--c);color:#fff}
-.mini span{display:block;font-size:15pt;font-weight:700;color:var(--c);line-height:1.15}
-.mini i{font-style:normal;font-size:24pt;color:var(--muted)}
+.mini span{display:block;font-size:15.0pt;font-weight:700;color:var(--c);line-height:1.15}
+.mini i{font-style:normal;font-size:20pt;color:var(--muted)}
 .platgrid{display:grid;grid-template-columns:1.55fr 1fr;gap:6mm;align-items:center}
 .meth{display:flex;flex-direction:column;gap:3mm}
 .meth div{display:grid;grid-template-columns:11mm 1fr;gap:4mm;align-items:start}
 .meth .mi{width:11mm;height:11mm;border-radius:3mm;background:var(--sky);display:grid;place-items:center;margin-top:.6mm}
 .meth .mi svg{width:7mm;height:7mm}
-.meth p{font-size:21.9pt;line-height:1.38}
+.meth p{font-size:20pt;line-height:1.38}
 .meth b{color:var(--blue)}
 
 .browser{width:100%;border:.6mm solid var(--line);border-radius:4mm;overflow:hidden;box-shadow:0 2mm 5mm rgba(80,40,120,.15);background:#fff}
@@ -163,13 +164,13 @@ b{font-weight:800}
 .step:not(:last-child)::after{content:"➜";position:absolute;right:-7mm;top:5.5mm;font-size:25.7pt;color:var(--muted)}
 .step .ltr{width:22mm;height:22mm;margin:0 auto 3mm;border-radius:50%;border:1.4mm solid var(--c);color:var(--c);font-weight:800;font-size:32.1pt;display:grid;place-items:center;background:#fff}
 .step.focus .ltr{background:var(--c);color:#fff;box-shadow:0 0 0 2mm color-mix(in srgb,var(--c) 22%,#fff)}
-.step h3{font-size:22.5pt;font-weight:800;color:var(--c);line-height:1.15}
+.step h3{font-size:20pt;font-weight:800;color:var(--c);line-height:1.15}
 .step p{font-size:18.2pt;line-height:1.35;color:var(--muted);margin-top:1.5mm}
 .legend{display:flex;gap:8mm;margin-top:5mm;font-size:17.1pt;color:var(--muted);justify-content:center}
-.tag{display:inline-block;background:var(--red);color:#fff;font-size:13.9pt;font-weight:800;border-radius:2mm;padding:.6mm 2.4mm;margin-top:2mm}
+.tag{display:inline-block;background:var(--red);color:#fff;font-size:14pt;font-weight:800;border-radius:2mm;padding:.6mm 2.4mm;margin-top:2mm}
 
 .feat{list-style:none;display:flex;flex-direction:column;gap:3.5mm}
-.feat li{display:grid;grid-template-columns:13mm 1fr;gap:4mm;align-items:center;font-size:20.9pt;line-height:1.33}
+.feat li{display:grid;grid-template-columns:13mm 1fr;gap:4mm;align-items:center;font-size:20pt;line-height:1.33}
 .feat .fi{width:13mm;height:13mm;border-radius:50%;background:var(--bg);display:grid;place-items:center}
 .feat .fi svg{width:7.5mm;height:7.5mm}
 
@@ -220,19 +221,19 @@ tr.hl td{font-weight:800}
 .grp .ln span{font-size:18.2pt;text-align:right;font-weight:700}
 
 .bul{list-style:none;display:flex;flex-direction:column;gap:3mm}
-.bul li{display:grid;grid-template-columns:10mm 1fr;gap:3mm;font-size:21.9pt;line-height:1.38}
+.bul li{display:grid;grid-template-columns:10mm 1fr;gap:3mm;font-size:20pt;line-height:1.38}
 .bul li svg{width:9mm;height:9mm;margin-top:.8mm}
 
 .band{flex:none;display:grid;grid-template-columns:1.25fr 1fr;gap:8mm}
-.access{background:linear-gradient(90deg,var(--dark),#167a5a);border-radius:6mm;color:#fff;padding:6mm 9mm;display:grid;grid-template-columns:50mm 1fr;gap:8mm;align-items:center}
+.access{background:linear-gradient(90deg,var(--dark),#1f8a96);border-radius:6mm;color:#fff;padding:6mm 9mm;display:grid;grid-template-columns:50mm 1fr;gap:8mm;align-items:center}
 .access .qr{width:50mm;height:50mm;background:#fff;border-radius:3mm;padding:3.4mm}
 .access .qr img{width:100%;height:100%;display:block}
-.access h3{font-size:28.9pt;font-weight:800;color:#ffd166;display:flex;align-items:center;gap:3mm}
+.access h3{font-size:28.9pt;font-weight:800;color:#bfe6ea;display:flex;align-items:center;gap:3mm}
 .access h3 svg{width:10mm;height:10mm}
-.access .link{font-size:22.5pt;font-weight:800;margin:1.5mm 0 2.5mm}
+.access .link{font-size:20pt;font-weight:800;margin:1.5mm 0 2.5mm}
 .access ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:1.6mm}
 .access li{counter-increment:s;font-size:19.8pt;line-height:1.3;padding-left:10mm;position:relative}
-.access li::before{content:counter(s);position:absolute;left:0;top:.3mm;width:7mm;height:7mm;border-radius:50%;background:var(--orange);color:#fff;font-size:13.9pt;font-weight:800;display:grid;place-items:center}
+.access li::before{content:counter(s);position:absolute;left:0;top:.3mm;width:7mm;height:7mm;border-radius:50%;background:var(--orange);color:#fff;font-size:14pt;font-weight:800;display:grid;place-items:center}
 .thanks{background:#fff;border:.6mm solid var(--line);border-radius:6mm;padding:6mm 9mm}
 .thanks h3{font-size:25.7pt;font-weight:800;color:var(--teal);display:flex;align-items:center;gap:3mm;margin-bottom:3mm}
 .thanks h3 svg{width:9mm;height:9mm}
@@ -240,34 +241,34 @@ tr.hl td{font-weight:800}
 .thanks li{display:grid;grid-template-columns:8mm 1fr;gap:2.5mm;font-size:19.3pt;line-height:1.3}
 .thanks li svg{width:7mm;height:7mm;margin-top:.5mm}
 
-footer{margin-top:4mm;background:var(--dark);color:#e6f4ee;padding:5.5mm 24mm;display:flex;justify-content:center;gap:6mm;align-items:center;font-size:21.4pt;font-weight:600}
-footer b{color:#ffd166}
+footer{margin-top:4mm;background:var(--dark);color:#e6f4ee;padding:5.5mm 24mm;display:flex;justify-content:center;gap:6mm;align-items:center;font-size:20pt;font-weight:600}
+footer b{color:#bfe6ea}
 footer svg{width:8mm;height:8mm}
 '''
 
 leaf = lambda x,y,r,s,o,col: f'<svg class="deco" style="left:{x}mm;top:{y}mm;width:{s}mm;height:{s}mm;opacity:{o};transform:rotate({r}deg)" viewBox="0 0 100 100"><path d="M50 95 C10 70 5 30 50 5 C95 30 90 70 50 95Z" fill="{col}"/><path d="M50 92 V12" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M50 40 L30 28 M50 55 L28 44 M50 70 L32 61 M50 40 L70 28 M50 55 L72 44 M50 70 L68 61" stroke="#fff" stroke-width="2" fill="none"/></svg>'
 decos = ''.join([
- leaf(-14,-6,-35,70,.22,'#3fa66a'), leaf(30,-16,20,46,.16,'#8cc63f'),
- leaf(790,150,40,66,.18,'#3fa66a'), leaf(812,118,-10,40,.14,'#8cc63f'),
- leaf(-18,560,-60,60,.14,'#3fa66a'), leaf(800,640,60,56,.14,'#8cc63f'),
- leaf(-12,1080,-120,70,.18,'#3fa66a'), leaf(790,1090,130,64,.18,'#3fa66a'),
+ leaf(-14,-6,-35,70,.22,'#8fa3b5'), leaf(30,-16,20,46,.16,'#b9bec4'),
+ leaf(790,150,40,66,.18,'#8fa3b5'), leaf(812,118,-10,40,.14,'#b9bec4'),
+ leaf(-18,560,-60,60,.14,'#8fa3b5'), leaf(800,640,60,56,.14,'#b9bec4'),
+ leaf(-12,1080,-120,70,.18,'#8fa3b5'), leaf(790,1090,130,64,.18,'#8fa3b5'),
 ])
 
-sun = '<svg viewBox="0 0 40 40"><g stroke="#e9a81c" stroke-width="3" stroke-linecap="round"><line x1="20" y1="2" x2="20" y2="8"/><line x1="20" y1="32" x2="20" y2="38"/><line x1="2" y1="20" x2="8" y2="20"/><line x1="32" y1="20" x2="38" y2="20"/><line x1="7.3" y1="7.3" x2="11.5" y2="11.5"/><line x1="28.5" y1="28.5" x2="32.7" y2="32.7"/><line x1="7.3" y1="32.7" x2="11.5" y2="28.5"/><line x1="28.5" y1="11.5" x2="32.7" y2="7.3"/></g><circle cx="20" cy="20" r="8" fill="#e9a81c"/></svg>'
+sun = '<svg viewBox="0 0 40 40"><g stroke="#1f8a96" stroke-width="3" stroke-linecap="round"><line x1="20" y1="2" x2="20" y2="8"/><line x1="20" y1="32" x2="20" y2="38"/><line x1="2" y1="20" x2="8" y2="20"/><line x1="32" y1="20" x2="38" y2="20"/><line x1="7.3" y1="7.3" x2="11.5" y2="11.5"/><line x1="28.5" y1="28.5" x2="32.7" y2="32.7"/><line x1="7.3" y1="32.7" x2="11.5" y2="28.5"/><line x1="28.5" y1="11.5" x2="32.7" y2="7.3"/></g><circle cx="20" cy="20" r="8" fill="#1f8a96"/></svg>'
 
 # cycle diagram
 def node(cx,cy,col,lines):
     t=''.join(f'<tspan x="{cx}" dy="{0 if i==0 else 8.6}">{l}</tspan>' for i,l in enumerate(lines))
     y0=cy-(len(lines)-1)*4.3+2.6
-    return f'<circle cx="{cx}" cy="{cy}" r="27" fill="{col}"/><text x="{cx}" y="{y0}" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Plus Jakarta Sans">{t}</text>'
+    return f'<circle cx="{cx}" cy="{cy}" r="27" fill="{col}"/><text x="{cx}" y="{y0}" text-anchor="middle" fill="#fff" font-size="7.4" font-weight="800" font-family="Calibri, Carlito, Arial">{t}</text>'
 cyc = f'''<svg viewBox="0 0 200 200">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1b3a8a"/></marker></defs>
 <circle cx="100" cy="100" r="68" fill="none" stroke="#c9d6e8" stroke-width="2" stroke-dasharray="4 4"/>
 <g fill="none" stroke="#1b3a8a" stroke-width="2.4" marker-end="url(#ah)">
 <path d="M126 38 A68 68 0 0 1 160 70"/><path d="M162 128 A68 68 0 0 1 130 160"/><path d="M72 162 A68 68 0 0 1 40 130"/><path d="M38 72 A68 68 0 0 1 70 40"/></g>
-<circle cx="100" cy="100" r="28" fill="#fff" stroke="#1f8a55" stroke-width="3"/>
-<text x="100" y="104" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1f8a55" font-family="Plus Jakarta Sans">SHINING</text>
-{node(100,32,'#2d6cc0',['Pemantauan','& evaluasi'])}{node(168,100,'#e57a24',['Perbaikan','sistem'])}{node(100,168,'#7a4bb8',['Deteksi','masalah'])}{node(32,100,'#1f8a55',['Uji','lapangan'])}
+<circle cx="100" cy="100" r="28" fill="#fff" stroke="#2e8a57" stroke-width="3"/>
+<text x="100" y="104" text-anchor="middle" font-size="11.5" font-weight="800" fill="#2e8a57" font-family="Calibri, Carlito, Arial">SHINING</text>
+{node(100,32,'#1f3a68',['Pemantauan','& evaluasi'])}{node(168,100,'#1f8a96',['Perbaikan','sistem'])}{node(100,168,'#5f7a91',['Deteksi','masalah'])}{node(32,100,'#2e8a57',['Uji','lapangan'])}
 </svg>'''
 
 def ts(n,when,col,mlab,m,flab,f):
@@ -275,8 +276,6 @@ def ts(n,when,col,mlab,m,flab,f):
 
 html = f'''<!doctype html>
 <html lang="id"><head><meta charset="utf-8"><title>Poster SHINING A0</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>{css}</style></head>
 <body><div class="poster">
 {decos}
@@ -335,9 +334,9 @@ html = f'''<!doctype html>
         <div class="pan" style="--c:var(--purple);--bg:var(--lilac)">
           <div class="ph">{ic('target','#fff')}<span>Kesenjangan</span></div>
           <ul class="gap">
-            <li>{ic('chart','#7a4bb8')}<span>Edukasi <i>online</i> catin dan intervensi berbasis HP: hasil beragam dan efek terbatas <cite>(Atmaka <i>et al.</i> 2022; Musgrave <i>et al.</i> 2023)</cite></span></li>
-            <li>{ic('users','#7a4bb8')}<span>Angka <i>drop-out</i> tinggi <cite>(Eysenbach 2005; Meyerowitz-Katz <i>et al.</i> 2020)</cite></span></li>
-            <li>{ic('phone','#7a4bb8')}<span>Proses pengembangan platform jarang dilaporkan <cite>(Eysenbach 2011)</cite>; HP spesifikasi rendah, berbagi HP, dan jaringan tidak stabil umum terjadi</span></li>
+            <li>{ic('chart','#5f7a91')}<span>Edukasi <i>online</i> catin dan intervensi berbasis HP: hasil beragam dan efek terbatas <cite>(Atmaka <i>et al.</i> 2022; Musgrave <i>et al.</i> 2023)</cite></span></li>
+            <li>{ic('users','#5f7a91')}<span>Angka <i>drop-out</i> tinggi <cite>(Eysenbach 2005; Meyerowitz-Katz <i>et al.</i> 2020)</cite></span></li>
+            <li>{ic('phone','#5f7a91')}<span>Proses pengembangan platform jarang dilaporkan <cite>(Eysenbach 2011)</cite>; HP spesifikasi rendah, berbagi HP, dan jaringan tidak stabil umum terjadi</span></li>
           </ul>
           <div class="find"><b>Temuan kami:</b> 38,9% menuntaskan keenam instrumen; perbaikan berulang menutup celah kehilangan data</div>
         </div>
@@ -351,14 +350,14 @@ html = f'''<!doctype html>
     <section class="card">
       {head(3,'Metode','blue','clip')}
       <div class="meth">
-        <div><span class="mi">{ic('flow','#2d6cc0')}</span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
-        <div><span class="mi">{ic('pin','#2d6cc0')}</span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
-        <div><span class="mi">{ic('users','#2d6cc0')}</span><p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p></div>
-        <div><span class="mi">{ic('clip','#2d6cc0')}</span><p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p></div>
-        <div><span class="mi">{ic('chart','#2d6cc0')}</span><p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p></div>
-        <div><span class="mi">{ic('shield','#2d6cc0')}</span><p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p></div>
+        <div><span class="mi">{ic('flow','#1f3a68')}</span><p><b>Desain:</b> potong lintang dan evaluasi proses (tahap pengembangan model ADDIE)</p></div>
+        <div><span class="mi">{ic('pin','#1f3a68')}</span><p><b>Tempat dan waktu:</b> Kota Binjai, Sumatera Utara; Juli–Oktober 2026</p></div>
+        <div><span class="mi">{ic('users','#1f3a68')}</span><p><b>Subjek:</b> 198 catin memenuhi syarat (jalur BKKBN dan KUA); 74 dianalisis (data lengkap dan valid; 30 laki-laki, 44 perempuan)</p></div>
+        <div><span class="mi">{ic('clip','#1f3a68')}</span><p><b>Instrumen:</b> identitas, pengetahuan 48 butir (KR-20 = 0,904), sikap HBM 24 butir (α = 0,955), FFQ, IPAQ-SF, media sosial</p></div>
+        <div><span class="mi">{ic('chart','#1f3a68')}</span><p><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis; p &lt; 0,05</p></div>
+        <div><span class="mi">{ic('shield','#1f3a68')}</span><p><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025</p></div>
       </div>
-      <div class="sub" style="--c:var(--green);margin-top:5mm">{ic('flow','#1f8a55')}Alur penelitian (model ADDIE)</div>
+      <div class="sub" style="--c:var(--green);margin-top:5mm">{ic('flow','#2e8a57')}Alur penelitian (model ADDIE)</div>
       <div class="mini">
         <div style="--c:var(--blue)"><b>A</b><span>Analisis</span></div><i>›</i>
         <div style="--c:var(--teal)"><b>D</b><span>Desain</span></div><i>›</i>
@@ -371,15 +370,15 @@ html = f'''<!doctype html>
     <section class="card">
       {head(4,'Tampilan Laman SHINING','purple','monitor')}
       <div class="platgrid"><div><figure class="browser">
-          <div class="bar"><i style="background:#ef6b5b"></i><i style="background:#f5b942"></i><i style="background:#4cbf74"></i><span>mulai.edukasi-catin.id</span></div>
+          <div class="bar"><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><i style="background:#b9bec4"></i><span>mulai.edukasi-catin.id</span></div>
           <div class="screen"><img src="laman-shining.png" alt="Laman awal dan login SHINING"></div>
         </figure>
         <p class="note" style="text-align:center">Gambar 2. Laman awal dan login SHINING</p></div>
       <ul class="feat">
-        <li><span class="fi" style="--bg:var(--mint)">{ic('book','#1f8a55')}</span>Materi gizi prakonsepsi berbasis bukti dan konstruk HBM</li>
-        <li><span class="fi" style="--bg:var(--sky)">{ic('phone','#2d6cc0')}</span>Ramah HP; masuk dengan nama dan nomor WhatsApp</li>
-        <li><span class="fi" style="--bg:var(--lilac)">{ic('save','#7a4bb8')}</span>Progres dan draf tersimpan otomatis per nomor HP</li>
-        <li><span class="fi" style="--bg:var(--peach)">{ic('check','#e57a24')}</span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
+        <li><span class="fi" style="--bg:var(--mint)">{ic('book','#2e8a57')}</span>Materi gizi prakonsepsi berbasis bukti dan konstruk HBM</li>
+        <li><span class="fi" style="--bg:var(--sky)">{ic('phone','#1f3a68')}</span>Ramah HP; masuk dengan nama dan nomor WhatsApp</li>
+        <li><span class="fi" style="--bg:var(--lilac)">{ic('save','#5f7a91')}</span>Progres dan draf tersimpan otomatis per nomor HP</li>
+        <li><span class="fi" style="--bg:var(--peach)">{ic('check','#1f8a96')}</span>Instrumen terintegrasi: pengetahuan, sikap HBM, FFQ, IPAQ-SF</li>
       </ul></div>
     </section>
   </div>
@@ -415,7 +414,7 @@ html = f'''<!doctype html>
         {bar('Keenam instrumen',38.9,'–','navy','<td class="r">77 (38,9)</td>',True)}
       </table>
       <p class="note">Penurunan terbesar terjadi sebelum tes pengetahuan, instrumen terpanjang. Kiriman berulang mencapai 13,8% rekaman.</p>
-      <div class="callout">{ic('check','#1f8a55')}<span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
+      <div class="callout">{ic('check','#2e8a57')}<span><b style="color:var(--green)">Iterasi berhasil:</b> blok makanan pokok FFQ yang hilang pada 26,9% kiriman tidak terjadi lagi setelah simpan draf otomatis (0 dari 13; p = 0,04).</span></div>
     </section>
     <section class="card">
       {head(7,'Hasil 2 · Media Sosial (n = 74)','teal','phone')}
@@ -432,7 +431,7 @@ html = f'''<!doctype html>
     </section>
     <section class="card">
       {head(8,'Menurut Peran Catin','purple','users')}
-      <div class="key"><span>{ic('male','#2d6cc0')}Laki-laki (n = 30)</span><span>{ic('female','#e0598b')}Perempuan (n = 44)</span></div>
+      <div class="key"><span>{ic('male','#1f3a68')}Laki-laki (n = 30)</span><span>{ic('female','#1f8a96')}Perempuan (n = 44)</span></div>
       <div class="grp">
         <div><div class="t">WhatsApp platform utama*</div>
           <div class="ln"><div class="track"><div class="fill" style="width:73.3%;--f:var(--blue)"></div></div><span>73,3%</span></div>
@@ -464,19 +463,19 @@ html = f'''<!doctype html>
       </table>
       <p class="note">r<sub>s</sub>: korelasi Spearman. <sup>a</sup>Kruskal-Wallis. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². Frekuensi akses, pengetahuan, dan sikap tidak berhubungan dengan IMT.</p>
     </section>
-    <section class="card" style="background:#fffaf3">
+    <section class="card" style="background:#f3f8f9">
       {head(10,'Simpulan','orange','bulb')}
       <ul class="bul">
-        <li>{ic('phone','#e57a24')}<span>Media sosial, terutama WhatsApp, digunakan catin secara intensif sehingga menjadi saluran strategis edukasi gizi prakonsepsi.</span></li>
-        <li>{ic('book','#e57a24')}<span>Pengetahuan yang baik dan sikap HBM yang positif belum tecermin pada status gizi: <b>51,4%</b> catin berat badan lebih atau obesitas, sehingga intervensi sebelum kehamilan perlu segera diperkuat.</span></li>
-        <li>{ic('cycle','#e57a24')}<span>Platform SHINING layak dikembangkan; perbaikan berulang menutup celah kehilangan data dan menjadi landasan edukasi pranikah yang berkelanjutan melalui BKKBN dan KUA.</span></li>
+        <li>{ic('phone','#1f8a96')}<span>Media sosial, terutama WhatsApp, digunakan catin secara intensif sehingga menjadi saluran strategis edukasi gizi prakonsepsi.</span></li>
+        <li>{ic('book','#1f8a96')}<span>Pengetahuan yang baik dan sikap HBM yang positif belum tecermin pada status gizi: <b>51,4%</b> catin berat badan lebih atau obesitas, sehingga intervensi sebelum kehamilan perlu segera diperkuat.</span></li>
+        <li>{ic('cycle','#1f8a96')}<span>Platform SHINING layak dikembangkan; perbaikan berulang menutup celah kehilangan data dan menjadi landasan edukasi pranikah yang berkelanjutan melalui BKKBN dan KUA.</span></li>
       </ul>
     </section>
     <section class="card">
       {head(11,'Saran','red','mega')}
       <ul class="bul">
-        <li>{ic('heart','#d9483b')}<span><b style="color:var(--red)">Edukasi:</b> latih verifikasi informasi, arahkan catin ke akun tenaga kesehatan yang kredibel, ingatkan bahaya produk tanpa izin edar, dan manfaatkan WhatsApp sebagai saluran pengingat.</span></li>
-        <li>{ic('monitor','#d9483b')}<span><b style="color:var(--red)">Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</span></li>
+        <li>{ic('heart','#1b2f52')}<span><b style="color:var(--red)">Edukasi:</b> latih verifikasi informasi, arahkan catin ke akun tenaga kesehatan yang kredibel, ingatkan bahaya produk tanpa izin edar, dan manfaatkan WhatsApp sebagai saluran pengingat.</span></li>
+        <li>{ic('monitor','#1b2f52')}<span><b style="color:var(--red)">Platform:</b> instrumen ringkas dan berurutan logis, simpan draf otomatis, serta pemantauan data secara langsung selama pengumpulan data.</span></li>
       </ul>
     </section>
   </div>
@@ -485,17 +484,17 @@ html = f'''<!doctype html>
     <div class="access">
       <div class="qr"><img src="qr-shining.svg" alt="QR SHINING"></div>
       <div>
-        <h3>{ic('qr','#ffd166')}12 · Akses SHINING – Mulai Sekarang!</h3>
+        <h3>{ic('qr','#bfe6ea')}12 · Akses SHINING – Mulai Sekarang!</h3>
         <div class="link">mulai.edukasi-catin.id</div>
         <ol><li>Pindai QR atau buka tautan di atas.</li><li>Isi nama dan nomor WhatsApp.</li><li>Baca ringkasan persetujuan, lalu mulai.</li></ol>
       </div>
     </div>
     <div class="thanks">
-      <h3>{ic('heart','#14857c')}13 · Ucapan Terima Kasih</h3>
+      <h3>{ic('heart','#1f8a96')}13 · Ucapan Terima Kasih</h3>
       <ul>
-        <li>{ic('check','#1f8a55')}<span>Para calon pengantin peserta penelitian</span></li>
-        <li>{ic('check','#1f8a55')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
-        <li>{ic('check','#1f8a55')}<span>Tim peneliti dan enumerator lapangan</span></li>
+        <li>{ic('check','#2e8a57')}<span>Para calon pengantin peserta penelitian</span></li>
+        <li>{ic('check','#2e8a57')}<span>Pemerintah Kota Binjai, BKKBN, dan KUA</span></li>
+        <li>{ic('check','#2e8a57')}<span>Tim peneliti dan enumerator lapangan</span></li>
       </ul>
     </div>
   </div>
