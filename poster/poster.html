@@ -18,25 +18,31 @@ b,strong{font-weight:700}
 sup{font-size:.62em;line-height:0}
 
 /* header */
-.strip{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;font-size:15px;font-weight:600;letter-spacing:.08em;text-align:center;padding:7px 0}
-header{display:grid;grid-template-columns:180px 1fr 380px;gap:26px;align-items:center;padding:14px 40px 12px;background:#fff;border-bottom:5px solid var(--teal)}
-.logo{display:flex;flex-direction:column;align-items:center;gap:6px}
-.logo img{width:118px;height:118px}
-.logo span{font-weight:800;color:var(--navy);font-size:19px;letter-spacing:.02em}
+header{position:relative;display:grid;grid-template-columns:200px 1fr 390px;gap:26px;align-items:center;padding:50px 44px 22px;background:linear-gradient(180deg,#fff 0%,#f3f8fb 100%);overflow:hidden}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--teal),var(--navy2) 50%,var(--teal))}
+.strip{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:2;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;font-size:15px;font-weight:600;letter-spacing:.08em;padding:8px 34px 9px;border-radius:0 0 18px 18px;white-space:nowrap;box-shadow:0 3px 8px rgba(14,50,99,.15)}
+.leaf{position:absolute;color:var(--teal2);opacity:.13;pointer-events:none;z-index:0}
+header>*:not(.leaf):not(.strip){position:relative;z-index:1}
+.logo{display:flex;flex-direction:column;align-items:center;gap:4px}
+.logo img{width:124px;height:124px}
+.logo span{font-weight:700;color:var(--navy);font-size:22px;letter-spacing:.01em;margin-top:4px}
+.logo small{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--navy);font-weight:500}
+.logo small::before,.logo small::after{content:"";width:18px;height:1.5px;background:var(--navy);opacity:.6}
 .ttl{text-align:center}
-.ttl h1{font-family:"Inter Display",Inter,sans-serif;font-size:46px;line-height:1.08;font-weight:800;color:var(--navy);letter-spacing:-.01em}
-.ttl h2{font-size:23px;font-weight:600;color:var(--teal);margin-top:8px}
-.ttl .au{font-size:19px;font-weight:700;margin-top:10px}
-.ttl .af{font-size:13.5px;color:var(--mute);margin-top:4px}
+.ttl h1{font-family:"Inter Display",Inter,sans-serif;font-size:47px;line-height:1.1;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.ttl h2{font-size:23px;font-weight:600;color:var(--navy2);margin-top:8px}
+.ttl .au{font-size:18.5px;font-weight:600;margin-top:10px}
+.ttl .af{font-size:13px;color:var(--teal);margin-top:5px}
 .side{display:flex;flex-direction:column;gap:10px}
-.contact{font-size:14px;line-height:1.5;color:var(--ink)}
-.contact div{display:flex;gap:8px;align-items:baseline}
-.contact i{font-style:normal;color:var(--teal);font-weight:700;width:18px;flex:none}
-.badge{background:var(--sky);border:1px solid #c9dbef;border-radius:12px;padding:10px 14px}
-.badge .n{font-family:"Inter Display",Inter;font-size:19px;line-height:1.15;font-weight:800;color:var(--navy);letter-spacing:.02em}
-.badge .n em{color:var(--teal2);font-style:normal}
-.badge .t{font-size:13.5px;color:var(--teal);font-weight:700}
-.badge .d{font-size:12.5px;color:var(--mute);margin-top:2px}
+.contact{font-size:14px;line-height:1.35;color:var(--ink);display:flex;flex-direction:column;gap:6px}
+.contact div{display:flex;gap:9px;align-items:center}
+.contact i{width:24px;height:24px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none}
+.contact i svg{width:13px;height:13px}
+.badge{background:rgba(234,242,251,.85);border:1px solid #d3e2f2;border-radius:14px;padding:10px 14px}
+.badge .n{display:flex;align-items:center;gap:7px;font-family:"Inter Display",Inter;font-size:21px;line-height:1.15;font-weight:700;color:var(--navy);letter-spacing:.01em}
+.badge .n svg{width:24px;height:24px;color:var(--teal2)}
+.badge .t{font-size:13.5px;color:var(--teal);font-weight:700;margin-top:2px}
+.badge .d{font-size:12px;color:var(--mute);margin-top:2px}
 
 /* grid & panels */
 main{flex:1;display:flex;flex-direction:column;gap:12px;padding:14px 28px 12px}
@@ -46,7 +52,10 @@ main{flex:1;display:flex;flex-direction:column;gap:12px;padding:14px 28px 12px}
 .ph.t{background:linear-gradient(90deg,var(--teal),var(--teal2))}
 .ph.g{background:linear-gradient(90deg,#23804a,var(--green))}
 .ph .no{background:#fff;color:var(--navy);border-radius:999px;min-width:34px;height:34px;padding:0 8px;display:grid;place-items:center;font-size:17px;font-weight:800}
-.ph.t .no{color:var(--teal)} .ph.g .no{color:#23804a}
+.ph.t .no{color:var(--teal)} .ph.g .no,.ph.g2 .no{color:#23804a}
+.ph .pi{margin-left:auto;width:28px;height:28px;opacity:.9}
+.ph.ab{background:linear-gradient(90deg,var(--teal),#2b9fae)}
+.ph.g2{background:linear-gradient(90deg,#23804a,#3aa76a)}
 .ph small{font-weight:500;font-size:16px;opacity:.9;margin-left:auto}
 .pb{padding:11px 18px;font-size:15.5px;line-height:1.45;flex:1}
 .cap{font-size:12.5px;color:var(--mute);margin-top:8px;line-height:1.35}
@@ -216,9 +225,10 @@ footer{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text
 </head>
 <body>
 <div class="poster">
-  <div class="strip">SEMINAR SEKOLAH PASCASARJANA IPB · PROGRAM STUDI ILMU GIZI · SENIN, 2 NOVEMBER 2026</div>
   <header>
-    <div class="logo"><img src="logo_ipb.png" alt="Logo IPB"><span>IPB University</span></div>
+    <div class="leaf" style="left:-20px;top:-26px;width:150px;transform:rotate(-35deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="left:120px;top:-40px;width:90px;transform:rotate(25deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="right:-24px;top:-14px;width:170px;transform:rotate(30deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="right:150px;top:-36px;width:85px;transform:rotate(-20deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="right:-10px;bottom:-60px;width:110px;transform:rotate(150deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
+    <div class="strip">SEMINAR SEKOLAH PASCASARJANA IPB · PROGRAM STUDI ILMU GIZI · SENIN, 2 NOVEMBER 2026</div>
+    <div class="logo"><img src="logo_ipb.png" alt="Logo IPB"><span>IPB University</span><small>Bogor Indonesia</small></div>
     <div class="ttl">
       <h1>Pengembangan Media Edukasi Gizi Online<br>SHINING bagi Calon Pengantin</h1>
       <h2>Evaluasi Proses Implementasi dan Pola Penggunaan Media Sosial</h2>
@@ -227,12 +237,12 @@ footer{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text
     </div>
     <div class="side">
       <div class="contact">
-        <div><i>⌂</i>Program Studi Ilmu Gizi, FKGiz IPB, Kampus IPB Dramaga, Bogor</div>
-        <div><i>✆</i>0813-8172-4884</div>
-        <div><i>@</i>am_marhamah@apps.ipb.ac.id</div>
+        <div><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></i>Program Studi Ilmu Gizi, FKGiz IPB, Kampus IPB Dramaga, Bogor</div>
+        <div><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></i>0813-8172-4884</div>
+        <div><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 12.5l7.5-5.4V7z"/></svg></i>am_marhamah@apps.ipb.ac.id</div>
       </div>
       <div class="badge">
-        <div class="n">SHIN<em>ING</em></div>
+        <div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>SHINING</div>
         <div class="t">Sehat Sebelum Hamil itu Penting</div>
         <div class="d">Edukasi gizi prakonsepsi online 8 minggu berbasis <i>Health Belief Model</i> (HBM)</div>
       </div>
@@ -243,7 +253,7 @@ footer{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text
     <!-- ROW 1 -->
     <div class="row" style="grid-template-columns:640px 1fr">
       <section class="panel">
-        <div class="ph">Abstrak</div>
+        <div class="ph ab">Abstrak<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2 5.5c3-1.3 6.5-1.3 10 .8v13c-3.5-2-7-2-10-.8z"/><path d="M22 5.5c-3-1.3-6.5-1.3-10 .8v13c3.5-2 7-2 10-.8z"/></svg></div>
         <div class="pb abs">
           <p><b>Latar belakang.</b> Bukti tentang penggunaan media sosial (medsos) calon pengantin (catin) dan kinerja edukasi gizi prakonsepsi online di lapangan di Indonesia masih terbatas.</p>
           <p><b>Tujuan.</b> Menganalisis penggunaan medsos dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan IMT, serta mengevaluasi platform web SHINING kelompok kontrol.</p>
@@ -255,7 +265,7 @@ footer{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text
       </section>
 
       <section class="panel">
-        <div class="ph t"><span class="no">1</span>Pendahuluan</div>
+        <div class="ph g2"><span class="no">1</span>Pendahuluan<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
         <div class="pb">
           <div class="intro">
             <div class="card"><h4>Masalah gizi prakonsepsi</h4><div class="cb">
