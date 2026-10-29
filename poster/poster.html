@@ -66,7 +66,7 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .kn{color:var(--navy);font-weight:700}
 
 /* abstract */
-.abs p{margin-bottom:7px;font-size:14.6px;line-height:1.42;text-align:justify}
+.abs p{margin-bottom:5px;font-size:14.6px;line-height:1.38;text-align:justify}
 .abs p b{color:var(--teal)}
 .kw{font-size:13.5px;color:var(--mute);border-top:1px dashed var(--line);padding-top:7px;margin-top:4px}
 
@@ -105,14 +105,22 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .adw{border-left:1px solid var(--line);padding-left:20px}
 .adh{display:flex;align-items:center;gap:8px;color:var(--teal);font-weight:700;font-size:18px;margin-bottom:10px}
 .adh svg{width:24px;height:24px}
-.ad{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr;align-items:start}
+.ad{position:relative;display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr;align-items:start;padding-top:10px}
+.ad>*{position:relative;z-index:1}
+.ad>.fokus{position:absolute;z-index:0;top:0;bottom:-8px;left:calc(3*(100% - 136px)/5 + 102px - 6px);width:calc(2*(100% - 136px)/5 + 34px + 12px);background:#fff6e9;border:2px dashed var(--amber);border-radius:14px}
+.ad>.fokus span{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.05em;padding:3px 12px;border-radius:999px;white-space:nowrap}
+.ad .o1,.ad .o2,.ad .o3{opacity:.55}
+.fnote{margin-top:12px;font-size:13.4px;color:#8a4b12;background:#fff6e9;border-radius:8px;padding:6px 10px;line-height:1.35}
+.fnote b{color:#8a4b12}
+.tj{margin-left:auto;background:#fff;color:var(--navy);font-size:13px;font-weight:800;padding:3px 10px;border-radius:999px;letter-spacing:.02em}
+.ph small + .tj,.tj + small{margin-left:10px}
 .ar{color:var(--navy2);font-size:28px;text-align:center;padding-top:14px}
 .as{text-align:center;padding:0 4px}
-.as .c{width:54px;height:54px;border-radius:999px;border:4px solid var(--cc);color:var(--cc);display:grid;place-items:center;margin:0 auto 6px;font-weight:800;font-size:24px;background:#fff}
+.as .c{width:48px;height:48px;border-radius:999px;border:4px solid var(--cc);color:var(--cc);display:grid;place-items:center;margin:0 auto 6px;font-weight:800;font-size:24px;background:#fff}
 .as h5{font-size:16.5px;color:var(--ct,var(--navy));margin-bottom:6px;line-height:1.2}
 .as h5 span{display:block;font-size:13.5px;font-weight:600;opacity:.85}
-.as .ico{color:var(--navy);height:40px;display:flex;justify-content:center;margin-bottom:6px}
-.as .ico svg{width:40px;height:40px}
+.as .ico{color:var(--navy);height:32px;display:flex;justify-content:center;margin-bottom:4px}
+.as .ico svg{width:32px;height:32px}
 .as p{font-size:13.6px;line-height:1.35;color:var(--mute)}
 .as + .ar + .as{border-left:0}
 .o1{--cc:var(--navy)} .o2{--cc:var(--teal2);--ct:var(--teal)} .o3{--cc:var(--navy2)}
@@ -146,7 +154,7 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .rp-wrap .cap{text-align:center;margin-top:8px;max-width:250px}
 
 /* timeline */
-.tl{display:flex;flex-direction:column;gap:7px}
+.tl{display:flex;flex-direction:column;gap:4px}
 .tr{display:grid;grid-template-columns:120px 1fr 1fr;gap:8px;font-size:13.4px;line-height:1.32}
 .tr .d{font-weight:800;color:var(--navy);position:relative;padding-left:18px;font-size:13.6px}
 .tr .d::before{content:"";position:absolute;left:0;top:3px;width:11px;height:11px;border-radius:999px;background:var(--teal);box-shadow:0 0 0 3px var(--mint)}
@@ -158,7 +166,7 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .tr small{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1px;color:#8a3443}
 .tr .f small{color:#23804a} .tr .m.q small{color:var(--navy2)} .tr .f.q small{color:#5b6876}
 .tl-h{display:grid;grid-template-columns:120px 1fr 1fr;gap:8px;font-size:12px;font-weight:800;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
 .kpi{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:7px 9px;font-size:12.8px;line-height:1.3}
 .kpi b{display:block;font-family:"Inter Display",Inter;font-size:24px;color:var(--navy);font-weight:800}
 
@@ -280,7 +288,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
               <div>Dewasa muda aktif mencari info kesehatan di medsos <span class="cite">(Lim et al. 2022)</span>, tempat misinformasi gizi menyebar luas <span class="cite">(Wang et al. 2019; Suarez-Lledo &amp; Alvarez-Galvez 2021)</span>. Dalam HBM, medsos = <i>isyarat bertindak</i> <span class="cite">(Janz &amp; Becker 1984)</span>.</div>
               <div class="our"><b>Temuan:</b> 73,0% mengakses medsos ±setiap jam; WhatsApp platform utama (59,5%).</div>
             </div></div>
-            <div class="card"><h4>Kesenjangan</h4><div class="cb">
+            <div class="card"><h4>Celah penelitian</h4><div class="cb">
               <ul class="gap">
                 <li>Edukasi online catin &amp; intervensi prakonsepsi berbasis HP: hasil beragam, efek terbatas <span class="cite">(Atmaka et al. 2022; Musgrave et al. 2023)</span>.</li>
                 <li>Angka berhenti tinggi (<i>law of attrition</i>) <span class="cite">(Eysenbach 2005; Meyerowitz-Katz et al. 2020)</span>; proses pengembangan platform perlu dilaporkan <span class="cite">(Eysenbach 2011)</span>.</li>
@@ -306,10 +314,11 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
           <div class="mi"><span class="ic">I</span><div><b>Instrumen:</b> pengetahuan 48 butir (KR-20=0,904); sikap HBM 24 butir, 6 konstruk (α=0,955); FFQ; IPAQ-SF; kuesioner medsos; IMT (PNPK Obesitas 2025)</div></div>
           <div class="mi"><span class="ic">P</span><div><b>Indikator proses:</b> penyelesaian &amp; lama pengisian (<i>timestamp</i>), kiriman ganda, karantina, data hilang; uji kemudahan awal (15 mahasiswa)</div></div>
           <div class="mi" style="grid-column:span 2"><span class="ic">A</span><div><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis, khi-kuadrat/eksak Fisher (data tidak normal; Shapiro-Wilk); kontrol peran catin; p&lt;0,05; Python, diverifikasi SPSS</div></div>
+          <div class="fnote" style="grid-column:span 2;margin-top:0"><b>Fokus makalah:</b> proses implementasi (Tujuan 1) &amp; pola medsos (Tujuan 2), data awal kelompok kontrol; evaluasi dampak dilaporkan terpisah.</div>
         </div>
         <div class="adw">
           <div class="adh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg>Alur penelitian (model ADDIE)</div>
-          <div class="ad"><div class="as o1"><div class="c">1</div><h5>Analysis<span>(Analisis kebutuhan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6"/><path d="M14 3l5 5h-5z"/><path d="M8 9h4M8 12h6M8 15h3"/><circle cx="16.5" cy="16.5" r="3"/><path d="M18.7 18.7L21 21"/></svg></div><p>Kajian literatur, survei awal, analisis kebutuhan</p></div><div class="ar">⟶</div><div class="as o2"><div class="c">2</div><h5>Design<span>(Desain media)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 0.5v0M3 9H1.5M22.5 9H21M5 3.5 4 2.5M19 3.5l1-1"/></svg></div><p>Desain konten berbasis <i>Health Belief Model</i> (HBM)</p></div><div class="ar">⟶</div><div class="as o3"><div class="c">3</div><h5>Development<span>(Pengembangan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><p>Pengembangan platform SHINING dan materi edukasi</p></div><div class="ar">⟶</div><div class="as f4"><div class="c">4</div><h5>Implementation<span>(Implementasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M7.5 19v-2a4.5 4.5 0 0 1 9 0v2z"/><path d="M1.5 19v-1.5A3.5 3.5 0 0 1 6.6 14.4M22.5 19v-1.5a3.5 3.5 0 0 0-5.1-3.1"/></svg></div><p>Uji coba, rekrutmen peserta, implementasi edukasi online</p></div><div class="ar">⟶</div><div class="as f5"><div class="c">5</div><h5>Evaluation<span>(Evaluasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="13" width="3" height="6" rx=".5"/><rect x="10.5" y="9" width="3" height="10" rx=".5"/><rect x="16" y="4" width="3" height="15" rx=".5"/></svg></div><p>Analisis proses, pola penggunaan media, dan evaluasi dampak</p></div></div>
+          <div class="ad"><div class="fokus"><span>FOKUS MAKALAH INI</span></div><div class="as o1"><div class="c">1</div><h5>Analysis<span>(Analisis kebutuhan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6"/><path d="M14 3l5 5h-5z"/><path d="M8 9h4M8 12h6M8 15h3"/><circle cx="16.5" cy="16.5" r="3"/><path d="M18.7 18.7L21 21"/></svg></div><p>Kajian literatur, survei awal, analisis kebutuhan</p></div><div class="ar">⟶</div><div class="as o2"><div class="c">2</div><h5>Design<span>(Desain media)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 0.5v0M3 9H1.5M22.5 9H21M5 3.5 4 2.5M19 3.5l1-1"/></svg></div><p>Desain konten berbasis <i>Health Belief Model</i> (HBM)</p></div><div class="ar">⟶</div><div class="as o3"><div class="c">3</div><h5>Development<span>(Pengembangan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><p>Pengembangan platform SHINING dan materi edukasi</p></div><div class="ar">⟶</div><div class="as f4"><div class="c">4</div><h5>Implementation<span>(Implementasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M7.5 19v-2a4.5 4.5 0 0 1 9 0v2z"/><path d="M1.5 19v-1.5A3.5 3.5 0 0 1 6.6 14.4M22.5 19v-1.5a3.5 3.5 0 0 0-5.1-3.1"/></svg></div><p>Uji coba, rekrutmen peserta, implementasi edukasi online</p></div><div class="ar">⟶</div><div class="as f5"><div class="c">5</div><h5>Evaluation<span>(Evaluasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="13" width="3" height="6" rx=".5"/><rect x="10.5" y="9" width="3" height="10" rx=".5"/><rect x="16" y="4" width="3" height="15" rx=".5"/></svg></div><p>Analisis proses, pola penggunaan media, dan evaluasi dampak</p></div></div>
         </div>
       </div>
     </section>
@@ -317,7 +326,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
     <!-- ROW 3 PLATFORM + TIMELINE -->
     <div class="row" style="grid-template-columns:820px 260px 1fr">
       <section class="panel">
-        <div class="ph t"><span class="no">3.1</span>Hasil · Platform SHINING</div>
+        <div class="ph t"><span class="no">3.1</span>Hasil · Platform SHINING<span class="tj">Tujuan 1</span></div>
         <div class="pb plat">
           <div>
             <div class="phone"><div class="scr">
@@ -353,7 +362,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       </figure>
 
       <section class="panel">
-        <div class="ph t"><span class="no">3.2</span>Hasil · Pengembangan Iteratif Platform</div>
+        <div class="ph t"><span class="no">3.2</span>Hasil · Pengembangan Iteratif Platform<span class="tj">Tujuan 1</span></div>
         <div class="pb">
           <div class="tl">
             <div class="tl-h"><span>Periode</span><span>Masalah terdeteksi</span><span>Perubahan</span></div>
@@ -375,7 +384,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
     <!-- ROW 4 COMPLETION + SOCIAL MEDIA -->
     <div class="row" style="grid-template-columns:1fr 1fr">
       <section class="panel">
-        <div class="ph"><span class="no">3.3</span>Penyelesaian Instrumen Sesi 1 <small>n = 198</small></div>
+        <div class="ph"><span class="no">3.3</span>Penyelesaian Instrumen Sesi 1 <span class="tj">Tujuan 1</span><small>n = 198</small></div>
         <div class="pb">
           <table class="bt">
             <tr><th>Tahap</th><th style="width:44%">Dikirim</th><th class="num">n (%)</th><th class="num">Valid</th><th class="num">Median (RAK), mnt</th></tr>
@@ -394,7 +403,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       </section>
 
       <section class="panel">
-        <div class="ph"><span class="no">3.4</span>Penggunaan Media Sosial <small>n = 74</small></div>
+        <div class="ph"><span class="no">3.4</span>Penggunaan Media Sosial <span class="tj">Tujuan 2</span><small>n = 74</small></div>
         <div class="pb">
           <table class="bt">
             <tr><th>Indikator</th><th style="width:52%"></th><th class="num">%</th></tr>
@@ -417,7 +426,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
     <!-- ROW 5 CORRELATIONS + ROLE -->
     <div class="row" style="grid-template-columns:1.12fr 1fr">
       <section class="panel">
-        <div class="ph t"><span class="no">3.5</span>Hubungan Medsos, Pengetahuan, Sikap HBM, dan IMT <small>n = 74</small></div>
+        <div class="ph t"><span class="no">3.5</span>Hubungan Medsos, Pengetahuan, Sikap HBM, dan IMT <span class="tj">Tujuan 2</span><small>n = 74</small></div>
         <div class="pb">
           <table class="ct">
             <tr><th>Variabel</th><th>Pengetahuan</th><th>Sikap HBM</th><th>IMT</th></tr>
@@ -440,7 +449,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       </section>
 
       <section class="panel">
-        <div class="ph t"><span class="no">3.6</span>Menurut Peran Catin</div>
+        <div class="ph t"><span class="no">3.6</span>Menurut Peran Catin<span class="tj">Tujuan 2</span></div>
         <div class="pb">
           <div class="leg"><span style="--c:var(--navy2)">Laki-laki (n=30)</span><span style="--c:var(--teal2)">Perempuan (n=44)</span></div>
           <div class="rr"><div class="lb">Platform utama: WhatsApp <span class="sig">*</span><em>p=0,045</em></div><div class="rb" style="width:73.3%;background:var(--navy2)"></div><div class="rv">73,3%</div><div class="rb" style="width:50%;background:var(--teal2)"></div><div class="rv">50,0%</div></div>
