@@ -93,6 +93,23 @@ main{flex:1;display:flex;flex-direction:column;gap:12px;padding:14px 28px 12px}
 .fs:first-child{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
 .fs b{display:block;font-size:20px;font-family:"Inter Display",Inter;font-weight:800}
 
+.adw{border-left:1px solid var(--line);padding-left:20px}
+.adh{display:flex;align-items:center;gap:8px;color:var(--teal);font-weight:700;font-size:18px;margin-bottom:10px}
+.adh svg{width:24px;height:24px}
+.ad{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr;align-items:start}
+.ar{color:var(--navy2);font-size:28px;text-align:center;padding-top:14px}
+.as{text-align:center;padding:0 4px}
+.as .c{width:54px;height:54px;border-radius:999px;border:4px solid var(--cc);color:var(--cc);display:grid;place-items:center;margin:0 auto 6px;font-weight:800;font-size:24px;background:#fff}
+.as h5{font-size:16.5px;color:var(--ct,var(--navy));margin-bottom:6px}
+.as .ico{color:var(--navy);height:40px;display:flex;justify-content:center;margin-bottom:6px}
+.as .ico svg{width:40px;height:40px}
+.as p{font-size:13.6px;line-height:1.35;color:var(--mute)}
+.as + .ar + .as{border-left:0}
+.o1{--cc:var(--navy)} .o2{--cc:var(--teal2);--ct:var(--teal)} .o3{--cc:var(--navy2)}
+.f4 .c{background:var(--navy);border-color:var(--navy);color:#fff}
+.f5{--ct:var(--green)} .f5 .c{background:var(--green);border-color:var(--green);color:#fff}
+.f5 .ico{color:var(--green)}
+
 /* platform */
 .plat{display:grid;grid-template-columns:270px 1fr;gap:16px}
 .phone{width:250px;height:400px;border-radius:30px;background:#10233f;padding:10px;margin:0 auto;box-shadow:0 6px 14px rgba(0,0,0,.18)}
@@ -267,28 +284,15 @@ footer{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text
         <div class="mlist">
           <div class="mi"><span class="ic">D</span><div><b>Desain:</b> <i>cross-sectional</i> + evaluasi proses, bagian dari riset pengembangan SHINING (model ADDIE)</div></div>
           <div class="mi"><span class="ic">W</span><div><b>Tempat &amp; waktu:</b> pembinaan catin Kota Binjai, Sumatera Utara; Juli–Oktober 2026</div></div>
-          <div class="mi"><span class="ic">S</span><div><b>Subjek:</b> catin 20–40 tahun, kelompok kontrol; rekrutmen via brosur kode QR &amp; WhatsApp</div></div>
+          <div class="mi"><span class="ic">S</span><div><b>Subjek:</b> catin 20–40 tahun, kelompok kontrol; rekrutmen via brosur kode QR &amp; WhatsApp; <b>198</b> memenuhi syarat, <b>74</b> dianalisis (30 laki-laki, 44 perempuan)</div></div>
           <div class="mi"><span class="ic">E</span><div><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025; persetujuan elektronik</div></div>
           <div class="mi"><span class="ic">I</span><div><b>Instrumen:</b> pengetahuan 48 butir (KR-20=0,904); sikap HBM 24 butir, 6 konstruk (α=0,955); FFQ; IPAQ-SF; kuesioner medsos; IMT (PNPK Obesitas 2025)</div></div>
           <div class="mi"><span class="ic">P</span><div><b>Indikator proses:</b> penyelesaian &amp; lama pengisian (<i>timestamp</i>), kiriman ganda, karantina, data hilang; uji kemudahan awal (15 mahasiswa)</div></div>
           <div class="mi" style="grid-column:span 2"><span class="ic">A</span><div><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis, khi-kuadrat/eksak Fisher (data tidak normal; Shapiro-Wilk); kontrol peran catin; p&lt;0,05; Python, diverifikasi SPSS</div></div>
         </div>
-        <div>
-          <div class="addie">
-            <div class="st"><div class="c">A</div><h5>Analysis</h5>Kajian literatur &amp; analisis kebutuhan</div>
-            <div class="st"><div class="c">D</div><h5>Design</h5>Materi berbasis konstruk HBM</div>
-            <div class="st"><div class="c">D</div><h5>Development</h5>Platform web SHINING &amp; uji kemudahan</div>
-            <div class="st on"><div class="c">I</div><h5>Implementation</h5>Rekrutmen &amp; sesi 1 kelompok kontrol</div>
-            <div class="st"><div class="c">E</div><h5>Evaluation</h5>Evaluasi proses &amp; dampak</div>
-          </div>
-          <div class="flow">
-            <div class="fs" style="background:#1b4f8a"><b>1.344</b>rekaman mentah</div>
-            <div class="fs" style="background:#1a6390"><b>198</b>catin memenuhi syarat</div>
-            <div class="fs" style="background:#167a92"><b>161</b>isi identitas</div>
-            <div class="fs" style="background:#14918f"><b>77</b>selesai 6 instrumen</div>
-            <div class="fs" style="background:#2f9b57"><b>74</b>dianalisis (30 L, 44 P)</div>
-          </div>
-          <div class="cap">Gambar 1. Tahap ADDIE dan alur subjek. Dikeluarkan: akun uji coba, nomor tidak valid, mahasiswa tahap uji coba; 1 identitas diisi pasangan.</div>
+        <div class="adw">
+          <div class="adh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg>Alur penelitian (model ADDIE)</div>
+          <div class="ad"><div class="as o1"><div class="c">1</div><h5>Analisis kebutuhan</h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6"/><path d="M14 3l5 5h-5z"/><path d="M8 9h4M8 12h6M8 15h3"/><circle cx="16.5" cy="16.5" r="3"/><path d="M18.7 18.7L21 21"/></svg></div><p>Kajian literatur, survei awal, analisis kebutuhan</p></div><div class="ar">⟶</div><div class="as o2"><div class="c">2</div><h5>Desain media</h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 0.5v0M3 9H1.5M22.5 9H21M5 3.5 4 2.5M19 3.5l1-1"/></svg></div><p>Desain konten berbasis <i>Health Belief Model</i> (HBM)</p></div><div class="ar">⟶</div><div class="as o3"><div class="c">3</div><h5>Pengembangan</h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><p>Pengembangan platform SHINING dan materi edukasi</p></div><div class="ar">⟶</div><div class="as f4"><div class="c">4</div><h5>Implementasi</h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M7.5 19v-2a4.5 4.5 0 0 1 9 0v2z"/><path d="M1.5 19v-1.5A3.5 3.5 0 0 1 6.6 14.4M22.5 19v-1.5a3.5 3.5 0 0 0-5.1-3.1"/></svg></div><p>Uji coba, rekrutmen peserta, implementasi edukasi online</p></div><div class="ar">⟶</div><div class="as f5"><div class="c">5</div><h5>Evaluasi</h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="13" width="3" height="6" rx=".5"/><rect x="10.5" y="9" width="3" height="10" rx=".5"/><rect x="16" y="4" width="3" height="15" rx=".5"/></svg></div><p>Analisis proses, pola penggunaan media, dan evaluasi dampak</p></div></div>
         </div>
       </div>
     </section>
