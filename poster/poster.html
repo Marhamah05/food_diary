@@ -18,34 +18,34 @@ b,strong{font-weight:700}
 sup{font-size:.62em;line-height:0}
 
 /* header */
-header{position:relative;display:grid;grid-template-columns:200px 1fr 390px;gap:26px;align-items:center;padding:50px 44px 22px;background:linear-gradient(180deg,#fff 0%,#f3f8fb 100%);overflow:hidden}
+header{flex:none;position:relative;display:grid;grid-template-columns:200px 1fr 390px;gap:26px;align-items:center;padding:44px 44px 16px;background:linear-gradient(180deg,#fff 0%,#f3f8fb 100%);overflow:hidden}
 header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--teal),var(--navy2) 50%,var(--teal))}
 .strip{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:2;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;font-size:15px;font-weight:600;letter-spacing:.08em;padding:8px 34px 9px;border-radius:0 0 18px 18px;white-space:nowrap;box-shadow:0 3px 8px rgba(14,50,99,.15)}
 .leaf{position:absolute;color:var(--teal2);opacity:.13;pointer-events:none;z-index:0}
 header>*:not(.leaf):not(.strip){position:relative;z-index:1}
 .logo{display:flex;flex-direction:column;align-items:center;gap:4px}
-.logo img{width:124px;height:124px}
+.logo img{width:108px;height:108px}
 .logo span{font-weight:700;color:var(--navy);font-size:22px;letter-spacing:.01em;margin-top:4px}
 .logo small{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--navy);font-weight:500}
 .logo small::before,.logo small::after{content:"";width:18px;height:1.5px;background:var(--navy);opacity:.6}
 .ttl{text-align:center}
-.ttl h1{font-family:"Inter Display",Inter,sans-serif;font-size:47px;line-height:1.1;font-weight:700;color:var(--navy);letter-spacing:-.01em}
-.ttl h2{font-size:23px;font-weight:600;color:var(--navy2);margin-top:8px}
-.ttl .au{font-size:18.5px;font-weight:600;margin-top:10px}
+.ttl h1{font-family:"Inter Display",Inter,sans-serif;font-size:46px;line-height:1.06;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.ttl h2{font-size:23px;font-weight:600;color:var(--navy2);margin-top:6px}
+.ttl .au{font-size:18.5px;font-weight:600;margin-top:7px}
 .ttl .af{font-size:13px;color:var(--teal);margin-top:5px}
-.side{display:flex;flex-direction:column;gap:10px}
-.contact{font-size:14px;line-height:1.35;color:var(--ink);display:flex;flex-direction:column;gap:6px}
+.side{display:flex;flex-direction:column;gap:8px}
+.contact{font-size:14px;line-height:1.35;color:var(--ink);display:flex;flex-direction:column;gap:4px}
 .contact div{display:flex;gap:9px;align-items:center}
 .contact i{width:24px;height:24px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none}
 .contact i svg{width:13px;height:13px}
-.badge{background:rgba(234,242,251,.85);border:1px solid #d3e2f2;border-radius:14px;padding:10px 14px}
+.badge{background:rgba(234,242,251,.85);border:1px solid #d3e2f2;border-radius:14px;padding:8px 14px}
 .badge .n{display:flex;align-items:center;gap:7px;font-family:"Inter Display",Inter;font-size:21px;line-height:1.15;font-weight:700;color:var(--navy);letter-spacing:.01em}
 .badge .n svg{width:24px;height:24px;color:var(--teal2)}
 .badge .t{font-size:13.5px;color:var(--teal);font-weight:700;margin-top:2px}
 .badge .d{font-size:12px;color:var(--mute);margin-top:2px}
 
 /* grid & panels */
-main{flex:1;display:flex;flex-direction:column;gap:12px;padding:14px 28px 12px}
+main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .row{display:grid;gap:14px}
 .panel{background:#fff;border-radius:14px;border:1px solid var(--line);box-shadow:0 2px 6px rgba(14,50,99,.06);overflow:hidden;display:flex;flex-direction:column}
 .ph{display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,var(--navy),var(--navy2));color:#fff;padding:9px 16px;font-size:22px;font-weight:700}
@@ -220,7 +220,7 @@ h6{font-size:15px;color:var(--navy);margin:0 0 7px;text-transform:uppercase;lett
 .thx li::before{content:"♥";color:var(--green);font-size:15px}
 .refs{font-size:11.2px;line-height:1.38;color:var(--mute);column-count:2;column-gap:16px}
 .refs p{break-inside:avoid;margin-bottom:2px}
-footer{background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text-align:center;font-size:15px;font-weight:600;padding:9px 0}
+footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text-align:center;font-size:15px;font-weight:600;padding:9px 0}
 </style>
 </head>
 <body>
