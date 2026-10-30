@@ -5,15 +5,15 @@
 <title>Poster SHINING</title>
 <style>
 :root{
-  --navy:#0e3263; --navy2:#1b4f8a; --teal:#0d8487; --teal2:#14a3a0; --green:#2f9b57;
-  --mint:#e6f4f1; --sky:#eaf2fb; --ink:#1d2733; --mute:#5b6876; --line:#d5e1e6; --amber:#d9822b; --red:#c2410c;
+  --navy:#0a2a5c; --navy2:#12458a; --teal:#00777a; --teal2:#009a95; --green:#1e8a46;
+  --mint:#dcf0ea; --sky:#e2edf9; --ink:#0f1a26; --mute:#3d4956; --line:#c8d7de; --amber:#e07612; --red:#c2410c;
   --bg:#f4f8f9;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#fff}
-body{font-family:Inter,"DejaVu Sans",sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Inter Display",Inter,"DejaVu Sans",sans-serif;font-weight:500;letter-spacing:-.006em;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .poster{width:2200px;height:3110px;background:var(--bg);position:relative;overflow:hidden;display:flex;flex-direction:column}
-b,strong{font-weight:700}
+b,strong{font-weight:800}
 .cite{color:var(--mute);font-size:.82em;font-style:normal}
 sup{font-size:.62em;line-height:0}
 
@@ -171,7 +171,7 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .fn td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .fn tr.em td{font-weight:700}
 .fz{height:23px;display:flex;justify-content:center}
-.fz span{display:flex;align-items:center;justify-content:center;height:100%;border-radius:4px;background:#2f6db5;color:#fff;font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fz span{display:flex;align-items:center;justify-content:center;height:100%;border-radius:4px;background:#1f5fae;color:#fff;font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
 .fz.k span{background:var(--amber);color:#2b1a06}
 .fz.v span{background:var(--teal)}
 .rings{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 8px}
@@ -195,6 +195,9 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .dax{display:grid;grid-template-columns:240px 1fr;gap:14px;font-size:12px;color:var(--mute);margin-top:-2px}
 .dax div{display:flex;justify-content:space-between}
 
+.itr{display:grid;grid-template-columns:250px 1fr;gap:14px;align-items:center}
+.cyc svg{display:block;width:250px;height:250px}
+.cyc .cap{text-align:center;margin-top:2px}
 /* timeline */
 .tl{display:flex;flex-direction:column;gap:4px}
 .tr{display:grid;grid-template-columns:120px 1fr 1fr;gap:8px;font-size:14.6px;line-height:1.32}
@@ -209,13 +212,13 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .tr .f small{color:#23804a} .tr .m.q small{color:var(--navy2)} .tr .f.q small{color:#5b6876}
 .tl-h{display:grid;grid-template-columns:120px 1fr 1fr;gap:8px;font-size:13px;font-weight:800;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
-.kpi{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:7px 9px;font-size:14px;line-height:1.3}
-.kpi b{display:block;font-family:"Inter Display",Inter;font-size:26px;color:var(--navy);font-weight:800}
+.kpi{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:14px;line-height:1.3}
+.kpi b{display:block;font-family:"Inter Display",Inter;font-size:24px;color:var(--navy);font-weight:800}
 
 /* bars */
-.bt{width:100%;border-collapse:collapse;font-size:14.4px}
+.bt{width:100%;border-collapse:collapse;font-size:15.4px}
 .bt th{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);text-align:left;padding:0 6px 5px;border-bottom:2px solid var(--line)}
-.bt td{padding:3.5px 6px;border-bottom:1px solid #eef3f5;vertical-align:middle}
+.bt td{padding:2px 6px;border-bottom:1px solid #eef3f5;vertical-align:middle}
 .bt td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .bt tr.em td{font-weight:700}
 .bar{height:15px;border-radius:4px;background:#e3ecf0;position:relative;overflow:hidden}
@@ -302,7 +305,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
 
   <main>
     <!-- ROW 1 -->
-    <div class="row" style="grid-template-columns:660px 1fr">
+    <div class="row" style="grid-template-columns:680px 1fr">
       <section class="panel">
         <div class="ph ab">Abstrak<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2 5.5c3-1.3 6.5-1.3 10 .8v13c-3.5-2-7-2-10-.8z"/><path d="M22 5.5c-3-1.3-6.5-1.3-10 .8v13c3.5-2 7-2 10-.8z"/></svg></div>
         <div class="pb abs">
@@ -403,18 +406,34 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       <section class="panel">
         <div class="ph t"><span class="no">3.2</span>Hasil · Pengembangan Iteratif Platform<span class="tj">Tujuan 1</span></div>
         <div class="pb">
+          <div class="itr"><figure class="cyc"><svg viewBox="0 0 400 400" role="img" aria-label="Siklus pengembangan iteratif SHINING">
+              <defs><marker id="cah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5 0 10z" fill="#5b6876"/></marker></defs>
+              <circle cx="200" cy="200" r="134" fill="none" stroke="#d5e1e6" stroke-width="10"/>
+              <path d="M254 84 A128 128 0 0 1 316 146" fill="none" stroke="#5b6876" stroke-width="5" marker-end="url(#cah)"/>
+              <path d="M316 254 A128 128 0 0 1 254 316" fill="none" stroke="#5b6876" stroke-width="5" marker-end="url(#cah)"/>
+              <path d="M146 316 A128 128 0 0 1 84 254" fill="none" stroke="#5b6876" stroke-width="5" marker-end="url(#cah)"/>
+              <path d="M84 146 A128 128 0 0 1 146 84" fill="none" stroke="#5b6876" stroke-width="5" marker-end="url(#cah)"/>
+              <g font-family="Inter,'DejaVu Sans',sans-serif" font-weight="700" text-anchor="middle">
+                <circle cx="200" cy="66" r="54" fill="#1b4f8a"/><text x="200" y="63" fill="#fff" font-size="22">Pantau</text><text x="200" y="84" fill="#fff" font-size="13.5">data mingguan</text>
+                <circle cx="334" cy="200" r="54" fill="#b24a5b"/><text x="334" y="197" fill="#fff" font-size="22">Deteksi</text><text x="334" y="217" fill="#fff" font-size="15">masalah</text>
+                <circle cx="200" cy="334" r="54" fill="#2f9b57"/><text x="200" y="331" fill="#fff" font-size="22">Perbaiki</text><text x="200" y="352" fill="#fff" font-size="14">skrip &amp; UI</text>
+                <circle cx="66" cy="200" r="54" fill="#0d8487"/><text x="66" y="197" fill="#fff" font-size="21">Terapkan</text><text x="66" y="217" fill="#fff" font-size="13.5">&amp; catat tgl</text>
+                <text x="200" y="200" fill="#0a2a5c" font-size="28" font-weight="800">SHINING</text>
+                <text x="200" y="224" fill="#5b6876" font-size="15" font-weight="600">3 putaran perbaikan</text>
+              </g>
+            </svg><figcaption class="cap">Siklus pengembangan iteratif</figcaption></figure>
           <div class="tl">
-            <div class="tl-h"><span>Periode</span><span>Masalah terdeteksi</span><span>Perubahan</span></div>
             <div class="tr"><div class="d">Akhir Juli</div><div class="m"><small>Masalah</small>Persetujuan tidak tersimpan; angka nol nomor HP hilang; status “selesai” hanya di HP</div><div class="f"><small>Perbaikan</small>Skrip ditulis ulang (normalisasi nomor, karantina, penanda duplikat); status dikonfirmasi server</div></div>
             <div class="tr"><div class="d">Agustus</div><div class="m q"><small>Penilaian awal</small>Kemudahan dan keterbacaan dinilai oleh 15 mahasiswa</div><div class="f q"><small>Catatan</small>Tidak ada masalah besar yang dilaporkan</div></div>
             <div class="tr"><div class="d">Awal Oktober</div><div class="m"><small>Masalah</small>Progres hilang saat berganti telepon; isian kosong</div><div class="f"><small>Perbaikan</small>Progres per nomor telepon; validasi isian; kirim ulang otomatis</div></div>
             <div class="tr"><div class="d">Pertengahan Oktober</div><div class="m"><small>Masalah</small>Blok makanan pokok FFQ hilang; halaman awal terlalu banyak tahap</div><div class="f"><small>Perbaikan</small>Simpan draf otomatis; blok makanan pokok wajib; persetujuan berlapis</div></div>
             <div class="tr"><div class="d">Akhir Oktober</div><div class="m q"><small>Status</small>Pendaftaran kelompok kontrol ditutup</div><div class="f q"><small>Tindak lanjut</small>Data dikunci untuk analisis</div></div>
           </div>
+          </div>
           <div class="kpis">
-            <div class="kpi"><b>13,8%</b>kiriman berulang (186/1.344), terutama dari halaman daftar yang terbuka ulang</div>
-            <div class="kpi"><b>22/23</b>rekaman karantina di minggu pertama (format nomor)</div>
-            <div class="kpi"><b>26,9% → 0%</b>FFQ tanpa makanan pokok, sebelum vs sesudah simpan draf (p=0,04)</div>
+            <div class="kpi"><b>13,8%</b><span>kiriman berulang (186 dari 1.344 rekaman)</span></div>
+            <div class="kpi"><b>22/23</b><span>rekaman karantina di minggu pertama</span></div>
+            <div class="kpi"><b>26,9%→0%</b><span>FFQ tanpa makanan pokok setelah simpan draf (p=0,04)</span></div>
           </div>
         </div>
       </section>
@@ -444,18 +463,18 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       <section class="panel">
         <div class="ph"><span class="no">3.4</span>Penggunaan Media Sosial <span class="tj">Tujuan 2</span><small>n = 74</small></div>
         <div class="pb">
-          <div class="glg"><span><i style="background:#2f6db5"></i>Pola akses</span><span><i style="background:var(--teal)"></i>Perilaku informasi</span><span><i style="background:var(--amber)"></i>Perlu diwaspadai</span></div>
-          <div class="rings">
-            <div class="rg a"><div class="d" style="--p:59.5"><b>59,5%</b></div><span>Platform utama: WhatsApp</span></div>
-            <div class="rg a"><div class="d" style="--p:33.8"><b>33,8%</b></div><span>Platform utama: TikTok/Instagram</span></div>
-            <div class="rg a"><div class="d" style="--p:73.0"><b>73,0%</b></div><span>Akses hampir terus-menerus (±setiap jam)</span></div>
-            <div class="rg a"><div class="d" style="--p:51.4"><b>51,4%</b></div><span>Durasi ≥3 jam/hari</span></div>
-            <div class="rg i"><div class="d" style="--p:87.7"><b>87,7%</b></div><span>Pernah mencari info prakonsepsi<sup>a</sup></span></div>
-            <div class="rg i"><div class="d" style="--p:61.6"><b>61,6%</b></div><span>Selalu memeriksa kebenaran info<sup>a</sup></span></div>
-            <div class="rg i"><div class="d" style="--p:75.7"><b>75,7%</b></div><span>Sumber: akun nakes/lembaga resmi<sup>b</sup></span></div>
-            <div class="rg w"><div class="d" style="--p:39.2"><b>39,2%</b></div><span>Sumber: influencer<sup>b</sup></span></div>
-            <div class="rg w"><div class="d" style="--p:71.6"><b>71,6%</b></div><span>Pernah tertarik produk yang dipromosikan</span></div>
-          </div>
+          <table class="bt">
+            <tr><th>Indikator</th><th style="width:52%"></th><th class="num">%</th></tr>
+            <tr><td>Platform utama: WhatsApp</td><td><div class="bar"><span style="width:59.5%"></span></div></td><td class="num">59,5</td></tr>
+            <tr><td>Platform utama: TikTok/Instagram</td><td><div class="bar"><span style="width:33.8%"></span></div></td><td class="num">33,8</td></tr>
+            <tr><td>Akses hampir terus-menerus (±setiap jam)</td><td><div class="bar"><span style="width:73.0%"></span></div></td><td class="num">73,0</td></tr>
+            <tr><td>Durasi ≥3 jam/hari</td><td><div class="bar"><span style="width:51.4%"></span></div></td><td class="num">51,4</td></tr>
+            <tr><td>Pernah mencari info prakonsepsi<sup>a</sup></td><td><div class="bar v"><span style="width:87.7%"></span></div></td><td class="num">87,7</td></tr>
+            <tr><td>Selalu memeriksa kebenaran info<sup>a</sup></td><td><div class="bar v"><span style="width:61.6%"></span></div></td><td class="num">61,6</td></tr>
+            <tr><td>Sumber: akun nakes/lembaga resmi<sup>b</sup></td><td><div class="bar v"><span style="width:75.7%"></span></div></td><td class="num">75,7</td></tr>
+            <tr><td>Sumber: influencer<sup>b</sup></td><td><div class="bar w"><span style="width:39.2%"></span></div></td><td class="num">39,2</td></tr>
+            <tr><td>Pernah tertarik produk yang dipromosikan</td><td><div class="bar w"><span style="width:71.6%"></span></div></td><td class="num">71,6</td></tr>
+          </table>
           <div class="hl n" style="margin-top:9px">WhatsApp efektif sebagai pengingat kesehatan <span class="cite">(Laurence et al. 2025)</span>; ketertarikan pada produk promosi perlu diwaspadai <span class="cite">(Agustiani et al. 2026)</span>.</div>
           <div class="cap">Subjek: 59,5% perempuan; 60,6% ≤SMA. <sup>a</sup>n=73. <sup>b</sup>Boleh lebih dari satu sumber.</div>
         </div>
