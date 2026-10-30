@@ -82,6 +82,16 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 28px 8px}
 .card .our{margin-top:auto;background:var(--sky);border-radius:6px;padding:6px 8px;font-size:13.5px}
 .card .our b{color:var(--navy)}
 .gap li{margin-left:16px;margin-bottom:5px}
+.lbg{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.lbg h4{background:linear-gradient(90deg,var(--teal),var(--navy2));color:#fff;font-size:15.5px;padding:6px 12px;font-weight:700}
+.lbb{display:grid;grid-template-columns:560px 1fr;gap:16px;padding:10px 12px}
+.sts{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;align-content:start}
+.st2{display:flex;flex-direction:column;gap:3px;background:var(--mint);border-radius:9px;padding:8px 10px;font-size:13.4px;line-height:1.32}
+.st2 .v{font-family:"Inter Display",Inter;font-size:29px;font-weight:800;color:var(--teal);line-height:1}
+.st2.n{background:var(--sky)} .st2.n .v{color:var(--navy)}
+.lbl{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14px;line-height:1.38}
+.lbl li{position:relative;padding-left:16px}
+.lbl li::before{content:"";position:absolute;left:2px;top:7px;width:7px;height:7px;border-radius:2px;background:var(--teal)}
 .aim{margin-top:12px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;background:linear-gradient(90deg,var(--teal),var(--green));color:#fff;border-radius:10px;padding:10px 14px;font-size:15.5px;line-height:1.4}
 .aim .tg{font-weight:800;font-size:17px;border-right:2px solid rgba(255,255,255,.5);padding-right:12px}
 
@@ -227,7 +237,8 @@ h6{font-size:15px;color:var(--navy);margin:0 0 7px;text-transform:uppercase;lett
 .thx li{display:grid;grid-template-columns:22px 1fr;gap:7px}
 .thx li::before{content:"♥";color:var(--green);font-size:15px}
 .refs{font-size:11.2px;line-height:1.38;color:var(--mute);column-count:2;column-gap:16px}
-.refs p{break-inside:avoid;margin-bottom:2px}
+.refs p{display:inline;margin-bottom:0}
+.refs p+p::before{content:" · "}
 footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text-align:center;font-size:15px;font-weight:600;padding:9px 0}
 </style>
 </head>
@@ -275,27 +286,23 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       <section class="panel">
         <div class="ph g2"><span class="no">1</span>Pendahuluan<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
         <div class="pb">
-          <div class="intro">
-            <div class="card"><h4>Masalah gizi prakonsepsi</h4><div class="cb">
-              <div class="stat"><span class="v">±50%</span><span>orang dewasa Indonesia berat badan lebih/obesitas <span class="cite">(Pengpid &amp; Peltzer 2017)</span></span></div>
-              <div class="stat"><span class="v">44–77%</span><span>catin di Bogor &amp; Jakarta Barat berpengetahuan gizi kurang <span class="cite">(Melani &amp; Kuswari 2019; Zahra et al. 2024)</span></span></div>
-              <div>Masa prakonsepsi periode kritis bagi calon ayah, calon ibu, dan anak, namun sering diabaikan <span class="cite">(Stephenson et al. 2018)</span>.</div>
-              <div class="our"><b>Temuan:</b> 51,4% catin berat badan lebih/obesitas, meski 59,5% berpengetahuan baik.</div>
-            </div></div>
-            <div class="card"><h4>Paparan digital</h4><div class="cb">
-              <div class="stat"><span class="v">221,5 jt</span><span>pengguna internet, didominasi milenial &amp; gen-Z, usia menikah <span class="cite">(APJII 2024)</span></span></div>
-              <div class="stat"><span class="v">±50%</span><span>unggahan gizi akun berpengaruh tidak akurat <span class="cite">(Denniss et al. 2024)</span></span></div>
-              <div>Dewasa muda aktif mencari info kesehatan di medsos <span class="cite">(Lim et al. 2022)</span>, tempat misinformasi gizi menyebar luas <span class="cite">(Wang et al. 2019; Suarez-Lledo &amp; Alvarez-Galvez 2021)</span>. Dalam HBM, medsos = <i>isyarat bertindak</i> <span class="cite">(Janz &amp; Becker 1984)</span>.</div>
-              <div class="our"><b>Temuan:</b> 73,0% mengakses medsos ±setiap jam; WhatsApp platform utama (59,5%).</div>
-            </div></div>
-            <div class="card"><h4>Celah penelitian</h4><div class="cb">
-              <ul class="gap">
-                <li>Edukasi online catin &amp; intervensi prakonsepsi berbasis HP: hasil beragam, efek terbatas <span class="cite">(Atmaka et al. 2022; Musgrave et al. 2023)</span>.</li>
-                <li>Angka berhenti tinggi (<i>law of attrition</i>) <span class="cite">(Eysenbach 2005; Meyerowitz-Katz et al. 2020)</span>; proses pengembangan platform perlu dilaporkan <span class="cite">(Eysenbach 2011)</span>.</li>
-                <li>HP spesifikasi rendah, HP/akun bersama, dan jaringan tidak stabil adalah hambatan tersering <span class="cite">(Amiri et al. 2023)</span>.</li>
+          <div class="lbg">
+            <h4>Latar belakang</h4>
+            <div class="lbb">
+              <div class="sts">
+                <div class="st2"><span class="v">±50%</span><span>orang dewasa Indonesia berat badan lebih/obesitas <span class="cite">(Pengpid &amp; Peltzer 2017)</span></span></div>
+                <div class="st2"><span class="v">44–77%</span><span>catin di Bogor &amp; Jakarta Barat berpengetahuan gizi kurang <span class="cite">(Melani &amp; Kuswari 2019; Zahra et al. 2024)</span></span></div>
+                <div class="st2 n"><span class="v">72,78%</span><span>penduduk mengakses internet, didominasi Gen Z (34,49%) &amp; milenial (31,56%); 77,57% untuk medsos <span class="cite">(BPS 2025)</span></span></div>
+                <div class="st2 n"><span class="v">±50%</span><span>unggahan gizi akun populer tidak akurat <span class="cite">(Denniss et al. 2024)</span></span></div>
+              </div>
+              <ul class="lbl">
+                <li>Masa prakonsepsi periode kritis memperbaiki gizi &amp; kesehatan catin sebagai calon ayah dan ibu, tetapi sering diabaikan <span class="cite">(Stephenson et al. 2018)</span>.</li>
+                <li>Dewasa muda aktif mencari info kesehatan di medsos <span class="cite">(Lim et al. 2022)</span>, padahal misinformasi gizi menyebar luas <span class="cite">(Wang et al. 2019; Suarez-Lledo &amp; Alvarez-Galvez 2021)</span>. Dalam HBM, medsos = <i>isyarat bertindak</i>, bergantung pada informasi yang dibaca dan cara menilainya <span class="cite">(Janz &amp; Becker 1984)</span>.</li>
+                <li>Edukasi online catin memberi hasil beragam <span class="cite">(Atmaka et al. 2022)</span>; intervensi prakonsepsi berbasis HP efeknya masih terbatas <span class="cite">(Musgrave et al. 2023)</span>.</li>
+                <li>Angka berhenti tinggi (<i>law of attrition</i>) <span class="cite">(Eysenbach 2005; Meyerowitz-Katz et al. 2020)</span>, sehingga cara platform dikembangkan, diubah, dan digunakan perlu dilaporkan <span class="cite">(Eysenbach 2011)</span>.</li>
+                <li>Di negara berpenghasilan rendah–menengah, laporan intervensi prakonsepsi online masih terbatas; HP spesifikasi rendah, HP bersama, dan jaringan tidak stabil menjadi hambatan tersering <span class="cite">(Amiri et al. 2023)</span>.</li>
               </ul>
-              <div class="our"><b>Temuan:</b> hanya 38,9% menyelesaikan keenam instrumen; perbaikan iteratif menutup celah kehilangan data.</div>
-            </div></div>
+            </div>
           </div>
           <div class="aim"><span class="tg">Tujuan</span><span><b>(1)</b> Mengevaluasi proses implementasi platform web media edukasi SHINING, meliputi penyelesaian pengisian dan mutu data; <b>(2)</b> menganalisis pola penggunaan medsos catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan IMT, sebagai dasar pengembangan edukasi gizi prakonsepsi online yang mudah digunakan.</span></div>
         </div>
@@ -311,9 +318,9 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
           <div class="mi"><span class="ic">W</span><div><b>Tempat &amp; waktu:</b> pembinaan catin Kota Binjai, Sumatera Utara; Juli–Oktober 2026</div></div>
           <div class="mi"><span class="ic">S</span><div><b>Subjek:</b> catin 20–40 tahun, kelompok kontrol; rekrutmen via brosur kode QR &amp; WhatsApp; <b>198</b> memenuhi syarat, <b>74</b> dianalisis (30 laki-laki, 44 perempuan)</div></div>
           <div class="mi"><span class="ic">E</span><div><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025; persetujuan elektronik</div></div>
-          <div class="mi"><span class="ic">I</span><div><b>Instrumen:</b> pengetahuan 48 butir (KR-20=0,904); sikap HBM 24 butir, 6 konstruk (α=0,955); FFQ; IPAQ-SF; kuesioner medsos; IMT (PNPK Obesitas 2025)</div></div>
-          <div class="mi"><span class="ic">P</span><div><b>Indikator proses:</b> penyelesaian &amp; lama pengisian (<i>timestamp</i>), kiriman ganda, karantina, data hilang; uji kemudahan awal (15 mahasiswa)</div></div>
-          <div class="mi" style="grid-column:span 2"><span class="ic">A</span><div><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis, khi-kuadrat/eksak Fisher (data tidak normal; Shapiro-Wilk); kontrol peran catin; p&lt;0,05; Python, diverifikasi SPSS</div></div>
+          <div class="mi"><span class="ic">I</span><div><b>Instrumen:</b> pengetahuan 48 butir (baik &gt;80%); sikap 24 butir, 6 konstruk HBM, Likert 4 poin (positif ≥72); FFQ; IPAQ-SF; kuesioner medsos; IMT dari BB/TB isian sendiri (PNPK 2025)</div></div>
+          <div class="mi"><span class="ic">P</span><div><b>Indikator proses:</b> penyelesaian &amp; lama pengisian (<i>timestamp</i>), kiriman ganda, karantina, data hilang; kemudahan dinilai 15 mahasiswa (skala 1–5)</div></div>
+          <div class="mi" style="grid-column:span 2"><span class="ic">A</span><div><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis, khi-kuadrat/eksak Fisher; hubungan bermakna diuji ulang dengan kontrol peran; sebelum–sesudah perbaikan: eksak Fisher; p&lt;0,05; Python &amp; SPSS</div></div>
           <div class="fnote" style="grid-column:span 2;margin-top:0"><b>Fokus makalah:</b> proses implementasi (Tujuan 1) &amp; pola medsos (Tujuan 2), data awal kelompok kontrol; evaluasi dampak dilaporkan terpisah.</div>
         </div>
         <div class="adw">
@@ -338,7 +345,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
                 <li><i>✓</i>Sikap HBM (24)<em>3,0 mnt</em></li>
                 <li class="p"><i>4</i>FFQ<em>5,5 mnt</em></li>
                 <li class="p"><i>5</i>IPAQ-SF<em>1,8 mnt</em></li>
-                <li class="p"><i>6</i>Akses medsos<em>3,2 mnt</em></li>
+                <li class="p"><i>6</i>Kuesioner medsos<em>3,2 mnt</em></li>
               </ul>
               <div class="btn">Lanjutkan · draf tersimpan</div>
             </div></div>
@@ -347,11 +354,11 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
           <ul class="feat">
             <li><span><b>Web satu halaman, ramah HP:</b> tanpa unduh aplikasi dan tanpa membuat akun.</span></li>
             <li><span><b>Masuk dengan nama + nomor HP/WA</b>, lalu cek kelayakan (catin 20–40 tahun) dan persetujuan.</span></li>
-            <li><span><b>Enam instrumen sesi 1:</b> identitas, pengetahuan, sikap HBM, FFQ, IPAQ-SF, akses medsos.</span></li>
+            <li><span><b>Enam instrumen sesi 1:</b> identitas (BB &amp; TB), pengetahuan, sikap HBM, FFQ, IPAQ-SF, kuesioner medsos.</span></li>
             <li><span><b>Umpan balik IMT &amp; status gizi</b> langsung tampil sebagai informasi sekaligus <i>engagement</i>.</span></li>
-            <li><span><b>Tersimpan otomatis ke Google Sheets</b>; nomor HP sebagai penanda peserta.</span></li>
+            <li><span><b>Tersimpan otomatis ke Google Sheets</b>; nomor HP/WA sebagai penanda peserta.</span></li>
             <li><span><b>Kiriman berulang ditandai</b>; data tak dikenali masuk <b>lembar karantina</b> untuk verifikasi manual.</span></li>
-            <li><span><b>Uji kemudahan awal (n=15):</b> rerata 4,40–4,73 dari 5; skor total 22,8 ± 2,3 (5–25); terendah pada pengisian kuesioner.</span></li>
+            <li><span><b>Penilaian awal (15 mahasiswa):</b> kelima aspek mudah (rerata 4,40–4,73 dari 5; total 22,8 ± 2,3 dari 25); terendah pada pengisian kuesioner.</span></li>
           </ul>
         </div>
       </section>
@@ -366,15 +373,15 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
         <div class="pb">
           <div class="tl">
             <div class="tl-h"><span>Periode</span><span>Masalah terdeteksi</span><span>Perubahan</span></div>
-            <div class="tr"><div class="d">Akhir Juli</div><div class="m"><small>Masalah</small>Persetujuan tidak tersimpan; angka 0 di depan nomor HP hilang; status “selesai” hanya di HP catin, bukan di server</div><div class="f"><small>Perbaikan</small>Skrip ditulis ulang: normalisasi nomor, lembar karantina, penanda duplikat; status selesai dikonfirmasi server; cegah klik kirim ganda</div></div>
-            <div class="tr"><div class="d">Agustus</div><div class="m q"><small>Uji kemudahan</small>15 mahasiswa menilai platform mudah dan mudah dibaca</div><div class="f q"><small>Catatan</small>Tidak ada masalah besar dilaporkan, tetapi tidak menangkap masalah lapangan</div></div>
-            <div class="tr"><div class="d">Awal Oktober</div><div class="m"><small>Masalah</small>Progres hilang saat berganti HP; isian kosong</div><div class="f"><small>Perbaikan</small>Progres dilacak per nomor HP; validasi isian kosong; pengiriman ulang otomatis</div></div>
-            <div class="tr"><div class="d">Pertengahan Oktober</div><div class="m"><small>Masalah</small>Blok makanan pokok FFQ hilang saat dikirim; halaman awal terbuka ulang di beberapa tahap</div><div class="f"><small>Perbaikan</small>Simpan draf otomatis; blok makanan pokok wajib; persetujuan berlapis; kartu “selamat datang kembali”</div></div>
+            <div class="tr"><div class="d">Akhir Juli</div><div class="m"><small>Masalah</small>Halaman persetujuan tidak tersimpan; angka nol di depan nomor HP hilang; status “selesai” hanya tersimpan di HP</div><div class="f"><small>Perbaikan</small>Skrip ditulis ulang (normalisasi nomor, lembar karantina, penanda duplikat); status selesai dikonfirmasi server; cegah kirim ganda</div></div>
+            <div class="tr"><div class="d">Agustus</div><div class="m q"><small>Penilaian awal</small>Kemudahan dan keterbacaan dinilai oleh 15 mahasiswa</div><div class="f q"><small>Catatan</small>Tidak ada masalah besar yang dilaporkan</div></div>
+            <div class="tr"><div class="d">Awal Oktober</div><div class="m"><small>Masalah</small>Progres hilang saat berganti telepon; isian kosong</div><div class="f"><small>Perbaikan</small>Progres dilacak per nomor telepon; validasi isian kosong; pengiriman ulang otomatis</div></div>
+            <div class="tr"><div class="d">Pertengahan Oktober</div><div class="m"><small>Masalah</small>Blok makanan pokok FFQ hilang saat dikirim; halaman awal terlalu banyak tahap</div><div class="f"><small>Perbaikan</small>Simpan draf otomatis; blok makanan pokok wajib; persetujuan berlapis; kartu “selamat datang kembali”</div></div>
             <div class="tr"><div class="d">Akhir Oktober</div><div class="m q"><small>Status</small>Pendaftaran kelompok kontrol ditutup</div><div class="f q"><small>Tindak lanjut</small>Data dikunci untuk analisis</div></div>
           </div>
           <div class="kpis">
             <div class="kpi"><b>13,8%</b>kiriman berulang (186/1.344); 68,3% dari halaman daftar &amp; persetujuan yang terbuka ulang</div>
-            <div class="kpi"><b>22/23</b>rekaman karantina terjadi di minggu pertama (format nomor &amp; skrip baru)</div>
+            <div class="kpi"><b>22/23</b>rekaman karantina terjadi di minggu pertama, terutama format nomor belum dinormalisasi</div>
             <div class="kpi"><b>26,9% → 0%</b>FFQ tanpa blok makanan pokok sebelum vs sesudah simpan draf (29/108 vs 0/13; p=0,04)</div>
           </div>
         </div>
@@ -389,16 +396,16 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
           <table class="bt">
             <tr><th>Tahap</th><th style="width:44%">Dikirim</th><th class="num">n (%)</th><th class="num">Valid</th><th class="num">Median (RAK), mnt</th></tr>
             <tr><td>Persetujuan</td><td><div class="bar"><span style="width:86.4%"></span></div></td><td class="num">171 (86,4)</td><td class="num">–</td><td class="num">–</td></tr>
-            <tr><td>Identitas</td><td><div class="bar"><span style="width:81.3%"></span></div></td><td class="num">161 (81,3)</td><td class="num">160</td><td class="num">1,9 (1,1–2,9)</td></tr>
-            <tr class="em"><td>Pengetahuan (48)</td><td><div class="bar w"><span style="width:54.0%"></span></div></td><td class="num">107 (54,0)</td><td class="num">106</td><td class="num">16,7 (10,7–34,4)</td></tr>
-            <tr><td>Sikap HBM (24)</td><td><div class="bar"><span style="width:48.5%"></span></div></td><td class="num">96 (48,5)</td><td class="num">94</td><td class="num">3,0 (1,6–4,7)</td></tr>
+            <tr><td>Formulir identitas</td><td><div class="bar"><span style="width:81.3%"></span></div></td><td class="num">161 (81,3)</td><td class="num">160</td><td class="num">1,9 (1,1–2,9)</td></tr>
+            <tr class="em"><td>Tes pengetahuan (48 butir)</td><td><div class="bar w"><span style="width:54.0%"></span></div></td><td class="num">107 (54,0)</td><td class="num">106</td><td class="num">16,7 (10,7–34,4)</td></tr>
+            <tr><td>Skala sikap (24 butir)</td><td><div class="bar"><span style="width:48.5%"></span></div></td><td class="num">96 (48,5)</td><td class="num">94</td><td class="num">3,0 (1,6–4,7)</td></tr>
             <tr><td>FFQ</td><td><div class="bar"><span style="width:46.5%"></span></div></td><td class="num">92 (46,5)</td><td class="num">88</td><td class="num">5,5 (4,0–7,8)</td></tr>
-            <tr><td>Media sosial</td><td><div class="bar"><span style="width:41.4%"></span></div></td><td class="num">82 (41,4)</td><td class="num">80</td><td class="num">3,2 (2,1–4,1)</td></tr>
+            <tr><td>Kuesioner medsos</td><td><div class="bar"><span style="width:41.4%"></span></div></td><td class="num">82 (41,4)</td><td class="num">80</td><td class="num">3,2 (2,1–4,1)</td></tr>
             <tr><td>IPAQ-SF</td><td><div class="bar"><span style="width:41.4%"></span></div></td><td class="num">82 (41,4)</td><td class="num">67</td><td class="num">1,8 (1,2–2,7)</td></tr>
             <tr class="em"><td>Keenam instrumen</td><td><div class="bar v"><span style="width:38.9%"></span></div></td><td class="num">77 (38,9)</td><td class="num">59</td><td class="num">–</td></tr>
           </table>
-          <div class="hl a" style="margin-top:9px">Penurunan terbesar (81,3% → 54,0%) terjadi <b>sebelum tes pengetahuan</b>, instrumen terpanjang. Dari 77 yang selesai, 45,5% tuntas dalam 1 jam dan 70,1% dalam 24 jam. Setelah perbaikan pertengahan Oktober, penyelesaian sesi 1 naik <b>37,2% → 55,6%</b> (p=0,137).</div>
-          <div class="cap">Valid: BB 30–200 kg &amp; TB 120–220 cm; pengetahuan ≥39/48; sikap ≥20/24; FFQ ≥48/60; medsos butir inti; IPAQ-SF 0–7 hari &amp; ≤960 mnt/hari. RAK: rentang antarkuartil.</div>
+          <div class="hl a" style="margin-top:9px">Penurunan terbesar (81,3% → 54,0%) terjadi <b>sebelum tes pengetahuan</b>, instrumen terpanjang; kuesioner panjang menurunkan penyelesaian dan mutu jawaban <span class="cite">(Galesic &amp; Bosnjak 2009)</span>. Setelah perbaikan pertengahan Oktober, penyelesaian naik <b>37,2% → 55,6%</b>, tetapi tidak bermakna (p=0,137).</div>
+          <div class="cap">Kiriman ganda: dipakai kiriman paling lengkap. Valid: BB 30–200 kg &amp; TB 120–220 cm; pengetahuan ≥39/48; sikap ≥20/24; FFQ ≥48/60; medsos butir inti; IPAQ-SF 0–7 hari &amp; ≤960 mnt/hari. RAK: rentang antarkuartil.</div>
         </div>
       </section>
 
@@ -418,7 +425,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
             <tr><td>Pernah tertarik produk yang dipromosikan</td><td><div class="bar w"><span style="width:71.6%"></span></div></td><td class="num">71,6</td></tr>
           </table>
           <div class="hl n" style="margin-top:9px">Dominasi WhatsApp khas Indonesia (remaja AS hanya 23%; <span class="cite">Faverio &amp; Sidoti 2024</span>) dan efektif sebagai pengingat kesehatan <span class="cite">(Laurence et al. 2025)</span>. Ketertarikan pada produk promosi perlu diwaspadai <span class="cite">(Agustiani et al. 2026)</span>.</div>
-          <div class="cap"><sup>a</sup>n=73. <sup>b</sup>Dapat memilih lebih dari satu sumber.</div>
+          <div class="cap">Subjek: 59,5% perempuan; 60,6% berpendidikan ≤SMA; 51,4% berat badan lebih/obesitas. <sup>a</sup>n=73. <sup>b</sup>Dapat memilih lebih dari satu sumber.</div>
         </div>
       </section>
     </div>
@@ -434,16 +441,16 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
             <tr><td>Durasi harian</td><td class="ns">0,175 (0,135)</td><td class="ns">0,199 (0,090)</td><td class="s neg">−0,331 (0,004)*</td></tr>
             <tr><td>Mencari info prakonsepsi</td><td class="ns">0,057 (0,631)</td><td class="ns">0,216 (0,066)</td><td class="ns">−0,181 (0,125)</td></tr>
             <tr><td>Memeriksa kebenaran info</td><td class="ns">0,116 (0,327)</td><td class="s pos">0,287 (0,014)*</td><td class="ns">0,042 (0,723)</td></tr>
-            <tr><td>Platform utama<sup>a</sup></td><td class="s pos">– (0,047)*</td><td class="s pos">– (0,006)*</td><td class="ns">– (0,919)</td></tr>
+            <tr><td>Platform utama<sup>a</sup></td><td class="ns">– (0,088)</td><td class="s pos">– (0,006)*</td><td class="ns">– (0,919)</td></tr>
             <tr><td>Sumber nakes/resmi<sup>b</sup></td><td class="ns">– (0,950)</td><td class="ns">– (0,456)</td><td class="s neg">– (0,022)*</td></tr>
             <tr><td>Skor pengetahuan</td><td>–</td><td class="s pos">0,414 (&lt;0,001)*</td><td class="ns">−0,009 (0,939)</td></tr>
             <tr><td>Skor sikap</td><td>–</td><td>–</td><td class="ns">−0,212 (0,070)</td></tr>
           </table>
           <div class="cap">Nilai: r<sub>s</sub> Spearman (p). <sup>a</sup>Kruskal-Wallis (WhatsApp, Instagram, TikTok); skor terendah pada pengguna WhatsApp. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². *p&lt;0,05.</div>
           <div class="ins">
-            <div><b>Konstruk HBM:</b> pengetahuan paling erat dengan persepsi hambatan (r=0,449) dan kerentanan (r=0,410); <b>persepsi hambatan terendah</b> (68,5% skor maks.).</div>
+            <div><b>Konstruk HBM:</b> pengetahuan paling erat dengan persepsi hambatan (r=0,449) dan kerentanan (r=0,410), tetapi tidak dengan efikasi diri; <b>persepsi hambatan terendah</b> (68,5% skor maks.).</div>
             <div><b>Durasi–IMT</b> tetap bermakna setelah dikontrol peran (r parsial=−0,315; p=0,006); perlu dikonfirmasi pada sampel lebih besar.</div>
-            <div><b>Cara memilih &amp; menilai informasi</b> lebih berhubungan dengan IMT dan sikap daripada frekuensi akses medsos <span class="cite">(Chen et al. 2018; Lam et al. 2025)</span>.</div>
+            <div><b>Cara memilih &amp; menilai informasi</b> lebih berhubungan dengan IMT dan sikap daripada frekuensi akses medsos <span class="cite">(Chen et al. 2018; Denniss et al. 2024; Lam et al. 2025)</span>.</div>
           </div>
         </div>
       </section>
@@ -487,9 +494,9 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
               <div class="le"><i>3</i><span><b>Kiriman ganda &amp; HP bersama</b> ditangani dengan penanda peserta dan aturan baku</span></div>
               <div class="le"><i>4</i><span><b>Penyimpanan dikonfirmasi server</b>; data dipantau setiap minggu</span></div>
               <div class="le"><i>5</i><span><b>Pesan sesuai peran:</b> laki-laki via WhatsApp; perempuan juga via TikTok/Instagram</span></div>
-              <div class="le"><i>6</i><span><b>Dokumentasi perubahan</b> bertanggal; pisahkan kontrol–intervensi dengan kode akses</span></div>
+              <div class="le"><i>6</i><span><b>Dokumentasi perubahan</b> bertanggal; pemisahan kelompok kontrol–intervensi dijaga</span></div>
             </div>
-            <div class="cap" style="margin-top:7px"><b>Keterbatasan:</b> sampel kecil, BB/TB dilaporkan sendiri, analisis eksploratif tanpa regresi, desain potong lintang; alasan berhenti tidak terekam.</div>
+            <div class="cap" style="margin-top:7px"><b>Keterbatasan:</b> sampel kecil, BB/TB dilaporkan sendiri, analisis eksploratif tanpa regresi, desain potong lintang; alasan berhenti tidak terekam; perbandingan sebelum–sesudah perbaikan berdasarkan periode singkat dan peserta sedikit.</div>
           </div>
         </div>
       </section>
@@ -523,7 +530,7 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
     <section class="panel">
       <div class="pb" style="padding:9px 16px">
         <div class="refs">
-          <p><b>Pustaka utama.</b> Amiri P et al. 2023. BMC Health Serv Res 23:1176 · APJII 2024 · Atmaka DR et al. 2022. Media Gizi Indones 17(1SP):1–5 · Chen X et al. 2018. J Health Commun 23(8):724–734 · Denniss E et al. 2024. IJBNPA 21:16 · Eysenbach G. 2005. JMIR 7(1):e11 · Eysenbach G. 2011. JMIR 13(4):e126 · Faverio M, Sidoti O. 2024. Pew Research Center</p>
+          <p><b>Pustaka utama.</b> Amiri P et al. 2023. BMC Health Serv Res 23:1176 · Atmaka DR et al. 2022. Media Gizi Indones 17(1SP):1–5 · BPS 2025 · Chen X et al. 2018. J Health Commun 23(8):724–734 · Denniss E et al. 2024. IJBNPA 21:16 · Eysenbach G. 2005. JMIR 7(1):e11 · Eysenbach G. 2011. JMIR 13(4):e126 · Faverio M, Sidoti O. 2024. Pew Research Center · Galesic M, Bosnjak M. 2009. Public Opin Q 73(2):349–360</p>
           <p>Janz NK, Becker MH. 1984. Health Educ Q 11(1):1–47 · Lam BT et al. 2025. JMIR 27:e67640 · Laurence MC et al. 2025. Front Digit Health 7:1542006 · Lim MSC et al. 2022. JMIR 24(1):e23656 · Meyerowitz-Katz G et al. 2020. JMIR 22(9):e20283 · Musgrave L et al. 2023. JMIR 25:e41900 · Stephenson J et al. 2018. Lancet 391:1830–1841 · Zahra SS et al. 2024. HPCEJ 3(1)</p>
         </div>
       </div>
