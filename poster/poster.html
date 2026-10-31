@@ -151,12 +151,14 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
 .kpi.big div{font-size:25px;padding:8px 6px;line-height:1.15}
 .kpi.big div b{font-size:46px;line-height:1.1}
 .kpi div.t b{color:var(--teal)} .kpi div.a{background:var(--peach)} .kpi div.a b{color:#c25e05}
-.fun{display:grid;grid-template-columns:1fr 70px;gap:5px 10px;font-size:24.5px;align-items:center}
-.fun .bw{background:#e9eef1;border-radius:6px;height:33px;position:relative}
+.fun{display:grid;grid-template-columns:1fr 70px;gap:4px 10px;font-size:24px;align-items:center}
+.fun .bw{background:#e9eef1;border-radius:6px;height:30px;position:relative}
 .fun .bw span{position:absolute;left:0;top:0;bottom:0;background:#8fd0c8;border-radius:6px}
 .fun .bw em{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:700;white-space:nowrap}
 .fun .bw.o span{background:#f6b26b}
 .fun .bw.k span{background:#a9b9c8}
+.fun .fh{grid-column:1/-1;display:flex;justify-content:space-between;font-size:21.5px;font-weight:800;color:var(--navy);text-transform:none;letter-spacing:0;line-height:1.05;align-self:end;padding-bottom:2px;border-bottom:2px solid var(--line)}
+.fun .fh.r{text-align:right}
 .fun .md{text-align:right;font-weight:700;font-size:28px}
 .fun .md.o{color:var(--amber);font-weight:800}
 
@@ -335,7 +337,7 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
   </div>
 
   <!-- ROW 2 -->
-  <div class="row" style="grid-template-columns:0.52fr 1.7fr;flex:0 0 428px">
+  <div class="row" style="grid-template-columns:0.52fr 1.7fr;flex:0 0 421px">
     <section class="panel">
       <div class="ph"><span class="no">2</span>Tujuan<svg class="i tg"><use href="#target"/></svg></div>
       <div class="pb">
@@ -397,7 +399,7 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
   <!-- HASIL -->
   <section class="hasil">
     <div class="ph"><span class="no">5</span>Hasil<svg class="i tg"><use href="#target"/></svg></div>
-    <div class="hrow" style="grid-template-columns:0.8fr 1.4fr 1.12fr;flex:0 0 506px">
+    <div class="hrow" style="grid-template-columns:0.8fr 1.4fr 1.12fr;flex:0 0 513px">
       <div class="sub">
         <h3><span class="n">5.1</span>Platform SHINING <span class="tj">Tujuan 1</span></h3>
         <div class="browser">
@@ -433,6 +435,7 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
       <div class="sub">
         <h3><span class="n">5.3</span>Penyelesaian Pre-test <span class="tj">Tujuan 1</span></h3>
         <div class="fun">
+          <div class="fh"><span>Instrumen · dikirim, n (%)</span><span>Median (menit)</span></div>
           <div class="bw"><span style="width:86.4%"></span><em>Persetujuan · 171 (86,4%)</em></div><div class="md">–</div>
           <div class="bw"><span style="width:81.3%"></span><em>Identitas · 161 (81,3%)</em></div><div class="md">1,9</div>
           <div class="bw o"><span style="width:54%"></span><em>Pengetahuan (48) · 107 (54,0%)</em></div><div class="md o">16,7</div>
