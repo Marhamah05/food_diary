@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Poster SHINING – A0</title>
+<style>
+@page{size:841mm 1189mm;margin:0}
+:root{
+  --navy:#0d2f5e; --navy2:#16508f; --teal:#00807c; --teal2:#14a29a; --green:#1f8a4c;
+  --mint:#e1f3ee; --sky:#e6eff9; --lav:#efeafb; --peach:#fdeee0; --ink:#0f1a26; --mute:#43505e;
+  --line:#d3dee4; --amber:#e07612; --red:#c63a2b; --violet:#7c4dcc; --bg:#eef4f6; --blue:#2f6fd6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:"Inter","Inter Display","DejaVu Sans",sans-serif;font-weight:500;color:var(--ink);letter-spacing:-.005em;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+b,strong{font-weight:700}
+sup{font-size:.6em;line-height:0}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.poster{width:2200px;height:3110px;background:var(--bg);position:relative;overflow:hidden;display:flex;flex-direction:column;border-top:10px solid var(--navy)}
+.poster::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(90deg,var(--navy) 0 50%,var(--teal) 50% 75%,var(--green) 75%)}
+
+/* header */
+header{flex:none;margin:0 24px;background:#fff;border-radius:0 0 22px 22px;display:grid;grid-template-columns:280px 1fr 500px;align-items:center;padding:0 22px 8px;gap:6px 18px}
+.strip{grid-column:1/-1;justify-self:center;background:var(--navy);color:#fff;font-size:22px;font-weight:700;letter-spacing:.04em;padding:6px 34px;border-radius:0 0 18px 18px}
+.logo{border-right:2px solid var(--line);padding-right:16px;display:flex;justify-content:center}
+.logo img{width:265px;display:block}
+.ttl{text-align:center}
+.ttl h1{font-family:"Inter Display",Inter;font-size:59px;line-height:1.04;font-weight:800;color:var(--navy);letter-spacing:-.015em}
+.ttl h1 em{font-style:normal;color:var(--teal)}
+.ttl h2{font-size:33px;font-weight:700;color:var(--teal);margin-top:4px}
+.ttl .au{font-size:28px;font-weight:700;margin-top:3px}
+.ttl .af{font-size:20px;color:var(--mute);margin-top:4px}
+.contact{border-left:2px solid var(--line);padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:25px;line-height:1.2}
+.contact div{display:flex;gap:12px;align-items:center}
+.contact i{width:44px;height:44px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;flex:none;font-size:23px}
+
+/* panels */
+main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;min-height:0}
+.row{display:grid;gap:12px;min-height:0}
+.panel{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.ph{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;padding:5px 18px;font-family:"Inter Display",Inter;font-size:40px;font-weight:800;letter-spacing:-.01em;flex:none}
+.ph .no{background:#fff;color:var(--navy);border-radius:999px;width:44px;height:44px;display:grid;place-items:center;font-size:28px;font-weight:800;flex:none}
+.ph .tg{margin-left:auto;font-size:34px;opacity:.85}
+.pb{padding:10px 16px;font-size:27px;line-height:1.3;flex:1;min-height:0;display:flex;flex-direction:column}
+.cap{font-size:22px;color:var(--mute);font-style:italic;text-align:center;line-height:1.25;margin-top:auto;padding-top:6px}
+.tj{display:inline-block;background:var(--mint);color:var(--teal);border-radius:999px;font-size:22px;font-weight:700;padding:2px 14px;vertical-align:middle;margin-left:4px;letter-spacing:0}
+
+/* abstrak */
+.abs p{padding:7px 12px 7px 54px;border-radius:10px;position:relative;margin-bottom:6px;font-size:27.5px;line-height:1.25}
+.abs p .ic{position:absolute;left:10px;top:9px;width:34px;height:34px;border-radius:999px;color:#fff;display:grid;place-items:center;font-size:20px}
+.abs p b.h{font-weight:800}
+.abs .p1{background:#e8f5ec}.abs .p1 .ic{background:var(--green)}.abs .p1 b.h{color:var(--green)}
+.abs .p2{background:var(--sky)}.abs .p2 .ic{background:var(--blue)}.abs .p2 b.h{color:var(--blue)}
+.abs .p3{background:var(--lav)}.abs .p3 .ic{background:var(--violet)}.abs .p3 b.h{color:var(--violet)}
+.abs .p4{background:var(--peach)}.abs .p4 .ic{background:var(--amber)}.abs .p4 b.h{color:var(--amber)}
+.abs .p5{background:var(--mint)}.abs .p5 .ic{background:var(--teal)}.abs .p5 b.h{color:var(--teal)}
+.kw{background:var(--navy);color:#fff;border-radius:10px;padding:6px 14px;font-size:23px;margin-top:auto}
+.kw b{color:#8fe3d6}
+
+/* pendahuluan */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;min-height:0}
+.lbl{display:inline-block;border:2.5px solid var(--teal);color:var(--teal);font-weight:800;border-radius:10px;padding:3px 14px;font-size:29px;margin-bottom:8px;align-self:flex-start}
+.lbl.o{border-color:var(--amber);color:#c25e05}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1}
+.st{background:#f3f8fa;border-radius:14px;padding:10px 12px;font-size:26px;line-height:1.22}
+.st .v{display:flex;align-items:center;gap:8px;font-family:"Inter Display";font-size:54px;font-weight:800;color:var(--navy);line-height:1.05;margin-bottom:6px}
+.st .v svg{font-size:40px;color:var(--teal)}
+.st:nth-child(2) .v,.st:nth-child(3) .v{color:var(--teal)}
+.st:nth-child(2) .v svg,.st:nth-child(3) .v svg{color:var(--navy2)}
+.gapbox{background:#fff7ec;border:2px solid #f6d7b3;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column}
+.gl{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:27px;line-height:1.22;flex:1;justify-content:space-around}
+.gl li{display:flex;gap:12px;align-items:center}
+.gl li .ic{width:50px;height:50px;border-radius:12px;background:#fff;border:2px solid #f3cfa4;color:var(--amber);display:grid;place-items:center;font-size:29px;flex:none}
+
+/* tujuan */
+.tuj{display:flex;flex-direction:column;gap:10px;flex:1}
+.tuj div{display:flex;gap:14px;align-items:center;background:#f1f7f8;border-radius:12px;padding:10px 14px;flex:1;font-size:30px;line-height:1.25}
+.tuj span{width:48px;height:48px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.tuj div:nth-child(2) span{background:var(--teal)}
+
+/* metode */
+.met{display:grid;grid-template-columns:0.9fr 0.9fr 1.2fr 620px;grid-template-rows:1fr 1fr 1fr;gap:6px;flex:1}
+.m{background:#f1f6fb;border-radius:12px;padding:4px 11px;font-size:25px;line-height:1.2}
+.m h5{display:flex;align-items:center;gap:8px;font-size:25.5px;line-height:1.1;font-weight:800;color:var(--blue);margin-bottom:2px}
+.m h5 i{width:32px;height:32px;border-radius:9px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:22px;flex:none;font-style:normal}
+.m.g{background:#eaf6ef}.m.g h5{color:var(--green)}.m.g h5 i{background:var(--green)}
+.m.v{background:var(--lav)}.m.v h5{color:var(--violet)}.m.v h5 i{background:var(--violet)}
+.m.o{background:var(--peach);border:2.5px solid var(--amber)}.m.o h5{color:#c25e05}.m.o h5 i{background:var(--amber)}
+.m.r{background:#fdecea}.m.r h5{color:var(--red)}.m.r h5 i{background:var(--red)}
+.m.n h5{color:var(--navy)}.m.n h5 i{background:var(--navy)}
+.flow{grid-column:4;grid-row:1/4;background:#f6eedd;border-radius:12px;padding:6px 12px;display:flex;flex-direction:column;gap:3px}
+.flow .ey{font-size:14px;letter-spacing:.14em;color:#6b5a40;font-weight:700;display:flex;justify-content:space-between;align-items:baseline}
+.flow .ey span{font-size:21px;letter-spacing:0;font-style:italic;font-weight:500;color:var(--mute)}
+.flow h6{font-family:Georgia,serif;font-size:27px;color:#1f3d33;line-height:1.1}
+.flow .sb{font-size:17px;color:#4a4a3a;line-height:1.25;border-bottom:2px solid #1f3d33;padding-bottom:4px}
+.flow .fq{display:flex;gap:10px;align-items:flex-start;flex:1}
+.flow .qb{background:#1f3d33;border-radius:10px;padding:6px;flex:none;text-align:center;color:#fff;font-size:11px;letter-spacing:.1em;font-weight:700}
+.flow .qb img{width:124px;height:124px;display:block;border-radius:4px;margin-top:3px}
+.flow ol{list-style:none;font-size:16.5px;line-height:1.2;display:flex;flex-direction:column;gap:4px;counter-reset:s;color:#444}
+.flow li{display:grid;grid-template-columns:22px 1fr;gap:6px}
+.flow li::before{counter-increment:s;content:counter(s);width:21px;height:21px;border-radius:999px;background:#1f3d33;color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;margin-top:1px}
+.flow li b{display:block;color:#1f3d33;font-size:19px}
+.flow .cp{font-size:21px;font-style:italic;color:var(--mute);text-align:center}
+
+/* addie */
+.addie{display:grid;grid-template-columns:1fr 34px 1.1fr 34px 1.2fr 34px 1.15fr 34px 1fr;flex:1;gap:4px}
+.ad{border-radius:14px;padding:8px 12px;display:flex;align-items:center;gap:12px;background:#eef4fb;position:relative}
+.ad .c{width:68px;height:68px;border-radius:999px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:36px;flex:none}
+.ad h5{font-family:"Inter Display";font-size:33px;white-space:nowrap;font-weight:800;color:var(--blue);line-height:1.05}
+.ad p{font-size:26px;line-height:1.18;margin-top:2px}
+.ad.b{background:#e6f4f2}.ad.b .c{background:var(--teal)}.ad.b h5{color:var(--teal)}
+.ad.c3{background:var(--lav)}.ad.c3 .c{background:var(--violet)}.ad.c3 h5{color:var(--violet)}
+.ad.d{background:var(--peach);border:3px solid var(--amber)}.ad.d .c{background:var(--amber)}.ad.d h5{color:#c25e05}
+.ad.e{background:#eaf6ef}.ad.e .c{background:var(--green)}.ad.e h5{color:var(--green)}
+.ad.d .fk{position:absolute;top:-17px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:19px;font-weight:800;padding:2px 14px;border-radius:8px;white-space:nowrap;letter-spacing:.04em}
+.arr{display:grid;place-items:center;font-size:42px;color:var(--mute)}
+.iter{text-align:center;margin:8px auto 0;border:2.5px dashed var(--amber);border-top:none;border-radius:0 0 18px 18px;padding:2px 40px 4px;color:#c25e05;font-weight:800;font-size:28px;width:66%}
+
+/* hasil */
+.hasil{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;flex:1;min-height:0}
+.hrow{display:grid;gap:12px;padding:12px 12px 0;min-height:0}
+.sub{background:#f7fafb;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column;min-height:0}
+.sub h3{font-family:"Inter Display";font-size:35px;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:10px;margin-bottom:8px;line-height:1.1;white-space:nowrap}
+.sub h3 .n{background:var(--navy);color:#fff;border-radius:7px;padding:0 9px;font-size:31px}
+.browser{background:#e8eef2;border-radius:12px;padding:8px;display:flex;gap:10px;align-items:center}
+.browser .w{flex:1;background:#fff;border-radius:8px;overflow:hidden}
+.browser .bar{font-size:22px;padding:3px 10px;color:var(--mute);display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--line)}
+.browser .bar i{width:11px;height:11px;border-radius:99px;background:#e0605a;display:inline-block}
+.browser .bar i+i{background:#e7b33c}.browser .bar i+i+i{background:#54b26a}
+.browser .w img{width:100%;display:block}
+.browser .hp{width:116px;border-radius:16px;border:6px solid #1b2229;overflow:hidden;flex:none}
+.browser .hp img{width:100%;display:block}
+.cyc{display:grid;grid-template-columns:240px 1fr;gap:12px;align-items:center}
+.cyc svg text{font-family:Inter;font-weight:800;fill:#fff}
+.ks{list-style:none;font-size:28.5px;line-height:1.24}
+.ks li{padding:6px 0;border-bottom:1.5px solid var(--line)}
+.ks li:last-child{border:none}
+.ks .bad{color:var(--red)} .ks .ok{color:var(--green)}
+.kpi{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}
+.kpi div{background:#eef4f7;border-radius:10px;padding:5px 6px;text-align:center;font-size:22px;line-height:1.12}
+.kpi div b{display:block;font-family:"Inter Display";font-size:33px;color:var(--navy2);white-space:nowrap}
+.kpi div.t b{color:var(--teal)} .kpi div.a{background:var(--peach)} .kpi div.a b{color:#c25e05}
+.fun{display:grid;grid-template-columns:1fr 70px;gap:5px 10px;font-size:23.5px;align-items:center}
+.fun .bw{background:#e9eef1;border-radius:6px;height:32px;position:relative}
+.fun .bw span{position:absolute;left:0;top:0;bottom:0;background:#8fd0c8;border-radius:6px}
+.fun .bw em{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:700;white-space:nowrap}
+.fun .bw.o span{background:#f6b26b}
+.fun .bw.k span{background:#a9b9c8}
+.fun .md{text-align:right;font-weight:700;font-size:26px}
+.fun .md.o{color:var(--amber);font-weight:800}
+
+.medsos{display:grid;grid-template-columns:0.8fr 0.76fr 0.98fr 1.3fr;gap:20px;flex:1;min-height:0}
+.ms h4{font-size:29px;font-weight:800;color:var(--teal);margin-bottom:6px}
+.donut{display:flex;gap:16px;align-items:center;background:#eef4f7;border-radius:12px;padding:8px 14px;margin-bottom:8px}
+.donut ul{list-style:none;font-size:26px;line-height:1.35}
+.sw{display:inline-block;width:20px;height:20px;border-radius:4px;vertical-align:-2px;margin-right:6px}
+.fact{display:flex;align-items:center;gap:10px;border-radius:10px;padding:6px 12px;margin-bottom:9px;font-size:26px;line-height:1.2;background:var(--sky)}
+.fact b{font-family:"Inter Display";font-size:35px;color:var(--navy2)}
+.fact.t{background:var(--mint)} .fact.t b{color:var(--teal)}
+.fact.a{background:var(--peach)} .fact.a b{color:#c25e05}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.two div{border-radius:10px;padding:6px;text-align:center;font-size:25px;line-height:1.15;background:var(--mint)}
+.two div b{display:block;font-family:"Inter Display";font-size:37px;color:var(--teal)}
+.two div+div{background:var(--peach)} .two div+div b{color:#c25e05}
+.leg{display:flex;gap:16px;font-size:25px;white-space:nowrap;font-weight:700;margin-bottom:4px}
+.bars .q{font-size:26px;font-weight:800;margin:4px 0 2px}
+.bars .br{display:grid;grid-template-columns:1fr 96px;gap:10px;align-items:center;margin-bottom:3px;font-size:26px;font-weight:700}
+.bars .tr{height:20px;border-radius:99px;background:#e6ecf0;overflow:hidden}
+.bars .tr span{display:block;height:100%;border-radius:99px;background:var(--navy)}
+.bars .tr.f span{background:var(--teal2)}
+.bars .nt{font-size:23px;color:var(--mute);margin-top:6px}
+.rel{display:grid;grid-template-columns:235px 1fr 235px;gap:10px 8px;align-items:center}
+.rel .nd{background:#eef4f7;border-radius:10px;padding:3px 8px;text-align:center;font-size:24px;font-weight:800;line-height:1.1;min-height:58px;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:8px}
+.rel .nd svg{font-size:25px;color:var(--teal)}
+.rel .nd.o svg{color:var(--amber)}
+.rel .ln{text-align:center;font-size:21px;color:var(--mute);line-height:1.15}
+.rel .ln b{display:block;font-size:29px;color:var(--teal)}
+.rel .ln.o b{color:#c25e05}
+.rel .ln .ar{height:4px;background:var(--teal);position:relative;margin:5px 0}
+.rel .ln .ar::after{content:"";position:absolute;right:-2px;top:-7px;border-left:14px solid var(--teal);border-top:9px solid transparent;border-bottom:9px solid transparent}
+.rel .ln.o .ar{background:#b5621a}.rel .ln.o .ar::after{border-left-color:#b5621a}
+.rk{background:var(--navy);color:#fff;border-radius:12px;padding:8px 16px;font-size:27px;line-height:1.28;margin-top:10px}
+.rk b.h{color:#8fe3d6}
+
+/* simpulan */
+.sim{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;flex:1}
+.sc{border-radius:12px;padding:10px 16px;background:#eaf6ef}
+.sc h4{display:flex;align-items:center;gap:10px;font-size:32px;font-weight:800;color:var(--green);margin-bottom:4px}
+.sc h4 i{width:44px;height:44px;border-radius:999px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:25px;font-style:normal}
+.sc ul{list-style:none;font-size:29px;line-height:1.2;display:flex;flex-direction:column;gap:5px}
+.sc li{padding-left:22px;position:relative}
+.sc li::before{content:"";position:absolute;left:0;top:.48em;width:11px;height:11px;border-radius:99px;background:var(--green)}
+.sc.s{background:var(--sky)} .sc.s h4{color:var(--blue)} .sc.s h4 i,.sc.s li::before{background:var(--blue)}
+.sc.i{background:var(--lav)} .sc.i h4{color:var(--violet)} .sc.i h4 i,.sc.i li::before{background:var(--violet)}
+.ty{display:grid;grid-template-columns:1fr 370px;gap:14px;flex:1}
+.ty ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ty li{display:flex;gap:12px;align-items:center;background:#f6f9fa;border-radius:10px;padding:6px 12px;font-size:27px;font-weight:700;line-height:1.2;flex:1}
+.ty li i{width:42px;height:42px;border-radius:999px;background:#fde4ea;color:#d6336c;display:grid;place-items:center;flex:none;font-style:normal;font-size:23px}
+.qrc{background:#fbefe3;border:5px solid #5b3418;border-radius:16px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr auto;align-items:center;padding:8px 10px;gap:3px 10px;text-align:center}
+.qrc img{grid-row:2/4;grid-column:1}
+.qrc .k{grid-column:1/-1}
+.qrc .u,.qrc .go{grid-column:1/-1;justify-self:center}
+.qrc .k{font-size:14px;font-weight:800;letter-spacing:.12em;color:#8a5a2b}
+.qrc .sh{font-family:Georgia,serif;font-weight:700;font-size:30px;color:#5b3418;letter-spacing:.08em;line-height:1}
+.qrc .sl{font-size:15px;color:#8a5a2b;font-weight:600}
+.qrc img{width:132px;height:132px;border-radius:6px;background:#fff}
+.qrc .u{font-size:18px;font-weight:700;color:#fff;background:#a5653a;border-radius:999px;padding:1px 12px}
+.qrc .go{font-family:Georgia,serif;color:#fff;background:#a5653a;font-size:21px;font-weight:700;border-radius:6px;padding:2px 14px;letter-spacing:.03em}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+    <symbol id="book" viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v15a2 2 0 0 0-2-2H3zM21 5a2 2 0 0 0-2-2h-5a2 2 0 0 0-2 2v15a2 2 0 0 1 2-2h7z"/></symbol>
+    <symbol id="clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 14h6M9 18h3"/></symbol>
+    <symbol id="chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+    <symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.6"/><path d="M17 14c2.6 0 4.5 2 4.5 5"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-7.5 7-13a7 7 0 0 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></symbol>
+    <symbol id="monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M8 10h8"/></symbol>
+    <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+    <symbol id="refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="mobile" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+    <symbol id="cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 7H6"/></symbol>
+    <symbol id="baby" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/><path d="M10 7h.01M14 7h.01"/></symbol>
+    <symbol id="alert" viewBox="0 0 24 24"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+    <symbol id="exit" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+    <symbol id="gap" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5M8 11h6"/></symbol>
+    <symbol id="weight" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 9a5 5 0 0 1 8 0M12 9l1.5-2"/></symbol>
+    <symbol id="wifi" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0M12 20h.01"/></symbol>
+    <symbol id="hat" viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+    <symbol id="news" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h4M7 16h4M14 12h3v4h-3z"/></symbol>
+  </defs>
+</svg>
+
+<div class="poster">
+<header>
+  <div class="strip">SEMINAR SEKOLAH PASCASARJANA IPB · PRODI ILMU GIZI · SENIN, 2 NOVEMBER 2026</div>
+  <div class="logo"><img src="logo-ipb-resmi.png" alt="IPB University"></div>
+  <div class="ttl">
+    <h1>Pengembangan Media Edukasi Gizi Online<br><em>SHINING</em> bagi Calon Pengantin</h1>
+    <h2>Evaluasi Proses Implementasi dan Pola Penggunaan Media Sosial</h2>
+    <div class="au">Marhamah<sup>1</sup>, Hardinsyah<sup>2</sup>, Cesilia Meti Dwiriani<sup>2</sup>, Lilik Kustiyah<sup>2</sup>, Irman Hermadi<sup>3</sup></div>
+    <div class="af"><sup>1</sup>Program Doktor Ilmu Gizi, FKGiz IPB · <sup>2</sup>Prodi Ilmu Gizi, FKGiz IPB · <sup>3</sup>Prodi Ilmu Komputer, FMIPA IPB</div>
+  </div>
+  <div class="contact">
+    <div><i><svg class="i"><use href="#pin"/></svg></i>Prodi Ilmu Gizi, FKGiz IPB, Kampus IPB Dramaga, Bogor</div>
+    <div><i><svg class="i"><use href="#phone"/></svg></i>0813-8172-4884</div>
+    <div><i><svg class="i"><use href="#mail"/></svg></i>ann_marhamah@apps.ipb.ac.id</div>
+  </div>
+</header>
+
+<main>
+  <!-- ROW 1 -->
+  <div class="row" style="grid-template-columns:1fr 1fr;flex:0 0 606px">
+    <section class="panel">
+      <div class="ph"><svg class="i"><use href="#doc"/></svg>Abstrak<svg class="i tg"><use href="#target"/></svg></div>
+      <div class="pb abs">
+        <p class="p1"><span class="ic"><svg class="i"><use href="#book"/></svg></span><b class="h">Latar belakang.</b> Data media sosial catin dan kinerja edukasi gizi online di lapangan masih terbatas.</p>
+        <p class="p2"><span class="ic"><svg class="i"><use href="#target"/></svg></span><b class="h">Tujuan.</b> Mengevaluasi implementasi platform SHINING dan kaitan media sosial catin dengan pengetahuan, sikap HBM, dan IMT.</p>
+        <p class="p3"><span class="ic"><svg class="i"><use href="#clip"/></svg></span><b class="h">Metode.</b> <i>Cross-sectional</i> dan evaluasi proses; Kota Binjai, Juli–Oktober 2026; 198 pendaftar, 74 data lengkap.</p>
+        <p class="p4"><span class="ic"><svg class="i"><use href="#chart"/></svg></span><b class="h">Hasil.</b> Hanya 38,9% menyelesaikan semua instrumen. WhatsApp dominan (59,5%). Pengetahuan terkait sikap (r=0,414), tetapi 51,4% berat badan lebih/obesitas.</p>
+        <p class="p5"><span class="ic"><svg class="i"><use href="#check"/></svg></span><b class="h">Simpulan.</b> Arahkan catin ke sumber kredibel, biasakan cek fakta, dan gunakan instrumen ringkas.</p>
+        <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi online, evaluasi proses, gizi prakonsepsi, media sosial</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="ph"><span class="no">1</span>Pendahuluan<svg class="i tg"><use href="#target"/></svg></div>
+      <div class="pb">
+        <div class="intro">
+          <div style="display:flex;flex-direction:column">
+            <span class="lbl">Latar belakang</span>
+            <div class="stats">
+              <div class="st"><div class="v"><svg class="i"><use href="#weight"/></svg>±50%</div>dewasa Indonesia berat badan lebih/obesitas</div>
+              <div class="st"><div class="v"><svg class="i"><use href="#hat"/></svg>44–77%</div>catin berpengetahuan gizi kurang</div>
+              <div class="st"><div class="v"><svg class="i"><use href="#wifi"/></svg>34,49%</div>pengguna internet adalah <b>Gen Z</b>, kelompok usia menikah</div>
+              <div class="st"><div class="v"><svg class="i"><use href="#news"/></svg>≈50%</div>unggahan gizi akun populer tidak akurat</div>
+            </div>
+          </div>
+          <div class="gapbox">
+            <span class="lbl o">Masalah saat ini &amp; GAP</span>
+            <ul class="gl">
+              <li><span class="ic"><svg class="i"><use href="#baby"/></svg></span>Prakonsepsi masa kritis, tetapi sering diabaikan</li>
+              <li><span class="ic"><svg class="i"><use href="#alert"/></svg></span>Misinformasi gizi marak di media sosial</li>
+              <li><span class="ic"><svg class="i"><use href="#monitor"/></svg></span>Efek edukasi online catin masih beragam</li>
+              <li><span class="ic"><svg class="i"><use href="#exit"/></svg></span>Retensi rendah, banyak yang putus di tengah jalan</li>
+              <li><span class="ic"><svg class="i"><use href="#gap"/></svg></span><span><b>GAP:</b> laporan implementasi platform prakonsepsi online masih langka</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row" style="grid-template-columns:0.52fr 1.7fr;flex:0 0 408px">
+    <section class="panel">
+      <div class="ph"><span class="no">2</span>Tujuan<svg class="i tg"><use href="#target"/></svg></div>
+      <div class="pb">
+        <div class="tuj">
+          <div><span>1</span><p>Mengevaluasi <b>proses implementasi</b> platform SHINING</p></div>
+          <div><span>2</span><p>Menganalisis <b>pola media sosial</b> catin dan kaitannya dengan pengetahuan, sikap, dan IMT</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="ph"><span class="no">3</span>Metode<svg class="i tg"><use href="#target"/></svg></div>
+      <div class="pb" style="padding:7px 12px 6px">
+        <div class="met">
+          <div class="m"><h5><i><svg class="i"><use href="#clip"/></svg></i>3.1 Desain</h5><i>Cross-sectional</i> + evaluasi proses</div>
+          <div class="m g"><h5><i><svg class="i"><use href="#users"/></svg></i>3.2 Subjek</h5>198 catin → 74 dianalisis (30 L, 44 P)</div>
+          <div class="m v"><h5><i><svg class="i"><use href="#pin"/></svg></i>3.3 Waktu &amp; lokasi</h5>Kota Binjai; Juli–Oktober 2026</div>
+          <div class="m o" style="grid-column:1/3"><h5><i><svg class="i"><use href="#doc"/></svg></i>3.4 Instrumen</h5>Pengetahuan, sikap HBM, FFQ, IPAQ-SF, medsos, IMT</div>
+          <div class="m g"><h5><i><svg class="i"><use href="#chart"/></svg></i>3.5 Analisis</h5>Spearman, Mann-Whitney, Kruskal-Wallis, Fisher</div>
+          <div class="m r" style="grid-column:1/3"><h5><i><svg class="i"><use href="#check"/></svg></i>3.6 Indikator proses</h5>Penyelesaian, lama isi, kiriman ganda, data hilang</div>
+          <div class="m n"><h5><i><svg class="i"><use href="#shield"/></svg></i>3.7 Etik</h5>KEPK Poltekkes Kemenkes Medan No. 01.26.1986/2025</div>
+          <div class="flow">
+            <div class="ey">CARA GABUNG <span>Alur pengisian instrumen</span></div>
+            <h6>Empat Langkah, Selesaikan Satu Sesi</h6>
+            <div class="sb">Akses langsung dari HP, tanpa unduh aplikasi apapun. Satu sesi dikerjakan selama 1 (satu) minggu. Jadi, ga usah terburu-buru.</div>
+            <div class="fq">
+              <div class="qb">SCAN UNTUK MASUK<img src="qr.png" alt="QR"></div>
+              <ol>
+                <li><span><b>Scan kode QR di samping</b>Buka kamera HP, arahkan ke kode QR.</span></li>
+                <li><span><b>Isi form Login</b>Nama lengkap, No. HP/Email, pilih BPPKB/BKKBN.</span></li>
+                <li><span><b>Kerjakan Sesi 1 — Data Awal</b>Selesaikan bertahap dalam 1 (satu) minggu.</span></li>
+                <li><span><b>Tuntaskan Sesi 2 — Data Akhir</b>Setelah 8 minggu, buka link yang sama.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ROW 3 ADDIE -->
+  <section class="panel" style="flex:0 0 240px">
+    <div class="ph"><span class="no">4</span>Alur Penelitian: Iteratif dengan Skema ADDIE<svg class="i tg"><use href="#target"/></svg></div>
+    <div class="pb" style="padding:15px 16px 5px">
+      <div class="addie">
+        <div class="ad"><span class="c"><svg class="i"><use href="#search"/></svg></span><div><h5>1. Analisis</h5><p>kajian &amp; survei kebutuhan</p></div></div>
+        <div class="arr">→</div>
+        <div class="ad b"><span class="c"><svg class="i"><use href="#monitor"/></svg></span><div><h5>2. Desain</h5><p>konten edukasi berbasis HBM</p></div></div>
+        <div class="arr">→</div>
+        <div class="ad c3"><span class="c"><svg class="i"><use href="#gear"/></svg></span><div><h5>3. Pengembangan</h5><p>platform SHINING &amp; materi</p></div></div>
+        <div class="arr">→</div>
+        <div class="ad d"><span class="fk">FOKUS MAKALAH</span><span class="c"><svg class="i"><use href="#users"/></svg></span><div><h5>4. Implementasi</h5><p>uji coba &amp; rekrutmen</p></div></div>
+        <div class="arr">→</div>
+        <div class="ad e"><span class="c"><svg class="i"><use href="#chart"/></svg></span><div><h5>5. Evaluasi</h5><p>proses &amp; dampak</p></div></div>
+      </div>
+      <div class="iter"><svg class="i"><use href="#refresh"/></svg> Iteratif: evaluasi mingguan memperbaiki platform (Juli–Okt 2026)</div>
+    </div>
+  </section>
+
+  <!-- HASIL -->
+  <section class="hasil">
+    <div class="ph"><span class="no">5</span>Hasil<svg class="i tg"><use href="#target"/></svg></div>
+    <div class="hrow" style="grid-template-columns:0.8fr 1.4fr 1.12fr;flex:0 0 508px">
+      <div class="sub">
+        <h3><span class="n">5.1</span>Platform SHINING <span class="tj">Tujuan 1</span></h3>
+        <div class="browser">
+          <div class="w"><div class="bar"><i></i><i></i><i></i>mulai.edukasi-catin.id</div><img src="laman-shining.png" alt="Laman SHINING"></div>
+          <div class="hp"><img src="shining-hp.jpg" alt="SHINING di HP"></div>
+        </div>
+        <p style="font-size:28px;line-height:1.26;margin-top:12px">Web untuk HP tanpa unduhan/akun; data tersimpan otomatis; IMT langsung tampil.</p>
+        <div class="cap">Gambar 1. Laman web SHINING (mulai.edukasi-catin.id)</div>
+      </div>
+      <div class="sub">
+        <h3><span class="n">5.2</span>Iteratif: Kendala &amp; Solusi <span class="tj">Tujuan 1</span></h3>
+        <div class="cyc">
+          <svg viewBox="0 0 210 210" width="240" height="240">
+            <circle cx="105" cy="105" r="66" fill="none" stroke="#c9d6dd" stroke-width="5" stroke-dasharray="10 8"/>
+            <circle cx="105" cy="40" r="40" fill="#14a29a"/><text x="105" y="37" font-size="17" text-anchor="middle">Pantau</text><text x="105" y="57" font-size="17" text-anchor="middle">data</text>
+            <circle cx="170" cy="105" r="40" fill="#c63a2b"/><text x="170" y="102" font-size="16.5" text-anchor="middle">Deteksi</text><text x="170" y="122" font-size="16" text-anchor="middle">masalah</text>
+            <circle cx="105" cy="170" r="40" fill="#1f8a4c"/><text x="105" y="167" font-size="16.5" text-anchor="middle">Perbaiki</text><text x="105" y="187" font-size="17" text-anchor="middle">fitur</text>
+            <circle cx="40" cy="105" r="40" fill="#0d2f5e"/><text x="40" y="102" font-size="17" text-anchor="middle">Pakai</text><text x="40" y="122" font-size="17" text-anchor="middle">lagi</text>
+          </svg>
+          <ul class="ks">
+            <li><b>Juli:</b> <span class="bad">Angka 0 nomor HP hilang</span> → <span class="ok">Normalisasi nomor &amp; karantina</span></li>
+            <li><b>Awal Okt:</b> <span class="bad">Progres hilang saat ganti HP</span> → <span class="ok">Progres dilacak per nomor HP</span></li>
+            <li><b>Pertengahan Okt:</b> <span class="bad">Data makanan pokok FFQ hilang</span> → <span class="ok">Simpan draf otomatis</span></li>
+          </ul>
+        </div>
+        <div class="kpi">
+          <div><b>13,8%</b>kiriman berulang</div>
+          <div><b>22/23</b>karantina minggu ke-1</div>
+          <div class="t"><b>26,9→0%</b>FFQ hilang data</div>
+        </div>
+        <div class="cap">Gambar 2. Siklus pemantauan dan perbaikan platform</div>
+      </div>
+      <div class="sub">
+        <h3><span class="n">5.3</span>Penyelesaian Pre-test <span class="tj">Tujuan 1</span></h3>
+        <div class="fun">
+          <div class="bw"><span style="width:86.4%"></span><em>Persetujuan · 171 (86,4%)</em></div><div class="md">–</div>
+          <div class="bw"><span style="width:81.3%"></span><em>Identitas · 161 (81,3%)</em></div><div class="md">1,9</div>
+          <div class="bw o"><span style="width:54%"></span><em>Pengetahuan (48) · 107 (54,0%)</em></div><div class="md o">16,7</div>
+          <div class="bw"><span style="width:48.5%"></span><em>Sikap HBM (24) · 96 (48,5%)</em></div><div class="md">3,0</div>
+          <div class="bw"><span style="width:46.5%"></span><em>FFQ · 92 (46,5%)</em></div><div class="md">5,5</div>
+          <div class="bw"><span style="width:41.4%"></span><em>Media sosial · 82 (41,4%)</em></div><div class="md">3,2</div>
+          <div class="bw"><span style="width:41.4%"></span><em>IPAQ-SF · 82 (41,4%)</em></div><div class="md">1,8</div>
+          <div class="bw k"><span style="width:38.9%"></span><em>Keenam instrumen · 77 (38,9%)</em></div><div class="md">–</div>
+        </div>
+        <div class="kpi">
+          <div class="a"><b>−27,3</b>turun sebelum tes</div>
+          <div><b>45,5% · 70,1%</b>tuntas ≤1 / ≤24 jam</div>
+          <div class="t"><b>47,0 vs 47,9%</b>P vs L</div>
+        </div>
+        <div class="cap">Gambar 3. Corong penyelesaian (n=198); kanan: median menit</div>
+      </div>
+    </div>
+
+    <div class="hrow" style="grid-template-columns:1fr;flex:1;padding-bottom:12px">
+      <div class="sub">
+        <h3><span class="n">5.4</span>Penggunaan Media Sosial (n=74) <span class="tj">Tujuan 2</span></h3>
+        <div class="medsos">
+          <div class="ms">
+            <h4>Pola penggunaan</h4>
+            <div class="donut">
+              <svg viewBox="0 0 42 42" width="132" height="132" style="transform:rotate(-90deg)">
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#a9b4be" stroke-width="8"/>
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#14a29a" stroke-width="8" stroke-dasharray="59.5 40.5"/>
+                <circle cx="21" cy="21" r="15.9" fill="none" stroke="#0d2f5e" stroke-width="8" stroke-dasharray="33.8 66.2" stroke-dashoffset="-59.5"/>
+              </svg>
+              <ul>
+                <li style="font-weight:800;color:var(--navy)">Platform utama</li>
+                <li><span class="sw" style="background:#14a29a"></span><b>59,5%</b> WhatsApp</li>
+                <li><span class="sw" style="background:#0d2f5e"></span><b>33,8%</b> TikTok/IG</li>
+                <li><span class="sw" style="background:#a9b4be"></span><b>6,8%</b> lainnya</li>
+              </ul>
+            </div>
+            <div class="two"><div><b>59,5%</b>pengetahuan baik</div><div><b>51,4%</b>BB lebih/obesitas</div></div>
+          </div>
+          <div class="ms">
+            <h4>&nbsp;</h4>
+            <div class="fact"><b>73,0%</b> akses hampir setiap jam <svg class="i" style="margin-left:auto;color:var(--navy2);font-size:30px"><use href="#bell"/></svg></div>
+            <div class="fact t"><b>75,7%</b> info dari akun nakes; 39,2% influencer</div>
+            <div class="fact a"><b>71,6%</b> tertarik produk promosi <svg class="i" style="margin-left:auto;color:var(--amber);font-size:30px"><use href="#cart"/></svg></div>
+          </div>
+          <div class="ms bars">
+            <h4>Laki-laki vs perempuan <span style="color:var(--mute);font-weight:600;font-size:23px;float:right;margin-top:4px">*p&lt;0,05</span></h4>
+            <div class="leg"><span><span class="sw" style="background:var(--navy)"></span>Laki-laki (30)</span><span><span class="sw" style="background:var(--teal2)"></span>Perempuan (44)</span></div>
+            <div class="q">WhatsApp utama*</div>
+            <div class="br"><div class="tr"><span style="width:73.3%"></span></div>73,3%</div>
+            <div class="br"><div class="tr f"><span style="width:50%"></span></div>50,0%</div>
+            <div class="q">TikTok/Instagram utama*</div>
+            <div class="br"><div class="tr"><span style="width:20%"></span></div>20,0%</div>
+            <div class="br"><div class="tr f"><span style="width:43.2%"></span></div>43,2%</div>
+            <div class="q">Medsos ≥3 jam/hari*</div>
+            <div class="br"><div class="tr"><span style="width:36.7%"></span></div>36,7%</div>
+            <div class="br"><div class="tr f"><span style="width:61.4%"></span></div>61,4%</div>
+            
+          </div>
+          <div class="ms">
+            <h4>Hubungan dengan sikap &amp; IMT</h4>
+            <div class="rel">
+              <div class="nd"><svg class="i"><use href="#book"/></svg>Pengetahuan</div>
+              <div class="ln"><b>r = 0,414</b><div class="ar"></div>p &lt; 0,001</div>
+              <div class="nd"><svg class="i"><use href="#heart"/></svg>Sikap HBM</div>
+              <div class="nd"><svg class="i"><use href="#search"/></svg>Cek kebenaran info</div>
+              <div class="ln"><b>r = 0,287</b><div class="ar"></div>p = 0,014</div>
+              <div class="nd"><svg class="i"><use href="#heart"/></svg>Sikap HBM</div>
+              <div class="nd o"><svg class="i"><use href="#mobile"/></svg>Durasi medsos</div>
+              <div class="ln o"><b>r = −0,331</b><div class="ar"></div>p = 0,004</div>
+              <div class="nd o"><svg class="i"><use href="#scale"/></svg>IMT</div>
+              <div class="nd o"><svg class="i"><use href="#shield"/></svg>Info akun nakes</div>
+              <div class="ln o"><b>22,5 vs 26,6</b><div class="ar"></div>kg/m² · p = 0,022</div>
+              <div class="nd o"><svg class="i"><use href="#scale"/></svg>IMT lebih rendah</div>
+            </div>
+          </div>
+        </div>
+        <div class="rk"><b class="h">Rangkuman:</b> Catin aktif bermedsos, didominasi WhatsApp (terutama laki-laki); perempuan lebih banyak di TikTok/Instagram dan lebih lama online. IMT dan sikap terkait <b>sumber kredibel dan kebiasaan cek fakta</b>, bukan seberapa sering online.</div>
+        <div class="cap">Gambar 4. Pola medsos, perbandingan peran, dan hubungan antarvariabel (Spearman; bukan sebab-akibat)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 6 -->
+  <div class="row" style="grid-template-columns:1.62fr 1fr;flex:0 0 322px">
+    <section class="panel">
+      <div class="ph"><span class="no">6</span>Simpulan dan Saran<svg class="i tg"><use href="#target"/></svg></div>
+      <div class="pb">
+        <div class="sim">
+          <div class="sc"><h4><i><svg class="i"><use href="#check"/></svg></i>Simpulan</h4><ul><li>Platform sederhana layak</li><li>Medsos didominasi WhatsApp</li><li>Pengetahuan baik, BB lebih &gt;50%</li></ul></div>
+          <div class="sc s"><h4><i><svg class="i"><use href="#pin"/></svg></i>Saran</h4><ul><li>Instrumen ringkas</li><li>Biasakan cek fakta</li><li>WhatsApp untuk pengingat</li></ul></div>
+          <div class="sc i"><h4><i><svg class="i"><use href="#gear"/></svg></i>Implikasi SHINING</h4><ul><li>Instrumen dipecah per kunjungan</li><li>Pengingat via WhatsApp</li><li>Konten singkat TikTok/IG</li></ul></div>
+        </div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="ph"><span class="no">7</span>Ucapan Terima Kasih<svg class="i tg"><use href="#target"/></svg></div>
+      <div class="pb">
+        <div class="ty">
+          <ul>
+            <li><i><svg class="i"><use href="#heart"/></svg></i>DPPKB dan Kemenag Kota Binjai</li>
+            <li><i><svg class="i"><use href="#heart"/></svg></i>Calon pengantin Kota Binjai</li>
+            <li><i><svg class="i"><use href="#heart"/></svg></i>Semua pihak yang berkontribusi</li>
+          </ul>
+          <div class="qrc">
+            <div class="k">KELAS ONLINE CALON PENGANTIN</div>
+            <img src="qr-shining.png" alt="QR shining.edukasi-catin.id">
+            <div class="sh">SHINING</div>
+            <div class="sl">Sehat Sebelum Hamil Itu Penting</div>
+            <div class="u">shining.edukasi-catin.id</div>
+            <div class="go">✦ Scan &amp; mulai kelasmu</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</div>
+</body>
+</html>
