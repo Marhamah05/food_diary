@@ -275,11 +275,78 @@ h6{font-size:16.1px;color:var(--navy);margin:0 0 7px;text-transform:uppercase;le
 .refs p{display:inline;margin-bottom:0}
 .refs p+p::before{content:" · "}
 footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;text-align:center;font-size:16.1px;font-weight:600;padding:9px 0}
+
+/* ===== v2 layout ===== */
+.abr{display:grid;grid-template-columns:44px 132px 1fr;gap:10px;align-items:start;padding:8px 0;border-bottom:1px dashed var(--line);font-size:15.6px;line-height:1.3}
+.abr:last-of-type{border-bottom:0}
+.abr .bi{width:40px;height:40px;border-radius:50%;background:var(--mint);color:var(--teal);display:grid;place-items:center}
+.abr .bi svg{width:23px;height:23px}
+.abr b.l{color:var(--teal);font-size:16.5px;padding-top:9px}
+.abr p{text-align:left}
+.kw2{font-size:14.5px;color:var(--mute);margin-top:6px}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sub{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.sub h4{font-size:18px;font-weight:800;padding:7px 14px;color:var(--navy)}
+.sub.a h4{background:var(--mint)} .sub.b h4{background:#fdf1df;color:#8a4b12}
+.bigs{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px}
+.bs{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;background:var(--bg);border-radius:10px;padding:9px 10px}
+.bs .bi{width:50px;height:50px;border-radius:12px;display:grid;place-items:center;color:#fff;background:var(--teal)}
+.bs .bi svg{width:28px;height:28px}
+.bs.n .bi{background:var(--navy2)} .bs.o .bi{background:var(--amber)} .bs.r .bi{background:#b24a5b}
+.bs b{display:block;font-family:"Inter Display",Inter;font-size:36px;font-weight:800;line-height:1;color:var(--teal)}
+.bs.n b{color:var(--navy2)} .bs.o b{color:#c0620c} .bs.r b{color:#a03c4c}
+.bs span{font-size:14.6px;line-height:1.25}
+.mu{list-style:none;padding:8px 12px;display:flex;flex-direction:column;gap:7px}
+.mu li{display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;font-size:15.2px;line-height:1.28}
+.mu .bi{width:40px;height:40px;border-radius:50%;background:#fdf1df;color:#c0620c;display:grid;place-items:center}
+.mu .bi svg{width:22px;height:22px}
+.tuj{margin-top:12px;display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;background:linear-gradient(90deg,var(--teal),var(--green));color:#fff;border-radius:12px;padding:12px 16px}
+.tuj .bi{width:66px;height:66px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center}
+.tuj .bi svg{width:40px;height:40px}
+.tuj h5{font-size:21px;font-weight:800;margin-bottom:3px}
+.tuj p{font-size:16.6px;line-height:1.3}
+.ml{display:flex;flex-direction:column}
+.mr{display:grid;grid-template-columns:40px 128px 1fr;gap:10px;align-items:start;padding:7px 0;border-bottom:1px dashed var(--line);font-size:15.4px;line-height:1.28}
+.mr .bi{width:38px;height:38px;border-radius:10px;background:var(--sky);color:var(--navy2);display:grid;place-items:center}
+.mr .bi svg{width:22px;height:22px}
+.mr b.l{color:var(--navy2);font-size:16px;padding-top:8px}
+.fok{margin-top:10px;display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;background:#fff3e4;border:2px solid var(--amber);border-radius:12px;padding:10px 12px}
+.fok .bi{width:48px;height:48px;border-radius:50%;background:var(--amber);color:#fff;display:grid;place-items:center}
+.fok .bi svg{width:28px;height:28px}
+.fok h5{font-size:18px;color:#a2560f;font-weight:800}
+.fok p{font-size:15.4px;line-height:1.28}
+.colL{display:flex;flex-direction:column;gap:12px}
+.colR{display:flex;flex-direction:column;gap:12px}
+.p51{display:grid;grid-template-columns:262px 1fr;gap:14px;align-items:start}
+.couple{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:8px}
+.couple{height:150px}
+.couple img{display:block;width:100%;height:auto;margin-top:-14px}
+.brand{font-family:"Inter Display",Inter;font-weight:800;font-size:30px;color:var(--navy);line-height:1}
+.brand em{font-style:normal;color:var(--teal2)}
+.brand small{display:block;font-size:14px;color:var(--teal);font-weight:700;margin-top:2px}
+.p51 .feat li{font-size:15px;line-height:1.28}
+.p51 .feat{gap:6px;margin-top:8px}
+.p52 .itr{grid-template-columns:205px 1fr;gap:10px}
+.p52 .cyc svg{width:205px;height:205px}
+.p52 .kpi{grid-template-columns:1fr;gap:2px;text-align:center}
+.p52 .tr{grid-template-columns:104px 1fr 1fr;gap:6px}
+.p52 .tr .d{font-size:13.6px;padding-left:16px}
+.r3 .ct{font-size:15px}
+.r3 .ct td{padding:4px 5px}
+.r3 .ct th{font-size:13.5px}
+.sim3{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:14px}
+.sbox{border-radius:12px;padding:10px 12px;border:1px solid var(--line);background:#fff}
+.sbox h6{display:inline-block;font-size:17px;font-weight:800;padding:4px 12px;border-radius:999px;margin-bottom:8px;letter-spacing:.03em;text-transform:uppercase}
+.sbox.s h6{background:var(--mint);color:var(--teal)} .sbox.r h6{background:#fdf1df;color:#a2560f} .sbox.i h6{background:var(--sky);color:var(--navy2)}
+.sbox ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.sbox li{display:grid;grid-template-columns:24px 1fr;gap:8px;font-size:16.4px;line-height:1.3}
+.sbox li::before{content:"✓";width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;display:grid;place-items:center;font-size:13px}
+.sbox.s li::before{background:var(--green)} .sbox.r li::before{background:var(--amber)} .sbox.i li::before{background:var(--navy2)}
+.lim{font-size:13.8px;color:var(--mute);margin-top:8px}
 </style>
 </head>
-<body>
-<div class="poster">
-  <header>
+<body><div class="poster">
+<header>
     <div class="leaf" style="left:-20px;top:-26px;width:150px;transform:rotate(-35deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="left:120px;top:-40px;width:90px;transform:rotate(25deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="right:-24px;top:-14px;width:170px;transform:rotate(30deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="right:150px;top:-36px;width:85px;transform:rotate(-20deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div class="leaf" style="right:-10px;bottom:-60px;width:110px;transform:rotate(150deg)"><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 4C22 22 12 52 24 80c6 13 18 17 26 16 8 1 20-3 26-16C88 52 78 22 50 4z"/><path d="M50 14v80" stroke="#fff" stroke-width="2.5"/><path d="M50 40l-15-10M50 55l-19-12M50 70l-16-10M50 40l15-10M50 55l19-12M50 70l16-10" stroke="#fff" stroke-width="2" fill="none"/></svg></div>
     <div class="strip">SEMINAR SEKOLAH PASCASARJANA IPB · PROGRAM STUDI ILMU GIZI · SENIN, 2 NOVEMBER 2026</div>
     <div class="logo"><img src="logo-ipb-resmi.png" alt="Logo IPB University, Bogor Indonesia"></div>
@@ -302,76 +369,45 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
       </div>
     </div>
   </header>
-
-  <main>
-    <!-- ROW 1 -->
-    <div class="row" style="grid-template-columns:680px 1fr">
-      <section class="panel">
-        <div class="ph ab">Abstrak<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2 5.5c3-1.3 6.5-1.3 10 .8v13c-3.5-2-7-2-10-.8z"/><path d="M22 5.5c-3-1.3-6.5-1.3-10 .8v13c3.5-2 7-2 10-.8z"/></svg></div>
-        <div class="pb abs">
-          <p><b>Latar belakang.</b> Bukti penggunaan media sosial (medsos) calon pengantin (catin) dan kinerja edukasi gizi prakonsepsi online di Indonesia masih terbatas.</p>
-          <p><b>Tujuan.</b> Mengevaluasi implementasi platform web SHINING kelompok kontrol serta menganalisis penggunaan medsos catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan IMT.</p>
-          <p><b>Metode.</b> <i>Cross-sectional</i> dan evaluasi proses; data awal catin Kota Binjai (Juli–Oktober 2026): 198 pendaftar, 74 dengan data lengkap.</p>
-          <p><b>Hasil.</b> Hanya 38,9% menyelesaikan keenam instrumen; penurunan terbesar sebelum tes pengetahuan 48 butir. Kiriman ganda 13,8%; blok makanan pokok hilang pada 26,9% FFQ. WhatsApp dominan (59,5%). Pengetahuan baik 59,5% dan berkorelasi dengan sikap (r=0,414), namun 51,4% berat badan lebih/obesitas. IMT lebih rendah berhubungan dengan durasi medsos lebih lama (r=−0,331) dan sumber akun tenaga kesehatan; memeriksa kebenaran informasi berhubungan dengan sikap lebih positif (r=0,287).</p>
-          <p><b>Simpulan.</b> Edukasi online perlu mengarahkan catin ke sumber kredibel dan membiasakan verifikasi informasi; platform perlu instrumen ringkas, konfirmasi penyimpanan di server, dan uji coba pada kelompok sasaran.</p>
-          <div class="kw"><b>Kata kunci:</b> calon pengantin, edukasi online, evaluasi proses, gizi prakonsepsi, media sosial</div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="ph g2"><span class="no">1</span>Pendahuluan<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div>
-        <div class="pb">
-          <div class="lbg">
-            <h4>Latar belakang</h4>
-            <div class="lbb">
-              <div class="sts">
-                <div class="st2"><span class="v">±50%</span><span>orang dewasa Indonesia berat badan lebih/obesitas</span></div>
-                <div class="st2"><span class="v">44–77%</span><span>catin di Bogor &amp; Jakarta Barat berpengetahuan gizi kurang</span></div>
-                <div class="st2 n"><span class="v">72,78%</span><span>penduduk mengakses internet (terbanyak Gen Z &amp; milenial); 77,57% untuk medsos</span></div>
-                <div class="st2 n"><span class="v">±50%</span><span>unggahan gizi akun populer tidak akurat</span></div>
-              </div>
-              <ul class="lbl">
-                <li>Masa prakonsepsi periode kritis memperbaiki gizi &amp; kesehatan catin sebagai calon ayah dan ibu, tetapi sering diabaikan.</li>
-                <li>Dewasa muda aktif mencari info kesehatan di medsos, padahal misinformasi gizi menyebar luas. Dalam HBM, medsos = <i>isyarat bertindak</i>, bergantung pada informasi yang dibaca dan cara menilainya.</li>
-                <li>Edukasi online catin memberi hasil beragam; intervensi prakonsepsi berbasis HP efeknya masih terbatas.</li>
-                <li>Angka berhenti tinggi (<i>law of attrition</i>), sehingga cara platform dikembangkan, diubah, dan digunakan perlu dilaporkan.</li>
-                <li>Di negara berpenghasilan rendah–menengah, laporan intervensi prakonsepsi online masih terbatas; HP spesifikasi rendah, HP bersama, dan jaringan tidak stabil menjadi hambatan tersering.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="aim"><span class="tg">Tujuan</span><span><b>(1)</b> Mengevaluasi proses implementasi platform web media edukasi SHINING, meliputi penyelesaian pengisian dan mutu data; <b>(2)</b> menganalisis pola penggunaan medsos catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan IMT, sebagai dasar pengembangan edukasi gizi prakonsepsi online yang mudah digunakan.</span></div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ROW 2 METODE -->
-    <section class="panel">
-      <div class="ph"><span class="no">2</span>Metode</div>
-      <div class="pb" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
-        <div class="mlist">
-          <div class="mi"><span class="ic">D</span><div><b>Desain:</b> <i>cross-sectional</i> + evaluasi proses, bagian dari riset pengembangan SHINING (model ADDIE)</div></div>
-          <div class="mi"><span class="ic">W</span><div><b>Tempat &amp; waktu:</b> pembinaan catin Kota Binjai, Sumatera Utara; Juli–Oktober 2026</div></div>
-          <div class="mi"><span class="ic">S</span><div><b>Subjek:</b> catin 20–40 tahun, kelompok kontrol; rekrutmen via brosur kode QR &amp; WhatsApp; <b>198</b> memenuhi syarat, <b>74</b> dianalisis (30 laki-laki, 44 perempuan)</div></div>
-          <div class="mi"><span class="ic">E</span><div><b>Etik:</b> KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025; persetujuan elektronik</div></div>
-          <div class="mi"><span class="ic">I</span><div><b>Instrumen:</b> pengetahuan 48 butir (baik &gt;80%); sikap 24 butir, 6 konstruk HBM, Likert 4 poin (positif ≥72); FFQ; IPAQ-SF; kuesioner medsos; IMT dari BB/TB isian sendiri (PNPK 2025)</div></div>
-          <div class="mi"><span class="ic">P</span><div><b>Indikator proses:</b> penyelesaian &amp; lama pengisian (<i>timestamp</i>), kiriman ganda, karantina, data hilang; kemudahan dinilai 15 mahasiswa (skala 1–5)</div></div>
-          <div class="mi" style="grid-column:span 2"><span class="ic">A</span><div><b>Analisis:</b> Spearman, Mann-Whitney, Kruskal-Wallis, khi-kuadrat/eksak Fisher; hubungan bermakna diuji ulang dengan kontrol peran; sebelum–sesudah perbaikan: eksak Fisher; p&lt;0,05; Python &amp; SPSS</div></div>
-          <div class="fnote" style="grid-column:span 2;margin-top:0"><b>Fokus makalah:</b> proses implementasi (Tujuan 1) &amp; pola medsos (Tujuan 2), data awal kelompok kontrol; evaluasi dampak dilaporkan terpisah.</div>
-        </div>
-        <div class="adw">
-          <div class="adh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg>Alur penelitian (model ADDIE)</div>
-          <div class="ad"><div class="fokus"><span>FOKUS MAKALAH INI</span></div><div class="as o1"><div class="c">1</div><h5>Analysis<span>(Analisis kebutuhan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6"/><path d="M14 3l5 5h-5z"/><path d="M8 9h4M8 12h6M8 15h3"/><circle cx="16.5" cy="16.5" r="3"/><path d="M18.7 18.7L21 21"/></svg></div><p>Kajian literatur, survei awal, analisis kebutuhan</p></div><div class="ar">⟶</div><div class="as o2"><div class="c">2</div><h5>Design<span>(Desain media)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 0.5v0M3 9H1.5M22.5 9H21M5 3.5 4 2.5M19 3.5l1-1"/></svg></div><p>Desain konten berbasis <i>Health Belief Model</i> (HBM)</p></div><div class="ar">⟶</div><div class="as o3"><div class="c">3</div><h5>Development<span>(Pengembangan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><p>Pengembangan platform SHINING dan materi edukasi</p></div><div class="ar">⟶</div><div class="as f4"><div class="c">4</div><h5>Implementation<span>(Implementasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M7.5 19v-2a4.5 4.5 0 0 1 9 0v2z"/><path d="M1.5 19v-1.5A3.5 3.5 0 0 1 6.6 14.4M22.5 19v-1.5a3.5 3.5 0 0 0-5.1-3.1"/></svg></div><p>Uji coba, rekrutmen peserta, implementasi edukasi online</p></div><div class="ar">⟶</div><div class="as f5"><div class="c">5</div><h5>Evaluation<span>(Evaluasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="13" width="3" height="6" rx=".5"/><rect x="10.5" y="9" width="3" height="10" rx=".5"/><rect x="16" y="4" width="3" height="15" rx=".5"/></svg></div><p>Analisis proses, pola penggunaan media, dan evaluasi dampak</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROW 3 PLATFORM + TIMELINE -->
-    <div class="row" style="grid-template-columns:820px 260px 1fr">
-      <section class="panel">
-        <div class="ph t"><span class="no">3.1</span>Hasil · Platform SHINING<span class="tj">Tujuan 1</span></div>
-        <div class="pb plat">
-          <div>
-            <div class="phone"><div class="scr">
+<main>
+<div class="row" style="grid-template-columns:680px 1fr">
+ <section class="panel"><div class="ph ab"><span class="no">1</span>Abstrak<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5c3-1.3 6.5-1.3 10 .8v13c-3.5-2-7-2-10-.8z"/><path d="M22 5.5c-3-1.3-6.5-1.3-10 .8v13c3.5-2 7-2 10-.8z"/></svg></div><div class="pb"><div class="abr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8 13h8M8 17h6"/></svg></span><b class="l">Latar belakang</b><p>Bukti penggunaan media sosial (medsos) calon pengantin (catin) dan kinerja edukasi gizi prakonsepsi online di Indonesia masih terbatas.</p></div><div class="abr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><b class="l">Tujuan</b><p>Mengevaluasi implementasi platform web SHINING kelompok kontrol serta menganalisis penggunaan medsos catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan IMT.</p></div><div class="abr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span><b class="l">Metode</b><p><i>Cross-sectional</i> dan evaluasi proses; data awal catin Kota Binjai (Juli–Oktober 2026): 198 pendaftar, 74 dengan data lengkap.</p></div><div class="abr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17v.5"/></svg></span><b class="l">Hasil</b><p>Hanya 38,9% menyelesaikan keenam instrumen; penurunan terbesar sebelum tes pengetahuan 48 butir. Kiriman ganda 13,8%; blok makanan pokok hilang pada 26,9% FFQ. WhatsApp dominan (59,5%). Pengetahuan baik 59,5% dan berkorelasi dengan sikap (r=0,414), namun 51,4% berat badan lebih/obesitas. IMT lebih rendah berhubungan dengan durasi medsos lebih lama (r=−0,331) dan sumber akun tenaga kesehatan; memeriksa kebenaran informasi berhubungan dengan sikap lebih positif (r=0,287).</p></div><div class="abr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></span><b class="l">Simpulan</b><p>Edukasi online perlu mengarahkan catin ke sumber kredibel dan membiasakan verifikasi informasi; platform perlu instrumen ringkas, konfirmasi penyimpanan di server, dan uji coba pada kelompok sasaran.</p></div><div class="kw2"><b>Kata kunci:</b> calon pengantin, edukasi online, evaluasi proses, gizi prakonsepsi, media sosial</div></div></section>
+ <section class="panel"><div class="ph g2"><span class="no">2</span>Pendahuluan<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></div><div class="pb"><div class="pd">
+  <div class="sub a"><h4>Latar belakang</h4><div class="bigs">
+    <div class="bs r"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M15 20v-1a4 4 0 0 1 6-3.5"/></svg></span><div><b>±50%</b><span>orang dewasa Indonesia berat badan lebih/obesitas</span></div></div>
+    <div class="bs o"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5.5c3-1.3 6.5-1.3 10 .8v13c-3.5-2-7-2-10-.8z"/><path d="M22 5.5c-3-1.3-6.5-1.3-10 .8v13c3.5-2 7-2 10-.8z"/></svg></span><div><b>44–77%</b><span>catin di Bogor &amp; Jakarta Barat berpengetahuan gizi kurang</span></div></div>
+    <div class="bs n"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></span><div><b>72,78%</b><span>penduduk mengakses internet; 77,57% untuk medsos</span></div></div>
+    <div class="bs"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></span><div><b>±50%</b><span>unggahan gizi akun populer tidak akurat</span></div></div>
+  </div></div>
+  <div class="sub b"><h4>Masalah utama</h4><ul class="mu">
+    <li><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span>Masa prakonsepsi periode kritis memperbaiki gizi &amp; kesehatan catin sebagai calon ayah dan ibu, tetapi sering diabaikan.</span></li>
+    <li><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><span>Dewasa muda mencari info kesehatan di medsos, padahal misinformasi gizi luas; dalam HBM, medsos = <i>isyarat bertindak</i>.</span></li>
+    <li><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M15 20v-1a4 4 0 0 1 6-3.5"/></svg></span><span>Edukasi online catin hasilnya beragam; intervensi prakonsepsi berbasis HP efeknya masih terbatas.</span></li>
+    <li><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.8 3v4.5h-4.5M5.2 21v-4.5h4.5"/></svg></span><span>Angka berhenti tinggi (<i>law of attrition</i>), sehingga cara platform dikembangkan dan digunakan perlu dilaporkan.</span></li>
+    <li><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></span><span>HP spesifikasi rendah, HP bersama, dan jaringan tidak stabil menjadi hambatan tersering.</span></li>
+  </ul></div>
+</div>
+<div class="tuj"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span><div><h5>Tujuan penelitian</h5><p><b>(1)</b> Mengevaluasi proses implementasi platform web media edukasi SHINING, meliputi penyelesaian pengisian dan mutu data; <b>(2)</b> menganalisis pola penggunaan medsos catin dan hubungannya dengan pengetahuan gizi prakonsepsi, sikap berbasis HBM, dan IMT, sebagai dasar pengembangan edukasi gizi prakonsepsi online yang mudah digunakan.</p></div></div></div></section>
+</div>
+<div class="row" style="grid-template-columns:680px 1fr">
+ <div class="colL">
+  <section class="panel"><div class="ph "><span class="no">3</span>Metode<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM8 11h8M8 15h6"/></svg></div><div class="pb"><div class="ml"><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg></span><b class="l">Desain</b><span><i>Cross-sectional</i> + evaluasi proses, bagian dari riset pengembangan SHINING (model ADDIE)</span></div><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M15 20v-1a4 4 0 0 1 6-3.5"/></svg></span><b class="l">Subjek</b><span>Catin 20–40 tahun, kelompok kontrol; rekrutmen via brosur kode QR &amp; WhatsApp; <b>198</b> memenuhi syarat, <b>74</b> dianalisis (30 laki-laki, 44 perempuan)</span></div><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM8 11h8M8 15h6"/></svg></span><b class="l">Instrumen</b><span>Pengetahuan 48 butir (baik &gt;80%); sikap 24 butir, 6 konstruk HBM, Likert 4 poin (positif ≥72); FFQ; IPAQ-SF; kuesioner medsos; IMT dari BB/TB isian sendiri (PNPK 2025)</span></div><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><rect x="5" y="12" width="3" height="6"/><rect x="10.5" y="8" width="3" height="10"/><rect x="16" y="4" width="3" height="14"/></svg></span><b class="l">Analisis</b><span>Spearman, Mann-Whitney, Kruskal-Wallis, khi-kuadrat/eksak Fisher; hubungan bermakna diuji ulang dengan kontrol peran; p&lt;0,05; Python &amp; SPSS</span></div><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><b class="l">Waktu &amp; lokasi</b><span>Pembinaan catin Kota Binjai, Sumatera Utara; Juli–Oktober 2026</span></div><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 4 8 8 9 4-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><b class="l">Etik</b><span>KEPK Poltekkes Kemenkes Medan No. 01.26.1986/KEPK/POLTEKKES KEMENKES MEDAN 2025; persetujuan elektronik</span></div><div class="mr"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg></span><b class="l">Indikator proses</b><span>Penyelesaian &amp; lama pengisian (<i>timestamp</i>), kiriman ganda, karantina, data hilang; kemudahan dinilai 15 mahasiswa (skala 1–5)</span></div></div><div class="fok"><span class="bi"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></span><div><h5>Fokus makalah</h5><p>Proses implementasi (Tujuan 1) &amp; pola medsos (Tujuan 2) pada data awal kelompok kontrol; evaluasi dampak dilaporkan terpisah.</p></div></div></div></section>
+  <section class="panel"><div class="ph "><span class="no">5.3</span>Penyelesaian Instrumen Sesi 1<span class="tj">Tujuan 1</span><small>n = 198</small></div><div class="pb"><table class="fn">
+            <tr><th>Tahap</th><th style="width:40%;text-align:center">Dikirim, n (%)</th><th class="num">Valid</th><th class="num">Median (RAK), mnt</th></tr>
+            <tr><td>Persetujuan</td><td><div class="fz "><span style="width:86.4%">171 (86,4%)</span></div></td><td class="num">–</td><td class="num">–</td></tr>
+            <tr><td>Formulir identitas</td><td><div class="fz "><span style="width:81.3%">161 (81,3%)</span></div></td><td class="num">160</td><td class="num">1,9 (1,1–2,9)</td></tr>
+            <tr class="em"><td>Tes pengetahuan (48 butir)</td><td><div class="fz k"><span style="width:54.0%">107 (54,0%)</span></div></td><td class="num">106</td><td class="num">16,7 (10,7–34,4)</td></tr>
+            <tr><td>Skala sikap (24 butir)</td><td><div class="fz "><span style="width:48.5%">96 (48,5%)</span></div></td><td class="num">94</td><td class="num">3,0 (1,6–4,7)</td></tr>
+            <tr><td>FFQ</td><td><div class="fz "><span style="width:46.5%">92 (46,5%)</span></div></td><td class="num">88</td><td class="num">5,5 (4,0–7,8)</td></tr>
+            <tr><td>Kuesioner medsos</td><td><div class="fz "><span style="width:41.4%">82 (41,4%)</span></div></td><td class="num">80</td><td class="num">3,2 (2,1–4,1)</td></tr>
+            <tr><td>IPAQ-SF</td><td><div class="fz "><span style="width:41.4%">82 (41,4%)</span></div></td><td class="num">67</td><td class="num">1,8 (1,2–2,7)</td></tr>
+            <tr class="em"><td>Keenam instrumen</td><td><div class="fz v"><span style="width:38.9%">77 (38,9%)</span></div></td><td class="num">59</td><td class="num">–</td></tr>
+          </table><div class="hl a" style="margin-top:9px">Penurunan terbesar (81,3% → 54,0%) <b>sebelum tes pengetahuan</b>, instrumen terpanjang <span class="cite">(Galesic &amp; Bosnjak 2009)</span>. Setelah perbaikan, penyelesaian naik <b>37,2% → 55,6%</b> (p=0,137).</div><div class="cap">Kiriman ganda: dipakai yang paling lengkap. Valid: BB/TB wajar &amp; butir terisi sesuai batas minimal. RAK: rentang antarkuartil.</div></div></section>
+ </div>
+ <div class="colR">
+  <section class="panel"><div class="ph "><span class="no">4</span>Alur Penelitian (Model ADDIE)<svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg></div><div class="pb"><div class="ad"><div class="fokus"><span>FOKUS MAKALAH INI</span></div><div class="as o1"><div class="c">1</div><h5>Analysis<span>(Analisis kebutuhan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6"/><path d="M14 3l5 5h-5z"/><path d="M8 9h4M8 12h6M8 15h3"/><circle cx="16.5" cy="16.5" r="3"/><path d="M18.7 18.7L21 21"/></svg></div><p>Kajian literatur, survei awal, analisis kebutuhan</p></div><div class="ar">⟶</div><div class="as o2"><div class="c">2</div><h5>Design<span>(Desain media)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/><path d="M12 0.5v0M3 9H1.5M22.5 9H21M5 3.5 4 2.5M19 3.5l1-1"/></svg></div><p>Desain konten berbasis <i>Health Belief Model</i> (HBM)</p></div><div class="ar">⟶</div><div class="as o3"><div class="c">3</div><h5>Development<span>(Pengembangan)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><p>Pengembangan platform SHINING dan materi edukasi</p></div><div class="ar">⟶</div><div class="as f4"><div class="c">4</div><h5>Implementation<span>(Implementasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M7.5 19v-2a4.5 4.5 0 0 1 9 0v2z"/><path d="M1.5 19v-1.5A3.5 3.5 0 0 1 6.6 14.4M22.5 19v-1.5a3.5 3.5 0 0 0-5.1-3.1"/></svg></div><p>Uji coba, rekrutmen peserta, implementasi edukasi online</p></div><div class="ar">⟶</div><div class="as f5"><div class="c">5</div><h5>Evaluation<span>(Evaluasi)</span></h5><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="13" width="3" height="6" rx=".5"/><rect x="10.5" y="9" width="3" height="10" rx=".5"/><rect x="16" y="4" width="3" height="15" rx=".5"/></svg></div><p>Analisis proses, pola penggunaan media, dan evaluasi dampak</p></div></div></div></section>
+  <div class="row" style="grid-template-columns:640px 1fr">
+   <section class="panel"><div class="ph t"><span class="no">5.1</span>Hasil · Platform SHINING<span class="tj">Tujuan 1</span></div><div class="pb"><div class="p51"><div><div class="phone"><div class="scr">
               <div class="top"><div class="n">SHINING</div><div class="s">Sesi 1 · Pengukuran awal</div></div>
               <div class="bmi">IMT Anda: 22,4 kg/m² · Normal</div>
               <ul>
@@ -383,10 +419,9 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
                 <li class="p"><i>6</i>Kuesioner medsos<em>3,2 mnt</em></li>
               </ul>
               <div class="btn">Lanjutkan · draf tersimpan</div>
-            </div></div>
-            <div class="cap" style="text-align:center">Gambar 2. Ilustrasi alur sesi 1 (median waktu pengisian)</div>
-          </div>
-          <ul class="feat">
+            </div></div><div class="cap" style="text-align:center">Gambar 2. Alur sesi 1 (median waktu pengisian)</div></div>
+<div><div class="couple"><img src="shining-hp.jpg" alt="Ilustrasi pasangan catin pada laman SHINING"></div>
+<div class="brand">SHIN<em>ING</em><small>Sehat Sebelum Hamil itu Penting · mulai.edukasi-catin.id</small></div><ul class="feat">
             <li><span><b>Web satu halaman, ramah HP:</b> tanpa unduh aplikasi dan tanpa membuat akun.</span></li>
             <li><span><b>Masuk dengan nama + nomor HP/WA</b>, lalu cek kelayakan (catin 20–40 tahun) dan persetujuan.</span></li>
             <li><span><b>Enam instrumen sesi 1:</b> identitas (BB &amp; TB), pengetahuan, sikap HBM, FFQ, IPAQ-SF, kuesioner medsos.</span></li>
@@ -394,19 +429,8 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
             <li><span><b>Tersimpan otomatis ke Google Sheets</b>; nomor HP/WA sebagai penanda peserta.</span></li>
             <li><span><b>Kiriman berulang ditandai</b>; data tak dikenali masuk <b>lembar karantina</b> untuk verifikasi manual.</span></li>
             <li><span><b>Penilaian awal (15 mahasiswa):</b> kelima aspek mudah (rerata 4,40–4,73 dari 5; total 22,8 ± 2,3 dari 25); terendah pada pengisian kuesioner.</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <figure class="rp-wrap">
-        <div class="rphone"><div class="notch"></div><img src="shining-hp.jpg" alt="Tampilan potret SHINING di HP"></div>
-        <figcaption class="cap">Gambar 3. Tampilan asli SHINING di HP (mulai.edukasi-catin.id)</figcaption>
-      </figure>
-
-      <section class="panel">
-        <div class="ph t"><span class="no">3.2</span>Hasil · Pengembangan Iteratif Platform<span class="tj">Tujuan 1</span></div>
-        <div class="pb">
-          <div class="itr"><figure class="cyc"><svg viewBox="0 0 400 400" role="img" aria-label="Siklus pengembangan iteratif SHINING">
+          </ul></div></div></div></section>
+   <section class="panel p52"><div class="ph t"><span class="no">5.2</span>Hasil · Pengembangan Iteratif<span class="tj">Tujuan 1</span></div><div class="pb"><div class="itr"><figure class="cyc"><svg viewBox="0 0 400 400" role="img" aria-label="Siklus pengembangan iteratif SHINING">
               <defs><marker id="cah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5 0 10z" fill="#5b6876"/></marker></defs>
               <circle cx="200" cy="200" r="134" fill="none" stroke="#d5e1e6" stroke-width="10"/>
               <path d="M254 84 A128 128 0 0 1 316 146" fill="none" stroke="#5b6876" stroke-width="5" marker-end="url(#cah)"/>
@@ -421,50 +445,23 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
                 <text x="200" y="200" fill="#0a2a5c" font-size="28" font-weight="800">SHINING</text>
                 <text x="200" y="224" fill="#5b6876" font-size="15" font-weight="600">3 putaran perbaikan</text>
               </g>
-            </svg><figcaption class="cap">Siklus pengembangan iteratif</figcaption></figure>
-          <div class="tl">
+            </svg><figcaption class="cap">Siklus pengembangan iteratif</figcaption></figure><div class="tl">
             <div class="tr"><div class="d">Akhir Juli</div><div class="m"><small>Masalah</small>Persetujuan tidak tersimpan; angka nol nomor HP hilang; status “selesai” hanya di HP</div><div class="f"><small>Perbaikan</small>Skrip ditulis ulang (normalisasi nomor, karantina, penanda duplikat); status dikonfirmasi server</div></div>
             <div class="tr"><div class="d">Agustus</div><div class="m q"><small>Penilaian awal</small>Kemudahan dan keterbacaan dinilai oleh 15 mahasiswa</div><div class="f q"><small>Catatan</small>Tidak ada masalah besar yang dilaporkan</div></div>
             <div class="tr"><div class="d">Awal Oktober</div><div class="m"><small>Masalah</small>Progres hilang saat berganti telepon; isian kosong</div><div class="f"><small>Perbaikan</small>Progres per nomor telepon; validasi isian; kirim ulang otomatis</div></div>
             <div class="tr"><div class="d">Pertengahan Oktober</div><div class="m"><small>Masalah</small>Blok makanan pokok FFQ hilang; halaman awal terlalu banyak tahap</div><div class="f"><small>Perbaikan</small>Simpan draf otomatis; blok makanan pokok wajib; persetujuan berlapis</div></div>
             <div class="tr"><div class="d">Akhir Oktober</div><div class="m q"><small>Status</small>Pendaftaran kelompok kontrol ditutup</div><div class="f q"><small>Tindak lanjut</small>Data dikunci untuk analisis</div></div>
-          </div>
-          </div>
-          <div class="kpis">
+          </div></div><div class="kpis">
             <div class="kpi"><b>13,8%</b><span>kiriman berulang (186 dari 1.344 rekaman)</span></div>
             <div class="kpi"><b>22/23</b><span>rekaman karantina di minggu pertama</span></div>
             <div class="kpi"><b>26,9%→0%</b><span>FFQ tanpa makanan pokok setelah simpan draf (p=0,04)</span></div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ROW 4 COMPLETION + SOCIAL MEDIA -->
-    <div class="row" style="grid-template-columns:1fr 1fr">
-      <section class="panel">
-        <div class="ph"><span class="no">3.3</span>Penyelesaian Instrumen Sesi 1 <span class="tj">Tujuan 1</span><small>n = 198</small></div>
-        <div class="pb">
-          <table class="fn">
-            <tr><th>Tahap</th><th style="width:40%;text-align:center">Dikirim, n (%)</th><th class="num">Valid</th><th class="num">Median (RAK), mnt</th></tr>
-            <tr><td>Persetujuan</td><td><div class="fz "><span style="width:86.4%">171 (86,4%)</span></div></td><td class="num">–</td><td class="num">–</td></tr>
-            <tr><td>Formulir identitas</td><td><div class="fz "><span style="width:81.3%">161 (81,3%)</span></div></td><td class="num">160</td><td class="num">1,9 (1,1–2,9)</td></tr>
-            <tr class="em"><td>Tes pengetahuan (48 butir)</td><td><div class="fz k"><span style="width:54.0%">107 (54,0%)</span></div></td><td class="num">106</td><td class="num">16,7 (10,7–34,4)</td></tr>
-            <tr><td>Skala sikap (24 butir)</td><td><div class="fz "><span style="width:48.5%">96 (48,5%)</span></div></td><td class="num">94</td><td class="num">3,0 (1,6–4,7)</td></tr>
-            <tr><td>FFQ</td><td><div class="fz "><span style="width:46.5%">92 (46,5%)</span></div></td><td class="num">88</td><td class="num">5,5 (4,0–7,8)</td></tr>
-            <tr><td>Kuesioner medsos</td><td><div class="fz "><span style="width:41.4%">82 (41,4%)</span></div></td><td class="num">80</td><td class="num">3,2 (2,1–4,1)</td></tr>
-            <tr><td>IPAQ-SF</td><td><div class="fz "><span style="width:41.4%">82 (41,4%)</span></div></td><td class="num">67</td><td class="num">1,8 (1,2–2,7)</td></tr>
-            <tr class="em"><td>Keenam instrumen</td><td><div class="fz v"><span style="width:38.9%">77 (38,9%)</span></div></td><td class="num">59</td><td class="num">–</td></tr>
-          </table>
-          <div class="hl a" style="margin-top:9px">Penurunan terbesar (81,3% → 54,0%) <b>sebelum tes pengetahuan</b>, instrumen terpanjang <span class="cite">(Galesic &amp; Bosnjak 2009)</span>. Setelah perbaikan, penyelesaian naik <b>37,2% → 55,6%</b> (p=0,137).</div>
-          <div class="cap">Kiriman ganda: dipakai yang paling lengkap. Valid: BB/TB wajar &amp; butir terisi sesuai batas minimal. RAK: rentang antarkuartil.</div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="ph"><span class="no">3.4</span>Penggunaan Media Sosial <span class="tj">Tujuan 2</span><small>n = 74</small></div>
-        <div class="pb">
-          <table class="bt">
-            <tr><th>Indikator</th><th style="width:52%"></th><th class="num">%</th></tr>
+          </div></div></section>
+  </div>
+ </div>
+</div>
+<div class="row r3" style="grid-template-columns:0.98fr 1.12fr 0.98fr">
+ <section class="panel"><div class="ph "><span class="no">5.4</span>Penggunaan Media Sosial<span class="tj">Tujuan 2</span><small>n = 74</small></div><div class="pb"><table class="bt">
+            <tr><th>Indikator</th><th style="width:38%"></th><th class="num">%</th></tr>
             <tr><td>Platform utama: WhatsApp</td><td><div class="bar"><span style="width:59.5%"></span></div></td><td class="num">59,5</td></tr>
             <tr><td>Platform utama: TikTok/Instagram</td><td><div class="bar"><span style="width:33.8%"></span></div></td><td class="num">33,8</td></tr>
             <tr><td>Akses hampir terus-menerus (±setiap jam)</td><td><div class="bar"><span style="width:73.0%"></span></div></td><td class="num">73,0</td></tr>
@@ -474,19 +471,8 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
             <tr><td>Sumber: akun nakes/lembaga resmi<sup>b</sup></td><td><div class="bar v"><span style="width:75.7%"></span></div></td><td class="num">75,7</td></tr>
             <tr><td>Sumber: influencer<sup>b</sup></td><td><div class="bar w"><span style="width:39.2%"></span></div></td><td class="num">39,2</td></tr>
             <tr><td>Pernah tertarik produk yang dipromosikan</td><td><div class="bar w"><span style="width:71.6%"></span></div></td><td class="num">71,6</td></tr>
-          </table>
-          <div class="hl n" style="margin-top:9px">WhatsApp efektif sebagai pengingat kesehatan <span class="cite">(Laurence et al. 2025)</span>; ketertarikan pada produk promosi perlu diwaspadai <span class="cite">(Agustiani et al. 2026)</span>.</div>
-          <div class="cap">Subjek: 59,5% perempuan; 60,6% ≤SMA. <sup>a</sup>n=73. <sup>b</sup>Boleh lebih dari satu sumber.</div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ROW 5 CORRELATIONS + ROLE -->
-    <div class="row" style="grid-template-columns:1.12fr 1fr">
-      <section class="panel">
-        <div class="ph t"><span class="no">3.5</span>Hubungan Medsos, Pengetahuan, Sikap HBM, dan IMT <span class="tj">Tujuan 2</span><small>n = 74</small></div>
-        <div class="pb">
-          <table class="ct">
+          </table><div class="hl n" style="margin-top:9px">WhatsApp efektif sebagai pengingat kesehatan <span class="cite">(Laurence et al. 2025)</span>; ketertarikan pada produk promosi perlu diwaspadai <span class="cite">(Agustiani et al. 2026)</span>.</div><div class="cap">Subjek: 59,5% perempuan; 60,6% ≤SMA. <sup>a</sup>n=73. <sup>b</sup>Boleh lebih dari satu sumber.</div></div></section>
+ <section class="panel"><div class="ph t"><span class="no">5.5</span>Hubungan Medsos, Pengetahuan, Sikap &amp; IMT<span class="tj">Tujuan 2</span></div><div class="pb"><table class="ct">
             <tr><th>Variabel</th><th>Pengetahuan</th><th>Sikap HBM</th><th>IMT</th></tr>
             <tr><td>Frekuensi akses</td><td class="ns">−0,092 (0,436)</td><td class="ns">0,031 (0,796)</td><td class="ns">0,038 (0,746)</td></tr>
             <tr><td>Durasi harian</td><td class="ns">0,175 (0,135)</td><td class="ns">0,199 (0,090)</td><td class="s neg">−0,331 (0,004)*</td></tr>
@@ -496,20 +482,8 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
             <tr><td>Sumber nakes/resmi<sup>b</sup></td><td class="ns">– (0,950)</td><td class="ns">– (0,456)</td><td class="s neg">– (0,022)*</td></tr>
             <tr><td>Skor pengetahuan</td><td>–</td><td class="s pos">0,414 (&lt;0,001)*</td><td class="ns">−0,009 (0,939)</td></tr>
             <tr><td>Skor sikap</td><td>–</td><td>–</td><td class="ns">−0,212 (0,070)</td></tr>
-          </table>
-          <div class="cap">r<sub>s</sub> Spearman (p). <sup>a</sup>Kruskal-Wallis; sikap terendah pada pengguna WhatsApp. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². *p&lt;0,05.</div>
-          <div class="ins">
-            <div><b>HBM:</b> pengetahuan erat dengan persepsi hambatan (r=0,449), tidak dengan efikasi diri; <b>hambatan terendah</b> (68,5%).</div>
-            <div><b>Durasi–IMT</b> tetap bermakna setelah dikontrol peran (r parsial=−0,315; p=0,006).</div>
-            <div><b>Cara memilih &amp; menilai informasi</b> lebih berperan daripada frekuensi akses <span class="cite">(Chen et al. 2018)</span>.</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="ph t"><span class="no">3.6</span>Menurut Peran Catin<span class="tj">Tujuan 2</span></div>
-        <div class="pb">
-          <div class="glg" style="font-size:14px"><span><i style="background:#2f6db5"></i>Laki-laki (n=30)</span><span><i style="background:var(--teal)"></i>Perempuan (n=44)</span></div>
+          </table><div class="cap">r<sub>s</sub> Spearman (p). <sup>a</sup>Kruskal-Wallis; sikap terendah pada pengguna WhatsApp. <sup>b</sup>Mann-Whitney; median IMT 22,5 vs 26,6 kg/m². *p&lt;0,05.</div></div></section>
+ <section class="panel"><div class="ph t"><span class="no">5.6</span>Menurut Peran Catin<span class="tj">Tujuan 2</span></div><div class="pb"><div class="glg" style="font-size:14px"><span><i style="background:#2f6db5"></i>Laki-laki (n=30)</span><span><i style="background:var(--teal)"></i>Perempuan (n=44)</span></div>
           <div class="db"><div class="lb">Platform utama: WhatsApp <span class="sig">*</span><em>p=0,045</em></div><div class="trk"><div class="ln" style="left:50.0%;width:23.299999999999997%"></div><div class="dt m" style="left:73.3%"></div><div class="dt f" style="left:50.0%"></div><div class="vl m hi" style="left:73.3%">73,3%</div><div class="vl f lo" style="left:50.0%">50,0%</div></div></div>
           <div class="db"><div class="lb">Platform utama: TikTok/IG <span class="sig">*</span><em>p=0,038</em></div><div class="trk"><div class="ln" style="left:20.0%;width:23.200000000000003%"></div><div class="dt m" style="left:20.0%"></div><div class="dt f" style="left:43.2%"></div><div class="vl m lo" style="left:20.0%">20,0%</div><div class="vl f hi" style="left:43.2%">43,2%</div></div></div>
           <div class="db"><div class="lb">Durasi ≥3 jam/hari <span class="sig">*</span><em>p=0,037</em></div><div class="trk"><div class="ln" style="left:36.7%;width:24.699999999999996%"></div><div class="dt m" style="left:36.7%"></div><div class="dt f" style="left:61.4%"></div><div class="vl m lo" style="left:36.7%">36,7%</div><div class="vl f hi" style="left:61.4%">61,4%</div></div></div>
@@ -517,54 +491,35 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
           <div class="db"><div class="lb">Sikap positif (≥72)<em>p=0,053</em></div><div class="trk"><div class="ln" style="left:53.3%;width:21.700000000000003%"></div><div class="dt m" style="left:53.3%"></div><div class="dt f" style="left:75.0%"></div><div class="vl m lo" style="left:53.3%">53,3%</div><div class="vl f hi" style="left:75.0%">75,0%</div></div></div>
           <div class="db"><div class="lb">Berat badan lebih/obesitas<em>p=0,450</em></div><div class="trk"><div class="ln" style="left:47.7%;width:9.0%"></div><div class="dt m" style="left:56.7%"></div><div class="dt f" style="left:47.7%"></div><div class="vl m hi" style="left:56.7%">56,7%</div><div class="vl f lo" style="left:47.7%">47,7%</div></div></div>
           <div class="dax"><span></span><div><span>0%</span><span>50%</span><span>100%</span></div></div>
-          <div class="hl" style="margin-top:6px;font-size:14px">Catin laki-laki lebih tua dan seluruhnya bekerja; pengetahuan &amp; sikap cenderung lebih rendah <span class="cite">(sejalan Zahra et al. 2024)</span>, tetapi tidak lebih mudah berhenti (selesai 47,0% vs 47,9%; p=0,910).</div>
-          <div class="cap">*p&lt;0,05 (khi-kuadrat/eksak Fisher; Mann-Whitney untuk skor).</div>
-        </div>
-      </section>
-    </div>
-
-    <!-- ROW 6 CONCLUSION -->
-    <div class="row" style="grid-template-columns:1fr 600px;flex:1">
-      <section class="panel">
-        <div class="ph g"><span class="no">4</span>Simpulan, Saran &amp; Implikasi</div>
-        <div class="pb conc">
-          <div>
-            <h6>Simpulan</h6>
-            <ul class="cl">
-              <li><span>Platform web sederhana dapat dipakai, namun <b>beban peserta, kiriman ganda, dan kehilangan data tak terlihat</b> perlu diantisipasi sejak perancangan.</span></li>
-              <li><span>Penggunaan medsos catin <b>intensif dan didominasi WhatsApp</b>.</span></li>
-              <li><span>Pengetahuan umumnya baik dan berkorelasi dengan sikap HBM, tetapi <b>&gt;50% catin berat badan lebih/obesitas</b>.</span></li>
-              <li><span>IMT lebih rendah &amp; sikap lebih positif berhubungan dengan <b>sumber kredibel dan memeriksa kebenaran informasi</b>, bukan frekuensi akses.</span></li>
-            </ul>
-            <div class="hl" style="margin-top:10px"><b>Saran:</b> gunakan instrumen ringkas dan pantau data rutin; biasakan catin memeriksa kebenaran informasi &amp; izin edar produk, gunakan referensi kredibel, dan manfaatkan WhatsApp untuk pengingat dan pendampingan.</div>
-          </div>
-          <div>
-            <h6>Enam implikasi bagi edukasi gizi online</h6>
-            <div class="les">
-              <div class="le"><i>1</i><span><b>Instrumen ringkas</b>; tes panjang dipecah ke beberapa kunjungan + simpan-lanjut</span></div>
-              <div class="le"><i>2</i><span><b>Pengingat terjadwal via WhatsApp</b> untuk menekan angka berhenti</span></div>
-              <div class="le"><i>3</i><span><b>Kiriman ganda &amp; HP bersama</b> ditangani dengan penanda peserta dan aturan baku</span></div>
-              <div class="le"><i>4</i><span><b>Penyimpanan dikonfirmasi server</b>; data dipantau setiap minggu</span></div>
-              <div class="le"><i>5</i><span><b>Pesan sesuai peran:</b> laki-laki via WhatsApp; perempuan juga via TikTok/Instagram</span></div>
-              <div class="le"><i>6</i><span><b>Dokumentasi perubahan</b> bertanggal; pemisahan kelompok kontrol–intervensi dijaga</span></div>
-            </div>
-            <div class="cap" style="margin-top:7px"><b>Keterbatasan:</b> sampel kecil, BB/TB isian sendiri, eksploratif tanpa regresi, potong lintang; alasan berhenti tidak terekam.</div>
-          </div>
-        </div>
-      </section>
-
-      <div style="display:flex;flex-direction:column;gap:14px">
-        <section class="panel">
-          <div class="ph g"><span class="no">5</span>Ucapan Terima Kasih</div>
-          <div class="pb">
-            <ul class="thx">
+          <div class="hl" style="margin-top:6px;font-size:14px">Catin laki-laki lebih tua dan seluruhnya bekerja; pengetahuan &amp; sikap cenderung lebih rendah <span class="cite">(sejalan Zahra et al. 2024)</span>, tetapi tidak lebih mudah berhenti (selesai 47,0% vs 47,9%; p=0,910).</div><div class="cap">*p&lt;0,05 (khi-kuadrat/eksak Fisher; Mann-Whitney untuk skor).</div></div></section>
+</div>
+<div class="row" style="grid-template-columns:1fr 600px;flex:1">
+ <section class="panel"><div class="ph g"><span class="no">6</span>Simpulan, Saran &amp; Implikasi</div><div class="pb"><div class="sim3">
+<div class="sbox s"><h6>Simpulan</h6><ul>
+<li><span>Platform web sederhana dapat dipakai, namun <b>beban peserta, kiriman ganda, dan kehilangan data tak terlihat</b> perlu diantisipasi sejak perancangan.</span></li>
+<li><span>Penggunaan medsos catin <b>intensif dan didominasi WhatsApp</b>.</span></li>
+<li><span>Pengetahuan umumnya baik dan berkorelasi dengan sikap HBM, tetapi <b>&gt;50% catin berat badan lebih/obesitas</b>.</span></li>
+<li><span>IMT lebih rendah &amp; sikap lebih positif berhubungan dengan <b>sumber kredibel dan memeriksa kebenaran informasi</b>, bukan frekuensi akses.</span></li></ul></div>
+<div class="sbox r"><h6>Saran</h6><ul>
+<li><span>Gunakan <b>instrumen ringkas</b> dan pantau data secara rutin.</span></li>
+<li><span>Biasakan catin <b>memeriksa kebenaran informasi &amp; izin edar produk</b>, dan gunakan referensi kredibel.</span></li>
+<li><span>Manfaatkan <b>WhatsApp</b> untuk pengingat dan pendampingan.</span></li></ul></div>
+<div class="sbox i"><h6>Implikasi</h6><ul>
+<li><span><b>Tes panjang dipecah</b> ke beberapa kunjungan + simpan-lanjut.</span></li>
+<li><span><b>Pengingat terjadwal</b> via WhatsApp menekan angka berhenti.</span></li>
+<li><span><b>Kiriman ganda &amp; HP bersama</b> ditangani dengan penanda peserta dan aturan baku.</span></li>
+<li><span><b>Penyimpanan dikonfirmasi server</b>; data dipantau tiap minggu.</span></li>
+<li><span><b>Pesan sesuai peran:</b> laki-laki via WhatsApp; perempuan juga via TikTok/Instagram.</span></li>
+<li><span><b>Perubahan didokumentasikan</b> bertanggal; kelompok kontrol–intervensi dipisah.</span></li></ul>
+<div class="lim"><b>Keterbatasan:</b> sampel kecil, BB/TB isian sendiri, eksploratif tanpa regresi, potong lintang; alasan berhenti tidak terekam.</div></div>
+</div></div></section>
+ <div style="display:flex;flex-direction:column;gap:12px">
+  <section class="panel"><div class="ph g"><span class="no">7</span>Ucapan Terima Kasih</div><div class="pb"><ul class="thx">
               <li>Dinas Pengendalian Penduduk dan Keluarga Berencana dan Kantor Kementerian Agama Kota Binjai</li>
               <li>Calon Pengantin Kota Binjai</li>
               <li>Seluruh pihak yang berkontribusi</li>
-            </ul>
-          </div>
-        </section>
-        <div class="access">
+            </ul></div></section>
+  <div class="access">
           <img src="qr.png" alt="QR SHINING">
           <div>
             <h3>Akses SHINING</h3>
@@ -576,19 +531,13 @@ footer{flex:none;background:linear-gradient(90deg,var(--navy),var(--teal));color
             </ol>
           </div>
         </div>
-      </div>
-    </div>
-
-    <section class="panel">
-      <div class="pb" style="padding:9px 16px">
-        <div class="refs">
+ </div>
+</div>
+<section class="panel"><div class="pb" style="padding:9px 16px"><div class="refs">
           <p><b>Pustaka utama.</b> Amiri P et al. 2023. BMC Health Serv Res 23:1176 · Atmaka DR et al. 2022. Media Gizi Indones 17(1SP):1–5 · BPS 2025 · Chen X et al. 2018. J Health Commun 23(8):724–734 · Denniss E et al. 2024. IJBNPA 21:16 · Eysenbach G. 2005. JMIR 7(1):e11 · Eysenbach G. 2011. JMIR 13(4):e126 · Faverio M, Sidoti O. 2024. Pew Research Center · Galesic M, Bosnjak M. 2009. Public Opin Q 73(2):349–360</p>
           <p>Janz NK, Becker MH. 1984. Health Educ Q 11(1):1–47 · Lam BT et al. 2025. JMIR 27:e67640 · Laurence MC et al. 2025. Front Digit Health 7:1542006 · Lim MSC et al. 2022. JMIR 24(1):e23656 · Meyerowitz-Katz G et al. 2020. JMIR 22(9):e20283 · Musgrave L et al. 2023. JMIR 25:e41900 · Stephenson J et al. 2018. Lancet 391:1830–1841 · Zahra SS et al. 2024. HPCEJ 3(1)</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>SHINING · Sehat Sebelum Hamil itu Penting — edukasi gizi prakonsepsi yang ringkas, kredibel, dan mudah diakses bagi calon pengantin</footer>
-</div>
-</body>
+        </div></div></section>
+</main>
+<footer>SHINING · Sehat Sebelum Hamil itu Penting — edukasi gizi prakonsepsi yang ringkas, kredibel, dan mudah diakses bagi calon pengantin</footer>
+</div></body>
 </html>
