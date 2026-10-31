@@ -58,19 +58,20 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
 .kw b{color:#8fe3d6}
 
 /* pendahuluan */
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;min-height:0}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;flex:1;min-height:0}
 .lbl{display:inline-block;border:2.5px solid var(--teal);color:var(--teal);font-weight:800;border-radius:10px;padding:3px 14px;font-size:29px;margin-bottom:8px;align-self:flex-start}
 .lbl.o{border-color:var(--amber);color:#c25e05}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1}
-.st{background:#f3f8fa;border-radius:14px;padding:10px 12px;font-size:26px;line-height:1.22}
-.st .v{display:flex;align-items:center;gap:8px;font-family:"Inter Display";font-size:54px;font-weight:800;color:var(--navy);line-height:1.05;margin-bottom:6px}
-.st .v svg{font-size:40px;color:var(--teal)}
+.stats{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;flex:1}
+.st{background:#f3f8fa;border-radius:14px;padding:10px 10px;font-size:26px;line-height:1.22}
+.st .v{display:flex;align-items:center;gap:6px;white-space:nowrap;font-family:"Inter Display";font-size:45px;font-weight:800;color:var(--navy);line-height:1.05;margin-bottom:6px;letter-spacing:-.02em}
+.st .v img{width:44px;height:44px;flex:none}
 .st:nth-child(2) .v,.st:nth-child(3) .v{color:var(--teal)}
 .st:nth-child(2) .v svg,.st:nth-child(3) .v svg{color:var(--navy2)}
 .gapbox{background:#fff7ec;border:2px solid #f6d7b3;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column}
 .gl{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:27px;line-height:1.22;flex:1;justify-content:space-around}
 .gl li{display:flex;gap:12px;align-items:center}
-.gl li .ic{width:50px;height:50px;border-radius:12px;background:#fff;border:2px solid #f3cfa4;color:var(--amber);display:grid;place-items:center;font-size:29px;flex:none}
+.gl li .ic{width:54px;height:54px;flex:none;display:grid;place-items:center}
+.gl li .ic img{width:54px;height:54px}
 
 /* tujuan */
 .tuj{display:flex;flex-direction:column;gap:10px;flex:1}
@@ -195,15 +196,16 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
 .ty{display:grid;grid-template-columns:1fr 370px;gap:14px;flex:1}
 .ty ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .ty li{display:flex;gap:12px;align-items:center;background:#f6f9fa;border-radius:10px;padding:6px 12px;font-size:27px;font-weight:700;line-height:1.2;flex:1}
-.ty li i{width:42px;height:42px;border-radius:999px;background:#fde4ea;color:#d6336c;display:grid;place-items:center;flex:none;font-style:normal;font-size:23px}
-.qrc{background:#fbefe3;border:5px solid #5b3418;border-radius:16px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto 1fr auto;align-items:center;padding:8px 10px;gap:3px 10px;text-align:center}
-.qrc img{grid-row:2/4;grid-column:1}
+.ty li img{width:46px;height:46px;flex:none}
+.qrc{position:relative;background:#fbefe3;border:5px solid #5b3418;border-radius:16px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto auto auto auto auto;align-items:center;padding:6px 10px;gap:2px 10px;text-align:center}
+.qrc img:not(.mas){grid-row:2/5;grid-column:1}
+.qrc .mas{grid-column:2;grid-row:4;justify-self:center;width:70px;height:70px}
 .qrc .k{grid-column:1/-1}
 .qrc .u,.qrc .go{grid-column:1/-1;justify-self:center}
 .qrc .k{font-size:14px;font-weight:800;letter-spacing:.12em;color:#8a5a2b}
 .qrc .sh{font-family:Georgia,serif;font-weight:700;font-size:30px;color:#5b3418;letter-spacing:.08em;line-height:1}
 .qrc .sl{font-size:15px;color:#8a5a2b;font-weight:600}
-.qrc img{width:132px;height:132px;border-radius:6px;background:#fff}
+.qrc img:not(.mas){width:132px;height:132px;border-radius:6px;background:#fff}
 .qrc .u{font-size:18px;font-weight:700;color:#fff;background:#a5653a;border-radius:999px;padding:1px 12px}
 .qrc .go{font-family:Georgia,serif;color:#fff;background:#a5653a;font-size:21px;font-weight:700;border-radius:6px;padding:2px 14px;letter-spacing:.03em}
 </style>
@@ -281,20 +283,20 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
           <div style="display:flex;flex-direction:column">
             <span class="lbl">Latar belakang</span>
             <div class="stats">
-              <div class="st"><div class="v"><svg class="i"><use href="#weight"/></svg>±50%</div>dewasa Indonesia berat badan lebih/obesitas</div>
-              <div class="st"><div class="v"><svg class="i"><use href="#hat"/></svg>44–77%</div>catin berpengetahuan gizi kurang</div>
-              <div class="st"><div class="v"><svg class="i"><use href="#wifi"/></svg>34,49%</div>pengguna internet adalah <b>Gen Z</b>, kelompok usia menikah</div>
-              <div class="st"><div class="v"><svg class="i"><use href="#news"/></svg>≈50%</div>unggahan gizi akun populer tidak akurat</div>
+              <div class="st"><div class="v"><img src="icons/scale.png" alt="">±50%</div>dewasa Indonesia berat badan lebih/obesitas</div>
+              <div class="st"><div class="v"><img src="icons/books.png" alt="">44–77%</div>catin berpengetahuan gizi kurang</div>
+              <div class="st"><div class="v"><img src="icons/mobile.png" alt="">34,49%</div>pengguna internet adalah <b>Gen Z</b>, kelompok usia menikah</div>
+              <div class="st"><div class="v"><img src="icons/exq.png" alt="">≈50%</div>unggahan gizi akun populer tidak akurat</div>
             </div>
           </div>
           <div class="gapbox">
             <span class="lbl o">Masalah saat ini &amp; GAP</span>
             <ul class="gl">
-              <li><span class="ic"><svg class="i"><use href="#baby"/></svg></span>Prakonsepsi masa kritis, tetapi sering diabaikan</li>
-              <li><span class="ic"><svg class="i"><use href="#alert"/></svg></span>Misinformasi gizi marak di media sosial</li>
-              <li><span class="ic"><svg class="i"><use href="#monitor"/></svg></span>Efek edukasi online catin masih beragam</li>
-              <li><span class="ic"><svg class="i"><use href="#exit"/></svg></span>Retensi rendah, banyak yang putus di tengah jalan</li>
-              <li><span class="ic"><svg class="i"><use href="#gap"/></svg></span><span><b>GAP:</b> laporan implementasi platform prakonsepsi online masih langka</span></li>
+              <li><span class="ic"><img src="icons/pregnant.png" alt=""></span>Prakonsepsi masa kritis, tetapi sering diabaikan</li>
+              <li><span class="ic"><img src="icons/warning.png" alt=""></span>Misinformasi gizi marak di media sosial</li>
+              <li><span class="ic"><img src="icons/laptop.png" alt=""></span>Efek edukasi online catin masih beragam</li>
+              <li><span class="ic"><img src="icons/chartdown.png" alt=""></span>Retensi rendah, banyak yang putus di tengah jalan</li>
+              <li><span class="ic"><img src="icons/magnify.png" alt=""></span><span><b>GAP:</b> laporan implementasi platform prakonsepsi online masih langka</span></li>
             </ul>
           </div>
         </div>
@@ -501,9 +503,9 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
       <div class="pb">
         <div class="ty">
           <ul>
-            <li><i><svg class="i"><use href="#heart"/></svg></i>DPPKB dan Kemenag Kota Binjai</li>
-            <li><i><svg class="i"><use href="#heart"/></svg></i>Calon pengantin Kota Binjai</li>
-            <li><i><svg class="i"><use href="#heart"/></svg></i>Semua pihak yang berkontribusi</li>
+            <li><img src="icons/heart.png" alt="">DPPKB dan Kemenag Kota Binjai</li>
+            <li><img src="icons/heart.png" alt="">Calon pengantin Kota Binjai</li>
+            <li><img src="icons/heart.png" alt="">Semua pihak yang berkontribusi</li>
           </ul>
           <div class="qrc">
             <div class="k">KELAS ONLINE CALON PENGANTIN</div>
@@ -512,6 +514,7 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
             <div class="sl">Sehat Sebelum Hamil Itu Penting</div>
             <div class="u">shining.edukasi-catin.id</div>
             <div class="go">✦ Scan &amp; mulai kelasmu</div>
+            <img class="mas" src="icons/hijab.png" alt="">
           </div>
         </div>
       </div>
