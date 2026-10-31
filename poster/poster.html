@@ -137,11 +137,11 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
 .browser .bar i{width:11px;height:11px;border-radius:99px;background:#e0605a;display:inline-block}
 .browser .bar i+i{background:#e7b33c}.browser .bar i+i+i{background:#54b26a}
 .browser .w img{width:100%;display:block}
-.browser .hp{width:98px;border-radius:16px;border:6px solid #1b2229;overflow:hidden;flex:none}
+.browser .hp{width:114px;border-radius:16px;border:6px solid #1b2229;overflow:hidden;flex:none}
 .browser .hp img{width:100%;display:block}
 .cyc{display:grid;grid-template-columns:240px 1fr;gap:12px;align-items:center}
 .cyc svg text{font-family:PInter;font-weight:800;fill:#fff}
-.ks{list-style:none;font-size:28.5px;line-height:1.24}
+.ks{list-style:none;font-size:30px;line-height:1.24}
 .ks li{padding:6px 0;border-bottom:1.5px solid var(--line)}
 .ks li:last-child{border:none}
 .ks .bad{color:var(--red)} .ks .ok{color:var(--green)}
@@ -151,13 +151,13 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
 .kpi.big div{font-size:25px;padding:8px 6px;line-height:1.15}
 .kpi.big div b{font-size:46px;line-height:1.1}
 .kpi div.t b{color:var(--teal)} .kpi div.a{background:var(--peach)} .kpi div.a b{color:#c25e05}
-.fun{display:grid;grid-template-columns:1fr 70px;gap:5px 10px;font-size:23.5px;align-items:center}
-.fun .bw{background:#e9eef1;border-radius:6px;height:32px;position:relative}
+.fun{display:grid;grid-template-columns:1fr 70px;gap:6px 10px;font-size:25px;align-items:center}
+.fun .bw{background:#e9eef1;border-radius:6px;height:36px;position:relative}
 .fun .bw span{position:absolute;left:0;top:0;bottom:0;background:#8fd0c8;border-radius:6px}
 .fun .bw em{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:700;white-space:nowrap}
 .fun .bw.o span{background:#f6b26b}
 .fun .bw.k span{background:#a9b9c8}
-.fun .md{text-align:right;font-weight:700;font-size:26px}
+.fun .md{text-align:right;font-weight:700;font-size:28px}
 .fun .md.o{color:var(--amber);font-weight:800}
 
 .medsos{display:grid;grid-template-columns:0.8fr 0.76fr 0.98fr 1.3fr;gap:20px;flex:1;min-height:0}
@@ -190,6 +190,19 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
 .rel .ln .ar{height:4px;background:var(--teal);position:relative;margin:5px 0}
 .rel .ln .ar::after{content:"";position:absolute;right:-2px;top:-7px;border-left:14px solid var(--teal);border-top:9px solid transparent;border-bottom:9px solid transparent}
 .rel .ln.o .ar{background:#b5621a}.rel .ln.o .ar::after{border-left-color:#b5621a}
+.cmp{display:grid;grid-template-columns:1fr 132px 132px;gap:8px 8px;align-items:center}
+.cmp .c0{font-size:26px;font-weight:700;line-height:1.15}
+.cmp .ch{display:flex;align-items:center;justify-content:center;gap:6px;font-size:25px;font-weight:800;color:#fff;border-radius:10px;padding:4px 0}
+.cmp .ch.l{background:var(--navy)} .cmp .ch.p{background:var(--teal2)}
+.cmp .cv{text-align:center;font-family:PDisplay;font-size:34px;font-weight:800;border-radius:10px;padding:6px 0;background:#eef3f6;color:var(--mute)}
+.cmp .cv.l.hi{background:var(--navy);color:#fff} .cmp .cv.p.hi{background:var(--teal2);color:#fff}
+.cnote{font-size:21px;color:var(--mute);margin-top:8px}
+.rl{display:flex;flex-direction:column;gap:9px}
+.rr{display:grid;grid-template-columns:1.2fr 30px 0.9fr 170px;align-items:center;gap:6px;background:#e9f6f3;border-left:7px solid var(--teal);border-radius:10px;padding:7px 12px;font-size:25px;font-weight:700;line-height:1.12}
+.rr .ra{font-size:32px;color:var(--teal);text-align:center;font-weight:800}
+.rr .rs{text-align:right;font-size:19px;color:var(--mute);font-weight:600;line-height:1.1}
+.rr .rs b{display:block;font-family:PDisplay;font-size:30px;color:var(--teal)}
+.rr.o{background:#fdf0e3;border-left-color:#c25e05} .rr.o .ra,.rr.o .rs b{color:#c25e05}
 .rk{background:var(--navy);color:#fff;border-radius:12px;padding:8px 16px;font-size:27px;line-height:1.28;margin-top:10px}
 .rk b.h{color:#8fe3d6}
 
@@ -377,7 +390,7 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
   <!-- HASIL -->
   <section class="hasil">
     <div class="ph"><span class="no">5</span>Hasil<svg class="i tg"><use href="#target"/></svg></div>
-    <div class="hrow" style="grid-template-columns:0.8fr 1.4fr 1.12fr;flex:0 0 490px">
+    <div class="hrow" style="grid-template-columns:0.8fr 1.4fr 1.12fr;flex:0 0 528px">
       <div class="sub">
         <h3><span class="n">5.1</span>Platform SHINING <span class="tj">Tujuan 1</span></h3>
         <div class="browser">
@@ -458,35 +471,23 @@ main{flex:1;display:flex;flex-direction:column;gap:10px;padding:10px 24px 18px;m
             <div class="fact t"><b>75,7%</b> info dari akun nakes; 39,2% influencer</div>
             <div class="fact a"><b>71,6%</b> tertarik produk promosi <svg class="i" style="margin-left:auto;color:var(--amber);font-size:30px"><use href="#cart"/></svg></div>
           </div>
-          <div class="ms bars">
-            <h4>Laki-laki vs perempuan <span style="color:var(--mute);font-weight:600;font-size:23px;float:right;margin-top:4px">*p&lt;0,05</span></h4>
-            <div class="leg"><span><span class="sw" style="background:var(--navy)"></span>Laki-laki (30)</span><span><span class="sw" style="background:var(--teal2)"></span>Perempuan (44)</span></div>
-            <div class="q">WhatsApp utama*</div>
-            <div class="br"><div class="tr"><span style="width:73.3%"></span></div>73,3%</div>
-            <div class="br"><div class="tr f"><span style="width:50%"></span></div>50,0%</div>
-            <div class="q">TikTok/Instagram utama*</div>
-            <div class="br"><div class="tr"><span style="width:20%"></span></div>20,0%</div>
-            <div class="br"><div class="tr f"><span style="width:43.2%"></span></div>43,2%</div>
-            <div class="q">Medsos ≥3 jam/hari*</div>
-            <div class="br"><div class="tr"><span style="width:36.7%"></span></div>36,7%</div>
-            <div class="br"><div class="tr f"><span style="width:61.4%"></span></div>61,4%</div>
-            
+          <div class="ms">
+            <h4>Laki-laki vs perempuan</h4>
+            <div class="cmp">
+              <div class="c0"></div><div class="ch l"><svg class="i"><use href="#users"/></svg>L (30)</div><div class="ch p"><svg class="i"><use href="#users"/></svg>P (44)</div>
+              <div class="c0">WhatsApp utama*</div><div class="cv l hi">73,3%</div><div class="cv p">50,0%</div>
+              <div class="c0">TikTok/IG utama*</div><div class="cv l">20,0%</div><div class="cv p hi">43,2%</div>
+              <div class="c0">Medsos ≥3 jam/hari*</div><div class="cv l">36,7%</div><div class="cv p hi">61,4%</div>
+            </div>
+            <div class="cnote">*p&lt;0,05 · warna = proporsi lebih tinggi</div>
           </div>
           <div class="ms">
             <h4>Hubungan dengan sikap &amp; IMT</h4>
-            <div class="rel">
-              <div class="nd"><svg class="i"><use href="#book"/></svg>Pengetahuan</div>
-              <div class="ln"><b>r = 0,414</b><div class="ar"></div>p &lt; 0,001</div>
-              <div class="nd"><svg class="i"><use href="#heart"/></svg>Sikap HBM</div>
-              <div class="nd"><svg class="i"><use href="#search"/></svg>Cek kebenaran info</div>
-              <div class="ln"><b>r = 0,287</b><div class="ar"></div>p = 0,014</div>
-              <div class="nd"><svg class="i"><use href="#heart"/></svg>Sikap HBM</div>
-              <div class="nd o"><svg class="i"><use href="#mobile"/></svg>Durasi medsos</div>
-              <div class="ln o"><b>r = −0,331</b><div class="ar"></div>p = 0,004</div>
-              <div class="nd o"><svg class="i"><use href="#scale"/></svg>IMT</div>
-              <div class="nd o"><svg class="i"><use href="#shield"/></svg>Info akun nakes</div>
-              <div class="ln o"><b>22,5 vs 26,6</b><div class="ar"></div>kg/m² · p = 0,022</div>
-              <div class="nd o"><svg class="i"><use href="#scale"/></svg>IMT lebih rendah</div>
+            <div class="rl">
+              <div class="rr"><span class="x">Pengetahuan</span><span class="ra">→</span><span class="y">Sikap HBM</span><span class="rs"><b>r = 0,414</b>p &lt; 0,001</span></div>
+              <div class="rr"><span class="x">Cek kebenaran info</span><span class="ra">→</span><span class="y">Sikap HBM</span><span class="rs"><b>r = 0,287</b>p = 0,014</span></div>
+              <div class="rr o"><span class="x">Durasi medsos</span><span class="ra">→</span><span class="y">IMT</span><span class="rs"><b>r = −0,331</b>p = 0,004</span></div>
+              <div class="rr o"><span class="x">Info akun nakes</span><span class="ra">→</span><span class="y">IMT lebih rendah</span><span class="rs"><b>22,5 vs 26,6</b>kg/m² · p = 0,022</span></div>
             </div>
           </div>
         </div>
