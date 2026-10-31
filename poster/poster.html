@@ -112,18 +112,19 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
 .flow .cp{font-size:21px;font-style:italic;color:var(--mute);text-align:center}
 
 /* addie */
-.addie{display:grid;grid-template-columns:1fr 34px 1.1fr 34px 1.2fr 34px 1.15fr 34px 1fr;flex:1;gap:4px}
+.addie{display:grid;grid-template-columns:0.92fr 34px 1.02fr 34px 3.6fr;flex:1;gap:4px}
+.fz{position:relative;display:grid;grid-template-columns:1.2fr 34px 1.1fr 34px 1fr;gap:4px;border:3px solid var(--amber);border-radius:18px;padding:5px;margin:-8px 0 -6px 2px;background:#fff7ef}
 .ad{border-radius:14px;padding:8px 12px;display:flex;align-items:center;gap:12px;background:#eef4fb;position:relative}
 .ad .c{width:68px;height:68px;border-radius:999px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:36px;flex:none}
 .ad h5{font-family:PDisplay;font-size:33px;white-space:nowrap;font-weight:800;color:var(--blue);line-height:1.05}
 .ad p{font-size:26px;line-height:1.18;margin-top:2px}
 .ad.b{background:#e6f4f2}.ad.b .c{background:var(--teal)}.ad.b h5{color:var(--teal)}
 .ad.c3{background:var(--lav)}.ad.c3 .c{background:var(--violet)}.ad.c3 h5{color:var(--violet)}
-.ad.d{background:var(--peach);border:3px solid var(--amber)}.ad.d .c{background:var(--amber)}.ad.d h5{color:#c25e05}
+.ad.d{background:var(--peach)}.ad.d .c{background:var(--amber)}.ad.d h5{color:#c25e05}
 .ad.e{background:#eaf6ef}.ad.e .c{background:var(--green)}.ad.e h5{color:var(--green)}
-.ad.d .fk{position:absolute;top:-17px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:19px;font-weight:800;padding:2px 14px;border-radius:8px;white-space:nowrap;letter-spacing:.04em}
+.fz .fk{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:19px;font-weight:800;padding:2px 14px;border-radius:8px;white-space:nowrap;letter-spacing:.04em}
 .arr{display:grid;place-items:center;font-size:42px;color:var(--mute)}
-.iter{text-align:center;margin:8px auto 0;border:2.5px dashed var(--amber);border-top:none;border-radius:0 0 18px 18px;padding:2px 40px 4px;color:#c25e05;font-weight:800;font-size:28px;width:66%}
+.iter{text-align:center;margin:8px 0 0 auto;border:2.5px dashed var(--amber);border-top:none;border-radius:0 0 18px 18px;padding:2px 30px 4px;color:#c25e05;font-weight:800;font-size:28px;width:63.5%}
 
 /* hasil */
 .hasil{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;flex:1;min-height:0}
@@ -388,11 +389,13 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
         <div class="arr">→</div>
         <div class="ad b"><span class="c"><svg class="i"><use href="#monitor"/></svg></span><div><h5>2. Desain</h5><p>konten edukasi berbasis HBM</p></div></div>
         <div class="arr">→</div>
+        <div class="fz"><span class="fk">FOKUS MAKALAH · TAHAP 3–5</span>
         <div class="ad c3"><span class="c"><svg class="i"><use href="#gear"/></svg></span><div><h5>3. Pengembangan</h5><p>platform SHINING &amp; materi</p></div></div>
         <div class="arr">→</div>
-        <div class="ad d"><span class="fk">FOKUS MAKALAH</span><span class="c"><svg class="i"><use href="#users"/></svg></span><div><h5>4. Implementasi</h5><p>uji coba &amp; rekrutmen</p></div></div>
+        <div class="ad d"><span class="c"><svg class="i"><use href="#users"/></svg></span><div><h5>4. Implementasi</h5><p>uji coba &amp; rekrutmen</p></div></div>
         <div class="arr">→</div>
         <div class="ad e"><span class="c"><svg class="i"><use href="#chart"/></svg></span><div><h5>5. Evaluasi</h5><p>proses &amp; dampak</p></div></div>
+        </div>
       </div>
       <div class="iter"><svg class="i"><use href="#refresh"/></svg> Iteratif: evaluasi mingguan memperbaiki platform (Juli–Okt 2026)</div>
     </div>
@@ -450,7 +453,7 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
         <div class="kpi">
           <div class="a"><b>−27,3</b>turun sebelum tes</div>
           <div><b>45,5% · 70,1%</b>tuntas ≤1 / ≤24 jam</div>
-          <div class="t"><b>47,0 vs 47,9%</b>P vs L</div>
+          <div class="t"><b>47,0 vs 47,9%</b><svg class="i sx sxf"><use href="#female"/></svg> vs <svg class="i sx sxm"><use href="#male"/></svg></div>
         </div>
         <div class="cap">Gambar 3. Corong penyelesaian (n=198); kanan: median menit</div>
       </div>
