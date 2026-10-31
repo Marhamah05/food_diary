@@ -130,7 +130,7 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
 .hasil{background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;flex:1;min-height:0}
 .hrow{display:grid;gap:12px;padding:12px 12px 0;min-height:0}
 .sub{background:#f7fafb;border-radius:14px;padding:10px 14px;display:flex;flex-direction:column;min-height:0}
-.sub h3{font-family:PDisplay;font-size:35px;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:10px;margin-bottom:8px;line-height:1.1;white-space:nowrap}
+.sub h3{font-family:PDisplay;font-size:35px;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:7px;margin-bottom:8px;line-height:1.1;white-space:nowrap}
 .sub h3 .n{background:var(--navy);color:#fff;border-radius:7px;padding:0 9px;font-size:31px}
 .browser{background:#e8eef2;border-radius:12px;padding:8px;display:flex;gap:10px;align-items:center}
 .browser .w{flex:1;background:#fff;border-radius:8px;overflow:hidden}
@@ -151,6 +151,24 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
 .kpi div b{display:block;font-family:PDisplay;font-size:33px;color:var(--navy2);white-space:nowrap}
 .kpi.big div{font-size:25px;padding:8px 6px;line-height:1.15}
 .kpi.big div b{font-size:46px;line-height:1.1}
+.fn{display:flex;flex-direction:column;gap:2px}
+.fnh{display:grid;grid-template-columns:230px 1fr 58px;gap:8px;font-size:19px;font-weight:800;color:var(--navy);line-height:1.05;border-bottom:2px solid var(--line);padding-bottom:3px;align-items:end}
+.fnh .mh{justify-self:end;white-space:nowrap;text-align:right}
+.fr{display:grid;grid-template-columns:230px 1fr 58px;gap:8px;align-items:center;font-size:21.5px;font-weight:700}
+.fr .fl{white-space:nowrap}
+.ft{position:relative;height:24px;background:#e9eef1;border-radius:6px;display:flex;align-items:center}
+.ff{height:100%;background:#7fc8bf;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;flex:none}
+.ff em,.ft em.out{font-style:normal;font-size:20px;font-weight:800;white-space:nowrap}
+.ff em{color:#0b3d3a;padding-right:8px}
+.ft em.out{margin-left:8px;color:var(--ink)}
+.fr .fm{text-align:right;font-size:23px;font-weight:800}
+.fr.o .ff{background:#f6b26b} .fr.o .fl,.fr.o .fm{color:#c25e05}
+.fr.k .ff{background:var(--navy2)} .fr.r .ff{background:#b9c7d3} .fr.r .ff em{color:var(--navy)} .fr.k .fl{color:var(--navy)} .fr.k .ft em.out{color:var(--navy)}
+.fdrop{margin:1px 0;font-size:19px;white-space:nowrap;text-align:center;font-weight:700;color:#c25e05;background:#fdeee0;border-radius:6px;padding:2px 8px;line-height:1.15}
+.kpi.k3 div{font-size:19.5px;padding:3px 4px}
+.kpi.k3 div b{font-size:28px}
+.kpi.k3 div.g{background:#eef3f6}
+.kpi.k3 .sx{width:.8em;height:.8em}
 .kpi div.t b{color:var(--teal)} .kpi div.a{background:var(--peach)} .kpi div.a b{color:#c25e05}
 .fun{display:grid;grid-template-columns:1fr 70px;gap:4px 10px;font-size:24px;align-items:center}
 .fun .bw{background:#e9eef1;border-radius:6px;height:30px;position:relative}
@@ -418,7 +436,7 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
   <!-- HASIL -->
   <section class="hasil">
     <div class="ph"><span class="no">5</span>Hasil<svg class="i tg"><use href="#target"/></svg></div>
-    <div class="hrow" style="grid-template-columns:0.8fr 1.4fr 1.12fr;flex:0 0 513px">
+    <div class="hrow" style="grid-template-columns:minmax(0,0.79fr) minmax(0,1.38fr) minmax(0,1.15fr);flex:0 0 513px">
       <div class="sub">
         <h3><span class="n">5.1</span>Platform SHINING <span class="tj">Tujuan 1</span></h3>
         <div class="browser">
@@ -453,23 +471,25 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
       </div>
       <div class="sub">
         <h3><span class="n">5.3</span>Penyelesaian Pre-test <span class="tj">Tujuan 1</span></h3>
-        <div class="fun">
-          <div class="fh"><span>Instrumen · dikirim, n (%)</span><span>Median (menit)</span></div>
-          <div class="bw"><span style="width:86.4%"></span><em>Persetujuan · 171 (86,4%)</em></div><div class="md">–</div>
-          <div class="bw"><span style="width:81.3%"></span><em>Identitas · 161 (81,3%)</em></div><div class="md">1,9</div>
-          <div class="bw o"><span style="width:54%"></span><em>Pengetahuan (48) · 107 (54,0%)</em></div><div class="md o">16,7</div>
-          <div class="bw"><span style="width:48.5%"></span><em>Sikap HBM (24) · 96 (48,5%)</em></div><div class="md">3,0</div>
-          <div class="bw"><span style="width:46.5%"></span><em>FFQ · 92 (46,5%)</em></div><div class="md">5,5</div>
-          <div class="bw"><span style="width:41.4%"></span><em>Media sosial · 82 (41,4%)</em></div><div class="md">3,2</div>
-          <div class="bw"><span style="width:41.4%"></span><em>IPAQ-SF · 82 (41,4%)</em></div><div class="md">1,8</div>
-          <div class="bw k"><span style="width:38.9%"></span><em>Keenam instrumen · 77 (38,9%)</em></div><div class="md">–</div>
+        <div class="fn">
+          <div class="fnh"><span>Tahap sesi 1</span><span>Dikirim, n (%)</span><span class="mh">Median (menit)</span></div>
+          <div class="fr r"><span class="fl">Terdaftar</span><div class="ft"><span class="ff" style="width:100.0%"><em>198 (100,0%)</em></span></div><span class="fm">–</span></div>
+          <div class="fr "><span class="fl">Persetujuan</span><div class="ft"><span class="ff" style="width:86.4%"><em>171 (86,4%)</em></span></div><span class="fm">–</span></div>
+          <div class="fr "><span class="fl">Formulir identitas</span><div class="ft"><span class="ff" style="width:81.3%"><em>161 (81,3%)</em></span></div><span class="fm">1,9</span></div>
+          <div class="fdrop">▼ Penurunan terbesar: −27,3 poin sebelum tes pengetahuan</div>
+          <div class="fr o"><span class="fl">Tes pengetahuan (48)</span><div class="ft"><span class="ff" style="width:54.0%"></span><em class="out">107 (54,0%)</em></div><span class="fm">16,7</span></div>
+          <div class="fr "><span class="fl">Skala sikap (24)</span><div class="ft"><span class="ff" style="width:48.5%"></span><em class="out">96 (48,5%)</em></div><span class="fm">3,0</span></div>
+          <div class="fr "><span class="fl">FFQ</span><div class="ft"><span class="ff" style="width:46.5%"></span><em class="out">92 (46,5%)</em></div><span class="fm">5,5</span></div>
+          <div class="fr "><span class="fl">Kuesioner medsos</span><div class="ft"><span class="ff" style="width:41.4%"></span><em class="out">82 (41,4%)</em></div><span class="fm">3,2</span></div>
+          <div class="fr "><span class="fl">IPAQ-SF</span><div class="ft"><span class="ff" style="width:41.4%"></span><em class="out">82 (41,4%)</em></div><span class="fm">1,8</span></div>
+          <div class="fr k"><span class="fl">Keenam instrumen</span><div class="ft"><span class="ff" style="width:38.9%"></span><em class="out">77 (38,9%)</em></div><span class="fm">–</span></div>
         </div>
-        <div class="kpi">
-          <div class="a"><b>−27,3</b>turun sebelum tes</div>
-          <div><b>45,5% · 70,1%</b>tuntas ≤1 / ≤24 jam</div>
-          <div class="t"><b>47,0 vs 47,9%</b><svg class="i sx sxf"><use href="#female"/></svg> vs <svg class="i sx sxm"><use href="#male"/></svg></div>
+        <div class="kpi k3">
+          <div class="t"><b>38,9%</b>tuntas 6 instrumen</div>
+          <div><b>45,5% · 70,1%</b>tuntas ≤1 jam · ≤24 jam</div>
+          <div class="g"><b><svg class="i sx sxf"><use href="#female"/></svg>47,0 · <svg class="i sx sxm"><use href="#male"/></svg>47,9%</b>tidak berbeda</div>
         </div>
-        <div class="cap">Gambar 3. Corong penyelesaian (n=198); kanan: median menit</div>
+        <div class="cap">Gambar 3. Corong penyelesaian sesi 1 (n=198) &amp; median waktu</div>
       </div>
     </div>
 
