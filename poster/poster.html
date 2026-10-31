@@ -229,7 +229,8 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
 .ty{display:grid;grid-template-columns:1fr 432px;gap:14px;flex:1}
 .ty ul{list-style:none;display:flex;flex-direction:column;gap:6px}
 .ty li{display:flex;gap:9px;align-items:center;background:#f6f9fa;border-radius:10px;padding:3px 10px;font-size:23.5px;font-weight:700;line-height:1.2;flex:1}
-.ty li img{width:34px;height:34px;flex:none}
+.ty li .ck{width:34px;height:34px;flex:none;border-radius:999px;background:var(--green);display:grid;place-items:center}
+.ty li .ck svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
 .qrc{position:relative;background:#fbefe3;border:5px solid #5b3418;border-radius:16px;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto auto 1fr auto auto;align-items:center;padding:6px 6px 6px 10px;gap:3px 10px;text-align:center}
 .qrc img:not(.mas){grid-row:2/5;grid-column:1}
 .qrc .mas{grid-column:3;grid-row:1/7;width:112px;height:0;min-height:100%;object-fit:cover;object-position:50% 12%;border-radius:10px;align-self:stretch}
@@ -537,10 +538,10 @@ main{flex:1;display:flex;flex-direction:column;gap:8px;padding:8px 24px 36px;min
       <div class="pb">
         <div class="ty">
           <ul>
-            <li><img src="icons/heart.png" alt="">DPPKB dan Kemenag Kota Binjai</li>
-            <li><img src="icons/heart.png" alt="">Calon pengantin Kota Binjai</li>
-            <li><img src="icons/heart.png" alt="">Universitas Terbuka (beasiswa doktor)</li>
-            <li><img src="icons/heart.png" alt="">Semua pihak yang berkontribusi</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>DPPKB dan Kemenag Kota Binjai</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Calon pengantin Kota Binjai</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Universitas Terbuka (beasiswa doktor)</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Semua pihak yang berkontribusi</li>
           </ul>
           <div class="qrc">
             <div class="k">KELAS ONLINE CALON PENGANTIN</div>
