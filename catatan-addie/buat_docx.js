@@ -72,13 +72,13 @@ const textW = A4P.width - marginP.left - marginP.right; // 7937
 const bagian1 = [
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 120 }, children: [new TextRun({ text: 'CATATAN PROSES ADDIE', bold: true, size: 28 })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 120 }, children: [new TextRun({ text: 'Pemantauan Data, Kendala, dan Perbaikan Platform SHINING EduCatin', bold: true, size: 26 })] }),
-  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 360 }, children: [new TextRun({ text: 'Periode pemantauan: 25 Oktober – 22 November 2026', size: 24 })] }),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 360 }, children: [new TextRun({ text: 'Periode pemantauan: 25 Oktober – November 2026', size: 24 })] }),
 
   P('**Catatan penggunaan.** Naskah ini disusun sebagai bahan sisipan disertasi pada tahap *Implementation* dan *Evaluation* model ADDIE. Penomoran subbab, tabel, dan gambar perlu disesuaikan dengan bab tempat naskah ini disisipkan dan dengan Pedoman Penulisan Karya Ilmiah IPB yang berlaku. Penanda [PERLU DATA], [CEK PROMOTOR], dan [CEK REFERENSI] menunjukkan bagian yang masih harus dilengkapi atau diputuskan.', { noIndent: true }),
 
   H1('1  Pengantar'),
   P('Pemantauan data pada 22 November 2026 menunjukkan bahwa kekurangan data pada media edukasi SHINING terutama berasal dari peserta yang berhenti di tengah rangkaian kuesioner, bukan dari kegagalan sistem penyimpanan. Catatan ini mendokumentasikan prosedur pemantauan, temuan, kendala platform beserta perbaikannya, dan rekomendasi untuk iterasi pengembangan berikutnya.'),
-  P('SHINING merupakan aplikasi web edukasi gizi dan kesehatan prakonsepsi bagi calon pengantin (catin) yang dikembangkan berdasarkan *Health Belief Model* (HBM). Kelompok kontrol mengakses mulai.edukasi-catin.id, sedangkan kelompok intervensi mengakses siaga.edukasi-catin.id. Kedua platform mengirim data setiap instrumen ke Google Sheets melalui Google Apps Script Web App, dengan nomor HP ternormalisasi (`hp_kunci`) sebagai kunci penggabungan data pre-test dan post-test.'),
+  P('SHINING merupakan aplikasi web edukasi gizi dan kesehatan prakonsepsi bagi calon pengantin (catin) yang dikembangkan berdasarkan *Health Belief Model* (HBM). Kelompok kontrol mengakses mulai.edukasi-catin.id, sedangkan kelompok intervensi mengakses shining.edukasi-catin.id. Kedua platform mengirim data setiap instrumen ke Google Sheets melalui Google Apps Script Web App, dengan nomor HP ternormalisasi (`hp_kunci`) sebagai kunci penggabungan data pre-test dan post-test.'),
   P('Angka dalam catatan ini merupakan gabungan kelompok kontrol dan intervensi, tanpa baris uji coba sistem. Pemisahan per kelompok dan pengecualian responden yang tidak memenuhi kriteria inklusi belum dilakukan [PERLU DATA].'),
 
   H1('2  Prosedur Pemantauan Data'),
@@ -120,7 +120,7 @@ const logWidths = [450, 1250, 900, 1500, 2300, 2200, 2700, 2136];
 const bagianLog = [
   H2('3.3  Log kendala dan perubahan platform'),
   P('Tabel 2 merangkum kendala yang ditemukan selama periode pemantauan beserta perbaikannya. Tabel ini melengkapi log kendala dan perubahan platform yang disusun sejak tahap *Development*.', { noIndent: true }),
-  CAP('**Tabel 2** Kendala dan perubahan platform SHINING, 25 Oktober – 22 November 2026'),
+  CAP('**Tabel 2** Kendala dan perubahan platform SHINING, 25 Oktober – November 2026'),
   table(logWidths, ['No', 'Fase ADDIE', 'Platform (K/I/Keduanya)', 'Komponen', 'Masalah', 'Dampak pada data/peserta', 'Perubahan/perbaikan', 'Verifikasi'], [
     ['1', 'Design', 'Keduanya', 'Kriteria kelengkapan M0', 'Definisi "M0 lengkap" berbeda: gerbang memakai 5 instrumen inti, rekap kelayakan memakai 6 instrumen (termasuk media sosial).', 'Peserta dapat membuka modul tanpa pre-test media sosial; status rekap tampak janggal ("Pre belum lengkap" tetapi sudah mencapai M8).', 'Keputusan: pre-test media sosial wajib di M0. Apps Script v7.3 menambah kolom `pre_inti_m0`; v7.6 menambah status `m0_wajib_lengkap` dan `m0_wajib_kurang`.', 'Uji data tiruan: nomor tanpa media sosial menghasilkan `m0_wajib_lengkap = false`. Penerapan gerbang di aplikasi web [PERLU DATA].'],
     ['2', 'Development', 'Keduanya', 'Rekap kelayakan', 'Kolom tahap media sosial tersimpan sebagai `tahap_program`; rekap hanya membaca `tahap`.', 'Semua kiriman media sosial terhitung pre-test; tidak ada peserta berstatus LENGKAP.', 'v7.3 (22 Nov 2026): rekap membaca `tahap` lalu `tahap_program`.', 'Uji data tiruan; tab diagnosa menunjukkan 7 orang dengan post-test media sosial terbaca.'],
@@ -130,11 +130,19 @@ const bagianLog = [
     ['6', 'Implementation', 'Keduanya', 'Pemantauan data', 'Belum ada alat untuk melihat kelengkapan per instrumen.', 'Penurunan jumlah peserta antar-kuesioner tidak terdeteksi dini.', 'v7.5: menu dan tab DIAGNOSA-INSTRUMEN.', 'Dijalankan pada data asli 22 Nov 2026 (Tabel 1).'],
     ['7', 'Implementation', 'Keduanya', 'Kunci nomor HP', '6–13 baris per instrumen tanpa `hp_kunci` karena nomor HP tidak sah atau kosong.', 'Penggabungan pre-post bergantung pada nama; risiko data satu peserta terpecah.', 'Perbaikan manual berdasarkan kolom `hp_asli` [PERLU DATA].', '[PERLU DATA]'],
     ['8', 'Implementation', 'Keduanya', 'Pengingat peserta', 'Rancangan flyer awal memuat materi edukasi gizi dan janji sertifikat, ditujukan ke platform kontrol.', 'Risiko kontaminasi kelompok kontrol dan perlakuan pengingat yang tidak setara.', 'Flyer netral tanpa materi edukasi dengan isi identik untuk kedua kelompok, hanya berbeda alamat dan kode QR (Lampiran 1).', 'Tanggal pengiriman dan jumlah penerima per kelompok [PERLU DATA].'],
+    ['9', 'Implementation', 'I', 'Pengaturan akses minggu (aplikasi web)', 'Kesalahan pengaturan aplikasi membuat 2 peserta intervensi dapat membuka Minggu 2–8 sebelum jadwalnya.', 'Kedua peserta menerima materi dan kemungkinan mengisi post-test M8 lebih awal dari hari ke-56; deviasi protokol.', 'Pengaturan diperbaiki; kedua peserta dicatat sebagai deviasi protokol dan dianalisis terpisah [CEK PROMOTOR].', 'Identitas, tanggal, dan instrumen yang diisi kedua peserta [PERLU DATA].'],
+    ['10', 'Implementation', 'I', 'Jadwal materi (aplikasi web)', 'Seluruh peserta intervensi masih berada di M0–M1; jeda 7 hari per minggu materi berisiko menurunkan keterlibatan.', 'Peserta menunggu lama untuk materi berikutnya.', 'Amandemen protokol: setelah M0 tuntas, materi Minggu 1–7 terbuka sekaligus (*self-paced*); M8 tetap terjadwal pada hari ke-56. Kiriman data diberi penanda `akses_terbuka = M1-M7` (subbab 3.4).', 'Simulasi peserta tuntas M0: M0–M7 terbuka, M8 terkunci, tanpa galat (22 Nov 2026). Tanggal aktif [PERLU DATA].'],
   ], { size: 18, center: [0] }),
-  SRC('K = platform kontrol (mulai.edukasi-catin.id); I = platform intervensi (siaga.edukasi-catin.id). Apps Script dipakai bersama oleh kedua platform.'),
+  SRC('K = platform kontrol (mulai.edukasi-catin.id); I = platform intervensi (shining.edukasi-catin.id). Apps Script dipakai bersama oleh kedua platform.'),
 ];
 
 const bagian2 = [
+  H2('3.4  Amandemen protokol: akses materi mandiri pada platform intervensi'),
+  P('Sejak [tanggal aktif, PERLU DATA], materi Minggu 1–7 pada platform intervensi (shining.edukasi-catin.id) dibuka sekaligus setelah peserta menuntaskan M0, sehingga peserta dapat mempelajari materi secara mandiri (*self-paced*). Minggu 8, yang memuat materi penutup dan post-test, tetap terjadwal pada hari ke-56 sejak M0 tuntas. Dengan demikian, jarak waktu antara pre-test dan post-test tetap setara dengan kelompok kontrol.'),
+  P('Saat amandemen diterapkan, seluruh peserta intervensi berada pada tahap M0–M1 dan belum ada aktivitas Minggu 2–7 yang tercatat, kecuali dua peserta yang dapat membuka Minggu 2–8 akibat kesalahan pengaturan aplikasi. Perubahan ini karenanya berlaku seragam bagi seluruh peserta intervensi mulai Minggu 2. Kedua peserta tersebut dicatat sebagai deviasi protokol (Tabel 2, nomor 9).'),
+  P('Perubahan dilakukan seminimal mungkin pada aplikasi web: satu pengaturan (`BUKA_M1_M7`) pada fungsi penentu minggu terbuka, teks pemberitahuan jadwal pada beranda, dan penanda `akses_terbuka = M1-M7` pada setiap kiriman data. Penanda ini memungkinkan kiriman sebelum dan sesudah amandemen dipisahkan dalam analisis sensitivitas. Materi, instrumen, dan alur pengiriman data tidak berubah. Berkas laman sebelum amandemen disimpan sebagai cadangan.'),
+  P('Amandemen ini perlu disampaikan kepada komisi pembimbing dan, bila protokol terdaftar, kepada komisi etik [CEK PROMOTOR]. Konsekuensinya bagi tafsir hasil adalah bahwa urutan dan laju paparan materi Minggu 1–7 dapat berbeda antarpeserta; kepatuhan per minggu materi sebaiknya dilaporkan sebagai indikator proses.'),
+
   H1('4  Rekomendasi untuk Iterasi Berikutnya'),
   P('Rekomendasi utama untuk iterasi berikutnya adalah menjaga kuesioner wajib melalui gerbang di aplikasi web dan mengurangi beban kuesioner pada sesi M0. Rincian per tahap ADDIE disajikan pada Tabel 3.'),
   CAP('**Tabel 3** Rekomendasi per tahap ADDIE berdasarkan temuan implementasi'),
@@ -155,6 +163,8 @@ const bagian2 = [
   B('**Deviasi protokol.** Peserta yang membuka modul sebelum pre-test wajib lengkap, terutama tanpa pre-test media sosial, dicatat sebagai deviasi protokol. Jumlahnya dihitung dari REKAP-KELAYAKAN dengan kriteria `pre_inti_m0` = LENGKAP (5/5) dan kolom `yang_kurang` memuat "medsos (pre)" [PERLU DATA].'),
   B('**Data hilang per luaran.** Peserta tanpa pre-test IPAQ dikeluarkan hanya dari analisis aktivitas fisik dan tetap masuk analisis pengetahuan dan sikap bila datanya lengkap. Data hilang dilaporkan per luaran dan per kelompok, disertai perbandingan karakteristik peserta yang lengkap dan tidak lengkap [PERLU DATA].'),
   B('**Post-test media sosial** diperlakukan sebagai data tambahan yang tidak wajib sejak 22 November 2026 dan dinyatakan secara eksplisit pada bagian metode [CEK PROMOTOR].'),
+  B('**Dua peserta dengan akses Minggu 2–8 lebih awal.** Dicatat sebagai deviasi protokol akibat kesalahan pengaturan aplikasi. Bila post-test M8 mereka terisi sebelum hari ke-56, data post-test tersebut dikeluarkan dari analisis per-protokol atau dilaporkan terpisah. Untuk menemukannya: REKAP-KELAYAKAN, kelompok intervensi dengan `jumlah_post` > 0, lalu bandingkan tanggal kiriman pertama dengan tanggal post-test [CEK PROMOTOR].'),
+  B('**Amandemen akses materi mandiri.** Dilaporkan pada metode (perubahan protokol beserta tanggalnya) dan pada keterbatasan (laju paparan materi Minggu 1–7 berbeda antarpeserta).'),
   B('**Keterbatasan.** Gerbang M0 belum mewajibkan seluruh instrumen pre-test selama sebagian periode pengumpulan data, dan pengingat peserta belum dibakukan antarkelompok.'),
 
   H1('6  Prioritas Iterasi Berikutnya'),
@@ -177,6 +187,10 @@ const bagian2 = [
     ['6', 'Definisi populasi analisis (seluruh peserta vs per-protokol)', '[CEK PROMOTOR]'],
     ['7', 'Post-test media sosial sebagai data tambahan yang tidak wajib', '[CEK PROMOTOR]'],
     ['8', 'Rujukan tentang beban responden, attrition, dan keterlibatan pada intervensi gizi digital', '[CEK REFERENSI]'],
+    ['9', 'Tanggal aktif amandemen akses materi mandiri (Minggu 1–7) pada platform intervensi', '[PERLU DATA]'],
+    ['10', 'Identitas, tanggal akses, dan tanggal post-test dua peserta yang membuka Minggu 2–8 lebih awal', '[PERLU DATA]'],
+    ['11', 'Persetujuan amandemen protokol oleh komisi pembimbing dan pelaporan ke komisi etik', '[CEK PROMOTOR]'],
+    ['12', 'Perlakuan analisis bagi dua peserta deviasi (dikeluarkan dari per-protokol atau dilaporkan terpisah)', '[CEK PROMOTOR]'],
   ], { size: 20, center: [0] }),
   SRC(''),
 ];
@@ -188,7 +202,7 @@ const lampiran = [
     new ImageRun({ type: 'jpg', data: fs.readFileSync(path.join(FLYER, 'Flyer_SHINING_kontrol.jpg')), transformation: { width: 240, height: 300 } }),
     new TextRun({ text: '      ' }),
     new ImageRun({ type: 'jpg', data: fs.readFileSync(path.join(FLYER, 'Flyer_SHINING_intervensi.jpg')), transformation: { width: 240, height: 300 } }) ] }),
-  CAP('**Gambar L1** Flyer pengingat kelompok kontrol (kiri, mulai.edukasi-catin.id) dan intervensi (kanan, siaga.edukasi-catin.id)'),
+  CAP('**Gambar L1** Flyer pengingat kelompok kontrol (kiri, mulai.edukasi-catin.id) dan intervensi (kanan, shining.edukasi-catin.id)'),
   H3('Teks pesan WhatsApp pendamping (identik untuk kedua kelompok)'),
   ...[
     'Halo Kak [nama],',
