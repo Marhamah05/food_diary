@@ -1,11 +1,11 @@
 /**
  * SHINING — Penerima Data Instrumen (SKRIP LENGKAP)
- * Versi 7.3 — 22 November 2026
+ * Versi 7.4 — 22 November 2026
  *
  * BERKAS INI MENGGANTIKAN SELURUH ISI Code.gs.
  * Cara pakai: buka Apps Script Sheet SHINING → klik di area kode →
  * Ctrl+A (pilih semua) → tempel seluruh isi berkas ini → Simpan (Ctrl+S).
- * v7.3 hanya mengubah REKAP, jadi Simpan saja sudah cukup. Deploy versi baru
+ * v7.3–v7.4 hanya mengubah REKAP, jadi Simpan saja sudah cukup. Deploy versi baru
  * (Deploy > Manage deployments > ikon pensil > New version > Deploy) boleh
  * dilakukan, tidak wajib. URL Web App TIDAK berubah, laman tidak perlu diubah.
  *
@@ -29,6 +29,13 @@
  *   7. Rekap kelayakan responden (pre & post per orang)
  *
  * Riwayat singkat:
+ *  - v7.4 (22 Nov): MEDSOS POST (M8) TIDAK WAJIB. Hanya rekap yang berubah.
+ *    + Kelayakan 'LENGKAP' kini = 6 instrumen pre (termasuk medsos pre)
+ *      + 5 instrumen post (TANPA medsos post). Kolom medsos_post tetap
+ *      ditampilkan (✓/–) sebagai data tambahan, tetapi tidak dihitung di
+ *      jumlah_post dan tidak muncul di 'yang_kurang'.
+ *    + Diatur lewat penanda wajibPost:false di PASANGAN_INTI, jadi mudah
+ *      diubah kembali bila keputusan berganti.
  *  - v7.3 (22 Nov): PERBAIKAN REKAP, penulisan data & gerbang modul TIDAK berubah.
  *    + Medsos (post) kini terbaca. Di tab medsos-literasi kolom 'tahap'
  *      disimpan sebagai 'tahap_program' (lihat ALIAS), sedangkan rekap lama
@@ -1249,14 +1256,15 @@ function petikJson(baris) {
 var TAB_REKAP    = 'REKAP-KELAYAKAN';
 var TAB_RINGKAS  = 'REKAP-RINGKASAN';
 
-// Enam instrumen yang wajib sepasang (pre di M0, post di M8).
+// Enam instrumen pre (M0) & post (M8). wajibPost:false = post-nya tidak wajib
+// untuk kelayakan LENGKAP (v7.4: medsos post), tetapi tetap ditampilkan.
 var PASANGAN_INTI = [
   { label: 'pengetahuan',      tab: 'pengetahuan',          pre: 'pre-test',          post: 'post-test' },
   { label: 'sikap',            tab: 'sikap-hbm',            pre: 'pre-test',          post: 'post-test' },
   { label: 'kebiasaan_makan',  tab: 'kebiasaan-makan-ffq',  pre: 'pre-test',          post: 'post-test' },
   { label: 'aktivitas_fisik',  tab: 'aktivitas-ipaq',       pre: 'pre-test',          post: 'post-test' },
   { label: 'karakteristik',    tab: 'identitas',            pre: 'pre-test',          post: 'post-test' },
-  { label: 'medsos',           tab: 'medsos-literasi',      pre: 'karakteristik-awal', post: 'tinjauan-akhir' }
+  { label: 'medsos',           tab: 'medsos-literasi',      pre: 'karakteristik-awal', post: 'tinjauan-akhir', wajibPost: false }
 ];
 
 // v7.3 — label PASANGAN_INTI yang setara dengan INTI_M0 (syarat M0 lengkap di server).
@@ -1425,6 +1433,7 @@ function bangunRekapKelayakan() {
       if (c2.isi[PASANGAN_INTI[k].label + '_pre']) nPre++; else kurang.push(PASANGAN_INTI[k].label + ' (pre)');
     }
     for (var m = 0; m < PASANGAN_INTI.length; m++) {
+      if (PASANGAN_INTI[m].wajibPost === false) continue;   // v7.4: post tidak wajib
       if (c2.isi[PASANGAN_INTI[m].label + '_post']) nPost++; else kurang.push(PASANGAN_INTI[m].label + ' (post)');
     }
 
@@ -1436,8 +1445,9 @@ function bangunRekapKelayakan() {
     var intiLengkap = (nInti === LABEL_INTI_M0.length);
 
     var total = PASANGAN_INTI.length;
+    var totalPost = PASANGAN_INTI.filter(function (d) { return d.wajibPost !== false; }).length;
     var kelayakan =
-      (nPre === total && nPost === total) ? 'LENGKAP — siap diolah' :
+      (nPre === total && nPost === totalPost) ? 'LENGKAP — siap diolah' :
       (nPre === total && nPost > 0)       ? 'Post belum lengkap' :
       (nPre === total)                    ? 'Baru pre (post belum mulai)' :
       (nPre > 0)                          ? 'Pre belum lengkap' : 'Belum ada pre';
@@ -1498,7 +1508,7 @@ function bangunRekapKelayakan() {
     ['Diperbarui', new Date()],
     ['', ''],
     ['Responden (status sah)', hitung.total],
-    ['LENGKAP — pre & post keenam instrumen', hitung.lengkap],
+    ['LENGKAP — 6 instrumen pre + 5 instrumen post (medsos post tidak wajib)', hitung.lengkap],
     ['Post belum lengkap', hitung.post_sebagian],
     ['Baru pre (post belum mulai)', hitung.baru_pre],
     ['Pre belum lengkap', hitung.pre_sebagian],
@@ -1521,6 +1531,7 @@ function bangunRekapKelayakan() {
   ring.push(['Catatan', 'Baris berstatus "uji" tetap tampil di ' + TAB_REKAP + ' tetapi tidak dihitung di sini.']);
   ring.push(['Kelompok', 'Diambil dari kolom "kelompok" (dikirim laman intervensi mulai 15 Okt 2026). Tanpa kolom itu, kode kelas SHINING-KONTROL-2026 = kontrol; selain itu "tanpa-label" (mis. baris uji coba intervensi lama). Sejak v7 satu nomor di dua kelompok tampil sebagai DUA baris.']);
   ring.push(['Medsos (v7.3)', 'Pre/post medsos dibaca dari kolom "tahap", atau "tahap_program" bila kosong (karakteristik-awal = pre, tinjauan-akhir = post). Sebelum v7.3 semua kiriman medsos terhitung pre.']);
+  ring.push(['Medsos post (v7.4)', 'Tidak wajib untuk LENGKAP. Kolom medsos_post tetap diisi ✓/– sebagai data tambahan; tidak dihitung di jumlah_post.']);
   ring.push(['pre_inti_m0', 'Kolom paling kanan REKAP-KELAYAKAN: 5 instrumen pre yang dipakai server untuk menyatakan M0 lengkap. Peserta "Pre belum lengkap" dengan pre_inti_m0 = LENGKAP (5/5) memang boleh lanjut ke modul berikutnya; biasanya hanya kurang medsos (pre).']);
 
   var sh2 = ss.getSheetByName(TAB_RINGKAS) || ss.insertSheet(TAB_RINGKAS);
