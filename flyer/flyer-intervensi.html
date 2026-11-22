@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf3e4;--cream2:#f6e7cf;--brown:#4a2412;--brown2:#7a3e1d;--terra:#c8693a;--ink:#2a1d14;--mute:#6b5646;--sage:#e3ecd6;--line:#ead8bd}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);
+ background:radial-gradient(900px 600px at 0% 0%,#eef2dc 0%,transparent 60%),linear-gradient(180deg,#fbf3e4 0%,#fdf6ec 100%);
+ position:relative;overflow:hidden}
+.wrap{padding:56px 64px 0}
+.brand{display:flex;align-items:center;gap:18px}
+.logo{width:72px;height:72px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;
+ font:900 40px 'Fraunces',serif;box-shadow:0 6px 16px rgba(200,105,58,.35)}
+.brand b{display:block;font:900 40px/1 'Fraunces',serif;color:var(--brown);letter-spacing:.5px}
+.brand span{display:block;font-size:17px;font-weight:700;letter-spacing:3px;color:var(--brown2);margin-top:6px}
+.hero{display:flex;gap:36px;margin-top:40px;align-items:stretch}
+.htext{flex:1.15}
+.tag{display:inline-block;background:var(--brown);color:#fff;font-weight:700;font-size:20px;padding:9px 20px;border-radius:999px}
+h1{font:900 64px/1.04 'Fraunces',serif;color:var(--brown);margin-top:22px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--terra)}
+.lead{font-size:24px;line-height:1.45;color:var(--mute);margin-top:20px;font-weight:500}
+.lead strong{color:var(--ink)}
+.photo{flex:.85;border-radius:32px;overflow:hidden;box-shadow:0 18px 40px rgba(74,36,18,.18);border:6px solid #fff}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{background:#fff;border:2px solid var(--line);border-radius:24px;padding:22px 22px 24px}
+.ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--sage);font-size:28px}
+.card:nth-child(2) .ic{background:#fde7d6}.card:nth-child(3) .ic{background:#efe6fb}
+.card h3{font:800 22px/1.25 'Plus Jakarta Sans';color:var(--brown);margin-top:14px}
+.card p{font-size:18px;line-height:1.4;color:var(--mute);margin-top:6px;font-weight:500}
+.cta{position:absolute;left:0;right:0;bottom:0;height:400px;background:var(--brown);color:#fff;
+ padding:44px 64px 0;display:flex;gap:40px;border-radius:48px 48px 0 0}
+.steps{flex:1}
+.steps h2{font:900 34px/1.1 'Fraunces',serif;color:#ffd9b8}
+ol{list-style:none;margin-top:20px}
+li{display:flex;gap:16px;align-items:flex-start;font-size:22px;line-height:1.35;margin-bottom:14px;font-weight:500}
+li i{flex:none;width:38px;height:38px;border-radius:50%;background:var(--terra);font:800 20px/38px 'Plus Jakarta Sans';text-align:center;font-style:normal}
+li b{color:#ffd9b8}
+.url{margin-top:6px;display:inline-block;background:#fff;color:var(--brown);font:800 30px 'Plus Jakarta Sans';padding:12px 26px;border-radius:16px;letter-spacing:.2px}
+.qr{width:236px;text-align:center}
+.qr img{width:236px;height:236px;background:#fff;border-radius:22px;padding:12px;display:block}
+.qr small{display:block;font-size:17px;margin-top:10px;color:#ffd9b8;font-weight:600}
+.foot{position:absolute;left:64px;right:64px;bottom:22px;display:flex;justify-content:space-between;font-size:17px;color:#e9cdb6;font-weight:500}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="logo">S</div>
+    <div><b>SHINING</b><span>EDUKASI GIZI &amp; KESEHATAN PRAKONSEPSI</span></div>
+  </div>
+
+  <div class="hero">
+    <div class="htext">
+      <div class="tag">Undangan khusus peserta SHINING</div>
+      <h1>Terima kasih<br>sudah memulai!<br>Yuk, <em>selesaikan</em>.</h1>
+      <p class="lead">Kakak/Abang sudah mengisi beberapa aktivitas SHINING. <strong>Perjalanannya tinggal sedikit lagi</strong>, dan setiap jawaban Kakak sangat berarti.</p>
+    </div>
+    <div class="photo"><img src="pasangan-shining.jpg" alt=""></div>
+  </div>
+
+  <div class="why">
+    <div class="card"><div class="ic">💛</div><h3>Kontribusi Kakak berarti</h3><p>Jawaban Kakak membantu menyusun edukasi pranikah yang lebih baik bagi catin Indonesia.</p></div>
+    <div class="card"><div class="ic">📲</div><h3>Lanjut dari titik terakhir</h3><p>Aktivitas yang sudah terisi tersimpan, tidak perlu mengulang dari awal.</p></div>
+    <div class="card"><div class="ic">⏳</div><h3>Fleksibel, bisa dicicil</h3><p>Isi lewat HP kapan saja, sesuai waktu luang Kakak.</p></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="steps">
+    <h2>Cara melanjutkan</h2>
+    <ol>
+      <li><i>1</i><span>Buka laman SHINING</span></li>
+      <li><i>2</i><span>Masuk dengan <b>nomor HP yang sama</b> seperti sebelumnya</span></li>
+      <li><i>3</i><span>Lanjutkan aktivitas berikutnya <b>sampai selesai</b></span></li>
+    </ol>
+    <div class="url">siaga.edukasi-catin.id</div>
+  </div>
+  <div class="qr"><img src="qr-intervensi.png" alt=""><small>Pindai untuk langsung masuk</small></div>
+</div>
+<div class="foot"><span>Butuh bantuan? WhatsApp 0813-8172-4884</span><span>Program penelitian edukasi calon pengantin</span></div>
+</body></html>
