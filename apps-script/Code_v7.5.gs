@@ -1,11 +1,11 @@
 /**
  * SHINING — Penerima Data Instrumen (SKRIP LENGKAP)
- * Versi 7.4 — 22 November 2026
+ * Versi 7.5 — 22 November 2026
  *
  * BERKAS INI MENGGANTIKAN SELURUH ISI Code.gs.
  * Cara pakai: buka Apps Script Sheet SHINING → klik di area kode →
  * Ctrl+A (pilih semua) → tempel seluruh isi berkas ini → Simpan (Ctrl+S).
- * v7.3–v7.4 hanya mengubah REKAP, jadi Simpan saja sudah cukup. Deploy versi baru
+ * v7.3–v7.5 hanya mengubah REKAP (dan menambah alat diagnosa), jadi Simpan saja sudah cukup. Deploy versi baru
  * (Deploy > Manage deployments > ikon pensil > New version > Deploy) boleh
  * dilakukan, tidak wajib. URL Web App TIDAK berubah, laman tidak perlu diubah.
  *
@@ -29,6 +29,15 @@
  *   7. Rekap kelayakan responden (pre & post per orang)
  *
  * Riwayat singkat:
+ *  - v7.5 (22 Nov): DIAGNOSA + PENGENALAN POST LEBIH LUWES. Hanya baca.
+ *    + Menu SHINING > "Diagnosa pre/post per instrumen" membuat tab
+ *      DIAGNOSA-INSTRUMEN: per instrumen inti, jumlah baris, baris tanpa
+ *      nomor HP (tidak ikut rekap), sebaran nilai tahap/sesi/status, jumlah
+ *      orang ber-pre & ber-post, dan kiriman yang tertahan di karantina.
+ *    + Rekap kini menganggap baris sebagai POST bila tahap = nama post resmi,
+ *      ATAU tahap berupa varian post (posttest, post test, akhir, sesi 2),
+ *      ATAU tahap kosong tetapi sesi = 2. Sebelumnya hanya teks persis
+ *      'post-test' yang dikenali; varian lain diam-diam dihitung PRE.
  *  - v7.4 (22 Nov): MEDSOS POST (M8) TIDAK WAJIB. Hanya rekap yang berubah.
  *    + Kelayakan 'LENGKAP' kini = 6 instrumen pre (termasuk medsos pre)
  *      + 5 instrumen post (TANPA medsos post). Kolom medsos_post tetap
@@ -1275,6 +1284,7 @@ function onOpen() {
     .createMenu('SHINING')
     .addItem('Bangun rekap kelayakan', 'bangunRekapKelayakan')
     .addItem('Bangun indeks cepat (cek status)', 'bangunIndeks')
+    .addItem('Diagnosa pre/post per instrumen', 'diagnosaInstrumen')
     .addSeparator()
     .addItem('Nyalakan rekap otomatis (tiap jam)', 'pasangPemicuRekap')
     .addItem('Matikan rekap otomatis', 'matikanPemicuRekap')
@@ -1360,7 +1370,8 @@ function bangunRekapKelayakan() {
 
       // v7.3: tab medsos-literasi menyimpan 'tahap' sebagai 'tahap_program' (ALIAS).
       var tahap = (sel('tahap') || sel('tahap_program')).toLowerCase();
-      var isPost = (tahap === String(def.post).toLowerCase());
+      // v7.5: kenali juga varian post & sesi 2 (lihat jenisTahap).
+      var isPost = (jenisTahap(tahap, sel('sesi'), def) === 'post');
       // Tahap kosong dianggap PRE — kiriman awal sebelum kolom tahap terisi.
       c.isi[def.label + (isPost ? '_post' : '_pre')] = 1;
     }
@@ -1543,4 +1554,119 @@ function bangunRekapKelayakan() {
 
   Logger.log('Rekap selesai: ' + hitung.total + ' responden sah, ' + hitung.lengkap + ' LENGKAP.');
   return hitung;
+}
+
+
+/* ============================================================
+ *  7. v7.5 — DIAGNOSA PRE/POST PER INSTRUMEN (hanya membaca)
+ * ============================================================ */
+
+var TAB_DIAGNOSA = 'DIAGNOSA-INSTRUMEN';
+
+/**
+ * 'pre' | 'post' untuk satu baris, memakai aturan yang SAMA dengan rekap.
+ * tahap : nilai kolom tahap (atau tahap_program), huruf kecil
+ * sesi  : nilai kolom sesi
+ * def   : entri PASANGAN_INTI
+ */
+function jenisTahap(tahap, sesi, def) {
+  var t = String(tahap || '').trim().toLowerCase();
+  if (t === String(def.post).toLowerCase()) return 'post';
+  if (t === String(def.pre).toLowerCase()) return 'pre';
+  if (TAHAP_KE_SESI[t] === '2') return 'post';
+  if (TAHAP_KE_SESI[t] === '1') return 'pre';
+  if (!t && String(sesi || '').trim() === '2') return 'post';
+  return 'pre';   // tahap kosong / tak dikenal dianggap PRE (seperti sebelumnya)
+}
+
+function diagnosaInstrumen() {
+  var ss = bukaSpreadsheet();
+  var out = [['DIAGNOSA PRE/POST PER INSTRUMEN', ''], ['Dibuat', new Date()], ['', '']];
+
+  function hitungNilai(peta) {
+    var k = Object.keys(peta).sort(function (a, b) { return peta[b] - peta[a]; });
+    return k.length ? k.map(function (x) { return (x || '(kosong)') + ' = ' + peta[x]; }).join(';  ') : '-';
+  }
+
+  for (var p = 0; p < PASANGAN_INTI.length; p++) {
+    var def = PASANGAN_INTI[p];
+    out.push(['■ ' + def.label + '  (tab: ' + def.tab + ')', '']);
+    var sh = ss.getSheetByName(def.tab);
+    if (!sh || sh.getLastRow() < 2) { out.push(['  tab tidak ada / kosong', '']); out.push(['', '']); continue; }
+
+    var v = sh.getDataRange().getValues();
+    var h = v[0].map(function (x) { return String(x).trim().toLowerCase(); });
+    function kol(n) { return h.indexOf(n); }
+    var kHp = kol('hp_kunci'), kNm = kol('nama'), kNo = kol('no_hp'), kAsli = kol('hp_asli'),
+        kT = kol('tahap'), kTP = kol('tahap_program'), kS = kol('sesi'), kSt = kol('status'), kC = kol('catatan_sistem');
+    function ambil(r, k) { return k === -1 ? '' : String(v[r][k] === null ? '' : v[r][k]).trim(); }
+
+    var nBaris = v.length - 1, tanpaHp = 0, dilewatiRekap = 0;
+    var tahapN = {}, sesiN = {}, statusN = {}, catatanN = {};
+    var orangPre = {}, orangPost = {};
+    for (var r = 1; r < v.length; r++) {
+      var hpRaw = ambil(r, kHp), nm = ambil(r, kNm), noHp = ambil(r, kNo);
+      var tahap = (ambil(r, kT) || ambil(r, kTP)).toLowerCase();
+      var sesi = ambil(r, kS);
+      tahapN[tahap] = (tahapN[tahap] || 0) + 1;
+      sesiN[sesi] = (sesiN[sesi] || 0) + 1;
+      var st = ambil(r, kSt); statusN[st] = (statusN[st] || 0) + 1;
+      ambil(r, kC).split(';').forEach(function (c) {
+        c = c.trim().split(':')[0]; if (c) catatanN[c] = (catatanN[c] || 0) + 1;
+      });
+      if (!hpRaw) tanpaHp++;
+      if (!hpRaw && !nm && !noHp) { dilewatiRekap++; continue; }
+      if (st === 'uji') continue;
+      var kunci = normalHP(hpRaw) || normalHP(noHp) || ('nama:' + nm.toLowerCase());
+      if (jenisTahap(tahap, sesi, def) === 'post') orangPost[kunci] = 1; else orangPre[kunci] = 1;
+    }
+    out.push(['  Jumlah baris', nBaris]);
+    out.push(['  Orang (bukan uji) yang punya PRE', Object.keys(orangPre).length]);
+    out.push(['  Orang (bukan uji) yang punya POST', Object.keys(orangPost).length]);
+    out.push(['  Baris tanpa hp_kunci', tanpaHp + (kAsli !== -1 ? '  (lihat kolom hp_asli)' : '')]);
+    out.push(['  Baris TIDAK ikut rekap (tanpa hp_kunci, nama, dan no_hp)', dilewatiRekap]);
+    out.push(['  Nilai tahap' + (kT === -1 && kTP !== -1 ? ' (kolom tahap_program)' : ''), hitungNilai(tahapN)]);
+    out.push(['  Nilai sesi', hitungNilai(sesiN)]);
+    out.push(['  Nilai status', hitungNilai(statusN)]);
+    out.push(['  Catatan sistem', hitungNilai(catatanN)]);
+    out.push(['  Dibaca rekap sebagai POST bila tahap', def.post + ' / posttest / post test / akhir / sesi 2 / (tahap kosong & sesi = 2)']);
+    out.push(['', '']);
+  }
+
+  // Kiriman instrumen inti yang tertahan di karantina.
+  out.push(['■ Karantina (' + TAB_KARANTINA + ')', '']);
+  var q = ss.getSheetByName(TAB_KARANTINA);
+  if (!q || q.getLastRow() < 2) {
+    out.push(['  kosong', '']);
+  } else {
+    var qv = q.getDataRange().getValues();
+    var qh = qv[0].map(function (x) { return String(x).trim(); });
+    var kAl = qh.indexOf('alasan'), kIns = qh.indexOf('instrumen_diminta'), kTd = qh.indexOf('diproses_ulang');
+    var per = {};
+    for (var i = 1; i < qv.length; i++) {
+      var sudah = kTd !== -1 && String(qv[i][kTd]).indexOf('masuk ke ') === 0;
+      if (sudah) continue;
+      var ins = kIns === -1 ? '' : String(qv[i][kIns]).trim();
+      var teks = qv[i].join(' ').toLowerCase();
+      var cocok = PASANGAN_INTI.filter(function (d) { return ins === d.tab || teks.indexOf(d.tab) !== -1; });
+      if (!cocok.length) continue;
+      var lbl = cocok[0].tab + ' — ' + (kAl === -1 ? '?' : String(qv[i][kAl]).split(':')[0]);
+      per[lbl] = (per[lbl] || 0) + 1;
+    }
+    var ks = Object.keys(per);
+    if (!ks.length) out.push(['  tidak ada kiriman instrumen inti yang tertahan', '']);
+    ks.sort().forEach(function (k) { out.push(['  ' + k, per[k]]); });
+  }
+
+  var sh2 = ss.getSheetByName(TAB_DIAGNOSA) || ss.insertSheet(TAB_DIAGNOSA);
+  sh2.clear();
+  sh2.getRange(1, 1, out.length, 2).setValues(out);
+  sh2.getRange(1, 1, 1, 2).setFontWeight('bold');
+  sh2.setColumnWidth(1, 430);
+  sh2.setColumnWidth(2, 700);
+  sh2.getRange(1, 2, out.length, 1).setWrap(true);
+  var lapor = 'Diagnosa selesai. Lihat tab ' + TAB_DIAGNOSA + '.';
+  Logger.log(lapor);
+  try { SpreadsheetApp.getUi().alert(lapor); } catch (e) {}
+  return lapor;
 }
