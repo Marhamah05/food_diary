@@ -1,11 +1,11 @@
 /**
  * SHINING — Penerima Data Instrumen (SKRIP LENGKAP)
- * Versi 7.5 — 22 November 2026
+ * Versi 7.6 — 22 November 2026
  *
  * BERKAS INI MENGGANTIKAN SELURUH ISI Code.gs.
  * Cara pakai: buka Apps Script Sheet SHINING → klik di area kode →
  * Ctrl+A (pilih semua) → tempel seluruh isi berkas ini → Simpan (Ctrl+S).
- * v7.3–v7.5 hanya mengubah REKAP (dan menambah alat diagnosa), jadi Simpan saja sudah cukup. Deploy versi baru
+ * v7.6 MENGUBAH doPost/doGet -> WAJIB Deploy versi baru setelah Simpan. Deploy versi baru
  * (Deploy > Manage deployments > ikon pensil > New version > Deploy) boleh
  * dilakukan, tidak wajib. URL Web App TIDAK berubah, laman tidak perlu diubah.
  *
@@ -29,6 +29,18 @@
  *   7. Rekap kelayakan responden (pre & post per orang)
  *
  * Riwayat singkat:
+ *  - v7.6 (22 Nov): MEDSOS PRE WAJIB DI M0 (sisi server).
+ *    + ?aksi=status kini juga mengirim:
+ *        m0_wajib          : daftar 6 instrumen wajib M0 (5 inti + medsos-literasi)
+ *        m0_wajib_kurang   : yang belum ada di sesi 1, mis. ['medsos-literasi']
+ *        m0_wajib_lengkap  : true bila keenamnya sudah ada
+ *      Kolom lama (m0_inti, m0_awal, m0_lengkap) TIDAK berubah, supaya jadwal
+ *      peserta yang sudah berjalan tidak bergeser. Laman perlu memakai
+ *      m0_wajib_lengkap untuk membuka M1.
+ *    + TAHAP_KE_SESI mengenal 'karakteristik-awal' (sesi 1) dan
+ *      'tinjauan-akhir' (sesi 2). Sebelumnya kiriman medsos selalu
+ *      'sesi_dikira_1', sehingga medsos post tercatat sebagai sesi 1.
+ *      Berlaku untuk kiriman BARU; baris lama tidak diubah.
  *  - v7.5 (22 Nov): DIAGNOSA + PENGENALAN POST LEBIH LUWES. Hanya baca.
  *    + Menu SHINING > "Diagnosa pre/post per instrumen" membuat tab
  *      DIAGNOSA-INSTRUMEN: per instrumen inti, jumlah baris, baris tanpa
@@ -156,7 +168,9 @@ var WAJIB = ['instrumen'];
 // Sebagian instrumen mengirim 'tahap' (pre-test/post-test), bukan 'sesi'.
 var TAHAP_KE_SESI = {
   'pre-test': '1', 'pretest': '1', 'pre test': '1', 'awal': '1', 'sesi 1': '1', '1': '1',
-  'post-test': '2', 'posttest': '2', 'post test': '2', 'akhir': '2', 'sesi 2': '2', '2': '2'
+  'post-test': '2', 'posttest': '2', 'post test': '2', 'akhir': '2', 'sesi 2': '2', '2': '2',
+  // v7.6: nilai tahap laman medsos-literasi
+  'karakteristik-awal': '1', 'tinjauan-akhir': '2'
 };
 
 // Kolom yang HARUS tersimpan sebagai teks, bukan angka.
@@ -335,6 +349,9 @@ function doGet(e) {
 
   try {
     var selesai = daftarSelesai(hp, sesi, mau);
+    // v7.6: syarat M0 wajib (5 inti + medsos pre), selalu dari sesi 1.
+    var selesai1 = (sesi === '1') ? selesai : daftarSelesai(hp, '1', mau);
+    var m0Kurang = M0_WAJIB.filter(function (t) { return selesai1.indexOf(t) === -1; });
     var m0 = infoM0(hp, mau);
     var terdaftar = kelompokTerdaftar(hp);
     return balas({
@@ -347,6 +364,9 @@ function doGet(e) {
       m0_inti      : m0.inti,
       m0_awal      : m0.awal,
       m0_lengkap   : m0.lengkap,
+      m0_wajib         : M0_WAJIB,
+      m0_wajib_kurang  : m0Kurang,
+      m0_wajib_lengkap : m0Kurang.length === 0,
       pertama      : m0.awal || kirimanPertama(hp, sesi, mau),
       terdaftar_di : terdaftar,
       kelompok_lain: mau ? terdaftar.filter(function (g) { return g !== mau; }) : []
@@ -439,6 +459,10 @@ function pasangKendali() {
  *   lengkap : waktu saat ke-5 instrumen inti lengkap (ISO), '' bila belum
  */
 var INTI_M0 = ['identitas', 'pengetahuan', 'sikap-hbm', 'kebiasaan-makan-ffq', 'aktivitas-ipaq'];
+
+// v7.6 — syarat WAJIB untuk membuka M1: 5 inti + medsos pre.
+// (INTI_M0 sengaja tidak diubah: m0_lengkap dipakai laman untuk jadwal.)
+var M0_WAJIB = INTI_M0.concat(['medsos-literasi']);
 
 function infoM0(hp, mau) {
   if (indeksSiap()) {
